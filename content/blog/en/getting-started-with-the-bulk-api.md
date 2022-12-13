@@ -42,7 +42,7 @@ Press **Create a new List**, and you'll be prompted to enter a **Name**, **Descr
 
 > We could have added **Tags** to find this list, which is typically helpful when managing a large number of Lists.
 
-Next, it asks for a **Data Source**. You can select either **Manual** or **Salesforce**. If you select **Manual**, you'll need to provide a CSV file, or if you select **Salesforce**, you'll be asked to provide your **Integration ID** and an option to provide the **Salesforce Object Query Language (SOQL)**. For the sake of this demo, we'll use a CSV File that looks like the following:
+It asks for a **Data Source**. You can select either **Manual** or **Salesforce**. If you select **Manual**, you'll need to provide a CSV file, or if you select **Salesforce**, you'll be asked to provide your Integration ID** and an option to provide the **Salesforce Object Query Language (SOQL)**. For this demo, we'll use a CSV File that looks like this:
 
 ```text
 firstName,lastName,Number,Location
