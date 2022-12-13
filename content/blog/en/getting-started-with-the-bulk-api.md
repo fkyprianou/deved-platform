@@ -68,7 +68,7 @@ Now that we have a **List**, we need to perform an action to send messages to th
 
 ![Pre-configured actions](/content/blog/getting-started-with-the-campaign-manager-api-ui/preconfigured-actions.png "preconfigured-actions.png")
 
-This is where we can start seeing the power of **Campaign Manager API & UI**. If we select the **SMS** pre-configured Action, it will automatically populate the fields, such as the **parameters** we'd like to use in the request, along with the **Command** used for the API call and **Response** settings that come back after a successful or unsuccessful call. 
+This is where we can start seeing the power of **Campaign Manager API & UI**. Suppose we select the **SMS** pre-configured Action. In that case, it will automatically populate the fields, such as the **parameters** we'd like to use in the request, along with the **Command** used for the API call and **Response** settings that come back after a successful or unsuccessful call. 
 
 The image below shows the command and headers to send an SMS message via the Vonage APIs. 
 
