@@ -94,7 +94,7 @@ We'll provide the following information to this form:
 * Recipient: {{item.Number}}
 * Template Message: Hello {{firstName}}, please visit vonage.com/usa to get your discount code. 
 
-Note the information that we provided for the **Condition**. This matches the **Location** column from the CSV file to match only entries containing **USA**. Which, in this case, is only two entries. The **Recipient** field also uses the same data source and retrieves the **Number** provided in the CSV File. Finally, we provide a **Template Message**, that uses the **FirstName** of the customer to send location-specific instructions. 
+Note the information that we provided for the **Condition**. This matches the **Location** column from the CSV file to match only entries containing **USA**. In this case, there are only two entries. The **Recipient** field also uses the same data source and retrieves the **Number** provided in the CSV File. Finally, we provide a **Template Message** that uses the **FirstName** of the customer to send location-specific instructions. 
 
 The only remaining thing to do is specify which **Action** we want to use for that **Segment**. I'll click on the drop-down and select **vg-send-sms**, which we defined earlier, and by default, it will automatically populate the **Action parameters** as shown below. 
 
