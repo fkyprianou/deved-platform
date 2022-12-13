@@ -52,7 +52,7 @@ Daniela,Facchinetti,14259999997,UK
 Ben,Aronov,14259999996,Israel
 ```
 
-Select **Data Source** and change it to **Manual**. Copy the text listed above and save it as a CSV file. Drag and drop the CSV file to the designer, and now you'll assign a **Label name** with the label defined in the CSV File. For example, mine looks like the following:
+Select **Data Source** and change it to **Manual**. Copy the text listed above and save it as a CSV file. Drag and drop the CSV file to the designer. Next, you'll assign a **Label name** with the label defined in the CSV File. For example, mine looks like the following:
 
 ![Map Labels to names defined in the CSV](/content/blog/getting-started-with-the-campaign-manager-api-ui/csvlabels.png "csvlabels.png")
 
