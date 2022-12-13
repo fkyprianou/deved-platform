@@ -64,7 +64,7 @@ You'll now have a **Lists** which defines whom to send the campaign to, along wi
 
 ## Creating a new Action
 
-Now that we have a **List**, we need to perform an action to send messages to the group using one of our communications APIs. Again, this could be via SMS, MMS, Facebook Messenger, Viber, WhatsApp, or voice. Select the **Actions** under **Configurations** and press **Create a new Action**. You'll see several pre-configured Actions that you can use or start from scratch.
+Now that we have a **List**, we need to perform an action to send messages to the group using one of our communication APIs. Again, this could be via SMS, MMS, Facebook Messenger, Viber, WhatsApp, or voice. Select the **Actions** under **Configurations** and press **Create a new Action**. You'll see several pre-configured Actions that you can use or start from scratch.
 
 ![Pre-configured actions](/content/blog/getting-started-with-the-campaign-manager-api-ui/preconfigured-actions.png "preconfigured-actions.png")
 
