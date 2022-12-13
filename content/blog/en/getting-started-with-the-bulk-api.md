@@ -58,7 +58,7 @@ Select **Data Source** and change it to **Manual**. Copy the text listed above a
 
 Finally, press the **Save** button. 
 
-You'll now have a **Lists** which defines whom to send the campaign to, along with the number of entries and when it was last modified. 
+You now have a **Lists** which defines whom to send the campaign to, the number of entries, and when it was last modified. 
 
 ![Configured List](/content/blog/getting-started-with-the-campaign-manager-api-ui/configuredlist.png "configuredlist.png")
 
