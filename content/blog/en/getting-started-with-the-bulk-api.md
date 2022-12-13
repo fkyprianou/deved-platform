@@ -21,11 +21,13 @@ replacement_url: ""
 ---
 ## Introduction
 
-Today, we are pleased to announce a new tool called Campaign Manager API & UI that makes it easy to create outreach campaigns at a large scale using any Vonage Communication API, such as Messages, Voice, and AI Studio. This API allows you to schedule and send personalized messages to different large-scale contact groups and offers the ability to receive and act on customer responses in a friendly GUI (Graphical User Interface). Campaign Manager API & UI enters Beta today, and you can try it now from your [Vonage Developer Portal](https://developer.vonage.com/).
+Today, we are pleased to announce a new tool, Campaign Manager*,  that makes it easy to create outreach campaigns at a large scale using multiple Vonage Communications APIs, including SMS, Messages, Voice, and with AI Studio. This new API allows you to schedule and send personalized messages, across multiple channels, to different large-scale contact groups and offers the ability to receive and act on customer responses in a friendly Vonage Dashboard user interface. Campaign Manager enters Beta today, and you can try it now from your [Vonage Developer Portal](https://developer.vonage.com/). This blog explains how to set up campaigns through the user interface, where all the operations shown are also available programmatically through the API.
+
+\* Note: The final product name for general availability is subject to change.
 
 ## Terminology
 
-Once you log into your [Vonage Developer Portal](https://developer.vonage.com/), look under **Build & Manage**, and you will see **Campaign Manager API & UI**. Under **Configurations**, you'll see the following entries: Lists, Actions, Jobs, and Runs. Let's discuss what each of these means before moving forward. 
+Once you log into your [Vonage Developer Portal](https://developer.vonage.com/), look under **Build & Manage**, and you will see **Campaign Manager**. Under **Configurations**, you'll see the following entries: Lists, Actions, Jobs, and Runs. Let's discuss what each of these means before moving forward. 
 
 * **List**: A List contains all the targets to run the Job. They can be directly uploaded at the creation time or imported from an external resource, like a file or CRM.
 * **Action**: An Action is typically used to send an SMS, WhatsApp Message, or make a phone call. Actions can also be used as reactions to trigger an API call upon receiving a response from the target user.
@@ -68,7 +70,7 @@ Now that we have a **List**, we need to perform an action to send messages to th
 
 ![Pre-configured actions](/content/blog/getting-started-with-the-campaign-manager-api-ui/preconfigured-actions.png "preconfigured-actions.png")
 
-This is where we can start seeing the power of **Campaign Manager API & UI**. Suppose we select the **SMS** pre-configured Action. In that case, it will automatically populate the fields, such as the **parameters** we'd like to use in the request, along with the **Command** used for the API call and **Response** settings that come back after a successful or unsuccessful call. 
+This is where we can start seeing the power of **Campaign Manager**. Suppose we select the **SMS** pre-configured Action. In that case, it will automatically populate the fields, such as the **parameters** we'd like to use in the request, along with the **Command** used for the API call and **Response** settings that come back after a successful or unsuccessful call. 
 
 The image below shows the command and headers to send an SMS message via the Vonage APIs. 
 
@@ -102,7 +104,7 @@ The only remaining thing to do is specify which **Action** we want to use for th
 
 Go ahead and press **Next**, and you'll reach the final step in creating a new job. Here you'll be allowed to define how you'll handle the responses from each of your chosen segments. This is optional, and for now, we'll press **Save** to continue. 
 
-Keep in mind that if we wanted to create another **Segment** that targeted individuals living in the **UK**, we could press the **Create a Segment** button again and modify our **Condition** to match that location, along with a customized **Template Message** for that locale. We could also specify an **Action** that uses something besides the SMS API. For example, we could use Facebook Messenger, WhatsApp, etc. 
+Keep in mind that if we wanted to create another **Segment** that targeted individuals living in the **UK**, we could press the **Create a Segment** button again and modify our **Condition** to match that location, along with a customized **Template Message** for that locale. We could also specify an **Action** that uses something besides the SMS API. For example, we could instead use Facebook Messenger, WhatsApp, etc.
 
 ## Scheduling a Run
 
