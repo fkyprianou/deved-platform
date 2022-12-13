@@ -120,4 +120,4 @@ If we now go to the **Runs** section and click on **Overview** and **Show More**
 
 ## Wrap-up
 
-Now that you have successfully built your first campaign with sample data, you can begin incorporating your live production data. But before we go, check out the documentation for the product and if you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack) and we will get back to you. Thanks again for reading, and I will catch you on the next one!
+Now that you have successfully built your first campaign with sample data, you can begin incorporating your live production data. But before we go, check out the documentation for the product. If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack), and we will get back to you. Thanks again for reading, and I will catch you on the next one!
