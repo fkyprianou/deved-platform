@@ -110,7 +110,7 @@ The final step in creating a campaign is to create a **Run**. This is a schedule
 
 You'll be prompted to enter your list's **Name**, **Description**, and **Job**. We'll use **My Run** for the **Name**, and for the **Description**, we'll use **This is my new Run**. We'll also need to select a **Job**, so I'll select **My New Job** from the dropdown.
 
-Next, we need to **Schedule** when the **Run** will take place. Please note that the displayed start and end dates are in UTC. Once complete, press **Schedule** as shown below. 
+Next, we need to **Schedule** when the **Run** will occur. Please note that the displayed start and end dates are in UTC. Once complete, press **Schedule** as shown below. 
 
 ![Create a Run](/content/blog/getting-started-with-the-campaign-manager-api-ui/create-a-run.png "create-a-run.png")
 
