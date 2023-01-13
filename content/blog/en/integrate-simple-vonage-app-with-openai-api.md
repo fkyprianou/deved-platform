@@ -1,5 +1,5 @@
 ---
-title: Integrate simple Vonage app with OpenAI API
+title: Integrate Simple Vonage App With OpenAI API
 description: The article will include workflow plus the simple app that uses
   Vonage Voice API and Message API to interact with 3d party Generative AI. In
   this case, I'll use image/text generation using OpenAI API.
