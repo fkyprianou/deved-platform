@@ -20,16 +20,17 @@ outdated: false
 replacement_url: ""
 ---
 ## Introduction
+
 Generative AI is becoming more and more popular. Over the past year, models and products have appeared that allow you to generate texts, images, and audio. In this article, we will consider how to make the interaction between Vonage API and OpenAI API. We will create an app that will receive a call, get a user response, and send it as a prompt to a generative AI service. When we receive the result, we will redirect it to the user using Vonage Messages API.
 
 The Vonage Messages API allows you to send and receive messages over SMS, MMS, Facebook Messenger, Viber, and WhatsApp! Ready to get started? Let's dive in! Remember to check out the [Messages API documentation](https://developer.vonage.com/messages/overview) for more information.
 
-
 ## Prerequisites
+
 Users can deploy the App using Github Codespaces. 
 Fork this repository. Open it in Codespases by clicking "Create codespace on main"
 
-![img]
+![Create Codespace interface](/content/blog/integrate-simple-vonage-app-with-openai-api/codespaces.png)
 
 Put related credentials and parameters, and you can run this App as described in this article.
 
@@ -41,6 +42,7 @@ In this case, make sure you have the following:
 * [ngrok](https://ngrok.com/) - A free account is required. This tool enables developers to expose a local development server to the Internet. 
 
 ## Create a new Vonage app
+
 Sign in/Sign up for free [developer.vonage.com](https://developer.vonage.com/)
 In order to be able to use the [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview), you'll have to create a [Vonage Application](https://developer.vonage.com/application/overview) from the developer portal.
 
@@ -48,24 +50,23 @@ A Vonage application contains the security and configuration information you nee
 
 All requests to the Vonage Voice API require authentication. Therefore, you should generate a private key with the Application API, which allows you to create JSON Web Tokens (JWT) to make the requests. For demo purposes, we will use the API key and API Secret.
 
-Let's create an Application using Vonage Developer Dashboard.
-
 In the left menu [here](https://dashboard.nexmo.com/) click API Settings, left menu item.
 
-![](img/settings.png)
+![API Settings](/content/blog/integrate-simple-vonage-app-with-openai-api/settings.png)
 
 Copy and paste in the `.env` file API key and API Secret
 
 ```
 API_KEY=b**********
 API_SECRET=******************
-
 ```
+
+Let's create an Application using Vonage Developer Dashboard.
 
 In the Application left menu item.
 Create a new App. For example, 'VoiceApp'. Generate a public and private key
 
-![](img/createApp.png)
+![Create Vonage App](/content/blog/integrate-simple-vonage-app-with-openai-api/createapp.png)
 
 We will create a bot to answer an inbound phone call. The bot will ask what image content you want to generate.
 
@@ -76,6 +77,7 @@ npm install -g @vonage/cli
 ```
 
 Set configuration
+
 ```bash
 vonage config:set --apiKey=[API_Key] --apiSecret=[API_Secret]
 ```
@@ -83,7 +85,9 @@ vonage config:set --apiKey=[API_Key] --apiSecret=[API_Secret]
 ```bash
 vonage numbers:buy **732**56** UK
 ```
+
 Find related App
+
 ```bash
 vonage apps
 ```
@@ -95,6 +99,7 @@ vonage apps
 ```
 
 Link phone number and the App
+
 ```bash
 vonage apps:link [APP_ID] --number=[NUMBER]
 ```
@@ -105,10 +110,9 @@ Number '**732**56**' is assigned to application '4e15f46e-****-4a0d-9749-0000000
 
 ## Create Call Control Object
 
-
 Speech Recognition (ASR)
 
-![asr](img/asr.png)
+![ASR scheme](/content/blog/integrate-simple-vonage-app-with-openai-api/asr.png)
 
 You can use the `input` action to collect digits or speech input by the person you are calling. This action is synchronous; Vonage processes the input and forwards it in the parameters sent to the `eventUrl` webhook endpoint you configure in your request. Your webhook endpoint should return another NCCO that replaces the existing NCCO and controls the Call based on the user input.
 
@@ -135,9 +139,9 @@ You can use the `input` action to collect digits or speech input by the person y
 ```
 
 Useful links:
+
 * [Validate Nexmo Call Control Object (NCCO)](https://dashboard.nexmo.com/voice/playground) 
 * [Recognition settings](https://developer.vonage.com/voice/voice-api/ncco-reference#speech-recognition-settings)
-
 
 ## Configure Generative AI app, Open AI
 
@@ -171,19 +175,15 @@ In the following JSON payload, you can manage parameter
     }))
 ```
 
-
 ## Deploy App in Codespace
+
 After you open source in GitHub Codespace
-[https://oborys-solid-trout-xrpr6xw6gp6h6vxx.github.dev/](https://oborys-solid-trout-xrpr6xw6gp6h6vxx.github.dev/)
-
-
 
 Run the following command
 
 ```
 cd src/voice/
 ```
-
 
 ```
 npm install
@@ -194,12 +194,10 @@ node index.js
 ```
 
 Update App settings () using Vonage CLI or Web GUI
+
 ```bash
 vonage apps:update 4e15f46e-****-4a0d-9749-000000000000 --voice_event_url=[Codespace-or-server-URL]/webhooks/event --voice_answer_url=[Codespace-or-server-URL]/webhooks/answer
 ```
-
-![](createApp.png)
-
 
 ## Configure Vonage Message API
 
@@ -207,12 +205,9 @@ To Receive a message with content or link, we will use Vonage message API.
 
 For WhatsApp, Scan the QR code and hit send on the pre-filled message.
 
-![](img/WhatsApp_qr.png)
-
-![](img/linkScr.png)
+![WhatsApp Sandbox QR](/content/blog/integrate-simple-vonage-app-with-openai-api/whatsapp_qr.png)
 
 Open [Messages API Sandbox](https://dashboard.nexmo.com/messages/sandbox) in case you you need aditional information
-
 
 Everything is ready
 
@@ -221,10 +216,7 @@ Everything is ready
 * Wait for the content in the corresponding messenger
 * Monitor the console
 
-
 Following, you can find a sample image that you can receive on your telephone
-
-
 
 Wrap-up
 Now that you have learned how to create a bot answering service for an inbound phone call, proceed with your request and send messages with the Vonage Messages API and Node.js, you could extend this project to making conversation using [Vonage AI Studio](https://studio.ai.vonage.com/agents) or integrate it with chatGPT.
