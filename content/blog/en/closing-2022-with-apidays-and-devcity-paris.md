@@ -26,9 +26,17 @@ The conference was held on 14-16 December 2022 and attracted 1700 attendees.
 
 On opening day David Darmon, Vonage’s VP of Sales EMEA, took to the stage for a talk called "Become a Conversational Commerce Trailblazer – the Drive for CX Innovation". The room was so crowded that there were barely enough seats! 
 
+![David Darmon giving a talk at apidays Paris](/content/blog/closing-2022-with-apidays-and-devcity-paris/david_darmon_apidays.jpg)
+
+![The room at David Darmon's talk at apidays Paris](/content/blog/closing-2022-with-apidays-and-devcity-paris/apidays_paris_talk.jpg)
+
 Vonage Developer Advocate, [Benjamin Aronov](https://developer.vonage.com/blog/authors/benjamin-aronov), ran a workshop titled ‘NoCode, LowCode, Boss Mode: Reimagining User Experience with AI Studio’ where participants left ready to build their first AI Studio agent after the session. 
 
 Vonage was a Gold Sponsor with an exhibition booth and plenty of swag. Attendees had a lot of run solving our Anagram Challenge and there was a Vonage Raffle to win an Apple iPad Mini. We had a great time learning from the attendees and helping them learn more about Vonage APIs. 
+
+![Vonage DevRel Team at apidays](/content/blog/closing-2022-with-apidays-and-devcity-paris/apidays_paris_team.jpg)
+
+![Vonage swag at apidays Paris](/content/blog/closing-2022-with-apidays-and-devcity-paris/apidays_swag.jpg)
 
 Congratulations to Olivier, our raffle winner! We hope you are enjoying your iPad Mini.
 
