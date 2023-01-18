@@ -21,19 +21,19 @@ replacement_url: ""
 ---
 ## Introduction
 
-Generative AI is becoming more and more popular. Over the past year, models and products have appeared that allow you to generate texts, images, and audio. In this article, we will consider how to make the interaction between [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview) and [OpenAI API](https://openai.com/api/). We will create an app that will receive a call, get a user response, and send it as a prompt to a generative AI service. When we receive the result, we will redirect it to the user using [Vonage Messages API](https://developer.vonage.com/messages/overview).
+Generative AI has gone mainstream.. Over the past year, models and products like ChatGPT and DALL-E-2 have appeared that allow you to generate texts, images, and audio. The creators of ChatGPT and DALL-E-2, OpenAI, have opened up these powerful tools for developers to access and create imaginative new applications.
+
+In this article, we will first consider how to integrate [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview) and [OpenAI API](https://openai.com/api/). We will create an app that will receive a prompt from a user, via call, call and send it to a generative AI service. We will then send the AI’s response to the user using [Vonage Messages API](https://developer.vonage.com/messages/overview).
 
 The Vonage Messages API allows you to send and receive messages over SMS, MMS, Facebook Messenger, Viber, and WhatsApp! Ready to get started? Let's dive in! Remember to check out the [Messages API documentation](https://developer.vonage.com/messages/overview) for more information.
 
 ## Prerequisites
 
-We've already developed a simple Vonage Voice application to receive a call, catch your response, and send it to a 3d party (OpenAI).
+We've already developed a starter Vonage Voice application to receive a call, catch your response, and send it to a 3rd party (OpenAI).
 Users can deploy the App using Github Codespaces.
 Fork [this repository](https://github.com/obvonage/Simple-Vonage-App-With-OpenAI-API). Open it in Codespaces by clicking "Create codespace on main"
 
 ![Create Codespace interface](/content/blog/integrate-simple-vonage-app-with-openai-api/codespaces.png)
-
-Put related credentials and parameters, and you can run this App as described in this tutorial.
 
 Besides, users can use their laptop or server to play with the App.
 In this case, make sure you have the following:
@@ -46,8 +46,6 @@ In this case, make sure you have the following:
 
 Sign in/Sign up for free [developer.vonage.com](https://developer.vonage.com/)
 In order to be able to use the [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview), you'll have to create a [Vonage Application](https://developer.vonage.com/application/overview) from the developer portal.
-
-A Vonage application contains the security and configuration information you need to interact with the Vonage Voice APIs.
 
 All requests to the Vonage Voice API require authentication. Therefore, you should generate a private key with the Application API, which allows you to create JSON Web Tokens (JWT) to make the requests. For demo purposes, we will use the API key and API Secret.
 
@@ -62,10 +60,12 @@ API_KEY=b**********
 API_SECRET=******************
 ```
 
+A Vonage application contains the security and configuration information you need to interact with the Vonage Voice APIs.
+
 Let's create an Application using Vonage Developer Dashboard.
 
 In the Application left menu item.
-Create a new App. For example, ```VoiceApp```. Generate a public and private key
+Create a new App. For example, `VoiceApp`. Generate a public and private key
 
 ![Create Vonage App](/content/blog/integrate-simple-vonage-app-with-openai-api/createapp.png)
 
@@ -83,17 +83,26 @@ Set configuration
 vonage config:set --apiKey=[API_Key] --apiSecret=[API_Secret]
 ```
 
-Search and buy virtual phone numbers
+Output
 
 ```bash
-vonage numbers:search UK
+Configuration saved.
 ```
+
+We need to buy a virtual number for our app to accept phone calls.
+Search and buy virtual phone numbers. Choose the number with the mention `Voice` in the Capabilities column
 
 ```bash
-vonage numbers:buy **732**56** UK
+vonage numbers:search GB
 ```
 
-Or search and buy virtual phone numbers using [Vonage Dashboard](https://dashboard.nexmo.com/buy-numbers)
+The following command can buy a related phone number
+
+```bash
+vonage numbers:buy **732**56** GB
+```
+
+Or search and buy virtual phone numbers using [Vonage Dashboard](https://dashboard.nexmo.com/buy-numbers). Select Voice feature from the dropdown menu.
 
 Find related App
 
@@ -113,19 +122,30 @@ Link phone number and the App
 vonage apps:link [APP_ID] --number=[NUMBER]
 ```
 
+For example
+
+```bash
+vonage apps:link 4e15f46e-****-4a0d-9749-000000000000 --number=44750385680
+```
+
+Expected response:
+
 ```bash
 Number '**732**56**' is assigned to application '4e15f46e-****-4a0d-9749-000000000000'.
 ```
 
 You can also link numbers using Vonage Dashboard, go to Applications, open related App, and click the 'Link' button in the list of numbers.
 
+![link number with app](/content/blog/integrate-simple-vonage-app-with-openai-api/link-number-with-app.png)
+
 ## Create Call Control Object
 
 Speech Recognition (ASR)
+Automatic Speech Recognition (ASR) enables apps to support voice input for such use cases as IVR, identification and different kinds of voice bots/assistants. Using this feature, the app gets transcribed user speech (in the text form) once it expects the user to answer some question by saying it rather than entering digits (DTMF); and then may continue the call flow according to its business logic based on what the user said.
 
 ![ASR scheme](/content/blog/integrate-simple-vonage-app-with-openai-api/asr.png)
 
-You can use the `input` action to collect digits or speech input by the person you are calling. This action is synchronous; Vonage processes the input and forwards it in the parameters sent to the `eventUrl` webhook endpoint you configure in your request. Your webhook endpoint should return another NCCO that replaces the existing NCCO and controls the Call based on the user input.
+You can use the `input` action to collect digits or speech input by the application you are calling. This action is synchronous; Vonage processes the input and forwards it to the `eventUrl` webhook endpoint. You will configure to receive this input in your request. Your webhook endpoint should return another NCCO that replaces the existing NCCO and controls the Call based on the user input.
 
 ```
 {
@@ -228,7 +248,7 @@ Update App settings using Vonage CLI
 vonage apps:update 4e15f46e-****-4a0d-9749-000000000000 --voice_event_url=[Codespace-or-server-URL]/webhooks/event --voice_answer_url=[Codespace-or-server-URL]/webhooks/answer
 ```
 
-Using Dashboard. Go to Application in the left menu. Choose a related app and  click the 'Edit' button
+Update App settings using Dashboard. Go to Application in the left menu. Choose a related app and  click the 'Edit' button
 
 ![Edit App](/content/blog/integrate-simple-vonage-app-with-openai-api/edit-app-urls.png)
 
