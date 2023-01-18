@@ -18,7 +18,10 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-After the successful [DevCity San Francisco at Dreamforce](https://developer.vonage.com/blog/22/08/15/vonage-devrel-looks-ahead-to-a-better-than-ever-dreamforce) and [DevCity London](https://developer.vonage.com/blog/22/11/08/devcity-came-to-london-and-here-is-what-went-down), the Vonage Developer Relations team closed out the year at the [apidays conference ](https://www.apidays.global/paris/)with the final DevCity stop - Paris. Apidays Paris 
+After the successful [DevCity San Francisco at Dreamforce](https://developer.vonage.com/blog/22/08/15/vonage-devrel-looks-ahead-to-a-better-than-ever-dreamforce) and [DevCity London](https://developer.vonage.com/blog/22/11/08/devcity-came-to-london-and-here-is-what-went-down), the Vonage Developer Relations team closed out the year at the [apidays conference ](https://www.apidays.global/paris/)with the final DevCity stop - Paris. 
+
+## Apidays Paris
+
 The conference was held on 14-16 December 2022 and attracted 1700 attendees. 
 
 On opening day David Darmon, Vonage’s VP of Sales EMEA, took to the stage for a talk called "Become a Conversational Commerce Trailblazer – the Drive for CX Innovation". The room was so crowded that there were barely enough seats! 
@@ -29,22 +32,24 @@ Vonage was a Gold Sponsor with an exhibition booth and plenty of swag. Attendees
 
 Congratulations to Olivier, our raffle winner! We hope you are enjoying your iPad Mini.
 
-DevCity Paris
+## DevCity Paris
+
 On 15 December, we ran our very own networking party at DevCity Paris. Benjamin was also the host at DevCity Paris and warmly welcomed the attendees with an introduction to Vonage APIs. 
 
 He was then joined by special guest, Arnaud Lauret, Author of ‘The Design of Web APIs’ (and known as the API Handyman), to discuss best practices for building APIs. Arnaud talked alot about API Governance, his work as an API researcher, and lessons learned in API Design.
 
-Our .NET Developer Advocate, Guillaume Faas, then delivered a live demo on enhancing in-app communication with our Video APIs.
+Our .NET Developer Advocate, [Guillaume Faas](https://learn.vonage.com/cn/authors/guillaume-faas/), then delivered a live demo on enhancing your collaborative experience with Video APIs.
 
 The networking party concluded with…networking! Folks were able to connect and interact with like-minded developers while sipping tasty cocktails. 
 
-10th Anniversary Soiree
+## 10th Anniversary Soiree
+
 Lastly, the crescendo of the conference was the apidays 10th anniversary soiree! Vonage held a special festive photo competition with an iTunes gift card prize. Participants were encouraged to wear purple Vonage Santa hats, purple bobbing headbands, and use our fun photobooth!
 
-Congratulations to Tad for winning our festive photo contest!
+Congratulations to [Tad](https://twitter.com/TadCapone) for winning our festive photo contest!
 
-Connecting with more developers
+## Connecting with more developers
 
 Au revoir 2022, we had a good year connecting with developers from San Francisco to London to Paris. As begin 2023, we look forward to more fun at developer events all around the world!
 
-Be the first to hear about DevCity events, join our Vonage Developer Community Slack!
+Be the first to hear about DevCity events, join our[ Vonage Developer Community Slack](https://developer.vonage.com/slack)!
