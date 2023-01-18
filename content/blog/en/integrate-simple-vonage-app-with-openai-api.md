@@ -21,25 +21,26 @@ replacement_url: ""
 ---
 ## Introduction
 
-Generative AI is becoming more and more popular. Over the past year, models and products have appeared that allow you to generate texts, images, and audio. In this article, we will consider how to make the interaction between Vonage API and OpenAI API. We will create an app that will receive a call, get a user response, and send it as a prompt to a generative AI service. When we receive the result, we will redirect it to the user using Vonage Messages API.
+Generative AI is becoming more and more popular. Over the past year, models and products have appeared that allow you to generate texts, images, and audio. In this article, we will consider how to make the interaction between [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview) and [OpenAI API](https://openai.com/api/). We will create an app that will receive a call, get a user response, and send it as a prompt to a generative AI service. When we receive the result, we will redirect it to the user using [Vonage Messages API](https://developer.vonage.com/messages/overview).
 
 The Vonage Messages API allows you to send and receive messages over SMS, MMS, Facebook Messenger, Viber, and WhatsApp! Ready to get started? Let's dive in! Remember to check out the [Messages API documentation](https://developer.vonage.com/messages/overview) for more information.
 
 ## Prerequisites
 
-Users can deploy the App using Github Codespaces. 
-Fork this repository. Open it in Codespases by clicking "Create codespace on main"
+We've already developed a simple Vonage Voice application to receive a call, catch your response, and send it to a 3d party (OpenAI).
+Users can deploy the App using Github Codespaces.
+Fork [this repository](https://github.com/obvonage/Simple-Vonage-App-With-OpenAI-API). Open it in Codespaces by clicking "Create codespace on main"
 
 ![Create Codespace interface](/content/blog/integrate-simple-vonage-app-with-openai-api/codespaces.png)
 
-Put related credentials and parameters, and you can run this App as described in this article.
+Put related credentials and parameters, and you can run this App as described in this tutorial.
 
 Besides, users can use their laptop or server to play with the App.
 In this case, make sure you have the following:
 
 * [Node.js](https://nodejs.org/en/download/) installed. Node.js is an open-source, cross-platform JavaScript runtime environment. 
 * [Vonage CLI](https://www.npmjs.com/package/@vonage/cli) - Once Node.js is installed, you can use `npm install -g @vonage/cli` to install it. This tool allows you to create and manage your Vonage applications.
-* [ngrok](https://ngrok.com/) - A free account is required. This tool enables developers to expose a local development server to the Internet. 
+* [ngrok](https://ngrok.com/) - A free account is required. This tool enables developers to expose a local development server to the Internet. See also: [Using ngrok in Rails in 2022](https://developer.vonage.com/blog/22/08/24/using-ngrok-in-rails-in-2022)
 
 ## Create a new Vonage app
 
@@ -64,7 +65,7 @@ API_SECRET=******************
 Let's create an Application using Vonage Developer Dashboard.
 
 In the Application left menu item.
-Create a new App. For example, 'VoiceApp'. Generate a public and private key
+Create a new App. For example, ```VoiceApp```. Generate a public and private key
 
 ![Create Vonage App](/content/blog/integrate-simple-vonage-app-with-openai-api/createapp.png)
 
@@ -82,9 +83,17 @@ Set configuration
 vonage config:set --apiKey=[API_Key] --apiSecret=[API_Secret]
 ```
 
+Search and buy virtual phone numbers
+
+```bash
+vonage numbers:search UK
+```
+
 ```bash
 vonage numbers:buy **732**56** UK
 ```
+
+Or search and buy virtual phone numbers using [Vonage Dashboard](https://dashboard.nexmo.com/buy-numbers)
 
 Find related App
 
@@ -107,6 +116,8 @@ vonage apps:link [APP_ID] --number=[NUMBER]
 ```bash
 Number '**732**56**' is assigned to application '4e15f46e-****-4a0d-9749-000000000000'.
 ```
+
+You can also link numbers using Vonage Dashboard, go to Applications, open related App, and click the 'Link' button in the list of numbers.
 
 ## Create Call Control Object
 
@@ -161,6 +172,7 @@ Paste it to your `.env` file
 API_KEY=b**********
 API_SECRET=******************
 OPENAI_API_KEY=sk-**************************************
+EVENT_URL=https://******************************************/webhooks/asr
 ```
 
 In the following JSON payload, you can manage parameter
@@ -175,30 +187,6 @@ In the following JSON payload, you can manage parameter
     }))
 ```
 
-## Deploy App in Codespace
-
-After you open source in GitHub Codespace
-
-Run the following command
-
-```
-cd src/voice/
-```
-
-```
-npm install
-```
-
-```
-node index.js
-```
-
-Update App settings () using Vonage CLI or Web GUI
-
-```bash
-vonage apps:update 4e15f46e-****-4a0d-9749-000000000000 --voice_event_url=[Codespace-or-server-URL]/webhooks/event --voice_answer_url=[Codespace-or-server-URL]/webhooks/answer
-```
-
 ## Configure Vonage Message API
 
 To Receive a message with content or link, we will use Vonage message API.
@@ -207,7 +195,52 @@ For WhatsApp, Scan the QR code and hit send on the pre-filled message.
 
 ![WhatsApp Sandbox QR](/content/blog/integrate-simple-vonage-app-with-openai-api/whatsapp_qr.png)
 
-Open [Messages API Sandbox](https://dashboard.nexmo.com/messages/sandbox) in case you you need aditional information
+Open [Messages API Sandbox](https://dashboard.nexmo.com/messages/sandbox) if you need additional information.
+
+## Deploy App in Codespace
+
+After you open source in GitHub Codespace
+
+Run the following command to install packages
+
+```
+npm install
+```
+
+Run the following command in the terminal to receive the GitHub Codespace URL for webhooks
+
+```
+echo "https://${CODESPACE_NAME}-3000.preview.app.github.dev/webhooks/asr" 
+```
+
+Copy and paste the output in `EVENT_URL=` in the `.env` file
+
+```
+API_KEY=b**********
+API_SECRET=******************
+OPENAI_API_KEY=sk-**************************************
+EVENT_URL=https://******************************************-3000.preview.app.github.dev/webhooks/asr
+```
+
+Update App settings using Vonage CLI 
+
+```bash
+vonage apps:update 4e15f46e-****-4a0d-9749-000000000000 --voice_event_url=[Codespace-or-server-URL]/webhooks/event --voice_answer_url=[Codespace-or-server-URL]/webhooks/answer
+```
+
+Using Dashboard. Go to Application in the left menu. Choose a related app and  click the 'Edit' button
+
+![Edit App](/content/blog/integrate-simple-vonage-app-with-openai-api/edit-app-urls.png)
+
+Run the App
+
+```bash
+node index.js
+```
+
+In the terminal, open the `Port` tab. Click on `Private` in the `Visibility` column, and change it to `Public`
+
+![codespace port public](/content/blog/integrate-simple-vonage-app-with-openai-api/codespace-port-public.png)
 
 Everything is ready
 
@@ -218,7 +251,8 @@ Everything is ready
 
 Following, you can find a sample image that you can receive on your telephone
 
-Wrap-up
+## Wrap-up
+
 Now that you have learned how to create a bot answering service for an inbound phone call, proceed with your request and send messages with the Vonage Messages API and Node.js, you could extend this project to making conversation using [Vonage AI Studio](https://studio.ai.vonage.com/agents) or integrate it with chatGPT.
 
 Join the Conversation
