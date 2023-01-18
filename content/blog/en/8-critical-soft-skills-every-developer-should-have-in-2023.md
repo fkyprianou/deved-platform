@@ -2,6 +2,7 @@
 title: 8 Critical Soft Skills Every Developer Should Have in 2023
 description: Here are eight items to improve your skills and effectiveness
   professionally and personally.
+thumbnail: /content/blog/8-critical-soft-skills-every-developer-should-have-in-2023/breakoutroom.jpg
 author: michael-crump
 published: true
 published_at: 2023-01-13T20:14:09.825Z
