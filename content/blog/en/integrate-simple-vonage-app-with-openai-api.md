@@ -1,8 +1,8 @@
 ---
 title: Integrate Phone Calls and SMS with OpenAI
-description: The article will include workflow plus the simple app that uses
+description: The article will include workflow plus the simple App that uses
   Vonage Voice API and Message API to interact with 3d party Generative AI. In
-  this case, I'll use image/text generation using OpenAI API.
+  this case, I'll use OpenAI API for image generation.
 author: oleksii-borysenko
 published: true
 published_at: 2023-01-27T11:52:19.543Z
@@ -90,7 +90,7 @@ Configuration saved.
 ```
 
 We need to buy a virtual number for our app to accept phone calls.
-Search and buy virtual phone numbers. Choose the number with the mention `Voice` in the Capabilities column. We can search for numbers by country code. The Vonage Numbers API uses ISO Alpha-2 codes. Find the country codes listed here.
+Search and buy virtual phone numbers. Choose the number with the mention `Voice` in the Capabilities column. We can search for numbers by country code. The Vonage [Numbers API](https://developer.vonage.com/numbers/overview) uses ISO Alpha-2 codes. Find the country codes listed [here](https://www.iso.org/obp/ui/#search).
 
 ```bash
 vonage numbers:search GB
@@ -184,7 +184,7 @@ According to the ‘Your Content’ chapter in OpenAI’s Terms of Use : "... Op
 
 As of January 2023, users are credited with $18 in free credit that can be used during your first 3 months. With this credit for example you can create or edit 900 images `1024x1024`.
 
-First, after registering and confirming your phone number, you need to generate your [API key](https://beta.openai.com/account/api-keys).
+First, after [registering](https://beta.openai.com/signup)  and confirming your phone number, you need to generate your [API key](https://beta.openai.com/account/api-keys).
 
 With this API key, we can move forward.
 
