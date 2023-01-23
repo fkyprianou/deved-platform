@@ -33,7 +33,7 @@ We've already developed a starter Vonage Voice application to receive a call, ca
 Users can deploy the App using Github Codespaces.
 Fork [this repository](https://github.com/Vonage-Community/tutorial-voice-messages-node-openai-integration). Open it in Codespaces by clicking "Create codespace on main"
 
-![Create Codespace interface](/content/blog/integrate-simple-vonage-app-with-openai-api/codespaces.png)
+![Create Codespace interface](/content/blog/integrate-phone-calls-and-sms-with-openai/codespaces.png)
 
 Besides, users can use their laptop or server to play with the App.
 In this case, make sure you have the following:
@@ -51,7 +51,7 @@ All requests to the Vonage Voice API require authentication. Therefore, you shou
 
 In the left menu [here](https://dashboard.nexmo.com/) click API Settings, left menu item.
 
-![API Settings](/content/blog/integrate-simple-vonage-app-with-openai-api/settings.png)
+![API Settings](/content/blog/integrate-phone-calls-and-sms-with-openai/settings.png)
 
 Copy and paste in the `.env` file API key and API Secret
 
@@ -67,7 +67,7 @@ Let's create an Application using Vonage Developer Dashboard.
 In the Application left menu item.
 Create a new App. For example, `VoiceApp`. Generate a public and private key
 
-![Create Vonage App](/content/blog/integrate-simple-vonage-app-with-openai-api/createapp.png)
+![Create Vonage App](/content/blog/integrate-phone-calls-and-sms-with-openai/createapp.png)
 
 We will create a bot to answer an inbound phone call. The bot will ask what image content you want to generate.
 
@@ -136,14 +136,14 @@ Number '**732**56**' is assigned to application '4e15f46e-****-4a0d-9749-0000000
 
 You can also link numbers using Vonage Dashboard, go to Applications, open related App, and click the 'Link' button in the list of numbers.
 
-![link number with app](/content/blog/integrate-simple-vonage-app-with-openai-api/link-number-with-app.png)
+![link number with app](/content/blog/integrate-phone-calls-and-sms-with-openai/link-number-with-app.png)
 
 ## Create Call Control Object
 
 Speech Recognition (ASR)
 Automatic Speech Recognition (ASR) enables apps to support voice input for such use cases as IVR, identification and different kinds of voice bots/assistants. Using this feature, the app gets transcribed user speech (in the text form) once it expects the user to answer some question by saying it rather than entering digits (DTMF); and then may continue the call flow according to its business logic based on what the user said. The following scheme shows how our application interacts with Vonage API through the Nexmo Call Control Object (NCCO).
 
-![ASR scheme](/content/blog/integrate-simple-vonage-app-with-openai-api/asr.png)
+![ASR scheme](/content/blog/integrate-phone-calls-and-sms-with-openai/asr.png)
 
 You can use the `input` action to collect typed digit input or speech input from a user. This action is synchronous; Vonage processes the input and forwards it to the `eventUrl` webhook endpoint. You will configure to receive this input in your request. Your webhook endpoint should return another NCCO that replaces the existing NCCO and controls the call based on the user input.
 
@@ -244,7 +244,7 @@ function sentMsg(phoneNumber, imgUrl)
 
 Open WhatsApp on your smartphone, and click the photo icon. Next, scan the QR code and hit send on the pre-filled message. 
 
-![WhatsApp Sandbox QR](/content/blog/integrate-simple-vonage-app-with-openai-api/whatsapp_qr.png)
+![WhatsApp Sandbox QR](/content/blog/integrate-phone-calls-and-sms-with-openai/whatsapp_qr.png)
 
 Open [Messages API Sandbox](https://dashboard.nexmo.com/messages/sandbox) if you need additional information or want to use another messenger.
 
@@ -275,7 +275,7 @@ EVENT_URL=https://******************************************-3000.preview.app.gi
 
 Update App settings using Dashboard. Go to Application in the left menu. Choose a related app and  click the 'Edit' button
 
-![Edit App](/content/blog/integrate-simple-vonage-app-with-openai-api/edit-app-urls.png)
+![Edit App](/content/blog/integrate-phone-calls-and-sms-with-openai/edit-app-urls.png)
 
 Update App settings using Vonage CLI. 
 Paste your Codespace URL or server URL instead of `[Codespace-or-server-URL]` in the following CLI command
@@ -292,7 +292,7 @@ node index.js
 
 In the terminal, open the `Port` tab. Click on `Private` in the `Visibility` column, and change it to `Public`
 
-![codespace port public](/content/blog/integrate-simple-vonage-app-with-openai-api/codespace-port-public.png)
+![codespace port public](/content/blog/integrate-phone-calls-and-sms-with-openai/codespace-port-public.png)
 
 Everything is ready
 
@@ -303,7 +303,7 @@ Everything is ready
 
 Following, you can find a sample image that you can receive on your telephone
 
-![Generated image](/content/blog/integrate-simple-vonage-app-with-openai-api/ukrainian-carpathians.png)
+![Generated image](/content/blog/integrate-phone-calls-and-sms-with-openai/ukrainian-carpathians.png)
 
 Prompt text: Ukrainian Carpathians montane meadow, photograph, photorealistic 8K, HD
 
