@@ -22,9 +22,9 @@ replacement_url: ""
 ---
 ## Introduction
 
-Generative AI has gone mainstream. Over the past year, models and products like ChatGPT and DALL-E-2 have appeared that allow you to generate texts, images, and audio. The creators of ChatGPT and DALL-E-2, OpenAI, have opened up these powerful tools for developers to access and create imaginative new applications.
+Generative AI has gone mainstream. Over the past year, models and products like ChatGPT and DALL-E 2 have appeared, allowing you to generate texts, images, and audio. The creators of ChatGPT and DALL-E 2, OpenAI, have opened up these powerful tools for developers to access and create imaginative new applications.
 
-In this article, we will first consider how to integrate [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview) and [OpenAI API](https://openai.com/api/). We will create an app that will receive a prompt from a user, via phone call, and send it to a generative AI service. We will then send the AI’s response to the user with [Vonage Messages API](https://developer.vonage.com/messages/overview). Let’s dive in!
+This article will first consider how to integrate [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview) and [OpenAI API](https://openai.com/api/). We will create an app that will receive a prompt from a user via phone call and send it to a generative AI service. We will send the AI’s response to the user with [Vonage Messages API](https://developer.vonage.com/messages/overview). Let’s dive in!
 
 The Vonage Messages API allows you to send and receive messages over SMS, MMS, Facebook Messenger, Viber, and WhatsApp! Ready to get started? Let's dive in! Remember to check out the [Messages API documentation](https://developer.vonage.com/messages/overview) for more information.
 
@@ -45,12 +45,11 @@ In this case, make sure you have the following:
 
 ## Create a new Vonage app
 
-Sign in/Sign up for free [developer.vonage.com](https://developer.vonage.com/)
-In order to be able to use the [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview), you'll have to create a [Vonage Application](https://developer.vonage.com/application/overview) from the developer portal.
+Sign in/Sign up for free [developer.vonage.com](https://developer.vonage.com/); to be able to use the [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview), you'll have to create a [Vonage Application](https://developer.vonage.com/application/overview) from the developer portal.
 
 All requests to the Vonage Voice API require authentication. Therefore, you should generate a private key with the Application API, which allows you to create JSON Web Tokens (JWT) to make the requests. For demo purposes, we will use the API key and API Secret.
 
-In the left menu [here](https://dashboard.nexmo.com/) click API Settings, left menu item.
+In the left menu [here](https://dashboard.nexmo.com/), click API Settings, left menu item.
 
 ![API Settings](/content/blog/integrate-phone-calls-and-sms-with-openai/settings.png)
 
@@ -91,7 +90,9 @@ Configuration saved.
 ```
 
 We need to buy a virtual number for our app to accept phone calls.
-Search and buy virtual phone numbers. Choose the number with the mention `Voice` in the Capabilities column. We can search for numbers by country code. The Vonage [Numbers API](https://developer.vonage.com/numbers/overview) uses ISO Alpha-2 codes. Find the country codes listed [here](https://www.iso.org/obp/ui/#search).
+- Search and buy virtual phone numbers. 
+- Choose the number with the mentioned `Voice` in the Capabilities column.
+- We can search for numbers by country code. The Vonage [Numbers API](https://developer.vonage.com/numbers/overview) uses ISO Alpha-2 codes. Find the country codes listed [here](https://www.iso.org/obp/ui/#search).
 
 ```bash
 vonage numbers:search GB
@@ -142,13 +143,13 @@ You can also link numbers using Vonage Dashboard, go to Applications, open relat
 ## Create Call Control Object
 
 Speech Recognition (ASR)
-Automatic Speech Recognition (ASR) enables apps to support voice input for such use cases as IVR, identification and different kinds of voice bots/assistants. Using this feature, the app gets transcribed user speech (in the text form) once it expects the user to answer some question by saying it rather than entering digits (DTMF); and then may continue the call flow according to its business logic based on what the user said. The following scheme shows how our application interacts with Vonage API through the Nexmo Call Control Object (NCCO).
+Automatic Speech Recognition (ASR) enables apps to support voice input for cases such as IVR, identification, and different kinds of voice bots/assistants. Using this feature, the app gets transcribed user speech (in the text form) once it expects the user to answer some question by saying it rather than entering digits (DTMF); and then may continue the call flow according to its business logic based on what the user said. The following scheme shows how our application interacts with Vonage API through the Nexmo Call Control Object (NCCO).
 
 ![ASR scheme](/content/blog/integrate-phone-calls-and-sms-with-openai/asr.png)
 
-You can use the `input` action to collect typed digit input or speech input from a user. This action is synchronous; Vonage processes the input and forwards it to the `eventUrl` webhook endpoint. You will configure to receive this input in your request. Your webhook endpoint should return another NCCO that replaces the existing NCCO and controls the call based on the user input.
+You can use the input action to collect a user's typed digit input or speech input. This action is synchronous; Vonage processes the input and forwards it to the `eventUrl` webhook endpoint. You will configure it to receive this input in your request. Your webhook endpoint should return another NCCO that replaces the existing NCCO and controls the call based on the user input.
 
-We can how this all works in our `index.js` file. First at the app is waiting to be triggered at the `webhook/answer` endpoint. Then the application continues through the three actions:
+We can see how this all works in our `index.js` file. First, the App is waiting to be triggered at the `webhook/answer` endpoint. Then the Application continues through the three actions:
 
 ```
 {
@@ -183,7 +184,7 @@ OpenAI released new image generation capabilities with their DALL·E models.
 
 According to the ‘Your Content’ chapter in OpenAI’s Terms of Use : "... OpenAI hereby assigns to you all its right, title and interest in and to Output."
 
-As of January 2023, users are credited with $18 in free credit that can be used during your first 3 months. With this credit for example you can create or edit 900 images `1024x1024`.
+As of January 2023, users are credited $18 in free credit that can be used during their first three months. With this credit, for example, you can create or edit 900 images `1024x1024`.
 
 First, after [registering](https://beta.openai.com/signup)  and confirming your phone number, you need to generate your [API key](https://beta.openai.com/account/api-keys).
 
@@ -197,7 +198,7 @@ API_SECRET=******************
 OPENAI_API_KEY=sk-**************************************
 ```
 
-In this tutorial we use [Images API](https://beta.openai.com/docs/guides/images/introduction?lang=node.js) for generate an image.
+In this tutorial, we use [Images API](https://beta.openai.com/docs/guides/images/introduction?lang=node.js) to generate an image.
 
 To generate an image, we use the following POST request.  
 
@@ -210,8 +211,8 @@ To generate an image, we use the following POST request.
 ```
 
 With the following JSON payload. Where you can manage parameter
-`n` - the number of images generated. You can request 1-10 images at a time
-`size` - available sizes 256x256, 512x512, or 1024x1024 pixels. Smaller sizes are faster to generate.
+- `n` - the number of images generated, you can request 1-10 images at a time
+- `size` - available sizes 256x256, 512x512, or 1024x1024 pixels. Smaller sizes are faster to generate.
 
 ```
     .send(JSON.stringify({
@@ -235,9 +236,9 @@ let imgUrl = res.body.data[0].url
 
 ## Configure Vonage Message API
 
-To receive a message with content or a link, we will use Vonage Messages API WhatsApp sandbox. 
+We will use Vonage Messages API WhatsApp sandbox to receive a message with content or a link. 
 
-We created `sentMsg` function that receives two parameters, `phoneNumber`, which contains information about the caller's phone number. And `imgUrl` that we parse from the OpenAI response.
+We created the `sentMsg` function that receives two parameters, `phoneNumber`, which contains information about the caller's phone number. And `imgUrl` that we parse from the OpenAI response.
 
 ```
 function sentMsg(phoneNumber, imgUrl)
@@ -291,7 +292,7 @@ Run the App
 node index.js
 ```
 
-In the terminal, open the `Port` tab. Click on `Private` in the `Visibility` column, and change it to `Public`
+In the terminal, open the `Port` tab. Click on `Private` in the `Visibility` column, and change it to `Public`.
 
 ![codespace port public](/content/blog/integrate-phone-calls-and-sms-with-openai/codespace-port-public.png)
 
@@ -302,7 +303,7 @@ Everything is ready
 * Wait for the content in the corresponding messenger
 * Monitor the console
 
-Following, you can find a sample image that you can receive on your telephone
+Following, you can find a sample image that you can receive on your telephone.
 
 ![Generated image](/content/blog/integrate-phone-calls-and-sms-with-openai/ukrainian-carpathians.png)
 
@@ -310,7 +311,7 @@ Prompt text: Ukrainian Carpathians montane meadow, photograph, photorealistic 8K
 
 ## Wrap-up
 
-Now that you have learned how to create a bot answering service for an inbound phone call which sends messages with the Vonage Messages API and Node.js, you could extend this project to use [Vonage AI Studio](https://studio.ai.vonage.com/agents) or integrate our bot with ChatGPT.
+Now that you have learned how to create a bot answering service for an inbound phone call that sends messages with the Vonage Messages API and Node.js, you could extend this project to use [Vonage AI Studio](https://studio.ai.vonage.com/agents) or integrate our bot with ChatGPT.
 
 Join the Conversation
 Were you able to get this tutorial to work? Did you generate some cool or funny pictures with DALL-E? Are you calling ChatGPT over the Voice API? Show off your AI creations and how we can help! Join the conversation on our [Vonage Community Slack](https://developer.vonage.com/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
