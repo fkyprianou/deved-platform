@@ -36,7 +36,7 @@ Fork [this repository](https://github.com/Vonage-Community/tutorial-voice-messag
 
 ![Create Codespace interface](/content/blog/integrate-phone-calls-and-sms-with-openai/codespaces.png)
 
-Besides, users can use their laptop or server to play with the App.
+Alternatively, users can use their laptop or server to play with the App.
 In this case, make sure you have the following:
 
 * [Node.js](https://nodejs.org/en/download/) installed. Node.js is an open-source, cross-platform JavaScript runtime environment. 
@@ -83,13 +83,13 @@ Set configuration
 vonage config:set --apiKey=[API_Key] --apiSecret=[API_Secret]
 ```
 
-Output
+Expected Output
 
 ```bash
 Configuration saved.
 ```
 
-We need to buy a virtual number for our app to accept phone calls.
+We need to buy a virtual number for our app to accept phone calls. You can do this with the Vonage CLI:
 - Search and buy virtual phone numbers. 
 - Choose the number with the mentioned `Voice` in the Capabilities column.
 - We can search for numbers by country code. The Vonage [Numbers API](https://developer.vonage.com/numbers/overview) uses ISO Alpha-2 codes. Find the country codes listed [here](https://www.iso.org/obp/ui/#search).
@@ -98,7 +98,7 @@ We need to buy a virtual number for our app to accept phone calls.
 vonage numbers:search GB
 ```
 
-The following command can buy a related phone number
+The following CLI command allows us to buy a virtual number:
 
 ```bash
 vonage numbers:buy **732**56** GB
@@ -106,7 +106,7 @@ vonage numbers:buy **732**56** GB
 
 Or search and buy virtual phone numbers using [Vonage Dashboard](https://dashboard.nexmo.com/buy-numbers). Select Voice feature from the dropdown menu.
 
-Find related App
+Find Our App
 
 ```bash
 vonage apps
@@ -136,14 +136,14 @@ Expected response:
 Number '**732**56**' is assigned to application '4e15f46e-****-4a0d-9749-000000000000'.
 ```
 
-You can also link numbers using Vonage Dashboard, go to Applications, open related App, and click the 'Link' button in the list of numbers.
+You can also link numbers using Vonage Dashboard, go to Applications, open related App (e.g. VoiceApp), and click the 'Link' button in the list of numbers.
 
 ![link number with app](/content/blog/integrate-phone-calls-and-sms-with-openai/link-number-with-app.png)
 
 ## Create Call Control Object
 
 Speech Recognition (ASR)
-Automatic Speech Recognition (ASR) enables apps to support voice input for cases such as IVR, identification, and different kinds of voice bots/assistants. Using this feature, the app gets transcribed user speech (in the text form) once it expects the user to answer some question by saying it rather than entering digits (DTMF); and then may continue the call flow according to its business logic based on what the user said. The following scheme shows how our application interacts with Vonage API through the Nexmo Call Control Object (NCCO).
+Automatic Speech Recognition (ASR) enables apps to support voice input for cases such as IVR, identification, and different kinds of voice bots/assistants. Using this feature, our app receives transcribed user speech (in the text form) once it expects the user to answer some question by saying it rather than entering digits (DTMF); and then may continue the call flow according to its business logic based on what the user said. The following scheme shows how our application interacts with Vonage API through the Nexmo Call Control Object (NCCO).
 
 ![ASR scheme](/content/blog/integrate-phone-calls-and-sms-with-openai/asr.png)
 
@@ -182,7 +182,7 @@ Useful links:
 
 OpenAI released new image generation capabilities with their DALL·E models.
 
-According to the ‘Your Content’ chapter in OpenAI’s Terms of Use : "... OpenAI hereby assigns to you all its right, title and interest in and to Output."
+According to the ‘Your Content’ chapter in OpenAI’s Terms of Use : "... OpenAI hereby assigns to you all its right, title and interest in and to Output.". Content rights belong to the user. Even if you use the free credit for new users, users can also use images for commerce.
 
 As of January 2023, users are credited $18 in free credit that can be used during their first three months. With this credit, for example, you can create or edit 900 images `1024x1024`.
 
@@ -311,7 +311,6 @@ Prompt text: Ukrainian Carpathians montane meadow, photograph, photorealistic 8K
 
 ## Wrap-up
 
-Now that you have learned how to create a bot answering service for an inbound phone call that sends messages with the Vonage Messages API and Node.js, you could extend this project to use [Vonage AI Studio](https://studio.ai.vonage.com/agents) or integrate our bot with ChatGPT.
+Congratulations! You've now built a bot answering service for an inbound call with Vonage Voice API that sends messages with Vonage Messages API. And it's all hosted on GitHub Codespaces. You could extend this project with [Vonage AI Studio](https://studio.ai.vonage.com/agents), adding a dynamic workflow to respond differently according to caller input. Or, since we've already integrated with OpenAI, you. could integrate ChatGPT.
 
-Join the Conversation
-Were you able to get this tutorial to work? Did you generate some cool or funny pictures with DALL-E? Are you calling ChatGPT over the Voice API? Show off your AI creations and how we can help! Join the conversation on our [Vonage Community Slack](https://developer.vonage.com/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
+Join the conversation on our [Vonage Community Slack](https://developer.vonage.com/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
