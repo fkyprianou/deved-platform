@@ -1,12 +1,13 @@
 ---
-title: Integrate Phone Calls and SMS with OpenAI
+title: Integrate Phone Calls and SMS With OpenAI
 description: The article will include workflow plus the simple App that uses
   Vonage Voice API and Message API to interact with 3d party Generative AI. In
   this case, I'll use OpenAI API for image generation.
+thumbnail: /content/blog/integrate-phone-calls-and-sms-with-openai/openai_vonageapi.png
 author: oleksii-borysenko
 published: true
-published_at: 2023-01-27T11:52:19.543Z
-updated_at: 2023-01-27T11:52:19.552Z
+published_at: 2023-01-24T09:50:46.178Z
+updated_at: 2023-01-24T09:50:49.167Z
 category: tutorial
 tags:
   - javascript
