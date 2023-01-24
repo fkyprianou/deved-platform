@@ -1,5 +1,5 @@
 ---
-title: 8 Critical Soft Skills Every Developer Should Have in 2023
+title: 6 Soft Skills Every Technical Person Should Have in 2023 & Beyond
 description: Here are eight items to improve your skills and effectiveness
   professionally and personally.
 thumbnail: /content/blog/8-critical-soft-skills-every-developer-should-have-in-2023/breakoutroom.jpg
@@ -18,131 +18,57 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
+6 Soft Skills Every Technical Person Should Have in 2023 & Beyond
+
 ## Introduction
 
-2023 is here, and soft skills are in demand more than ever. What are soft skills? Soft skills are personal attributes that enable individuals to effectively navigate their environment, work well with others, and achieve their goals.
+You've spent countless hours in lectures, taking tests, and finally landed your dream technical job, only to discover that you will also need soft skills to succeed. But where do you start, and more importantly, what soft skills should you focus on in 2023 and beyond? Today, I'll take you on a journey of soft skills that I'm personally focusing on and provide real-world examples that you can start today to build relationships, work effectively in your team, and contribute to a positive work culture that lasts generations.
 
-These skills are often called "people skills" and include communication, teamwork, and leadership. They are highly valued by employers in nearly every industry, as they help employees to build relationships, work effectively in teams, and contribute to a positive work culture.
+## Communication
 
-Below are the top 8 soft skills that every developer should have in 2023.
+Communication is a core skill set in all soft skills, no matter the list. Communication is the foundation of solid relationships that allows you to build trust, resolve conflicts, and strengthen your connections with others. It is easier to exchange information and ideas and achieve common goals if you have them. 
 
-## The Top 8 Soft-Skills
+Making eye contact and having upbeat body language and tone can make an impact no matter who you talk to. It is contagious. Try arriving at a meeting with a positive attitude, no matter the task. I've also found that giving a clear and concise update in three bullet points ensures that it is easily read and digested and can be copied into other communication methods such as emails, Slack, instant messaging applications, etc. Finally, I recommend having a team "lunch and learn" and putting together a slide deck explaining a feature, product, etc. By doing so, you'll learn more about the program as you plan to explain it to others and be regarded as someone who wants to share it with their team.
 
-1. Leadership - is the process of guiding people from A to point B. You don’t need an official position (such as management) to demonstrate this.
+## Leadership
 
-An effective leader: 
+An effective leader inspires and motivates others to work towards achieving a common goal. They also set a clear vision and strategy on how to get there. People often confuse the term management with leadership. A company or organization typically appoints management, whereas a leader doesn't need an official position to demonstrate this.
 
-* Defines a clear vision and strategy and inspires and motivates others to work towards achieving common goals.
-* Can identify and nurture team members' strengths, which can help retain top talent and foster a culture of continuous learning and development.
-* Sets the tone for the team or organization and can create a positive, inclusive, and collaborative culture.
+You can become an effective leader by trusting your team when you ask them to do something. Give them a chance to complete the task first before following up. Also, take time to understand your team's strengths and weaknesses and assign work accordingly. If you have someone on your team who loves documentation vs. coding, let them do it! It is straightforward to motivate someone if the work aligns with what they are passionate about. Finally, lean on others when making a decision that impacts them. You aren't in this alone, and selecting or delaying a decision can cause confusion.
 
-What leadership skills can you start today?
+## Interpersonal Skill
 
-* Gain trust by trusting your team - If you had a PR that needed to be reviewed while you were gone and logged in over your break to ensure that it went out, you should rethink if you trust your team.
-* Be proactive about what's coming down the pipeline and nurture your team's strengths to get it done.
-* Make decisions – You can be a natural leader by making informed decisions and not hesitating or delaying when a decision is needed.
+Interpersonal Skill is a list of abilities related to working with others. They typically include teamwork and intercultural fluency, such as understanding the impact of one's actions and words on others. A person that practices self-awareness looks to understand and shares the feelings of others and can identify and resolve disputes constructively. It only takes a little explaining to understand why you'd need this in the workplace! 
 
-2. Communication - is important because it allows people to exchange information and ideas, build relationships, and achieve common goals. 
+I'd start by "lightening up" to start working better with other people. While taking your job seriously, you should also know when to have fun and laugh. This will also help reduce burnout, which is relevant in our industry. I'd also suggest ways to get better at giving constructive criticism versus just saying that "it is all wrong." Take time to understand why they did it that way. Was there some information that was missing that would have helped them? Finally, learn to be assertive but not aggressive in your asks or comments. By becoming assertive, we show confidence in our asks vs. demanding. 
 
-An effective communicator: 
+## Mentorship
 
-* Is the foundation of solid relationships, whether they are personal or professional. By communicating effectively, you can build trust, resolve conflicts, and strengthen your connections with others.
-* Can articulate your thought process at work.
-* Is highly valued in the workplace and can open doors to new job opportunities and promotions.
+Mentorship is someone who teaches or gives help and advice to a less experienced and often younger person. There are several reasons you want to become a mentor with the first is that you can grow others on the team - not just yourself. It also offers a self-reflection opportunity on your career as you prepare to advise your mentee. It can also be used on your performance review to grow your career since you take the time to develop others. 
 
-What communication skills can you start today?
+I have been both a mentor and a mentee, and before I was a mentor, I would read books or articles on the topic to gain insights into what a great mentor looks like. One book I'd recommend is "Mentoring 101" by John C. Maxwell. I'd also spend time becoming an advocate for less experienced developers (or teammates), and they might come to you for more formal mentorship. Finally, you must have the desire to help someone reach their potential - even if that means putting yourself second to elevate them. 
 
-* Give clear & concise updates at meetings - Start with a bulleted list of 3 items and follow the format of what it is, why it is essential, what needs to be done, and who will do it.
-* Eye Contact, Facial Expressions, Body Language & Tone - Sometimes, what you don't say is what people remember. Try to arrive with a positive attitude no matter the task.
-* Public Speaking, Story Telling & Persuasion - Begin with a team "learn and learn" and put together a slide deck explaining a feature. By doing so, you'll learn more about the program as you plan to explain it to others and be regarded as someone who wants to share it with their team.
+## Problem-solving
 
-3. Interpersonal Skills - are essential in both personal and professional settings, as they can help to build strong relationships, resolve conflicts, and foster a sense of collaboration and community.
+Problem-solving is essential because it helps individuals and organizations identify and resolve issues and challenges promptly and effectively. An excellent problem-solver allows you to solve problems effectively, leading to a sense of accomplishment and increased job satisfaction.
 
-A person that practices self-awareness typically:
+One quick way to start being a problem-solver is to look for a way to move the project forward (even if it means putting it off). It can be a simple status email with the following steps to take or current blockers or pulling in another teammate to give it a fresh set of eyes. You can also look at your current tasks from various "lenses" before making the decision. This is where it is helpful to pull in others to achieve a common goal. 
 
-* Understands the impact of one's own actions and words on others.
-* Understands and shares the feelings of others.
-  Finds mutually beneficial solutions to conflicts or differences.
-* Can identify and resolve disputes constructively.
+## Conflict management
 
-What self-awareness skills can you start today?
+Conflict management is vital because conflicts and disagreements are a natural part of human interaction. By dealing with conflict management appropriately, you can help build trust and strengthen relationships within a team, fostering a sense of collaboration and community.
 
-* Assertive but not aggressive - It is straightforward to "tell" someone to do something but being confident in your ask goes a long way to building team morale.
-* Giving and receiving criticism well - Constructive criticism leads to a better overall result.
-* Lighten up - Take your job seriously but also know when to have fun and lighten up. This will also help reduce burnout, which is relevant in our industry.
+I typically look for common ground and helpful solutions when presented with a conflict. Very rarely is only one person right in a conflict. You should also ensure that conflict is appropriately and productively resolved. Never let a conflict go unaddressed or unresolved. Work to ensure all parties understand the conflict and the proposed resolution.
 
-4. Mentorship - is someone who teaches or gives help and advice to a less experienced and often younger person. 
-
-Being a good mentor: 
-
-* Grows others on the team - not just themselves.
-* It can be used as a scale for a job promotion.
-* Offers self-reflection moments as you share your learnings with other mentees.
-
-What mentorship skills can you start today?
-
-* Obtain relevant experience - Before being a mentor, read books or articles on the topic to gain insights to become a better mentor.
-* Being a trusted ally - Once your team can depend on you for other things, it is easier for them to trust you to be your mentor.
-* Be an advocate for less experienced developers - take a stand for junior team members and "teach" vs. criticize.
-
-5. Teamwork - is crucial because it can lead to better outcomes and increased productivity. 
-
-Being a good teammate: 
-
-* You can divide tasks and responsibilities to allow them to complete projects more efficiently.
-* It can provide opportunities for team members to learn from one another and develop new skills.
-* It can bring different viewpoints and approaches to problem-solving, which can lead to more effective solutions.
-
-What teammate skills can you start today?
-
-* Collaborate & cooperate - There are many opportunities to work with your teammates. You have to find them. If you can't find them, then ask how you can help.
-* Take a Team-based, collectivistic view - Go into projects thinking about the best outcome for the team to deliver our business needs.
-* Contribute to discussions outside of the personal area of expertise - Do you only know Node.js, and a teammate is asking about C#? Jump in and help in any way you can. Another language is interesting to learn.
-
-6. Problem-solving - is essential because it helps individuals and organizations to identify and resolve issues and challenges in a timely and effective manner. 
-
-Why should you focus on being a better problem solver?
-
-* Because it involves evaluating options and choosing the best course of action, which can lead to better decision-making.
-* It helps identify and resolve problems quickly and effectively.
-* It allows you to solve problems effectively, leading to a sense of accomplishment and increased job satisfaction.
-
-What problem-solving skills can you start today?
-
-* Find a way to move the project forward (even if it means putting it off). It can be a simple status email with the next steps to take or current blockers or pulling in another teammate to give it a fresh set of eyes.
-* Make informed decisions - Look at the current problems from various "lenses" before making the decision.
-* Prepare and take a systematic & resourceful approach.
-
-7. Flexible & Adaptability - this is important because it allows individuals and organizations to adapt to changing circumstances and demands.
-
-Why should you focus on being flexible?
-
-* It allows individuals and organizations to adapt to new situations and challenges, which can lead to increased success and competitiveness.
-* It can help individuals and organizations to bounce back from setbacks and challenges more easily.
-* It can help individuals and organizations think outside the box and create creative solutions to problems.
-
-What kind of flexibility skills can you start today?
-
-* Be open to new ideas and be trainable no matter the topic as it pertains to your job.
-* Work well under deadlines and pressure even if that means asking for more time and providing a valid reason.
-* Find new ways to do things - just because your  company did something one way ten years ago doesn't mean you have to keep doing it that way today. Research and utilize new methods that might not have existed back then.
-
-8. Conflict management - is important because conflicts and disagreements are a natural part of human interaction. 
-
-Why is conflict management critical? 
-
-* It can help build trust and strengthen relationships within a team, fostering a sense of collaboration and community.
-* Resolving conflicts promptly and effectively can prevent disruptions and increase productivity.
-* It allows you to manage conflicts effectively, leading to a more positive work environment and increased job satisfaction.
-
-What kind of conflict management skills can you start today?
-
-* Don’t cause unnecessary conflict - some conflict is necessary, but much of it can be handled in a different way.
-* Look for common ground and helpful solutions when presented with a conflict.
-* Deal with conflict appropriately & productively - don't let conflict go unaddressed or unresolved. Work to ensure all parties understand the conflict and the proposed resolution.
 
 ## Wrap-up
 
-There you have it! Now you have actionable steps that you can take in 2023 to improve your soft-skills. 
+We've only scratched the surface of several soft skills that you should have in 2023 and beyond. Several honorable mentions are: 
+
+* Networking - This is a way for individuals to grow their professional or personal lives by building a network of people working in the same industry as they do. This is beneficial for several reasons, with someone to reach out to in case they need a job being the first. 
+* Public Speaking -  Some people fear public speaking, but I typically use it as a motivator to learn something well enough to explain it to others. While you don't have to do it in a conference setting, the skillset translates to running internal meetings or organizing your thoughts. 
+* Time Management - Do you sometimes feel like you can't get anything done? I'd suggest creating a prioritized to-do list with 3 "must-do" items for the day, regardless of how little (or big) they might be. Setting clear and attainable goals gives you something to work towards, and checking an item off gives you a sense of accomplishment. 
+
+By learning these Soft skills, you'll show your future employer that your education and technical abilities are just the start of the skillset they will acquire when they hire you. 
 
 If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack) or send me a Tweet on [Twitter](https://twitter.com/mbcrump), and I will get back to you. Thanks again for reading, and I will catch you on the next one!
