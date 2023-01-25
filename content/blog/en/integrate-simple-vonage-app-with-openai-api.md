@@ -26,22 +26,19 @@ Generative AI has gone mainstream. Over the past year, models and products like 
 
 This article will first consider how to integrate [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview) and [OpenAI API](https://openai.com/api/). We will create an app that will receive a prompt from a user via phone call and send it to a generative AI service. We will send the AI’s response to the user with [Vonage Messages API](https://developer.vonage.com/messages/overview). Let’s dive in!
 
-The Vonage Messages API allows you to send and receive messages over SMS, MMS, Facebook Messenger, Viber, and WhatsApp! Ready to get started? Let's dive in! Remember to check out the [Messages API documentation](https://developer.vonage.com/messages/overview) for more information.
 
 ## Prerequisites
 
-We've already developed a starter Vonage Voice application to receive a call, catch your response, and send it to a 3rd party (OpenAI).
-Users can deploy the App using Github Codespaces.
-Fork [this repository](https://github.com/Vonage-Community/tutorial-voice-messages-node-openai-integration). Open it in Codespaces by clicking "Create codespace on main"
+We've already developed a starter Vonage application to receive a call, catch a user response, send it to OpenAI, and then message a WhatsApp reply. With the starter application, you just need to add your credentials into the .env file and deploy the app using Github Codespaces. Also, you can edit the starter application and experiment.
+To get started:
+
+To get started:
+- Fork [this repository](https://github.com/Vonage-Community/tutorial-voice-messages-node-openai-integration). Open it in Codespaces by clicking "Create codespace on main"
+- [Vonage CLI](https://www.npmjs.com/package/@vonage/cli) - Once Node.js is installed, you can use npm install -g @vonage/cli to install it. This tool allows you to create and manage your Vonage applications.
 
 ![Create Codespace interface](/content/blog/integrate-phone-calls-and-sms-with-openai/codespaces.png)
 
-Alternatively, users can use their laptop or server to play with the App.
-In this case, make sure you have the following:
-
-* [Node.js](https://nodejs.org/en/download/) installed. Node.js is an open-source, cross-platform JavaScript runtime environment. 
-* [Vonage CLI](https://www.npmjs.com/package/@vonage/cli) - Once Node.js is installed, you can use `npm install -g @vonage/cli` to install it. This tool allows you to create and manage your Vonage applications.
-* [ngrok](https://ngrok.com/) - A free account is required. This tool enables developers to expose a local development server to the Internet. See also: [Using ngrok in Rails in 2022](https://developer.vonage.com/blog/22/08/24/using-ngrok-in-rails-in-2022)
+Alternatively, you can deploy the app with [Node.js](Node.js) and [ngrok](https://ngrok.com/).
 
 ## Create a new Vonage app
 
@@ -49,11 +46,12 @@ Sign in/Sign up for free [developer.vonage.com](https://developer.vonage.com/); 
 
 All requests to the Vonage Voice API require authentication. Therefore, you should generate a private key with the Application API, which allows you to create JSON Web Tokens (JWT) to make the requests. For demo purposes, we will use the API key and API Secret.
 
-In the left menu [here](https://dashboard.nexmo.com/), click API Settings, left menu item.
+In the left menu [here](https://dashboard.nexmo.com/), click API Settings, left menu item. Under the API keys tab you will find your API key and Account secret (API secret). 
+
 
 ![API Settings](/content/blog/integrate-phone-calls-and-sms-with-openai/settings.png)
 
-Copy and paste in the `.env` file API key and API Secret
+Inside the Codespaces environment, copy and paste in the .env file API key and API Secret. Be careful not to store this information in the Github repository itself.
 
 ```
 API_KEY=b**********
@@ -64,12 +62,9 @@ A Vonage application contains the security and configuration information you nee
 
 Let's create an Application using Vonage Developer Dashboard.
 
-In the Application left menu item.
-Create a new App. For example, `VoiceApp`. Generate a public and private key
+Click Applications in the leftside menu. Then click “Create a new application”. You’ll need to give your application a name. For example, “VoiceApp”. You will also need to generate a public and private key. Lastly, enable Voice capabilities.
 
 ![Create Vonage App](/content/blog/integrate-phone-calls-and-sms-with-openai/createapp.png)
-
-We will create a bot to answer an inbound phone call. The bot will ask what image content you want to generate.
 
 Check it using Vonage CLI.
 
@@ -143,6 +138,7 @@ You can also link numbers using Vonage Dashboard, go to Applications, open relat
 ## Create Call Control Object
 
 Speech Recognition (ASR)
+
 Automatic Speech Recognition (ASR) enables apps to support voice input for cases such as IVR, identification, and different kinds of voice bots/assistants. Using this feature, our app receives transcribed user speech (in the text form) once it expects the user to answer some question by saying it rather than entering digits (DTMF); and then may continue the call flow according to its business logic based on what the user said. The following scheme shows how our application interacts with Vonage API through the Nexmo Call Control Object (NCCO).
 
 ![ASR scheme](/content/blog/integrate-phone-calls-and-sms-with-openai/asr.png)
@@ -180,11 +176,7 @@ Useful links:
 
 ## Configure Open AI
 
-OpenAI released new image generation capabilities with their DALL·E models.
-
-According to the ‘Your Content’ chapter in OpenAI’s Terms of Use : "... OpenAI hereby assigns to you all its right, title and interest in and to Output.". Content rights belong to the user. Even if you use the free credit for new users, users can also use images for commerce.
-
-As of January 2023, users are credited $18 in free credit that can be used during their first three months. With this credit, for example, you can create or edit 900 images `1024x1024`.
+OpenAI released new image generation capabilities with their DALL·E models. There are a couple of things that are very cool about the Open AI API. First, as of January 2023, users are credited $18 in free credit that can be used during their first three months. That’s a lot of credit to play with! For example, you can create or edit 900 images `1024x1024`. Secondly, according to the ‘Your Content’ chapter in OpenAI’s Terms of Use : "... OpenAI hereby assigns to you all its right, title and interest in and to Output.". This means that you totally own the generated images for any use, even for commercial purposes.
 
 First, after [registering](https://beta.openai.com/signup)  and confirming your phone number, you need to generate your [API key](https://beta.openai.com/account/api-keys).
 
@@ -236,7 +228,10 @@ let imgUrl = res.body.data[0].url
 
 ## Configure Vonage Message API
 
-We will use Vonage Messages API WhatsApp sandbox to receive a message with content or a link. 
+The Vonage Messages API allows you to send and receive messages over SMS, MMS, Facebook Messenger, Viber, and WhatsApp! In our use case, we use WhatsApp, but users can change the code and use Facebook or Viber. Remember to check out the Messages API documentation for more information."
+
+We will use Vonage Messages API WhatsApp sandbox to receive a message with content or a link.
+
 
 We created the `sentMsg` function that receives two parameters, `phoneNumber`, which contains information about the caller's phone number. And `imgUrl` that we parse from the OpenAI response.
 
@@ -275,7 +270,7 @@ OPENAI_API_KEY=sk-**************************************
 EVENT_URL=https://******************************************-3000.preview.app.github.dev/webhooks/asr
 ```
 
-Update App settings using Dashboard. Go to Application in the left menu. Choose a related app and  click the 'Edit' button
+Now we need to update our Vonage App settings to listen for our CodeSpace webhooks. We can do this using the [Dashboard](https://dashboard.nexmo.com/). Go to Application in the left menu. Choose our current app and click the 'Edit' button.
 
 ![Edit App](/content/blog/integrate-phone-calls-and-sms-with-openai/edit-app-urls.png)
 
@@ -311,6 +306,6 @@ Prompt text: Ukrainian Carpathians montane meadow, photograph, photorealistic 8K
 
 ## Wrap-up
 
-Congratulations! You've now built a bot answering service for an inbound call with Vonage Voice API that sends messages with Vonage Messages API. And it's all hosted on GitHub Codespaces. You could extend this project with [Vonage AI Studio](https://studio.ai.vonage.com/agents), adding a dynamic workflow to respond differently according to caller input. Or, since we've already integrated with OpenAI, you. could integrate ChatGPT.
+Congratulations! You've now built a bot answering service for an inbound call with Vonage Voice API that sends messages with Vonage Messages API. And it's all hosted on GitHub Codespaces. You could extend this project with [Vonage AI Studio](https://studio.ai.vonage.com/agents), adding a dynamic workflow to respond differently according to caller input. Or, since we've already integrated with OpenAI, you could integrate ChatGPT.
 
-Join the conversation on our [Vonage Community Slack](https://developer.vonage.com/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
+Show off your AI creations or let us know how we can help! Join the conversation on our [Vonage Community Slack](https://developer.vonage.com/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
