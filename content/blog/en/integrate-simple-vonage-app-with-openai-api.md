@@ -29,7 +29,6 @@ This article will first consider how to integrate the [Vonage Voice API](https:/
 ## Prerequisites
 
 We've already developed a starter Vonage application to receive a call, catch a user response, send it to OpenAI, and then message a WhatsApp reply. With the starter application, you just need to add your credentials into the .env file and deploy the app using Github Codespaces. Also, you can edit the starter application and experiment.
-To get started:
 
 To get started:
 
