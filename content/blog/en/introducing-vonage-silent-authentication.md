@@ -102,4 +102,4 @@ Whoops! We've got a rejection, this person isn't who they say they are!
 
 ## **Stay Tuned**
 
-Silent Authentication marks the start of a series of products we'll be working on since we were acquired by Ericsson this year. [You can register with us](https://www.vonage.com/communications-apis/verify/) if you want to start using Silent Authentication to activate developer preview, and in the meantime - we've got some nifty products we're excited about in 2023. Want to keep up to date? [Follow our Twitter Developer Account](https://twitter.com/VonageDev) or [check out our developer docs](https://developer.vonage.com/documentation). Happy Holidays!
+Silent Authentication marks the start of a series of products we're working on this year. [You can register with us](https://www.vonage.com/communications-apis/verify/) if you want to start using Silent Authentication to activate developer preview, and in the meantime - we've got some nifty products we're excited about in 2023. Want to keep up to date? [Follow our Twitter Developer Account](https://twitter.com/VonageDev) or [check out our developer docs](https://developer.vonage.com/documentation). Happy Holidays!
