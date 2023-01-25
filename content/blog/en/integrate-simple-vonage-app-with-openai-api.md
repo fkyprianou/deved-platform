@@ -24,8 +24,7 @@ replacement_url: ""
 
 Generative AI has gone mainstream. Over the past year, models and products like ChatGPT and DALL-E 2 have appeared, allowing you to generate texts, images, and audio. The creators of ChatGPT and DALL-E 2, OpenAI, have opened up these powerful tools for developers to access and create imaginative new applications.
 
-This article will first consider how to integrate [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview) and [OpenAI API](https://openai.com/api/). We will create an app that will receive a prompt from a user via phone call and send it to a generative AI service. We will send the AI’s response to the user with [Vonage Messages API](https://developer.vonage.com/messages/overview). Let’s dive in!
-
+This article will first consider how to integrate the [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview) and [OpenAI API](https://openai.com/api/). We will create an application that will receive a prompt from a user via phone call and send it to a generative AI service. We will send the AI’s response to the user with [Vonage Messages API](https://developer.vonage.com/messages/overview). Let’s dive in!
 
 ## Prerequisites
 
@@ -33,8 +32,9 @@ We've already developed a starter Vonage application to receive a call, catch a 
 To get started:
 
 To get started:
-- Fork [this repository](https://github.com/Vonage-Community/tutorial-voice-messages-node-openai-integration). Open it in Codespaces by clicking "Create codespace on main"
-- [Vonage CLI](https://www.npmjs.com/package/@vonage/cli) - Once Node.js is installed, you can use npm install -g @vonage/cli to install it. This tool allows you to create and manage your Vonage applications.
+
+* Fork [this repository](https://github.com/Vonage-Community/tutorial-voice-messages-node-openai-integration). Open it in Codespaces by clicking "Create codespace on main"
+* [Vonage CLI](https://www.npmjs.com/package/@vonage/cli) - Once Node.js is installed, you can use npm install -g @vonage/cli to install it. This tool allows you to create and manage your Vonage applications.
 
 ![Create Codespace interface](/content/blog/integrate-phone-calls-and-sms-with-openai/codespaces.png)
 
@@ -46,8 +46,7 @@ Sign in/Sign up for free [developer.vonage.com](https://developer.vonage.com/); 
 
 All requests to the Vonage Voice API require authentication. Therefore, you should generate a private key with the Application API, which allows you to create JSON Web Tokens (JWT) to make the requests. For demo purposes, we will use the API key and API Secret.
 
-In the left menu [here](https://dashboard.nexmo.com/), click API Settings, left menu item. Under the API keys tab you will find your API key and Account secret (API secret). 
-
+In the left menu [here](https://dashboard.nexmo.com/), click API Settings. Under the API keys tab you will find your API key and Account secret (API secret).
 
 ![API Settings](/content/blog/integrate-phone-calls-and-sms-with-openai/settings.png)
 
@@ -85,9 +84,10 @@ Configuration saved.
 ```
 
 We need to buy a virtual number for our app to accept phone calls. You can do this with the Vonage CLI:
-- Search and buy virtual phone numbers. 
-- Choose the number with the mentioned `Voice` in the Capabilities column.
-- We can search for numbers by country code. The Vonage [Numbers API](https://developer.vonage.com/numbers/overview) uses ISO Alpha-2 codes. Find the country codes listed [here](https://www.iso.org/obp/ui/#search).
+
+* Search and buy virtual phone numbers. 
+* Choose the number with the mentioned `Voice` in the Capabilities column.
+* We can search for numbers by country code. The Vonage [Numbers API](https://developer.vonage.com/numbers/overview) uses ISO Alpha-2 codes. Find the country codes listed [here](https://www.iso.org/obp/ui/#search).
 
 ```bash
 vonage numbers:search GB
@@ -203,8 +203,9 @@ To generate an image, we use the following POST request.
 ```
 
 With the following JSON payload. Where you can manage parameter
-- `n` - the number of images generated, you can request 1-10 images at a time
-- `size` - available sizes 256x256, 512x512, or 1024x1024 pixels. Smaller sizes are faster to generate.
+
+* `n` - the number of images generated, you can request 1-10 images at a time
+* `size` - available sizes 256x256, 512x512, or 1024x1024 pixels. Smaller sizes are faster to generate.
 
 ```
     .send(JSON.stringify({
@@ -231,7 +232,6 @@ let imgUrl = res.body.data[0].url
 The Vonage Messages API allows you to send and receive messages over SMS, MMS, Facebook Messenger, Viber, and WhatsApp! In our use case, we use WhatsApp, but users can change the code and use Facebook or Viber. Remember to check out the Messages API documentation for more information."
 
 We will use Vonage Messages API WhatsApp sandbox to receive a message with content or a link.
-
 
 We created the `sentMsg` function that receives two parameters, `phoneNumber`, which contains information about the caller's phone number. And `imgUrl` that we parse from the OpenAI response.
 
