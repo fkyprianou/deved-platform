@@ -68,7 +68,7 @@ This was apparent when I worked on an application many years ago that took an al
 
 It's time for solutions. Taking our `getDashboardData()` example above, we need to fix it. Before we fix it, we need to profile what is happening when we access that dashboard page. Running the Laravel debug bar outputs the following:
 
-![](/content/blog/so-what-is-performance-driven-development-in-php/image-1.png)
+![A boilerplate dashboard with an upsetting amount of queries](/content/blog/so-what-is-performance-driven-development-in-php/image-1.png)
 
 Two hundred and eighty-six SQL queries for the dashboard to load - in 11.92 seconds. How does this happen? 
 
@@ -96,7 +96,7 @@ public function getDashboardData()
 
 Much cleaner. But the important bit is: how does this look in the debug bar?
 
-![](https://lh3.googleusercontent.com/e4xDYMMIMqRVgHtswmTwhF113qMqn3jdsCb8ew8F-mJTUPTiLqShDoc5wPqCeORSf1kTWUXnGc-IN9sAJti7qmKbVwy1xDtc34iuV9q0ZhO4wATaQPmyOs6eE4qYczq2dd79lZ6ePTHXzN60GcN8tJBabA=s2048)
+![A much quicker dashboard!](https://lh3.googleusercontent.com/e4xDYMMIMqRVgHtswmTwhF113qMqn3jdsCb8ew8F-mJTUPTiLqShDoc5wPqCeORSf1kTWUXnGc-IN9sAJti7qmKbVwy1xDtc34iuV9q0ZhO4wATaQPmyOs6eE4qYczq2dd79lZ6ePTHXzN60GcN8tJBabA=s2048)
 
 Four SQL statements, 324ms to load.
 
