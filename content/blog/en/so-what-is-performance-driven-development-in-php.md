@@ -96,7 +96,7 @@ public function getDashboardData()
 
 Much cleaner. But the important bit is: how does this look in the debug bar?
 
-![A much quicker dashboard!](https://lh3.googleusercontent.com/e4xDYMMIMqRVgHtswmTwhF113qMqn3jdsCb8ew8F-mJTUPTiLqShDoc5wPqCeORSf1kTWUXnGc-IN9sAJti7qmKbVwy1xDtc34iuV9q0ZhO4wATaQPmyOs6eE4qYczq2dd79lZ6ePTHXzN60GcN8tJBabA=s2048)
+![A much quicker Dashboard!](/content/blog/so-what-is-performance-driven-development-in-php/image-2.png)
 
 Four SQL statements, 324ms to load.
 
