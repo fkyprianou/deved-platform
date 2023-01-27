@@ -76,7 +76,7 @@ Well, it's a classic n+1.
 
 On the developers' machine, the dashboard takes 1 second to load because there are a handful of fixtures in the database. As soon as this code hits production: this happens.
 
-The thing is, if you have these tools enabled for your teams' developer environments, these sorts of occurrences can be made a thing of the past. The first step to controlling problems like this is *setting your thresholds.* Tooling like [Blackfire](<>) and [Tideways](<>) enables you to set thresholds and even integrate into your pipelines, but whichever approach you take (i.e. free tooling or enterprise products) you'll still need to have expectations of what is acceptable for your application when developers code it.
+The thing is, if you have these tools enabled for your teams' developer environments, these sorts of occurrences can be made a thing of the past. The first step to controlling problems like this is *setting your thresholds.* Tooling like [Blackfire](https://www.blackfire.io/) and [Tideways](https://tideways.com/) enables you to set thresholds and even integrate into your pipelines, but whichever approach you take (i.e. free tooling or enterprise products) you'll still need to have expectations of what is acceptable for your application when developers code it.
 
 Let's say we want the target here to be less than 5 queries and a load time of under a second.
 
