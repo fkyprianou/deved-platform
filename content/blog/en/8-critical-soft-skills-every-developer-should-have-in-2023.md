@@ -53,7 +53,7 @@ I have been both a mentor and a mentee, and before I was a mentor, I would read 
 
 Problem-solving is essential because it helps individuals and organizations identify and resolve issues and challenges promptly and effectively, which leads to a sense of accomplishment and job satisfaction.
 
-One quick way to start being a problem-solver is to look for a way to move the project forward (even if it means putting it off). It can be a simple status email with the following steps to take or current blockers or pulling in another teammate to give it a fresh set of eyes. You can also look at your current tasks from various "lenses" before making the decision. This is where it is helpful to pull in others to achieve a common goal. 
+Being a valuable member of a business is all about moving the project forward, no matter what. Here are some tricks I use whenever a piece of work seems to get stuck: take a break, work backward and create an outline of necessary steps to completion (like pseudocode!), identify all current blockers, or ask a colleague to give the problem a fresh set of eyes. Asking for help is especially important, as looking at a problem from another viewpoint can present a solution you would have never imagined.
 
 ## Conflict management
 
