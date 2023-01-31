@@ -164,7 +164,7 @@ Once you let go of your mouse, you will be asked to **Assign Macro** to that **B
 
 ![Assign Macro to Worksheet](/content/blog/send-an-sms-message-from-an-excel-spreadsheet/assignmacro.png "AssignMacro.png")
 
-It is time to test it! Make sure you have a valid phone number in A1 & A2 and text in B1 & B2, and press the **SendSMS** button.
+It is time to test it! Make sure you have a working, valid phone number for your location in A1 & A2 and text in B1 & B2, and press the **SendSMS** button.
 
 ![Excel with sample data](/content/blog/send-an-sms-message-from-an-excel-spreadsheet/excelstart.png "ExcelStart.png")
 
