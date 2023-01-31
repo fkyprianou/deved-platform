@@ -18,11 +18,11 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-6 Soft Skills Every Technical Person Should Have in 2023 & Beyond
+
 
 ## Introduction
 
-You've spent countless hours in lectures, taking tests, and finally landed your dream technical job, only to discover that you will also need soft skills to succeed. But where do you start, and more importantly, what soft skills should you focus on in 2023 and beyond? Today, I'll take you on a journey of soft skills that I'm personally focusing on and provide real-world examples that you can start today to build relationships, work effectively in your team, and contribute to a positive work culture that lasts generations.
+Regardless of whether you may have just landed your first technical job or been in the industry for years, you'll eventually discover that you'll need soft skills to succeed. But where do you start, and more importantly, what soft skills should you focus on in 2023 and beyond? Today, I'll take you on a journey of soft skills that I'm personally focusing on and provide real-world examples that you can start today to build relationships, work effectively in your team, and contribute to a positive work culture that lasts generations.
 
 ## Communication
 
@@ -36,9 +36,10 @@ An effective leader inspires and motivates others to work towards achieving a co
 
 You can become an effective leader by trusting your team when you ask them to do something. Give them a chance to complete the task first before following up. Also, take time to understand your team's strengths and weaknesses and assign work accordingly. If you have someone on your team who loves documentation vs. coding, let them do it! It is straightforward to motivate someone if the work aligns with what they are passionate about. Finally, lean on others when making a decision that impacts them. You aren't in this alone, and selecting or delaying a decision can cause confusion.
 
-## Interpersonal Skill
+## Interpersonal Skills
+We use Interpersonal Skills every day when we communicate and interact with other people. They include skills such as listening as well as the ability to control and manage your emotions. It shouldn't surprise you that they tend to work well with other people and foster better relationships at home and at work.
 
-Interpersonal Skill is a list of abilities related to working with others. They typically include teamwork and intercultural fluency, such as understanding the impact of one's actions and words on others. A person that practices self-awareness looks to understand and shares the feelings of others and can identify and resolve disputes constructively. It only takes a little explaining to understand why you'd need this in the workplace! 
+
 
 I'd start by "lightening up" to start working better with other people. While taking your job seriously, you should also know when to have fun and laugh. This will also help reduce burnout, which is relevant in our industry. I'd also suggest ways to get better at giving constructive criticism versus just saying that "it is all wrong." Take time to understand why they did it that way. Was there some information that was missing that would have helped them? Finally, learn to be assertive but not aggressive in your asks or comments. By becoming assertive, we show confidence in our asks vs. demanding. 
 
@@ -65,10 +66,10 @@ I typically look for common ground and helpful solutions when presented with a c
 
 We've only scratched the surface of several soft skills that you should have in 2023 and beyond. Several honorable mentions are: 
 
-* Networking - This is a way for individuals to grow their professional or personal lives by building a network of people working in the same industry as they do. This is beneficial for several reasons, with someone to reach out to in case they need a job being the first. 
-* Public Speaking -  Some people fear public speaking, but I typically use it as a motivator to learn something well enough to explain it to others. While you don't have to do it in a conference setting, the skillset translates to running internal meetings or organizing your thoughts. 
+* Networking - This is a way for individuals to grow their professional or personal lives by building a network of people working in the same industry as they do. This is beneficial for several reasons, with someone to reach out to in case they need a job being the first. You can begin building your network with LinkedIn by adding all of your coworkers and doing searches of others who are working in your particular industry. 
+* Public Speaking -  Some people fear public speaking, but I typically use it as a motivator to learn something well enough to explain it to others. While you don't have to do it in a conference setting, the skillset translates to running internal meetings or organizing your thoughts. Keep in mind that you don't have to be a developer advocate to practice public speaking! Find something that you are passionate about and share it with your team. 
 * Time Management - Do you sometimes feel like you can't get anything done? I'd suggest creating a prioritized to-do list with 3 "must-do" items for the day, regardless of how little (or big) they might be. Setting clear and attainable goals gives you something to work towards, and checking an item off gives you a sense of accomplishment. 
 
-By learning these Soft skills, you'll show your future employer that your education and technical abilities are just the start of the skillset they will acquire when they hire you. 
+By learning these soft skills, you'll show your employer that your education and technical abilities are just the start of the skillset they will acquire when they hire you. 
 
 If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack) or send me a Tweet on [Twitter](https://twitter.com/mbcrump), and I will get back to you. Thanks again for reading, and I will catch you on the next one!
