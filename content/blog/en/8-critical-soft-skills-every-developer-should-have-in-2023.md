@@ -45,7 +45,7 @@ I'd start by "lightening up" to start working better with other people. While ta
 
 ## Mentorship
 
-Mentorship is someone who teaches or gives help and advice to a less experienced and often younger person. There are several reasons you want to become a mentor with the first is that you can grow others on the team - not just yourself. It also offers a self-reflection opportunity on your career as you prepare to advise your mentee. It can also be used on your performance review to grow your career since you take the time to develop others. 
+Mentorship is the influence, guidance, or direction given by a mentor. There are several reasons you want to become a mentor with the first is that you can grow others on the team - not just yourself. It also offers a self-reflection opportunity on your career as you prepare to advise your mentee. It can also be used on your performance review to grow your career since you take the time to develop others. 
 
 I have been both a mentor and a mentee, and before I was a mentor, I would read books or articles on the topic to gain insights into what a great mentor looks like. One book I'd recommend is "Mentoring 101" by John C. Maxwell. I'd also spend time becoming an advocate for less experienced developers (or teammates), and they might come to you for more formal mentorship. Finally, you must have the desire to help someone reach their potential - even if that means putting yourself second to elevate them. 
 
