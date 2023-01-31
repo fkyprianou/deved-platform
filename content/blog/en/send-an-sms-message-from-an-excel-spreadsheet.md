@@ -109,7 +109,7 @@ A new Window will appear with Microsoft Visual Basic for Applications running. S
 
 ![Excel New Module](/content/blog/send-an-sms-message-from-an-excel-spreadsheet/newmodule.png "NewModule.png")
 
-We need to add a **Reference** to the **Microsoft XML 6.0** library, which will allow us to call a REST Endpoint. Go to **Tools** -> **Reference** and check **Microsoft XML, v6.0**, as shown below. 
+We need to add a **Reference** to the **Microsoft XML 6.0** library, which will allow us to call a REST Endpoint. Go to **Tools** -> **Reference** and check **Microsoft XML, v6.0**, as shown below:
 
 ![Add Reference Dialog](/content/blog/send-an-sms-message-from-an-excel-spreadsheet/addreference.png "AddReference.png")
 
