@@ -59,7 +59,7 @@ Being a valuable member of a business is all about moving the project forward, n
 
 Conflict management is vital because conflicts and disagreements are a natural part of human interaction. By dealing with conflict management appropriately, you can help build trust and strengthen relationships within a team, fostering a sense of collaboration and community.
 
-I typically look for common ground and helpful solutions when presented with a conflict. Very rarely is only one person right in a conflict. You should also ensure that conflict is appropriately and productively resolved. Never let a conflict go unaddressed or unresolved. Work to ensure all parties understand the conflict and the proposed resolution.
+Clarify the source of the conflict to ensure how the issue came to be surfaced in the first place. It is sometimes best to use a third-party source to facilitate the conversation between two individuals. Look for common ground and helpful solutions when presented with a conflict. You should listen actively and let everyone have their say before moving to an outcome. Finally, never let a conflict go unaddressed or unresolved. Agree on the solution going forward and how each team member plays a part. 
 
 
 ## Wrap-up
