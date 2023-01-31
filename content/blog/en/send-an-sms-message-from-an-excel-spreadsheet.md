@@ -33,7 +33,7 @@ We will need to create a [Vonage Developer Account](https://developer.vonage.com
 
 ## Refer to the Vonage SMS API Documentation
 
-Before we start coding, we should first consult the [Vonage SMS API documentation](https://developer.vonage.com/en/messaging/sms/code-snippets/send-an-sms) to examine what fields the API expects us to provide when called. Upon visiting the documentation, we can see several programming SDKs are supported, but since Excel only uses VBA, we'll need to call the REST Endpoint that Vonage provides.
+Before we start coding, we should first consult the [Vonage SMS API documentation](https://developer.vonage.com/en/messaging/sms/code-snippets/send-an-sms) to examine what fields the API expects us to provide when called. Upon visiting the documentation, we can see several programming SDKs are supported. Since Excel only uses VBA, we'll need to call the REST Endpoint that Vonage provides.
 
 After examing the REST code snippet, we can see that there are several required fields, such as: 
 
