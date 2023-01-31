@@ -1,5 +1,5 @@
 ---
-title: 6 Soft Skills Every Technical Person Should Have in 2023 & Beyond
+title: Six Soft Skills Every Technical Person Should Have in 2023 & Beyond
 description: Here are eight items to improve your skills and effectiveness
   professionally and personally.
 thumbnail: /content/blog/8-critical-soft-skills-every-developer-should-have-in-2023/breakoutroom.jpg
