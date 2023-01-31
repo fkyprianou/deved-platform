@@ -1,12 +1,12 @@
 ---
-title: GitOps Workflows with GitHub Actions at Vonage
+title: GitOps Workflows With GitHub Actions at Vonage
 description: This article explains how we designed and implemented CI/CD
   workflows in GitHub Actions using a GitOps approach.
 thumbnail: /content/blog/gitops-workflows-with-github-actions-at-vonage/gitops-workflows_github-actions.png
 author: mark-tetlow
 published: true
-published_at: 2023-01-30T10:47:02.236Z
-updated_at: 2023-01-30T10:47:02.339Z
+published_at: 2023-01-31T09:51:17.850Z
+updated_at: 2023-01-31T09:51:19.286Z
 category: inspiration
 tags:
   - gitops
