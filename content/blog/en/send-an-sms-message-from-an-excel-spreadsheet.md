@@ -1,13 +1,14 @@
 ---
-title: Send an SMS Message from an Excel Spreadsheet
+title: Send an Sms Message From an Excel Spreadsheet
 description: Learn how to send an SMS Message from Excel using VBA
+thumbnail: /content/blog/send-an-sms-message-from-an-excel-spreadsheet/sms-excel.png
 author: michael-crump
 published: true
-published_at: 2023-01-27T16:44:05.978Z
-updated_at: 2023-01-27T16:44:06.104Z
+published_at: 2023-02-02T10:02:40.830Z
+updated_at: 2023-02-02T10:02:41.758Z
 category: tutorial
 tags:
-  - sms
+  - sms-api
   - office
   - excel
 comments: true
@@ -17,8 +18,6 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-Send SMS from an Excel Spreadsheet
-
 ## Introduction
 
 Microsoft offers a way to add new functionality to Office applications such as Microsoft Excel to prompt and interact with the user in ways specific to your business needs. You can perform these tasks and accomplish more by using Visual Basic for Applications (VBA). It is a simple but powerful programming language that you can use to do such things as get your contacts from Microsoft Outlook into a Microsoft Excel spreadsheet.
