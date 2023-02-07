@@ -1,14 +1,16 @@
 ---
-title: Send WhatsApp Messages in Laravel with Vonage's native SDK
+title: Send WhatsApp Messages in Laravel With Vonage's Native SDK
 description: Sending WhatsApp messages in Laravel is now easier than ever!
+thumbnail: /content/blog/send-whatsapp-messages-in-laravel-with-vonages-native-sdk/whatsapp_laravel_v2.png
 author: ashley-allen
 published: true
-published_at: 2023-02-01T13:28:08.265Z
-updated_at: 2023-02-01T13:28:08.305Z
+published_at: 2023-02-07T11:41:07.814Z
+updated_at: 2023-02-07T11:41:08.804Z
 category: tutorial
 tags:
   - php
   - laravel
+  - messages-api
 comments: true
 spotlight: false
 redirect: ""
