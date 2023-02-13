@@ -1,5 +1,5 @@
 ---
-title: How to Send SMS Messages with Python, Flask and Vonage
+title: How to Send SMS Messages With Python, Flask and Vonage
 description: Quick Guide on How to Create a Flask App for Sending SMS Using
   Vonage Python SDK
 thumbnail: /content/blog/how-to-send-sms-messages-with-python-flask-and-vonage/python-flash_sms.png
