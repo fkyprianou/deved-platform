@@ -1,10 +1,11 @@
 ---
-title: So, What is Performance-Driven Development in PHP?
+title: So, What Is Performance-Driven Development in PHP?
 description: Performance is often left until you've shipped production. But why?
+thumbnail: /content/blog/so-what-is-performance-driven-development-in-php/performance-driven-development_php.png
 author: james-seconde
 published: true
-published_at: 2023-01-27T10:07:39.368Z
-updated_at: 2023-01-27T10:07:39.403Z
+published_at: 2023-02-14T10:07:39.368Z
+updated_at: 2023-02-14T10:03:31.571Z
 category: tutorial
 tags:
   - php
