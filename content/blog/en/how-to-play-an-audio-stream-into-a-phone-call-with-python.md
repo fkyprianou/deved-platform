@@ -64,7 +64,7 @@ The audio file formats supported are MP3 and 16-bit WAV.
 
 We've already developed a starter Vonage application to receive a call and play music into your Call using two scenarios. With the starter application, you need to add your credentials to the .env file and deploy the app using Github Codespaces. Also, you can edit the starter application and experiment.
 To get started:
-Fork this repository. Open it in Codespaces by clicking "Create codespace on main"
+Fork [this repository](https://github.com/obvonage/tutorial-audio-stream--python-sdk). Open it in Codespaces by clicking "Create codespace on main"
 
 ![](codespaces.png)
 
