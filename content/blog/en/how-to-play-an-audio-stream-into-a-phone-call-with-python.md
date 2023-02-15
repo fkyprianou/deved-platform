@@ -73,8 +73,11 @@ Alternatively, you can deploy the app with [Python](https://www.python.org/downl
 ## Create a new Vonage app
 
 Sign in/Sign up for free [developer.vonage.com](https://developer.vonage.com/); to be able to use the Vonage Voice API, you'll have to create a Vonage Application from the developer portal.
-All requests to the Vonage Voice API require authentication. We will use the API key and private.key
-In the left menu [here](https://dashboard.nexmo.com/), click API Settings. Under the API keys tab you will find your API key and click button `Generate public and private key`. Paste key in `private.key` file in related Codespace.
+All requests to the Vonage Voice API require authentication. We will use the API key and private.key.
+
+In the left menu [here](https://dashboard.nexmo.com/), click API Settings. Under the API keys tab you will find your API key. Open [Application](https://dashboard.nexmo.com/applications) and create your new app by clicking "Create a new application" button. and click button `Generate public and private key`. Paste key in `private.key` file in related Codespace. Switch on Voice capabilaties. And click "Generate new application" button in the buttom.
+
+In the left menu here, click API Settings. Under the API keys tab, you will find your API key. Open Application and create your new app by clicking the "Create a new application" button. And click the button to Generate public and private keys. Paste the key in private.key file in related Codespace. Switch on Voice capabilities. And click the "Generate new application" button in the bottom.
 
 ![](settings.png)
 
