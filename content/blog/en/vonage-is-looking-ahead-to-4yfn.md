@@ -26,29 +26,15 @@ Check out our programme of events below and register your interest to attend.
 
 ## Half-Day Programme - Monday 27th February
 
-In our Half-Day Programme, "Powering Connections Through Cloud Communications", we will deliver 3 sessions for start-up founders, CTOs and developers on how Vonage Communication APIs can power hassle-free connections with your user-base through SMS and Verification. 
+In our Half-Day Programme, "Powering Connections Through Cloud Communications", we will deliver 3 sessions for startup founders, CTOs and developers on how Vonage Communication APIs can power hassle-free connections with your user-base through SMS and Verification. 
 
 Sessions are 30 minutes long, including time for Q&A at the end. Attendees will have the opportunity to network with other founders and developers over refreshments provided by Vonage.
 
-**09:30 - 10:15**  
-
- **"Power your Customers’ Communications, Conversations, and Engagement with Communication APIs"**, with **Richard Sueselbeck**, Director of Developer Relations and Experience, Vonage
-
-**10:30 - 11:15** 
-
-To Be Announced, with **Chris Howell**, Principal Architect, Vonage 
-
-**11:15 - 12:00** 
-
-**Networking**  
-
-**12:00 - 12:45** 
-
-**"How to Protect Against Phone Number Fraud",** with **Guillermo Quintero,** Senior Product Manager, Vonage
-
-**12:45 - 13:00** 
-
-**Networking**
+* **09:30 - 10:15** - **"Power your Customers’ Communications, Conversations, and Engagement with Communication APIs"**, with **Richard Sueselbeck**, Director of Developer Relations and Experience, Vonage
+* **10:30 - 11:15** - To Be Announced, with **Chris Howell**, Principal Architect, Vonage 
+* **11:15 - 12:00** - **Networking**  
+* **12:00 - 12:45** - **"How to Protect Against Phone Number Fraud",** with **Guillermo Quintero,** Senior Product Manager, Vonage
+* **12:45 - 13:00** - **Networking**
 
 Space is limited - pre-register now to attend one of our sessions [here](https://www.4yfn.com/session/powering-connections-through-cloud-communications/).
 
@@ -60,7 +46,7 @@ This event is invite only but we have a number of tickets that we can give away 
 
 ## Vonage Startup Programme
 
-Vonage for Startups, Vonage’s first program aimed at supporting startup companies, designed to help startups build products faster by connecting them to Vonage’s resources, people and Communications APIs.
+Vonage for Startups is Vonage’s first program aimed at supporting startup companies, designed to help startups build products faster by connecting them to Vonage’s resources, people and Communications APIs.
 
 Anybody can join our community and benefit from our educational material, startup content, event participation and more. Whether you are a founder, a corporate, a developer or just an individual curious about startups, please register to join the community.
 
