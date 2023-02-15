@@ -50,11 +50,11 @@ The application's associated public and private keys can be created through the 
 
 After creating an account, log into the Vonage Developer Dashboard, look for the [Application section](https://dashboard.nexmo.com/applications), and from here, create a new application. Give your application a name, such as **OutboundCall**, and press **Generate public and private key**. This will prompt you to download your private key and populate the public key for you. Please keep this information safe, as anyone with access to it can use your account!
 
-![Creating a Voice enabled application](/content/blog/how-to-make-an-outbound-text-to-speech-phone-call-with-node-js/outboundcall.png)
+![Creating a Voice enabled application](/content/blog/how-to-make-an-outbound-text-to-speech-phone-call-with-node-js/outboundcall.png "OutboundCall.png")
 
 Scroll down the page and ensure that the **Voice** capability is toggled on, and you can leave the **Answer**, **Event**, and **Fallback URLs** blank. 
 
-![Turning on the Voice Capability](/content/blog/how-to-make-an-outbound-text-to-speech-phone-call-with-node-js/voicecapability.png)
+![Turning on the Voice Capability](/content/blog/how-to-make-an-outbound-text-to-speech-phone-call-with-node-js/voicecapability.png "VoiceCapability.png")
 
 Press **Generate new application** to continue. You can also link a number if you choose, but it won't be necessary for this tutorial. 
 
@@ -62,7 +62,17 @@ Press **Generate new application** to continue. You can also link a number if yo
 
 Now that we have created our Vonage Voice Application inside  the developer dashboard and generated our public/private key pair let’s look at how we should configure our Node.js application. 
 
-Begin by going to a command/terminal prompt, creating a working directory, and typing `npm init -y` to initialize a Node.js project. We need to install the Node Vonage Server SDK by typing `npm install @vonage/server-sdk`. 
+Begin by going to a command/terminal prompt, creating a working directory, and then initialize a Node.js project.
+
+```bash
+npm init -y
+```
+We need to install the Node Vonage Server SDK as well. 
+
+```bash
+npm install @vonage/server-sdk
+```
+
 
 Create an `index.js` file, and initialize the Vonage SDK and credentials with the following code: 
 
@@ -105,7 +115,7 @@ vonage.voice.createOutboundCall({
 	.catch(err => console.error(err));
 ```
 
-Replace **YOUR_NUMBER** with a phone that you can answer immediately. The **FROM_NUMBER** should be your virtual number, which you can find in your dashboard. You can customize the NCCO object with [optional params](https://docs.nexmo.com/voice/voice-api/ncco-reference) with various voices by language, gender, and even accent.
+Replace **YOUR_NUMBER** with a phone that you can answer immediately. The **VONAGE_VIRTUAL_NUMBER** should be your virtual number, which you can find in your dashboard. You can customize the NCCO object with [optional params](https://docs.nexmo.com/voice/voice-api/ncco-reference) with various voices by language, gender, and even accent.
 
 Please note that we could host the NCCO object on GitHub, for example, by declaring a **ANSWER_URL** with the following and removing the **ncco** with an **answer_url** as shown below:
 
