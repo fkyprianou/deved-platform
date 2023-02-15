@@ -31,6 +31,8 @@ In our Half-Day Programme, "Powering Connections Through Cloud Communications", 
 Sessions are 30 minutes long, including time for Q&A at the end. Attendees will have the opportunity to network with other founders and developers over refreshments provided by Vonage.
 
 * **09:30 - 10:15** - **"Power your Customers’ Communications, Conversations, and Engagement with Communication APIs"**, with **Richard Sueselbeck**, Director of Developer Relations and Experience, Vonage
+
+
 * **10:30 - 11:15** - To Be Announced, with **Chris Howell**, Principal Architect, Vonage 
 * **11:15 - 12:00** - **Networking**  
 * **12:00 - 12:45** - **"How to Protect Against Phone Number Fraud",** with **Guillermo Quintero,** Senior Product Manager, Vonage
