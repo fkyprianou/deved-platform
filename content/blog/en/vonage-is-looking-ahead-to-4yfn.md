@@ -33,7 +33,7 @@ Sessions are 30 minutes long, including time for Q&A at the end. Attendees will 
 * **09:30 - 10:15** - **"Power your Customers’ Communications, Conversations, and Engagement with Communication APIs"**, with **Richard Sueselbeck**, Director of Developer Relations and Experience, Vonage
 
 
-* **10:30 - 11:15** - To Be Announced, with **Chris Howell**, Principal Architect, Vonage 
+* **10:30 - 11:15** - **"Supercharging interactions with serverless CPaaS - ChatGPT gets a voice"** with **Chris Howell**, Principal Architect, Vonage 
 * **11:15 - 12:00** - **Networking**  
 * **12:00 - 12:45** - **"How to Protect Against Phone Number Fraud",** with **Guillermo Quintero,** Senior Product Manager, Vonage
 * **12:45 - 13:00** - **Networking**
