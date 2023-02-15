@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Proactive Connect
+title: Getting Started With Proactive Connect
 description: Create outreach campaigns at a large scale using any Vonage
   Communication API such as Messages, Voice, and AI Studio.
 thumbnail: /content/blog/getting-started-with-the-campaign-manager-api-and-ui/bulk-api.png
