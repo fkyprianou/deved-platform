@@ -364,6 +364,6 @@ Now you can create your controllers and whenever any call is made to your applic
 
 ## Conclusion
 
-In this article, we looked at how to generate and send messages to respective addresses or locations when an HTTP Error 500 Code is created from our server. With this, you can check the content of the trace object from Actuator and see what other things you can do with it. You can also do a lot more with the Vonage API. Check the documentation here. The code for this article can be found here also.
+In this article, we looked at how to generate and send messages to respective addresses or locations when an HTTP Error 500 Code is created from our server. With this, you can check the content of the trace object from Actuator and see what other things you can do with it. You can also do a lot more with the Vonage API. Check the documentation here. The code for this article can be found [here](https://github.com/teevyne/spring-boot-actuator-vonage) also.
 
 Come join the conversation on [Vonage Community Slack](https://developer.vonage.com/en/community/slack) or send a message on [Twitter](https://twitter.com/VonageDev).
