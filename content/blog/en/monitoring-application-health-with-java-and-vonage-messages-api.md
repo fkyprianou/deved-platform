@@ -2,7 +2,7 @@
 title: Monitoring Application Health with Java and Vonage Messages API
 description: Learn to build an application monitoring system for your Java
   application with Spring Boot Actuator and Vonage Messages API.
-author: benjamin-aronov
+author: tolulope-ayemobola
 published: true
 published_at: 2023-02-16T11:32:07.206Z
 updated_at: 2023-02-16T11:32:07.235Z
