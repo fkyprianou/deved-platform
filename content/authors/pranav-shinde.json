@@ -1,0 +1,10 @@
+{
+  "team": false,
+  "alumni": false,
+  "spotlight": true,
+  "noteworthy": false,
+  "hidden": false,
+  "image_url": "/content/images/pranav.png",
+  "bio": "Pranav is a senior software engineer at Moneycontrol, where he is building next-gen web apps using React and Next.js. He also writes about performance and optimization at LearnersBucket.",
+  "name": "Pranav Shinde"
+}
