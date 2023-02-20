@@ -2,10 +2,11 @@
 title: Monitoring Application Health with Java and Vonage Messages API
 description: Learn to build an application monitoring system for your Java
   application with Spring Boot Actuator and Vonage Messages API.
+thumbnail: /content/blog/monitoring-application-health-with-java-and-vonage-messages-api/monitoring-application-health.png
 author: tolulope-ayemobola
 published: true
-published_at: 2023-02-16T11:32:07.206Z
-updated_at: 2023-02-16T11:32:07.235Z
+published_at: 2023-02-21T11:32:07.206Z
+updated_at: 2023-02-21T11:32:07.235Z
 category: tutorial
 tags:
   - java
@@ -18,8 +19,6 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-# Monitoring Application Health: Java + Vonage Messages API
-
 ## Introduction
 
 Generating and sending Actuator health reports is an important process that can help ensure the smooth operation of an application. 
@@ -67,12 +66,10 @@ The Actuator provides a number of useful features such as:
 The Vonage Messages API is a set of RESTful web services that allow developers to send and receive messages, such as SMS and MMS, as well as rich messages services such as WhatsApp, Viber and Facebook Messenger. The API is designed to be simple to use and easy to integrate with other systems and services.
 
 ### Getting Started with Vonage
+
 To get started working with the Vonage APIs, you'll need to sign up for a Vonage account and then create an application within that account. The application will be assigned an API key and secret, which you will use to authenticate your requests to the API.
 
-
-
 <sign-up></sign-up>
-
 
 ## Application Health Report Generation and Sending - The Implementation
 
