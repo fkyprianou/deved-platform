@@ -18,7 +18,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-[ChatGPT](https://openai.com/blog/chatgpt/)is a state-of-the-art conversational language model developed by [OpenAI](https://openai.com/). It is based on [transformer ](https://en.wikipedia.org/wiki/Transformer_(machine_learning_model))architecture and has been trained on a diverse range of internet text, allowing it to generate human-like responses to various questions and prompts. It can also write computer programs, compose music, write poetry, and more! Below is a sample poem it wrote for Vonage’s Communication APIs.  
+[ChatGPT](https://openai.com/blog/chatgpt/) is a state-of-the-art conversational language model developed by [OpenAI](https://openai.com/). It is based on [transformer ](https://en.wikipedia.org/wiki/Transformer_(machine_learning_model))architecture and has been trained on a diverse range of internet text, allowing it to generate human-like responses to various questions and prompts. It can also write computer programs, compose music, write poetry, and more! Below is a sample poem it wrote for Vonage’s Communication APIs.  
 
 ![Write a poem about Vonage](/content/blog/build-a-faq-answering-service-with-openai-and-vonage-ai-studio/vonagepoem.png "vonagepoem.png")
 
