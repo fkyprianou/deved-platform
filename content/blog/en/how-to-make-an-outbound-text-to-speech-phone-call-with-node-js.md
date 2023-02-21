@@ -29,7 +29,9 @@ The [Vonage Voice API](https://developer.vonage.com/en/voice/voice-api/overview)
 * Send text-to-speech messages in 40 languages with different genders and accents.
 * And more! 
 
-In this tutorial, you will learn how to securely use the Vonage Voice APIs to create a text-to-speech outbound phone call using Node.js.
+In this tutorial, you will learn how to securely use the Vonage Voice APIs to create a text-to-speech outbound phone call using Node.js. 
+
+T﻿he source code to the application can be found [here](https://github.com/Vonage-Community/blog-voice-nodejs-outbound-call).
 
 ## Prerequisites
 
