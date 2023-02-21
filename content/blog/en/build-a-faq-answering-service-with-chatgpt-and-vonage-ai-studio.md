@@ -1,6 +1,6 @@
 ---
-title: Build a FAQ Answering Service with ChatGPT and Vonage AI Studio
-description: Learn how to utilize ChatGPT and Vonage AI Studio to build a FAQ
+title: Build a FAQ Answering Service with OpenAI and Vonage AI Studio
+description: Learn how to utilize OpenAI and Vonage AI Studio to build a FAQ
   Answering Service
 author: michael-crump
 published: true
@@ -10,7 +10,7 @@ category: tutorial
 tags:
   - ai-studio
   - voice-api
-  - chatgpt
+  - gpt
 comments: true
 spotlight: false
 redirect: ""
@@ -18,13 +18,13 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-[ChatGPT ](https://openai.com/blog/chatgpt/)is a state-of-the-art conversational language model developed by [OpenAI](https://openai.com/). It is based on [transformer ](https://en.wikipedia.org/wiki/Transformer_(machine_learning_model))architecture and has been trained on a diverse range of internet text, allowing it to generate human-like responses to various questions and prompts. It can also write computer programs, compose music, write poetry, and more! Below is a sample poem it wrote for Vonage’s Communication APIs.  
+[ChatGPT](https://openai.com/blog/chatgpt/)is a state-of-the-art conversational language model developed by [OpenAI](https://openai.com/). It is based on [transformer ](https://en.wikipedia.org/wiki/Transformer_(machine_learning_model))architecture and has been trained on a diverse range of internet text, allowing it to generate human-like responses to various questions and prompts. It can also write computer programs, compose music, write poetry, and more! Below is a sample poem it wrote for Vonage’s Communication APIs.  
 
-![Write a poem about Vonage](/content/blog/build-a-faq-answering-service-with-chatgpt-and-vonage-ai-studio/vonagepoem.png "vonagepoem.png")
+![Write a poem about Vonage](/content/blog/build-a-faq-answering-service-with-openai-and-vonage-ai-studio/vonagepoem.png "vonagepoem.png")
 
-As you can see, ChatGPT is very powerful. We’ll use it today to create a FAQ (Frequently Asked Questions) answering service with [Vonage AI Studio](https://www.vonage.com/communications-apis/ai-studio/?icmp=l3nav%7Cl3nav_gototheaistudiooverviewpage_novalue), a Low-Code / No-Code conversational AI platform that helps businesses handle complex customer interactions through voice and text.
+As you can see, ChatGPT is very powerful. We’ll use the GPT API today to create a FAQ (Frequently Asked Questions) answering service with [Vonage AI Studio](https://www.vonage.com/communications-apis/ai-studio/?icmp=l3nav%7Cl3nav_gototheaistudiooverviewpage_novalue), a Low-Code / No-Code conversational AI platform that helps businesses handle complex customer interactions through voice and text.
 
-What benefits does ChatGPT using GPT-3 as a base model bring in a FAQ answering service with  [Vonage AI Studio](https://www.vonage.com/communications-apis/ai-studio/?icmp=l3nav%7Cl3nav_gototheaistudiooverviewpage_novalue)? Since OpenAI uses [Large Language Models (LLM)](https://www.nvidia.com/en-us/deep-learning-ai/solutions/large-language-models/#:~:text=Codify%20Intelligence%20with%20Large%20Language,transforming%20domains%20through%20learned%20knowledge.) technology, it reduces the time spent training an Agent. Instead of manually creating intents and activity sets, developers can input a bulk of text and set fallbacks with custom responses. Additionally, it allows the opportunity to fine-tune the Agent to answer queries beyond the training data provided. 
+What benefits does using GPT-3 as a base model bring in a FAQ answering service with  [Vonage AI Studio](https://www.vonage.com/communications-apis/ai-studio/?icmp=l3nav%7Cl3nav_gototheaistudiooverviewpage_novalue)? Since OpenAI uses [Large Language Models (LLM)](https://www.nvidia.com/en-us/deep-learning-ai/solutions/large-language-models/#:~:text=Codify%20Intelligence%20with%20Large%20Language,transforming%20domains%20through%20learned%20knowledge.) technology, it reduces the time spent training an Agent. Instead of manually creating intents and activity sets, developers can input a bulk of text and set fallbacks with custom responses. Additionally, it allows the opportunity to fine-tune the Agent to answer queries beyond the training data provided. 
 
 For example, we might train our model today by inputting potential customer questions, creating intents for each question, addressing utterances, testing for input mismatch, and optimizing based on results. In contrast, we will train our data tomorrow by inputting a bulk of text instead of intents and creating fallbacks with custom responses.
 
@@ -39,7 +39,7 @@ Before you begin, ensure you have completed the following:
 * [Python ](https://www.python.org/)is installed - I’m currently using version 3.11.1 for this article.
 * [Pip ](https://pypi.org/project/pip/)is installed - Double-check that you can run `pip` from your terminal or command prompt. 
 
-![OpenAI API Key Dialog](/content/blog/build-a-faq-answering-service-with-chatgpt-and-vonage-ai-studio/apikeys.png)
+![OpenAI API Key Dialog](/content/blog/build-a-faq-answering-service-with-openai-and-vonage-ai-studio/apikeys.png "apikeys.png")
 
 ## Creating the Server
 
@@ -100,7 +100,7 @@ ngrok http 9000
 
 After ngrok runs, it will give you a Forwarding URL that we'll use as the base for our Webhooks later in the article. Mine looks like the following:
 
-![Ngrok Running](/content/blog/build-a-faq-answering-service-with-chatgpt-and-vonage-ai-studio/ngrokrunning.png "ngrokrunning.png")
+![Ngrok Running](/content/blog/build-a-faq-answering-service-with-openai-and-vonage-ai-studio/ngrokrunning.png "ngrokrunning.png")
 
 Now, if I wanted to access my local python server through AI Studio, I’d use the Forwarding address shown in the screenshot. 
 
@@ -108,14 +108,14 @@ Now, if I wanted to access my local python server through AI Studio, I’d use t
 
 Navigate to the [Vonage AI Studio](https://studio.docs.ai.vonage.com/#_ga=2.52857896.1004057560.1652645262-2049185403.1651612958) home page and press the button to Create Agent. You will see an option of what type of Agent you would like to create.
 
-![Agent Creation](/content/blog/build-a-faq-answering-service-with-chatgpt-and-vonage-ai-studio/agent-creation.png "agent-creation.png")
+![Agent Creation](/content/blog/build-a-faq-answering-service-with-openai-and-vonage-ai-studio/agent-creation.png "agent-creation.png")
 
 To begin, select the Telephony Agent and press **Next,** as we want to create a voice-call scenario that you can use on your mobile phone.
 
 We will need to fill in some details here:
 
 * **Region**: Where will your Agent be typically used - The USA or in Europe
-* **Agent Name**: Give your Agent a unique name that is meaningful to you. In our case, we will use **ChatGPTDemo**.
+* **Agent Name**: Give your Agent a unique name that is meaningful to you. 
 * **Language**: Select the language of your Agent.
 * **Voices**: Select any voice (I’m using Matthew).
 * **Time Zone**: Choose the time zone where your Agent will operate.
@@ -128,7 +128,7 @@ Next, you will see the main user interface of AI Studio! If you’d like a prime
 
 To keep things simple, we’ll use the following conversation flow: 
 
-![Simple User Interface](/content/blog/build-a-faq-answering-service-with-chatgpt-and-vonage-ai-studio/simpledesignlayout.png "simpledesignlayout.png")
+![Simple User Interface](/content/blog/build-a-faq-answering-service-with-openai-and-vonage-ai-studio/simpledesignlayout.png "simpledesignlayout.png")
 
 We added: 
 
@@ -163,20 +163,20 @@ We added:
 
 Let's run the application by pressing the **Tester** button at the top right-hand corner of the screen and see what type of output we get. To begin, we see the welcome message along with the first question. The user might input, "**Where is the Vonage Headquarters?**" The Virtual Agent responds with a message that came back from OpenAI, which says the following: 
 
-![Sample Question #1](/content/blog/build-a-faq-answering-service-with-chatgpt-and-vonage-ai-studio/chatgpt-example1.png "chatgpt-example1.png")
+![Sample Question #1](/content/blog/build-a-faq-answering-service-with-openai-and-vonage-ai-studio/chatgpt-example1.png "chatgpt-example1.png")
 
 Or maybe you wish to ask it a more open-ended question, such as “What communication APIs does Vonage offer? And you’ll get the following reply:
 
-![Sample Question #2](/content/blog/build-a-faq-answering-service-with-chatgpt-and-vonage-ai-studio/chatgpt-example2.png "chatgpt-example2.png")
+![Sample Question #2](/content/blog/build-a-faq-answering-service-with-openai-and-vonage-ai-studio/chatgpt-example2.png "chatgpt-example2.png")
 
-ChatGPT also supports multi-intent handling, which occurs when you have an input with more than one intent, and the system handles both. A great example of this would be asking, “Where is the Vonage headquarters, and when was the company founded?” You might be surprised to see the result! 
+GPT API also supports multi-intent handling, which occurs when you have an input with more than one intent, and the system handles both. A great example of this would be asking, “Where is the Vonage headquarters, and when was the company founded?” You might be surprised to see the result! 
 
-![Sample Question #3](/content/blog/build-a-faq-answering-service-with-chatgpt-and-vonage-ai-studio/chatgpt-example3.png "chatgpt-example3.png")
+![Sample Question #3](/content/blog/build-a-faq-answering-service-with-openai-and-vonage-ai-studio/chatgpt-example3.png "chatgpt-example3.png")
 
 ## Wrap-up
 
-We saw how you could implement OpenAI’s ChatGPT in Vonage’s AI Studio in less time that it takes to grab lunch! By automating a FAQ (in this example), you could save hours a typical employee might spend to collect the data and create a response. You also might want to try to publish the Agent and test it with your cellphone! 
+We saw how you could implement OpenAI’s GPT API in Vonage’s AI Studio in less time that it takes to grab lunch! By automating a FAQ (in this example), you could save hours a typical employee might spend to collect the data and create a response. You also might want to try to publish the Agent and test it with your cellphone! 
 
 Also, note that the current integration via webhooks is a short-term solution, and we plan to develop dedicated nodes to support LLM by the end of Q2 2023. 
 
-So what are you waiting for? Give ChatGPT and [Vonage AI Studio](https://studio.docs.ai.vonage.com/#_ga=2.52857896.1004057560.1652645262-2049185403.1651612958) a shot today! Also, if you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/en/community/slack) or send me a Tweet on [Twitter](https://twitter.com/mbcrump), and I will get back to you. Thanks again for reading, and I will catch you on the next one!
+So what are you waiting for? Give the GPT API and [Vonage AI Studio](https://studio.docs.ai.vonage.com/#_ga=2.52857896.1004057560.1652645262-2049185403.1651612958) a shot today! Also, if you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/en/community/slack) or send me a Tweet on [Twitter](https://twitter.com/mbcrump), and I will get back to you. Thanks again for reading, and I will catch you on the next one!
