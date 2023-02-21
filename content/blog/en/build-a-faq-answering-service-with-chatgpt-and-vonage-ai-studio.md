@@ -45,7 +45,7 @@ Before you begin, ensure you have completed the following:
 
 We’ll need to create a server application that AI Studio will call out to once the user types a question from their phone. 
 
-To do so, we’ll use a short Python script to start a server on port 9000 using our OpenAI credentials, as shown below: 
+To do so, we’ll use a short Python script to start a server on port 9000 using our OpenAI credentials. Please note that I'm using Python, but you can create the same using your language of choice. 
 
 ```python
 from datetime import datetime, timedelta
@@ -92,7 +92,7 @@ Once the application starts successfully, you’ll get a deployment URL. For exa
 
 ## Run ngrok
 
-ngrok is a cross-platform application that enables developers to expose a local development server to the Internet with minimal effort. We'll be using it to expose our service to the Internet. If this is your first time using ngrok, a [blog post](https://developer.vonage.com/en/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr/) explains it in more detail. Once you have ngrok setup and are logged in (again, the free account is acceptable), run the following command:
+ngrok is a cross-platform application that enables developers to expose a local development server to the Internet with minimal effort. We'll be using it to expose our service to the Internet. If this is your first time using ngrok, a [blog post](https://developer.vonage.com/en/blog/using-ngrok-in-rails-in-2022#join-the-conversation) explains it in more detail. Once you have ngrok setup and are logged in (again, the free account is acceptable), run the following command:
 
 ```text
 ngrok http 9000
@@ -124,7 +124,7 @@ Next is the option to choose a template, and you can view some of the [other tem
 
 Finally, we have the option to **Select Event**. Events trigger your Agent, whether initiated by a user or the Agent itself. We will use an **Inbound call** and press **Create** for this example.
 
-Next, you will see the main user interface of AI Studio! If you’d like a primer on what it is capable of, visit here. 
+Next, you will see the main user interface of AI Studio! If you’d like a primer on what it is capable of, visit [here](https://studio.docs.ai.vonage.com/ai-studio/create-a-new-agent). 
 
 To keep things simple, we’ll use the following conversation flow: 
 
