@@ -18,7 +18,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-* ![]()
+1. ![]()
 
 ## Introduction
 
@@ -91,4 +91,10 @@ N﻿ow that we've got our database set up, we can start to build out our AI Stud
 * **E﻿vent:** Inbound 
 
 ## Retrieving Data From Airtable
+
 N﻿ow let's get started building out our flows. The great thing is that we've basically done all the work already! We just need to turn our vertical flowchart into a horizontal agent.
+
+O﻿ur steps:
+
+1. **S﻿end Message Node**: send a welcome message, "Welcome to AI Taxi"
+2. **Collect Input Node:** ask the user, "How can I help you?". The users response will be stored in a parameter called
