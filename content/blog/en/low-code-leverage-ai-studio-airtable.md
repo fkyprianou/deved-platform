@@ -97,4 +97,23 @@ N﻿ow let's get started building out our flows. The great thing is that we've b
 O﻿ur steps:
 
 1. **S﻿end Message Node**: send a welcome message, "Welcome to AI Taxi"
-2. **Collect Input Node:** ask the user, "How can I help you?". The users response will be stored in a parameter called
+2. **Collect Input Node:** ask the user, "How can I help you?". The user's response will be stored in a parameter called TOPIC.
+
+> Parameters are like variables, which can be accessed throughout the agent. You can read more about parameters [here](https://studio.docs.ai.vonage.com/properties-1/parameters). Just like variables in code have data types, parameters have [entities](https://studio.docs.ai.vonage.com/properties-1/entities). For simplicity, all parameters will be of type @sys.any.
+
+3. **C﻿lassification Node:** classify the `TOPIC` parameter. We will have two intents: `Retrieve Prices` and `Sign Up For Promotions`. Here we could've used a simple condition since in this example we only have two intents. However, the beauty and power of AI Studio is the Classification feature. We want to allow our users the freedom to enter any request they desire and write it naturally. You can see how powerful and easy to use the Classification node with suggested User Expressions is; [here](https://studio.docs.ai.vonage.com/whatsapp/nodes/conversation/classification).
+4. **Collect Input Node:** ask the user, "Where would you like to go?". The user's response will be stored in a parameter called DESTINATION.
+
+N﻿ow we have the search term that we want to send to Airtable and receive back our stored price info. But how can we pass it to Airtable? The great thing about Airtable is their built-in API for each base and helpful documentation. From our AI Taxi Demo base, click on \*help\* in the top right corner. Then in the sidebar, at the very bottom, you will find \*API Documentation\*. The really cool thing is that Airtable generates the required request for you! Here you will find the prebuilt curl request, it will look something like this:
+
+![Example of CURL request to Airtable API](/content/blog/low-code-leverage-ai-studio-airtable/screenshot-2023-02-19-at-14.11.58.png "Example of CURL request to Airtable API")
+
+
+
+N﻿ow we'll need to add this to our AI Studio agent. So we'll add a **Webhook node** that allows us to make REST API requests. Learn more about Webhook nodes [here](https://studio.docs.ai.vonage.com/whatsapp/nodes/integrations/webhook).
+
+I﻿n the node, we'll add our endpoint in the Request URL:
+
+`https://api.airtable.com/v0/app4AtCxYJu9tagah/Destinations`
+
+Y﻿ou'll also need to add your Airtable Personal Access Token in the Header parameters under the Headers tab. You can learn how to generate and use your Personal Access Token [here](https://airtable.com/developers/web/guides/personal-access-tokens). Make sure to give it scopes: `data.records:read `and`data.records:write`. This token can only be seen once, so you should save it somewhere safe that you can copy/paste it later.
