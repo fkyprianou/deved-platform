@@ -18,6 +18,8 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
+* ![]()
+
 ## Introduction
 
 A few months ago I was in Dubai for a hackathon. The hotel taxi driver was very friendly and wanted to make sure I made the most of my two-day trip. He began offering all kinds of services, like picking me up at the start and finish of each day of the event, doing different kinds of specialized tours of the city, or even doing a trip to Abu Dhabi.
@@ -63,3 +65,30 @@ We'll have a separate flow to send the promotional alerts. So our mockup for thi
 ![Example of mockup for outbound flow of AI Taxi Demo](/content/blog/low-code-leverage-ai-studio-airtable/screenshot-2023-02-26-at-15.28.45.png "Example of mockup for outbound flow of AI Taxi Demo")
 
 N﻿ow that we have a clear picture of what we want to build, let's get building!
+
+### Create an Airtable DB
+
+B﻿efore we can get started with AI Studio, we'll need to setup our Airtable database. Airtable is a cool tool that is like Excel with superpowers! The [documentation](https://airtable.com/developers/web/api/introduction) is fantastic, it's a great place to get started.
+
+O﻿nce you've gotten comfortable, you'll want to build a new base. We'll call it "AI Taxi Demo". In this base we'll have two tables; Destinations and Customers.
+
+F﻿or Destinations, we'll keep it simple. There will be just two fields: Name and Price. 
+
+![Destinations table with fields Name and Price](/content/blog/low-code-leverage-ai-studio-airtable/destinations-table.png "Destinations table with fields Name and Price")
+
+S﻿imilarly for the Customers tables we will just use two fields: Name and Phone_Number:
+
+![Customers table with fields Name and Phone_Number](/content/blog/low-code-leverage-ai-studio-airtable/group-1-40-.png "Customers table with fields Name and Phone_Number")
+
+W﻿e can add some dummy data for these tables so that our API calls return values. Phone numbers should be entered with only digits, no plus sign (+).
+
+## Create a New Agent
+
+N﻿ow that we've got our database set up, we can start to build out our AI Studio agent which will interact with the user and then pass data to and from Airtable. Follow the instructions found in the AI Studio documentation [here](https://studio.docs.ai.vonage.com/ai-studio/create-a-new-agent). There are three important options for our agent, select:
+
+* **T﻿ype:** WhatsApp
+* **Template:** S﻿tart From Scratch
+* **E﻿vent:** Inbound 
+
+## Retrieving Data From Airtable
+N﻿ow let's get started building out our flows. The great thing is that we've basically done all the work already! We just need to turn our vertical flowchart into a horizontal agent.
