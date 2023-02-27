@@ -24,14 +24,14 @@ Some example scenarios include:
 * Playing caller on-hold music.
 * Conference call - play music into a conference call until you have a quorum.
 * Pre Recorded message - useful where Vonage doesn't support your language in its Text-to-Speech engine.
-* Voice mail - when you call and leave a message, the voice message can be played back into a later call.
+* Voicemail - when you call and leave a message, the voice message can be played back into a later call.
 
 Below, you will see how to implement scenarios 1 and 2. The other scenarios will be covered in future blog posts.
 
 There are also two methods for playing an audio stream into a call:
 
-* Using a Call Control Object (NCCO)
-* Using the Voice API (VAPI)
+1. Using a Call Control Object (NCCO)
+2. Using the Voice API (VAPI)
 
 You will use method 1 for scenario 1, and method 2 for scenario 2.
 
@@ -49,7 +49,7 @@ There are some stream action options that are of interest:
 | `bargeIn`   | If set to `true`, this action is terminated when the user presses a button on the keypad. Use this feature to enable users to choose an option without having to listen to the whole message in your Interactive Voice Response (IVR) system. If you set `bargeIn` to `true` on one more Stream actions then the next action in the NCCO stack must be an input action. The default value is `false`. |
 | `loop`      | The Number of times audio is repeated before the Call is closed. The default value is 1. Set to 0 to loop infinitely.                                                                                                                                                                                                                                                                                 |
 
-An example NCCO for playing audio into a call:
+An example Python NCCO for playing audio into a call:
 
 ```python
 [
@@ -62,7 +62,8 @@ An example NCCO for playing audio into a call:
 
 The audio file formats supported are MP3 and 16-bit WAV.
 
-We've already developed a starter Vonage application to receive a call and play music into your Call using two scenarios. With the starter application, you need to add your credentials to the .env file and deploy the app using Github Codespaces. Also, you can edit the starter application and experiment.
+We've already developed a starter Vonage application to receive a call and play music into your Call using two scenarios. With the starter application, you need to add your credentials to the .env file and deploy the app using Github Codespaces. A codespace is a development environment that's hosted in the GitHub cloud. GitHub Codespaces are customizable on a per-project basis, and users can set the Linux-based operating system to use, forward commonly used ports, set environment variables, etc. Also, you can edit the starter application and experiment.
+
 To get started:
 Fork [this repository](https://github.com/obvonage/tutorial-audio-stream--python-sdk). Open it in Codespaces by clicking "Create codespace on main"
 
@@ -72,12 +73,10 @@ Alternatively, you can deploy the app with [Python](https://www.python.org/downl
 
 ## Create a new Vonage app
 
-Sign in/Sign up for free [developer.vonage.com](https://developer.vonage.com/); to be able to use the Vonage Voice API, you'll have to create a Vonage Application from the developer portal.
+Sign in/Sign up for free [developer.vonage.com](https://developer.vonage.com/); to use the Vonage Voice API, you'll have to create a Vonage Application from the developer portal.
 All requests to the Vonage Voice API require authentication. We will use the API key and private.key.
 
-In the left menu [here](https://dashboard.nexmo.com/), click API Settings. Under the API keys tab you will find your API key. Open [Application](https://dashboard.nexmo.com/applications) and create your new app by clicking "Create a new application" button. and click button `Generate public and private key`. Paste key in `private.key` file in related Codespace. Switch on Voice capabilaties. And click "Generate new application" button in the buttom.
-
-In the left menu here, click API Settings. Under the API keys tab, you will find your API key. Open Application and create your new app by clicking the "Create a new application" button. And click the button to Generate public and private keys. Paste the key in private.key file in related Codespace. Switch on Voice capabilities. And click the "Generate new application" button in the bottom.
+In the left menu [here](https://dashboard.nexmo.com/), click API Settings. Under the API keys tab, you will find your API key. Open [Application](https://dashboard.nexmo.com/applications) and create your new app by clicking the "Create a new application" button. And click the button "Generate public and private key". Paste the key in `private.key` file in related Codespace. Switch on Voice capabilities. And click the "Generate new application" button at the bottom.
 
 ![](settings.png)
 
@@ -93,7 +92,7 @@ We need to buy a virtual number for our app to accept phone calls:
 
 ## Streamed audio into your Call using an NCCO
 
-In this scenario, users will call a Nexmo number, and music will be streamed into users' calls using an NCCO with a `stream` action. 
+In this scenario, users will call a Vonage number, and music will be streamed into users' calls using an NCCO with a `stream` action. 
 We will use the following `scenario-1.py` file:
 
 ```python
@@ -135,7 +134,8 @@ if __name__ == '__main__':
 
 **Try It Out**
 
-You can run your code in Codespace, run the following commands:
+You can run your code in Codespace. Run the following commands:
+
 Install the dependencies
 
 ```bash
@@ -162,11 +162,11 @@ The sequence of events in this scenario is as follows:
 
 ## Streamed audio into your Call using Voice API
 
-In this scenario, you call your Vonage Number, and you are joined into a conference. You can then navigate to the /stream URL to initiate streaming into the conference. Music is then played into your conference using Voice API.
+In this scenario, you call your Vonage Number, and you are joined into a conference (in our case Soothing Conference). You can then navigate to the `/stream` URL to initiate streaming into the conference. Music is then played into your conference using Voice API.
 
 **Try It Out**
 
-You can run your code in Codespace, run the following commands:
+You can run your code in Codespace, run the following steps:
 Install the dependencies
 
 ```bash
@@ -185,16 +185,16 @@ In the terminal, open the `Port` tab. Click on `Private` in the `Visibility` col
 
 The sequence of events in this scenario is as follows:
 
-* Dial your Vonage Number.
-* Vonage receives the Call.
-* A callback is generated on the Answer webhook URL you specified.
-* Your application receives the callback and responds with an NCCO.
-* You are joined into a conference.
-* Run the next command in the new terminal window `echo "https://${CODESPACE_NAME}-9000.preview.app.github.dev/stream"`
+1. Dial your Vonage Number.
+2. Vonage receives the Call.
+3. Callback is generated on the Answer webhook URL you specified.
+4. Your application receives the callback and responds with an NCCO.
+5. You are joined into a conference.
+6. Run the next command in the new terminal window `echo "https://${CODESPACE_NAME}-9000.preview.app.github.dev/stream"`
   Navigate to the link (in case of running on a local machine, `localhost:9000/stream`), and music will be played into your conference.
 
 ## Wrap-Up
 
-Congrats! You can use the workflow and prepare code samples to stream related audio in call and related music when callers are on hold.
+Congrats! You can use the workflow and prepare code samples to stream related audio into a call, and play related music when callers are on hold.
 
 Show off your creations, or let us know how we can help! Join the conversation on our [Vonage Community Slack](https://developer.vonage.com/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
