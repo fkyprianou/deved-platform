@@ -76,9 +76,29 @@ Alternatively, you can deploy the app with [Python](https://www.python.org/downl
 Sign in/Sign up for free [developer.vonage.com](https://developer.vonage.com/); to use the Vonage Voice API, you'll have to create a Vonage Application from the developer portal.
 All requests to the Vonage Voice API require authentication. We will use the API key and private.key.
 
-In the left menu [here](https://dashboard.nexmo.com/), click API Settings. Under the API keys tab, you will find your API key. Open [Application](https://dashboard.nexmo.com/applications) and create your new app by clicking the "Create a new application" button. And click the button "Generate public and private key". Paste the key in `private.key` file in related Codespace. Switch on Voice capabilities. And click the "Generate new application" button at the bottom.
+In the left menu [here](https://dashboard.nexmo.com/), click API Settings. Under the API keys tab, you will find your API key. Open [Application](https://dashboard.nexmo.com/applications) and create your new app by clicking the "Create a new application" button. 
 
-![](settings.png)
+![Create a new Vonage app](/content/blog/how-to-play-an-audio-stream-into-a-phone-call-with-python/createapp.png)
+
+And click the button "Generate public and private key". Paste the key in `private.key` file in related Codespace. Switch on Voice capabilities. 
+
+I﻿n Codespase terminal, run the following commands:
+
+```bash
+echo "https://${CODESPACE_NAME}-9000.preview.app.github.dev/webhooks/answer"
+```
+
+a﻿nd
+
+```bash
+echo "https://${CODESPACE_NAME}-9000.preview.app.github.dev/webhooks/event"
+```
+
+Copy and paste this in the Answer URL and Event URL in accordance fields in the Vonage Application settings
+
+![Codespase URLs](/content/blog/how-to-play-an-audio-stream-into-a-phone-call-with-python/codespace-urls.png)
+
+And click the "Generate new application" button at the bottom.
 
 This tutorial also uses a virtual phone number. 
 
@@ -183,15 +203,21 @@ In the terminal, open the `Port` tab. Click on `Private` in the `Visibility` col
 
 ![Change port visibility](/content/blog/how-to-play-an-audio-stream-into-a-phone-call-with-python/codespace-port-public.png)
 
-The sequence of events in this scenario is as follows:
+Now you're here, we're ready to stream some audio!
+
+Do this extra things:
 
 1. Dial your Vonage Number.
-2. Vonage receives the Call.
-3. Callback is generated on the Answer webhook URL you specified.
-4. Your application receives the callback and responds with an NCCO.
-5. You are joined into a conference.
-6. Run the next command in the new terminal window `echo "https://${CODESPACE_NAME}-9000.preview.app.github.dev/stream"`
-  Navigate to the link (in case of running on a local machine, `localhost:9000/stream`), and music will be played into your conference.
+2. Run the next command in the new terminal window `echo "https://${CODESPACE_NAME}-9000.preview.app.github.dev/stream"`.
+   Navigate to the link (in case of running on a local machine, `localhost:9000/stream`), and music will be played into your conference.
+
+The following actions will happen:
+
+* Vonage receives the Call.
+* Callback is generated on the Answer webhook URL you specified.
+* Your application receives the callback and responds with an NCCO.
+* Callers joined a conference.
+* Music played at your conference
 
 ## Wrap-Up
 
