@@ -94,7 +94,7 @@ a﻿nd
 echo "https://${CODESPACE_NAME}-9000.preview.app.github.dev/webhooks/event"
 ```
 
-Copy and paste this in the Answer URL and Event URL in accordance fields in the Vonage Application settings
+Copy and paste this in the Answer URL and Event URL in accordance with fields in the Vonage Application settings.
 
 ![Codespase URLs](/content/blog/how-to-play-an-audio-stream-into-a-phone-call-with-python/codespace-urls.png)
 
@@ -205,7 +205,7 @@ In the terminal, open the `Port` tab. Click on `Private` in the `Visibility` col
 
 Now you're here, we're ready to stream some audio!
 
-Do this extra things:
+Do these extra things:
 
 1. Dial your Vonage Number.
 2. Run the next command in the new terminal window `echo "https://${CODESPACE_NAME}-9000.preview.app.github.dev/stream"`.
