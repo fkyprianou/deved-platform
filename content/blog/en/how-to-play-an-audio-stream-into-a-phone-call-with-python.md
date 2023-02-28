@@ -1,5 +1,5 @@
 ---
-title: How to Play an Audio Stream into a Phone Call with Python
+title: How to Play an Audio Stream Into a Phone Call With Python
 description: How to Play an Audio Stream into a Phone Call with Python
 author: oleksii-borysenko
 published: true
