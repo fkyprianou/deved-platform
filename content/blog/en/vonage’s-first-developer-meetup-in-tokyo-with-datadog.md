@@ -46,6 +46,6 @@ The attendees talked about their projects, interests, and applications while lea
 
 Thanks to [Datadog Japan](https://twitter.com/DatadogJ), [WeWork Japan](https://twitter.com/WeWorkJP), and everyone who came. The first gathering was a success! We are looking forward to our next meetup. 
 
-We always welcome community involvement. Please feel free to join us on [GitHub](https://github.com/Vonage/) and the [Vonage Community Slack](https://developer.vonage.com/community/slack). 
+We always welcome community involvement. Please feel free to join us on [GitHub](https://github.com/Vonage/) and the [Vonage Community Slack](https://developer.vonage.com/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
 
 For more upcoming developer events, check out our [Developer Community page](https://developer.vonage.com/en/community). Do you want us to support your tech community event? Drop us an email at community\[at]vonage.com
