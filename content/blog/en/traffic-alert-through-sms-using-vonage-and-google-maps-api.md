@@ -316,7 +316,7 @@ const response = {
 
 We have processed the response that we received from the Google Direction API and formed a readable string from it that will show the different routes we can take and how much time and distance it may take to reach the destination. 
 
-For forming the string, we took all the paths for the given routes, their distance, and the time to reach the destination normally and with traffic.
+To form the string, we took all the paths for the given routes, their distance, and the time to reach the destination normally and with traffic.
 
 We will convert all the routes to a human-readable string and then return them together.
 
@@ -453,7 +453,7 @@ You can find the source code of this application [here](https://github.com/pra9s
 
 ## Conclusion
 
-Now that we have created the instant traffic alert through SMS notification, you can reference this article to create a different alert system with SMS or use the [Conversation API](https://dashboard.nexmo.com/conversation) to create a bot that can answer customers’ questions.
+Now that we have created the instant traffic alert through SMS notification, you can reference this article to create a different alert system with SMS, or via WhatsApp using [Vonage Messages API](https://www.vonage.com/communications-apis/messages/). 
 
 Engagement from the community is always welcome. Join Vonage on [GitHub](https://github.com/Vonage) for code samples and the [Community Slack](https://developer.vonage.com/community/slack) for questions or feedback. Send Vonage developers a [tweet](https://twitter.com/vonagedev) and let them know about something cool you built using Vonage APIs.
 
