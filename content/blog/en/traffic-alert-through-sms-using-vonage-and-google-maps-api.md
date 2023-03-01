@@ -1,11 +1,12 @@
 ---
 title: Traffic Alert Through SMS Using Vonage and Google Maps API
-description: In this article, I will show how you can create a traffic alert
-  through SMS using Vonage and Google Maps API in Node.js.
+description: Learn how you can create a traffic alert through SMS using Vonage
+  and Google Maps API in Node.js.
+thumbnail: /content/blog/traffic-alert-through-sms-using-vonage-and-google-maps-api/traffic-alert.png
 author: pranav-shinde
 published: true
-published_at: 2023-03-01T10:10:54.060Z
-updated_at: 2023-03-01T10:10:54.071Z
+published_at: 2023-03-02T10:10:54.060Z
+updated_at: 2023-03-02T10:10:54.071Z
 category: tutorial
 tags:
   - javascript
@@ -28,14 +29,13 @@ In this article, I will show how you can create a traffic alert through SMS usin
 
 ## Prerequisites
 
- Before you begin, ensure you have installed the following: -   [Node.js](https://nodejs.org/en/download/). Node.js is an open-source, cross-platform JavaScript runtime environment.
+Before you begin, ensure you have installed the following: 
 
+* [Node.js](https://nodejs.org/en/download/). Node.js is an open-source, cross-platform JavaScript runtime environment.
 * [ngrok](https://ngrok.com/) - A free account is required. This tool enables developers to expose a local development server to the Internet.
 * [Vonage CLI](https://www.npmjs.com/package/@vonage/cli) - Once Node.js is installed, you can use `npm install -g @vonage/cli` to install it. This tool allows you to create and manage your Vonage applications.
 
-### Vonage API Account
-
-> To complete this tutorial, you will need a [Vonage API account](http://developer.nexmo.com/). If you don’t have one already, [sign up](https://ui.idp.vonage.com/ui/auth/registration) for a 30-day free trial and start building with free credit.
+<sign-up></sign-up>
 
 Once you have created an account, you can find your API Key and API Secret at the top of the [Vonage API Dashboard](https://dashboard.nexmo.com/settings).
 
@@ -106,7 +106,7 @@ These properties can be accessed using `process.env.PORT`
 
 The first step is to receive the SMS and read it. Vonage provides a Node.js SDK to use SMS clients within our Node application.
 
-[You can follow along with this tutorial on how you can receive the Message in a Node.js application](https://www.google.com/url?q=https://developer.vonage.com/en/blog/send-and-receive-sms-messages-with-node-js-and-express&sa=D&source=docs&ust=1676867052865733&usg=AOvVaw0zn-dLVEG5l5LYpWOzuBT-)
+You can follow along with [this tutorial](https://www.google.com/url?q=https://developer.vonage.com/en/blog/send-and-receive-sms-messages-with-node-js-and-express&sa=D&source=docs&ust=1676867052865733&usg=AOvVaw0zn-dLVEG5l5LYpWOzuBT-)  on how you can receive the Message in a Node.js application
 
 ```bash
 npm install @vonage/server-sdk
