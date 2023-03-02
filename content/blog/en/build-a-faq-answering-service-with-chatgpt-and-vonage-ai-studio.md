@@ -2,15 +2,16 @@
 title: Build a FAQ Answering Service with OpenAI and Vonage AI Studio
 description: Learn how to utilize OpenAI and Vonage AI Studio to build a FAQ
   Answering Service
+thumbnail: /content/blog/build-a-faq-answering-service-with-openai-and-vonage-ai-studio/faq-answering_chatgpt_ai-studio.png
 author: michael-crump
 published: true
-published_at: 2023-02-15T18:46:42.627Z
-updated_at: 2023-02-15T18:46:42.686Z
+published_at: 2023-03-09T18:46:42.627Z
+updated_at: 2023-03-09T18:46:42.686Z
 category: tutorial
 tags:
   - ai-studio
   - voice-api
-  - gpt
+  - chatgpt
 comments: true
 spotlight: false
 redirect: ""
