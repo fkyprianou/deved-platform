@@ -108,12 +108,52 @@ N﻿ow we have the search term that we want to send to Airtable and receive back
 
 ![Example of CURL request to Airtable API](/content/blog/low-code-leverage-ai-studio-airtable/screenshot-2023-02-19-at-14.11.58.png "Example of CURL request to Airtable API")
 
-
-
 N﻿ow we'll need to add this to our AI Studio agent. So we'll add a **Webhook node** that allows us to make REST API requests. Learn more about Webhook nodes [here](https://studio.docs.ai.vonage.com/whatsapp/nodes/integrations/webhook).
 
 I﻿n the node, we'll add our endpoint in the Request URL:
 
 `https://api.airtable.com/v0/app4AtCxYJu9tagah/Destinations`
 
-Y﻿ou'll also need to add your Airtable Personal Access Token in the Header parameters under the Headers tab. You can learn how to generate and use your Personal Access Token [here](https://airtable.com/developers/web/guides/personal-access-tokens). Make sure to give it scopes: `data.records:read `and`data.records:write`. This token can only be seen once, so you should save it somewhere safe that you can copy/paste it later.
+Y﻿ou'll also need to add your Airtable Personal Access Token in the Header parameters under the Headers tab. You can learn how to generate and use your Personal Access Token [here](https://airtable.com/developers/web/guides/personal-access-tokens). Make sure to give it scopes: `data.records:read`and`data.records:write`. This token can only be seen once, so you should save it somewhere safe that you can copy/paste it later.
+
+N﻿ow your webhook node should look like this:
+
+![Example of Lookup Destination Webhook Node](/content/blog/low-code-leverage-ai-studio-airtable/group-2-28-.png "Example of Lookup Destination Webhook Node")
+
+\
+We can test that our webhook is working by clicking the `test request` button in the top right. You'll see that it returns all our Destinations in the table. You can see under the response tab what data will be returned:
+
+![Example of Destinations Lookup Response](/content/blog/low-code-leverage-ai-studio-airtable/destinations-response.png "Example of Destinations Lookup Response")
+
+
+
+B﻿ut we don't want all the of the destinations, we want to be able to search by our user input. Luckily for us, Airtable has some cool search features. For instance, I've used the `filterByFormula` to create a global table search. We'll use `filterByFormula` here to search against the Destination column. And now our webhook node looks like this:
+
+![Example of Webhook Node with Query Parameters](/content/blog/low-code-leverage-ai-studio-airtable/lookup-with-filterbyformula.png "Example of Webhook Node with Query Parameters")
+
+> \
+> You must click on the Query parameters tab and fill out the parameter and value, writing directly into the URL path will not save.
+
+
+
+N﻿ow we can run the test again and see that the request returns an object which inside it has something called “records”, which itself contains an array of record objects. 
+
+![Example of Filtered Response](/content/blog/low-code-leverage-ai-studio-airtable/filtered-response.png "Example of Filtered Response")
+
+
+
+AI Studio allows us to handle API responses with the [Response Mapping ](https://studio.docs.ai.vonage.com/whatsapp/nodes/integrations/webhook#response-mapping)feature. We need to map the returned object to a parameter that we will then be able to use inside AI Studio. We can do so like this:
+
+![Example of Response Mapping](/content/blog/low-code-leverage-ai-studio-airtable/response-mapping-.png "Example of Response Mapping")
+
+
+
+A﻿nd now that we have mapped our response data, we can run the test and see some values returned to our parameters! 
+
+![Example of Response Mapping Test Results](/content/blog/low-code-leverage-ai-studio-airtable/response-mapping-test-results.png "Example of Response Mapping Test Results")
+
+
+
+W﻿e did it! We've connected our AI Studio agent to our Airtable data and now we can use this information in our agent. One last step is to use our data now in our agent and make a nice message to our user:
+
+![Example of Send Price Node](/content/blog/low-code-leverage-ai-studio-airtable/send-price-node.png "Example of Send Price Node")
