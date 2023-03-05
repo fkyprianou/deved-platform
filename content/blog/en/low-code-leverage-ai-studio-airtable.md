@@ -125,8 +125,6 @@ We can test that our webhook is working by clicking the `test request` button in
 
 ![Example of Destinations Lookup Response](/content/blog/low-code-leverage-ai-studio-airtable/destinations-response.png "Example of Destinations Lookup Response")
 
-
-
 B﻿ut we don't want all the of the destinations, we want to be able to search by our user input. Luckily for us, Airtable has some cool search features. For instance, I've used the `filterByFormula` to create a global table search. We'll use `filterByFormula` here to search against the Destination column. And now our webhook node looks like this:
 
 ![Example of Webhook Node with Query Parameters](/content/blog/low-code-leverage-ai-studio-airtable/lookup-with-filterbyformula.png "Example of Webhook Node with Query Parameters")
@@ -134,26 +132,110 @@ B﻿ut we don't want all the of the destinations, we want to be able to search b
 > \
 > You must click on the Query parameters tab and fill out the parameter and value, writing directly into the URL path will not save.
 
-
-
 N﻿ow we can run the test again and see that the request returns an object which inside it has something called “records”, which itself contains an array of record objects. 
 
 ![Example of Filtered Response](/content/blog/low-code-leverage-ai-studio-airtable/filtered-response.png "Example of Filtered Response")
-
-
 
 AI Studio allows us to handle API responses with the [Response Mapping ](https://studio.docs.ai.vonage.com/whatsapp/nodes/integrations/webhook#response-mapping)feature. We need to map the returned object to a parameter that we will then be able to use inside AI Studio. We can do so like this:
 
 ![Example of Response Mapping](/content/blog/low-code-leverage-ai-studio-airtable/response-mapping-.png "Example of Response Mapping")
 
-
-
 A﻿nd now that we have mapped our response data, we can run the test and see some values returned to our parameters! 
 
 ![Example of Response Mapping Test Results](/content/blog/low-code-leverage-ai-studio-airtable/response-mapping-test-results.png "Example of Response Mapping Test Results")
 
-
-
 W﻿e did it! We've connected our AI Studio agent to our Airtable data and now we can use this information in our agent. One last step is to use our data now in our agent and make a nice message to our user:
 
 ![Example of Send Price Node](/content/blog/low-code-leverage-ai-studio-airtable/send-price-node.png "Example of Send Price Node")
+
+
+
+## T﻿riggering an Outbound Event From Airtable
+
+So now that we’ve proven we can send info to and from Airtable, let’s do something a bit more exciting. Let’s take all our customers in our database and send them a message. Notice here the user isn’t initiating the conversation, but rather we’re working with an outbound event. 
+
+### Postman Setup
+
+We’re going to be using Postman to do this trigger action. But when you are building your application you just need to be able to retrieve your contacts and then make the POST request to AI Studio.
+
+First, we’ll need to [create a workspace](https://learning.postman.com/docs/getting-started/creating-your-first-workspace/) on Postman. A workspace allows you to create a [collection](https://learning.postman.com/docs/getting-started/creating-the-first-collection/), with which we can save pieces of information to variables. These [Postman variables](https://learning.postman.com/docs/sending-requests/variables/) allow us to pass data from our first GET request to our second POST request.
+
+### Retrieving Our Contacts From Airtable in Postman
+
+Just as we did earlier, we’ll do a GET request to our Airtable DB and pass our Access Token through in the headers. Your Postman should look something like this:
+
+![Example of Postman GET Request](/content/blog/low-code-leverage-ai-studio-airtable/postman-retrieve-contacts-example.png "Example of Postman GET Request")
+
+\
+You can hit send and you should get a response with all the customers in your table. Now we can add the bit of Postman logic to store our customers in variables.
+
+
+
+Under the Tests tab, here we’ll add a bit of Javascript:
+
+```javascript
+var jsonData = JSON.parse(responseBody);
+var bodyData = jsonData.records;
+pm.variables.set("retrieved_records", bodyData);
+```
+
+This will now let us access our GET response data under the key “retrieved_records”. You can see this by adding the line `console.log(pm.variables);` and opening the [console](https://blog.postman.com/the-postman-console/). Where you should see `retrieved_records` key: 
+
+![Example of Postman Console Logging](/content/blog/low-code-leverage-ai-studio-airtable/postman-console-.png "Example of Postman Console Logging")
+
+
+
+### Sending Each Contact To AI Studio With Postman
+
+Now we can use the information stored in our `pm.variables` to iterate and send a POST request to AI Studio for each contact. 
+
+First, we’ll add a new request to our collection. Let’s call it “Trigger Promotional Message” and here we’ll want to change it to a POST request. But where do we want to send our request?\
+\
+The cool thing is that all outbound WhatsApp agents are triggered by the same endpoint. You just need to pass your X-Vgai-Key and the proper parameters. Read about it [here](<https://studio.docs.ai.vonage.com/whatsapp/get-started/triggering-an-outbound-whatsapp-virtual-agent>)So with our X-Vgai-Key added in the headers, we need to provide the proper parameters to AI Studio. In the body, we’ll pass the following raw JS:
+
+```javascript
+{
+   "components": [
+       {
+           "type": "header",
+           "parameters": [
+               {
+                   "type": "text",
+                   "text": {{currentName}}
+               }
+           ]
+       }
+   ],
+   "namespace": "18b6e75b_1bf3_4d19_8c00_a59e16d4fc14",
+   "template": "hellodemo",
+   "locale": "en",
+   "to": {{currentNumber}},
+   "agent_id": "639198e1e7db284039394ee6",
+   "channel": "whatsapp",
+   "status_url": "string"
+}
+
+```
+
+But how will we get the `currentName` and `currentNumber` to pass in our POST request? We’ll need to make use of Postman’s pre-request script to iterate through our `retrieved_records` and access each contact’s information to make a POST request. Like so:
+
+```javascript
+const records = pm.variables.get('retrieved_Records');
+pm.variables.set('currentRecord', records.shift());
+const currentRecord = pm.variables.get('currentRecord');
+pm.variables.set('currentName',  JSON.stringify(currentRecord.fields.FIRST_NAME));
+pm.variables.set('currentNumber',  JSON.stringify(currentRecord.fields.PHONE_NUMBER));
+
+
+const currentName = pm.variables.get("currentName");
+
+
+if (records.length > 0){
+   console.log(currentName);
+   console.log("records length: "+records.length);
+   postman.setNextRequest('Trigger Bot');
+} else {
+postman.setNextRequest(null);
+}
+
+```
