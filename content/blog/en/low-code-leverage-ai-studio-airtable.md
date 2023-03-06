@@ -102,7 +102,7 @@ O﻿ur steps:
 3. **C﻿lassification Node:** classify the `TOPIC` parameter. We will have two intents: `Retrieve Prices` and `Sign Up For Promotions`. Here we could've used a simple condition since in this example we only have two intents. However, the beauty and power of AI Studio is the Classification feature. We want to allow our users the freedom to enter any request they desire and write it naturally. You can see how powerful and easy to use the Classification node with suggested User Expressions is; [here](https://studio.docs.ai.vonage.com/whatsapp/nodes/conversation/classification).
 4. **Collect Input Node:** ask the user, "Where would you like to go?". The user's response will be stored in a parameter called DESTINATION.
 
-N﻿ow we have the search term that we want to send to Airtable and receive back our stored price info. But how can we pass it to Airtable? The great thing about Airtable is their built-in API for each base and helpful documentation. From our AI Taxi Demo base, click on \*help\* in the top right corner. Then in the sidebar, at the very bottom, you will find \*API Documentation\*. The really cool thing is that Airtable generates the required request for you! Here you will find the prebuilt curl request, it will look something like this:
+N﻿ow we have the search term that we want to send to Airtable and receive back our stored price info. But how can we pass it to Airtable? The great thing about Airtable is their built-in API for each base and helpful documentation. From our AI Taxi Demo base, click on **help** in the top right corner. Then in the sidebar, at the very bottom, you will find **API Documentation**. The really cool thing is that Airtable generates the required request for you! Here you will find the prebuilt curl request, it will look something like this:
 
 ![Example of CURL request to Airtable API](/content/blog/low-code-leverage-ai-studio-airtable/screenshot-2023-02-19-at-14.11.58.png "Example of CURL request to Airtable API")
 
@@ -112,7 +112,7 @@ I﻿n the node, we'll add our endpoint in the Request URL:
 
 `https://api.airtable.com/v0/app4AtCxYJu9tagah/Destinations`
 
-Y﻿ou'll also need to add your Airtable Personal Access Token in the Header parameters under the Headers tab. You can learn how to generate and use your Personal Access Token [here](https://airtable.com/developers/web/guides/personal-access-tokens). Make sure to give it scopes: `data.records:read`and`data.records:write`. This token can only be seen once, so you should save it somewhere safe that you can copy/paste it later.
+Y﻿ou'll also need to add your Airtable Personal Access Token in the Header parameters under the Headers tab. You can learn how to generate and use your Personal Access Token [here](https://airtable.com/developers/web/guides/personal-access-tokens). Make sure to give it scopes: `data.records:read` and  `data.records:write`. This token can only be seen once, so you should save it somewhere safe that you can copy/paste it later.
 
 N﻿ow your webhook node should look like this:
 
@@ -145,6 +145,38 @@ A﻿nd now that we have mapped our response data, we can run the test and see so
 W﻿e did it! We've connected our AI Studio agent to our Airtable data and now we can use this information in our agent. One last step is to use our data now in our agent and make a nice message to our user:
 
 ![Example of Send Price Node](/content/blog/low-code-leverage-ai-studio-airtable/send-price-node.png "Example of Send Price Node")
+
+## Sending Data To Airtable
+
+Now that we’ve connected with our Airtable DB and begun receiving information, sending information will be a piece of cake!
+
+We’ll start again from our Topic Classification node. We’ll add a new Intent called “Sign Up For Promotions” and add some user expressions. Something like this:
+
+![Example of Adding User Expressions To Training Set](/content/blog/low-code-leverage-ai-studio-airtable/training-set-user-expressions-1.png "Example of Adding User Expressions To Training Set")
+
+Now we are ready to connect to our webhook. So let’s take a look at the Airtable documentation again. It shows us exactly how to format our request. We find in the generated request something like this:
+
+![Example of Airtable POST Request](/content/blog/low-code-leverage-ai-studio-airtable/example-airtable-post-request.png "Example of Airtable POST Request")
+
+So now just need to open our new webhook node. First we change our request type from GET to POST. We can see that we again need to pass our personal access token in the Authorization key in the header. But now we have a second field to pass as well, we add Content-Type to tell that we are sending json with the request. And finally we’ll pass through our data in the body, with a object that has records of customers.
+
+![Example of POST request webhook node](/content/blog/low-code-leverage-ai-studio-airtable/group-3-20-.png "Example of POST request webhook node")
+
+First let’s pass through a test customer. Let’s say, Miss Piggy.
+
+![Example of sending Miss Piggy customer to Airtable](/content/blog/low-code-leverage-ai-studio-airtable/miss-piggy-example.png "Example of sending Miss Piggy customer to Airtable")
+
+And now if we hit Test Request, we should see a new entry in Airtable.
+
+![New entry in Airtable; Miss Piggy](/content/blog/low-code-leverage-ai-studio-airtable/saved-test-customer.png "New entry in Airtable; Miss Piggy")
+
+But we don’t want to add Miss Piggy in our database! We want to add our actual user. Now you could ask for the user’s name and number here and if you require more information, you’ll probably need to use some collect input nodes here. But for this app, we just care about the user name and number. We can use AI Studio’s built-in system parameters for this! So we update Miss Piggy’s name and phone number with the system parameters `$PROFILE_NAME `and `$SENDER_PHONE_NUMBER`﻿. So our request body now looks like this:
+
+![Example of POST request with dynamic variables](/content/blog/low-code-leverage-ai-studio-airtable/post-request-with-variables.png "Example of POST request with dynamic variables")
+
+Lastly, let’s add a thank you message with a send message node. And now we can test this flow:
+
+<﻿Add gif>
 
 ## T﻿riggering an Outbound Event From Airtable
 
