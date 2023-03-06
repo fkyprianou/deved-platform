@@ -3,14 +3,15 @@ title: Vonage’s First Developer Meetup in Tokyo With Datadog
 description: Our first meetup was organized in collaboration with Datadog Japan.
   We invited different developer groups to a sharing and networking session,
   which turned out to be a positive experience.
+thumbnail: /content/blog/vonage’s-first-developer-meetup-in-tokyo-with-datadog/datadog-meetup.png
 author: clarisse-ng
 published: true
-published_at: 2023-02-24T03:06:07.177Z
-updated_at: 2023-02-24T03:06:07.210Z
+published_at: 2023-03-07T03:06:07.177Z
+updated_at: 2023-03-07T10:24:55.742Z
 category: event
 tags:
   - event
-  - developer
+  - developers
 comments: true
 spotlight: false
 redirect: ""
