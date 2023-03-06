@@ -23,7 +23,7 @@ The [Vonage Voice API](https://developer.vonage.com/en/voice/voice-api/overview)
 
 * Build apps that scale with the web technologies you are already using.
 * Control the flow of inbound and inbound calls in JSON with [Nexmo Call Control Objects](https://developer.vonage.com/en/voice/voice-api/overview#ncco) (NCCO). (Note: Nexmo is now Vonage).
-* Record and store inbound or inbound calls
+* Record and store inbound or outbound calls
 * Create conference calls
 * [Send text-to-speech messages](https://developer.vonage.com/en/blog/how-to-make-an-outbound-text-to-speech-phone-call-with-node-js) in 40 languages with different genders and accents.
 * And more! 
