@@ -18,17 +18,15 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-1. ![]()
-
 ## Introduction
 
 A few months ago I was in Dubai for a hackathon. The hotel taxi driver was very friendly and wanted to make sure I made the most of my two-day trip. He began offering all kinds of services, like picking me up at the start and finish of each day of the event, doing different kinds of specialized tours of the city, or even doing a trip to Abu Dhabi.
 
 He gave me his business card with a QR code to message him on WhatsApp. I scanned the code and it took me to a chat window with his business account. But that was it! None of the cool services he had just told me about were presented to users. So my business brain got to working  and I suggested to him, you know you can really help empower your customers with Vonage’s AI Studio!
 
-![An example of a QR code Taxi Driver card. Credit to zazzle.com](/content/blog/low-code-leverage-ai-studio-airtable/driver_taxi_limo_cool_black_metal_qr_code_business_card-r815c59cf1b504530b3dd0614064be5a1_tcvul_736.webp "An example of a QR code Taxi Driver card. Credit to zazzle.com")
+![An example of a QR code Taxi Driver card. Credit to zazzle.com](/content/blog/low-code-leverage-ai-studio-airtable/image-1-6-.png "An example of a QR code Taxi Driver card. Credit to zazzle.com")
 
-Last year Vonage launched AI Studio, a NoCode/LowCode platform that allows anyone to build Conversational AI agents, fast! Typical use cases for Conversational AI are chatbots for customer support or marketing. But chatbots can improve the user experience for so many more applications!
+Last year Vonage launched [AI Studio](https://studio.docs.ai.vonage.com/), a NoCode/LowCode platform that allows anyone to build Conversational AI agents, fast! Typical use cases for Conversational AI are chatbots for customer support or marketing. But chatbots can improve the user experience for so many more applications!
 
 In this tutorial, I’ll show you how to build an AI Studio WhatsApp agent for this taxi service which uses Airtable as a backend database to store and access information. We’ll also use Postman to show how to trigger a real-time message, pulling our user information from Airtable and sending it to AI Studio.
 
@@ -37,8 +35,8 @@ Yalla, let’s go!
 ## Prerequisites
 
 * Vonage Developer Account. To use AI Studio you'll need a Vonage Developer Account. Details to get started just below.
-* Airtable Account - sign up here﻿We'll be using Airtable as our backend database.
-* Postman Account - sign up[here](https://identity.getpostman.com/signup). We'll be using Postman to send requests in the advanced section of this tutorial.
+* Airtable Account - sign up [here﻿](https://airtable.com/signup). We'll be using Airtable as our backend database.
+* Postman Account - sign up [here](https://identity.getpostman.com/signup). We'll be using Postman to send requests in the advanced section of this tutorial.
 * Optional: Miro Account - sign up [here](https://miro.com/signup/). I use Miro to mockup my AI Studio agents. More information about this below.
 
 <sign-up></sign-up>
@@ -148,8 +146,6 @@ W﻿e did it! We've connected our AI Studio agent to our Airtable data and now w
 
 ![Example of Send Price Node](/content/blog/low-code-leverage-ai-studio-airtable/send-price-node.png "Example of Send Price Node")
 
-
-
 ## T﻿riggering an Outbound Event From Airtable
 
 So now that we’ve proven we can send info to and from Airtable, let’s do something a bit more exciting. Let’s take all our customers in our database and send them a message. Notice here the user isn’t initiating the conversation, but rather we’re working with an outbound event. 
@@ -169,8 +165,6 @@ Just as we did earlier, we’ll do a GET request to our Airtable DB and pass our
 \
 You can hit send and you should get a response with all the customers in your table. Now we can add the bit of Postman logic to store our customers in variables.
 
-
-
 Under the Tests tab, here we’ll add a bit of Javascript:
 
 ```javascript
@@ -183,15 +177,13 @@ This will now let us access our GET response data under the key “retrieved_rec
 
 ![Example of Postman Console Logging](/content/blog/low-code-leverage-ai-studio-airtable/postman-console-.png "Example of Postman Console Logging")
 
-
-
 ### Sending Each Contact To AI Studio With Postman
 
 Now we can use the information stored in our `pm.variables` to iterate and send a POST request to AI Studio for each contact. 
 
 First, we’ll add a new request to our collection. Let’s call it “Trigger Promotional Message” and here we’ll want to change it to a POST request. But where do we want to send our request?\
 \
-The cool thing is that all outbound WhatsApp agents are triggered by the same endpoint. You just need to pass your X-Vgai-Key and the proper parameters. Read about it [here](<https://studio.docs.ai.vonage.com/whatsapp/get-started/triggering-an-outbound-whatsapp-virtual-agent>)So with our X-Vgai-Key added in the headers, we need to provide the proper parameters to AI Studio. In the body, we’ll pass the following raw JS:
+The cool thing is that all outbound WhatsApp agents are triggered by the same endpoint. You just need to pass your X-Vgai-Key and the proper parameters. Read about it [here](https://studio.docs.ai.vonage.com/whatsapp/get-started/triggering-an-outbound-whatsapp-virtual-agent)So with our X-Vgai-Key added in the headers, we need to provide the proper parameters to AI Studio. In the body, we’ll pass the following raw JS:
 
 ```javascript
 {
@@ -214,7 +206,6 @@ The cool thing is that all outbound WhatsApp agents are triggered by the same en
    "channel": "whatsapp",
    "status_url": "string"
 }
-
 ```
 
 But how will we get the `currentName` and `currentNumber` to pass in our POST request? We’ll need to make use of Postman’s pre-request script to iterate through our `retrieved_records` and access each contact’s information to make a POST request. Like so:
@@ -237,5 +228,4 @@ if (records.length > 0){
 } else {
 postman.setNextRequest(null);
 }
-
 ```
