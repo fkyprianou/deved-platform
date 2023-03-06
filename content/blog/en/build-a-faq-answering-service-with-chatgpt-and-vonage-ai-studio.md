@@ -25,7 +25,7 @@ replacement_url: ""
 
 As you can see, ChatGPT is very powerful. We’ll use the GPT API today to create a FAQ (Frequently Asked Questions) answering service with [Vonage AI Studio](https://www.vonage.com/communications-apis/ai-studio/?icmp=l3nav%7Cl3nav_gototheaistudiooverviewpage_novalue), a Low-Code / No-Code conversational AI platform that helps businesses handle complex customer interactions through voice and text.
 
-What benefits does using GPT-3 as a base model bring in a FAQ answering service with  [Vonage AI Studio](https://www.vonage.com/communications-apis/ai-studio/?icmp=l3nav%7Cl3nav_gototheaistudiooverviewpage_novalue)? Since OpenAI uses [Large Language Models (LLM)](https://www.nvidia.com/en-us/deep-learning-ai/solutions/large-language-models/#:~:text=Codify%20Intelligence%20with%20Large%20Language,transforming%20domains%20through%20learned%20knowledge.) technology, it reduces the time spent training an Agent. Instead of manually creating intents and activity sets, developers can input a bulk of text and set fallbacks with custom responses. Additionally, it allows the opportunity to fine-tune the Agent to answer queries beyond the training data provided. 
+What benefits does using GPT 3.5 Turbo as a base model bring in a FAQ answering service with  [Vonage AI Studio](https://www.vonage.com/communications-apis/ai-studio/?icmp=l3nav%7Cl3nav_gototheaistudiooverviewpage_novalue)? Since OpenAI uses [Large Language Models (LLM)](https://www.nvidia.com/en-us/deep-learning-ai/solutions/large-language-models/#:~:text=Codify%20Intelligence%20with%20Large%20Language,transforming%20domains%20through%20learned%20knowledge.) technology, it reduces the time spent training an Agent. Instead of manually creating intents and activity sets, developers can input a bulk of text and set fallbacks with custom responses. Additionally, it allows the opportunity to fine-tune the Agent to answer queries beyond the training data provided. 
 
 For example, we might train our model today by inputting potential customer questions, creating intents for each question, addressing utterances, testing for input mismatch, and optimizing based on results. In contrast, we will train our data tomorrow by inputting a bulk of text instead of intents and creating fallbacks with custom responses.
 
@@ -34,7 +34,7 @@ For example, we might train our model today by inputting potential customer ques
 Before you begin, ensure you have completed the following:
 
 * A [Vonage Developer Account](https://developer.vonage.com/en/) - If you don't have one, you can create one, and we'll give you free credit to play around with our APIs.
-* An [OpenAI Account](https://openai.com/api/) and an [API Key](https://platform.openai.com/account/api-keys) are free and needed to get a reply from the user's input. We’ll use GTP-3 as a base model for this example. You can learn more about this model and others by visiting their [documentation](https://platform.openai.com/docs/models/overview). 
+* An [OpenAI Account](https://openai.com/api/) and an [API Key](https://platform.openai.com/account/api-keys) are free and needed to get a reply from the user's input. We’ll use GTP 3.5 Turbo as a base model for this example. You can learn more about this model and others by visiting their [documentation](https://platform.openai.com/docs/models/overview). 
           * Press “**Create new secret key”** and store the information somewhere safe, as we’ll use it later. See the example below.
 * [ngrok](https://ngrok.com/) - A free account is required. This tool enables developers to expose a local development server to the Internet.
 * [Python ](https://www.python.org/)is installed - I’m currently using version 3.11.1 for this article.
@@ -69,11 +69,16 @@ openai.api_key = openai_key
 @app.route("/webhook", methods=["POST"])
 def webhook():
     input = request.headers.get('input')
-    model_engine = "text-davinci-003"
-    completions = openai.Completion.create(engine=model_engine, prompt=input, max_tokens=1024, n=1, stop=None, temperature=0.5)
-    # Get the response text
-    response = completions.choices[0].text
-    return {'res': response.strip()}
+completions = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user",
+         "content": input},
+    ]
+)
+response = completions.choices[0].message.content
+return {'res': response.strip()}
 
 if __name__ == '__main__':
     app.run(port=9000, host='0.0.0.0', debug=True)  # run app in debug mode on port 5000
