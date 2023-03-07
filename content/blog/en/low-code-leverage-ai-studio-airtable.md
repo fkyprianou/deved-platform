@@ -107,7 +107,6 @@ N﻿ow your webhook node should look like this:
 
 ![Example of Lookup Destination Webhook Node](/content/blog/low-code-leverage-ai-studio-airtable/group-2-28-.png "Example of Lookup Destination Webhook Node")
 
-\
 We can test that our webhook is working by clicking the `test request` button in the top right. You'll see that it returns all our Destinations in the table. You can see under the response tab what data will be returned:
 
 ![Example of Destinations Lookup Response](/content/blog/low-code-leverage-ai-studio-airtable/destinations-response.png "Example of Destinations Lookup Response")
@@ -116,7 +115,6 @@ B﻿ut we don't want all the of the destinations, we want to be able to search b
 
 ![Example of Webhook Node with Query Parameters](/content/blog/low-code-leverage-ai-studio-airtable/lookup-with-filterbyformula.png "Example of Webhook Node with Query Parameters")
 
-> \
 > You must click on the Query parameters tab and fill out the parameter and value, writing directly into the URL path will not save.
 
 N﻿ow we can run the test again and see that the request returns an object which inside it has something called “records”, which itself contains an array of record objects. 
@@ -134,6 +132,10 @@ A﻿nd now that we have mapped our response data, we can run the test and see so
 W﻿e did it! We've connected our AI Studio agent to our Airtable data and now we can use this information in our agent. One last step is to use our data now in our agent and make a nice message to our user:
 
 ![Example of Send Price Node](/content/blog/low-code-leverage-ai-studio-airtable/send-price-node.png "Example of Send Price Node")
+
+I﻿f we open our [tester](https://studio.docs.ai.vonage.com/ai-studio/chatbot-tester), we can now see the full user journey to ask for a taxi price.
+
+![Testing Our Completed Flow](/content/blog/low-code-leverage-ai-studio-airtable/leverage-low-code-gif-1.gif "Testing Our Completed Flow")
 
 ## Sending Data To Airtable
 
