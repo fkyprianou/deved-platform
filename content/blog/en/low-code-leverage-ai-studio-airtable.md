@@ -167,4 +167,8 @@ But we don’t want to add Miss Piggy in our database! We want to add our actual
 
 Lastly, let’s add a thank you message with a send message node. And now we can test this flow:
 
-<﻿Add gif>
+![Testing Our Completed Flow 2](/content/blog/low-code-leverage-ai-studio-airtable/leverage-low-code-gif-2.gif "Testing Our Completed Flow 2")
+
+## Conclusion
+
+Now you've see how to implement an AI Studio with an easy-to-use Airtable database. What will you build with your new skills?  Please let me know on [Twitter](https://twitter.com/AronovBenjamin) or the [Vonage Community Slack](https://developer.vonage.com/en/community/slack) (we even have a channel for AI Studio). I’m really interested to see what you’re building with Low Code!
