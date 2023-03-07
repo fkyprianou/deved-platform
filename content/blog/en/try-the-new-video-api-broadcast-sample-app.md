@@ -1,8 +1,8 @@
 ---
-title: Try The New Video API Broadcast Sample App
-description: Try the new Video API Broadcast Sample App to easily stream live
-  video to multiple viewers
-thumbnail: /content/blog/try-the-new-video-api-broadcast-sample-app/video-broadcast-app.png
+title: Live Stream With The New Video API Broadcast Sample App
+description: Try the new Video API Broadcast Sample App to build live streaming
+  applications on the web
+thumbnail: /content/blog/live-stream-with-the-new-video-api-broadcast-sample-app/video-broadcast-app.png
 author: enrico-portolan
 published: true
 published_at: 2023-03-08T14:31:27.417Z
@@ -57,7 +57,7 @@ A guest is someone who is invited to join the broadcast by the host. Guests may 
 
 The viewer is someone who is watching the broadcast but does not have the ability to interact with the host or other guests directly. Viewers can join the broadcast by clicking on a link or by entering a unique URL. They can see and hear the host's video and audio feed in real-time, and they may be able to participate in chat sessions or Q&A depending on the settings enabled by the host.
 
-![The viewer in the broadcast sample app](/content/blog/switch_to_live_mode.jpg)
+![The viewer in the broadcast sample app](/content/blog/try-the-new-video-api-broadcast-sample-app/viewer.jpg)
 
 ### Experience Composer
 
@@ -67,6 +67,6 @@ The experience composer is a role that involves creating a custom user experienc
 
 ## Conclusion
 
-Overall, the (broadcast sample app)\[https://github.com/nexmo-se/broadcast-sample-app] is a flexible and customizable platform that can support many different use cases, depending on the roles that are defined. Whether you're using the app to host a live event, deliver a webinar, or build a video conferencing tool, the different roles in the broadcast sample app are essential components of the live streaming experience.
+Overall, the [broadcast sample app]([https://github.com/nexmo-se/broadcast-sample-app) is a flexible and customizable platform that can support many different use cases, depending on the roles that are defined. Whether you're using the app to host a live event, deliver a webinar, or build a video conferencing tool, the different roles in the broadcast sample app are essential components of the live streaming experience.
 
-In conclusion, the Video API  broadcast sample app is a powerful tool for building live streaming applications on the web. It provides developers with a simple starting point and all the tools they need to create high-quality, scalable, and customizable video streaming applications. Whether you're building a live event platform or a video conferencing tool, the broadcast sample app is an excellent starting point.
+In conclusion, the Video API broadcast sample app is a powerful tool for building live streaming applications on the web. It provides developers with a simple starting point and all the tools they need to create high-quality, scalable, and customizable video streaming applications. Whether you're building a live event platform or a video conferencing tool, the broadcast sample app is an excellent starting point.
