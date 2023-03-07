@@ -28,7 +28,7 @@ He gave me his business card with a QR code to message him on WhatsApp. I scanne
 
 Last year Vonage launched [AI Studio](https://studio.docs.ai.vonage.com/), a NoCode/LowCode platform that allows anyone to build Conversational AI agents, fast! Typical use cases for Conversational AI are chatbots for customer support or marketing. But chatbots can improve the user experience for so many more applications!
 
-In this tutorial, I’ll show you how to build an AI Studio WhatsApp agent for this taxi service which uses Airtable as a backend database to store and access information. We’ll also use Postman to show how to trigger a real-time message, pulling our user information from Airtable and sending it to AI Studio.
+In this tutorial, I’ll show you how to build an AI Studio WhatsApp agent for this taxi service which uses Airtable as a backend database to store and access information.
 
 Yalla, let’s go!
 
@@ -45,22 +45,11 @@ Yalla, let’s go!
 
 ### Start With a Mockup
 
-Before building any agent in AI Studio, I highly recommend mapping out your agent's flow using a visual tool. I use Miro for this but there are lots of tools online, or you can even just use a pen and paper. 
+Before building any agent in AI Studio, I highly recommend mapping out your agent's flow using a visual tool. You can read more about creating a high-fidelity Conversational AI mockup **here**.
 
-The idea is to have a high-fidelity mockup that you can basically just copy over to AI Studio, focusing on the more technical aspects of implementation without worrying about the flow. 
-I use the following set of components, this way I can just copy/paste.
-
-﻿First, create a small key of components so you can copy/paste and just add the text for each specific step. Here is what I use:
-
-![A sample key of components for a chatbot mockup](/content/blog/low-code-leverage-ai-studio-airtable/screenshot-2023-02-26-at-15.19.20.png "A sample key of components for a chatbot mockup")
-
-T﻿he cool thing is now you can mockup your bot super fast. You'll need to figure out what outcomes or user journeys you'll want to create for your users. For instance, in our app we'll let users look up taxi prices to popular locations and also add their contact info to subscribe to taxi deals. The mockup for those flow look like this:
+In our app we'll let users look up taxi prices to popular locations and also add their contact info to subscribe to future taxi deals. The mockup for those flow look like this:
 
 ![Example of mockup for inbound flows of AI Taxi Demo](/content/blog/low-code-leverage-ai-studio-airtable/screenshot-2023-02-26-at-15.28.40.png "Example of mockup for inbound flows of AI Taxi Demo")
-
-We'll have a separate flow to send the promotional alerts. So our mockup for this:
-
-![Example of mockup for outbound flow of AI Taxi Demo](/content/blog/low-code-leverage-ai-studio-airtable/screenshot-2023-02-26-at-15.28.45.png "Example of mockup for outbound flow of AI Taxi Demo")
 
 N﻿ow that we have a clear picture of what we want to build, let's get building!
 
@@ -170,94 +159,10 @@ And now if we hit Test Request, we should see a new entry in Airtable.
 
 ![New entry in Airtable; Miss Piggy](/content/blog/low-code-leverage-ai-studio-airtable/saved-test-customer.png "New entry in Airtable; Miss Piggy")
 
-But we don’t want to add Miss Piggy in our database! We want to add our actual user. Now you could ask for the user’s name and number here and if you require more information, you’ll probably need to use some collect input nodes here. But for this app, we just care about the user name and number. We can use AI Studio’s built-in system parameters for this! So we update Miss Piggy’s name and phone number with the system parameters `$PROFILE_NAME `and `$SENDER_PHONE_NUMBER`﻿. So our request body now looks like this:
+But we don’t want to add Miss Piggy in our database! We want to add our actual user. Now you could ask for the user’s name and number here and if you require more information, you’ll probably need to use some collect input nodes here. But for this app, we just care about the user name and number. We can use AI Studio’s built-in system parameters for this! So we update Miss Piggy’s name and phone number with the system parameters `$PROFILE_NAME`and `$SENDER_PHONE_NUMBER`﻿. So our request body now looks like this:
 
 ![Example of POST request with dynamic variables](/content/blog/low-code-leverage-ai-studio-airtable/post-request-with-variables.png "Example of POST request with dynamic variables")
 
 Lastly, let’s add a thank you message with a send message node. And now we can test this flow:
 
 <﻿Add gif>
-
-## T﻿riggering an Outbound Event From Airtable
-
-So now that we’ve proven we can send info to and from Airtable, let’s do something a bit more exciting. Let’s take all our customers in our database and send them a message. Notice here the user isn’t initiating the conversation, but rather we’re working with an outbound event. 
-
-### Postman Setup
-
-We’re going to be using Postman to do this trigger action. But when you are building your application you just need to be able to retrieve your contacts and then make the POST request to AI Studio.
-
-First, we’ll need to [create a workspace](https://learning.postman.com/docs/getting-started/creating-your-first-workspace/) on Postman. A workspace allows you to create a [collection](https://learning.postman.com/docs/getting-started/creating-the-first-collection/), with which we can save pieces of information to variables. These [Postman variables](https://learning.postman.com/docs/sending-requests/variables/) allow us to pass data from our first GET request to our second POST request.
-
-### Retrieving Our Contacts From Airtable in Postman
-
-Just as we did earlier, we’ll do a GET request to our Airtable DB and pass our Access Token through in the headers. Your Postman should look something like this:
-
-![Example of Postman GET Request](/content/blog/low-code-leverage-ai-studio-airtable/postman-retrieve-contacts-example.png "Example of Postman GET Request")
-
-\
-You can hit send and you should get a response with all the customers in your table. Now we can add the bit of Postman logic to store our customers in variables.
-
-Under the Tests tab, here we’ll add a bit of Javascript:
-
-```javascript
-var jsonData = JSON.parse(responseBody);
-var bodyData = jsonData.records;
-pm.variables.set("retrieved_records", bodyData);
-```
-
-This will now let us access our GET response data under the key “retrieved_records”. You can see this by adding the line `console.log(pm.variables);` and opening the [console](https://blog.postman.com/the-postman-console/). Where you should see `retrieved_records` key: 
-
-![Example of Postman Console Logging](/content/blog/low-code-leverage-ai-studio-airtable/postman-console-.png "Example of Postman Console Logging")
-
-### Sending Each Contact To AI Studio With Postman
-
-Now we can use the information stored in our `pm.variables` to iterate and send a POST request to AI Studio for each contact. 
-
-First, we’ll add a new request to our collection. Let’s call it “Trigger Promotional Message” and here we’ll want to change it to a POST request. But where do we want to send our request?\
-\
-The cool thing is that all outbound WhatsApp agents are triggered by the same endpoint. You just need to pass your X-Vgai-Key and the proper parameters. Read about it [here](https://studio.docs.ai.vonage.com/whatsapp/get-started/triggering-an-outbound-whatsapp-virtual-agent)So with our X-Vgai-Key added in the headers, we need to provide the proper parameters to AI Studio. In the body, we’ll pass the following raw JS:
-
-```javascript
-{
-   "components": [
-       {
-           "type": "header",
-           "parameters": [
-               {
-                   "type": "text",
-                   "text": {{currentName}}
-               }
-           ]
-       }
-   ],
-   "namespace": "18b6e75b_1bf3_4d19_8c00_a59e16d4fc14",
-   "template": "hellodemo",
-   "locale": "en",
-   "to": {{currentNumber}},
-   "agent_id": "639198e1e7db284039394ee6",
-   "channel": "whatsapp",
-   "status_url": "string"
-}
-```
-
-But how will we get the `currentName` and `currentNumber` to pass in our POST request? We’ll need to make use of Postman’s pre-request script to iterate through our `retrieved_records` and access each contact’s information to make a POST request. Like so:
-
-```javascript
-const records = pm.variables.get('retrieved_Records');
-pm.variables.set('currentRecord', records.shift());
-const currentRecord = pm.variables.get('currentRecord');
-pm.variables.set('currentName',  JSON.stringify(currentRecord.fields.FIRST_NAME));
-pm.variables.set('currentNumber',  JSON.stringify(currentRecord.fields.PHONE_NUMBER));
-
-
-const currentName = pm.variables.get("currentName");
-
-
-if (records.length > 0){
-   console.log(currentName);
-   console.log("records length: "+records.length);
-   postman.setNextRequest('Trigger Bot');
-} else {
-postman.setNextRequest(null);
-}
-```
