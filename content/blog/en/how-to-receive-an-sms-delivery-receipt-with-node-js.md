@@ -62,8 +62,6 @@ Sign in to your Vonage account, and go to [Settings](https://dashboard.nexmo.com
 
 ![SMS Settings](/content/blog/how-to-receive-an-sms-delivery-receipt-with-node-js/smssettings.png "smssettings.png")
 
-As noted, Vonage has two different APIs capable of sending and receiving SMS: The SMS API and the Messages API. You can learn more about Messages API webhooks in the [documentation](https://developer.vonage.com/messages/code-snippets/configure-webhooks).
-
 Every time you send a message from your virtual number, the delivery receipt webhook call will be made to that URL which will run the code on your local machine. Let’s write some code with Node.js and Express to handle it!
 
 ## Node.js project setup
