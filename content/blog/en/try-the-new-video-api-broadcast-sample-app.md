@@ -27,7 +27,7 @@ The Vonage Video API makes it easy to build a custom video experience within any
 
 The app is built using the Video API JavaScript SDK, which allows developers to create real-time communications applications on the web. With this SDK, developers can quickly add video chat, voice, and messaging to their websites and applications. The SDK also provides tools for building custom video and audio filters, capturing and sharing user screens, and more.
 
-![Broadcast sample app](/content/blog/download-and-try-the-new-video-api-broadcast-sample-app/start_broadcast.png)
+![Broadcast sample app](/content/blog/live-stream-with-the-new-video-api-broadcast-sample-app/start_broadcast.png)
 
 The broadcast sample app is available on [GitHub](https://github.com/opentok/broadcast-sample-app), and it comes with everything developers need to get started. The app includes a simple HTML page that displays a live video feed from a camera or microphone. It also includes JavaScript code that manages the Video API session and streams the video to multiple viewers.
 
@@ -45,7 +45,7 @@ The broadcast sample app has several roles that can be defined based on the use 
 
 The host is the person who initiates the broadcast and is responsible for setting up the Video API session. The host's video and audio feed are streamed to the viewers, and they have control over various settings such as video quality, audio quality, and more. The host also has the ability to manage guests, control access to the broadcast, and moderate any chat or Q&A sessions that are part of the broadcast.
 
-![The role of the host in the broadcast sample app](/content/blog/download-and-try-the-new-video-api-broadcast-sample-app/host.jpg)
+![The role of the host in the broadcast sample app](/content/blog/live-stream-with-the-new-video-api-broadcast-sample-app/host.jpg)
 
 ## The role of the guest in the broadcast sample app
 
@@ -57,13 +57,13 @@ A guest is someone who is invited to join the broadcast by the host. Guests may 
 
 The viewer is someone who is watching the broadcast but does not have the ability to interact with the host or other guests directly. Viewers can join the broadcast by clicking on a link or by entering a unique URL. They can see and hear the host's video and audio feed in real-time, and they may be able to participate in chat sessions or Q&A depending on the settings enabled by the host.
 
-![The viewer in the broadcast sample app](/content/blog/try-the-new-video-api-broadcast-sample-app/viewer.jpg)
+![The viewer in the broadcast sample app](/content/blog/live-stream-with-the-new-video-api-broadcast-sample-app/viewer.jpg)
 
 ### Experience Composer
 
 The experience composer is a role that involves creating a custom user experience for the broadcast. This may include custom branding, design elements, or other features that are tailored to the specific needs of the broadcast. The experience composer may work closely with the host to create a seamless user experience that is tailored to the specific requirements of the broadcast.
 
-![Experience composer in the broadcast sample app](/content/blog/download-and-try-the-new-video-api-broadcast-sample-app/experience_composer.png)
+![Experience composer in the broadcast sample app](/content/blog/live-stream-with-the-new-video-api-broadcast-sample-app/experience_composer.png)
 
 ## Conclusion
 
