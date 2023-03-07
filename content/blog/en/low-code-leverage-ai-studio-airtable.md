@@ -24,7 +24,7 @@ A few months ago I was in Dubai for a hackathon. The hotel taxi driver was very 
 
 He gave me his business card with a QR code to message him on WhatsApp. I scanned the code and it took me to a chat window with his business account. But that was it! None of the cool services he had just told me about were presented to users. So my business brain got to working  and I suggested to him, you know you can really help empower your customers with Vonage’s AI Studio!
 
-![An example of a QR code Taxi Driver card. Credit to zazzle.com](/content/blog/low-code-leverage-ai-studio-airtable/image-1-6-.png "An example of a QR code Taxi Driver card. Credit to zazzle.com")
+![An example of a QR code Taxi Driver card. Credit to zazzle.com](/content/blog/low-code-leverage-ai-studio-with-airtable/image-1-6-.png "An example of a QR code Taxi Driver card. Credit to zazzle.com")
 
 Last year Vonage launched [AI Studio](https://studio.docs.ai.vonage.com/), a NoCode/LowCode platform that allows anyone to build Conversational AI agents, fast! Typical use cases for Conversational AI are chatbots for customer support or marketing. But chatbots can improve the user experience for so many more applications!
 
@@ -48,6 +48,8 @@ Yalla, let’s go!
 Before building any agent in AI Studio, I highly recommend mapping out your agent's flow using a visual tool. You can read more about creating a high-fidelity Conversational AI mockup **here**.
 
 In our app we'll let users look up taxi prices to popular locations and also add their contact info to subscribe to future taxi deals. The mockup for those flow look like this:
+
+![Example of mockup for inbound flows of AI Taxi Demo](blob:https://learn.vonage.com/2809d326-8c4f-43db-b91c-e952f27293a5 "Example of mockup for inbound flows of AI Taxi Demo")
 
 ![Example of mockup for inbound flows of AI Taxi Demo](/content/blog/low-code-leverage-ai-studio-airtable/screenshot-2023-02-26-at-15.28.40.png "Example of mockup for inbound flows of AI Taxi Demo")
 
