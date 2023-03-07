@@ -36,11 +36,13 @@ Before you begin, make sure you have the following:
 
 ## Using ngrok to set up a local tunnel
 
+ngrok is a cross-platform application that enables developers to expose a local development server to the Internet with minimal effort. We'll be using it to expose our webhook (created shortly) to the public Internet.
+
 When a message gets delivered, the mobile phone carrier typically returns a **Delivery Receipt (DLR)** to Vonage, explaining the delivery status of your message. If you have set up a webhook endpoint, Vonage then forwards this delivery receipt to your endpoint.
 
 We need to set up ngrok to create a local tunnel so that we can run our Node.js code later. 
 
-As a refresher, ngrok is a cross-platform application that enables developers to expose a local development server to the Internet with minimal effort. We'll be using it to expose our webhook to the public Internet. Once you have ngrok setup and are logged in (again, the free account is acceptable), then run the following command:
+Once you have ngrok setup and are logged in (again, the free account is acceptable), then run the following command:
 
 ```
 ngrok http 5000
