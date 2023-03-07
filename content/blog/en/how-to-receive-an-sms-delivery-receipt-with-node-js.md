@@ -25,7 +25,7 @@ When you send a text message to a phone number with Vonage APIs, the HTTP respon
 
 In this tutorial, you will learn how to find out if the SMS messages sent from your virtual number have been delivered using Node.js.
 
-The [source code](https://github.com/nexmo-community/nexmo-node-quickstart/blob/4c6f00d0e4a50f7e2c68f38f132996829d792bbe/sms/dlr-express.js) for this application is available on GitHub.
+If you would like to skip ahead and just run the app, you can find a fully working version on [GitHub](https://github.com/Vonage/vonage-node-code-snippets/blob/master/sms/dlr-express.js).
 
 ## Prerequisites
 
