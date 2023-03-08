@@ -83,7 +83,6 @@ npm install express body-parser --save
 Create an `index.js` file, instantiate express, and listen to the server to port 5000, since we have configured ngrok to that port.
 
 ```javascript
-'use strict'
 const app = require('express')();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
