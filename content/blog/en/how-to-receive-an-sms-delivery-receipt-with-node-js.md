@@ -122,7 +122,7 @@ node index.js
 
 Try sending text messages from your Vonage virtual number to your mobile phone number to test.
 
-If your message has been successfully sent to your mobile phone, you should get a receipt with the info, including **status**, **messageId**, **network-code**, etc.
+If your message has been successfully sent to your mobile phone, you should get a receipt with the info, including **status**, **messageId**, **network-code**, etc. This information is shown through the terminal or command prompt. 
 
 Below is a sample of what mine looks like: 
 
