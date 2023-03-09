@@ -23,7 +23,7 @@ In this article, I'm going to use Vonage, Laravel, and Expose to receive an inco
 
 ## What is Mastodon?
 
-Mastodon is a Social Media platform that is open source. In terms of its behaviour and UI, it's very similar to Twitter (the equivlent to a "tweet" is a "toot", for instance). There are, however, major differences; I've mentioned that it's open source, but it also works as a "decentralised" network. This aspect of it is what makes it unique: the idea is that you can spin up your own Mastodon instance, that is connected to "the Fediverse" (i.e. all the other Mastodon servers). The end result is that you, as a user, can choose a Mastodon instance to sign up to, but can see content from all other users across the platform.
+[Mastodon is a Social Media platform that is open source](https://joinmastodon.org/). In terms of its behaviour and UI, it's very similar to Twitter (the equivlent to a "tweet" is a "toot", for instance). There are, however, major differences; I've mentioned that it's open source, but it also works as a "decentralised" network. This aspect of it is what makes it unique: the idea is that you can spin up your own Mastodon instance, that is connected to "the Fediverse" (i.e. all the other Mastodon servers). The end result is that you, as a user, can choose a Mastodon instance to sign up to, but can see content from all other users across the platform.
 
 To the surprise of probably nobody, the signup rate of Mastodon has been phenomenal: in November 2022 alone, it welcomed a million new users.
 
@@ -137,7 +137,7 @@ and hopefully, you'll get an HTTP200 response back, and your Toot should appear 
 
 There is absolutely no reasoning behind this, apart from "why not?". We *could* send a text to a number, and have it toot out the contents if we wanted to... so, let's do that!
 
-You'll need a Vonage account and a number to do this. To sign up if you haven't already, [head to the Vonage API site](https://ui.idp.vonage.com/ui/auth/registration). 
+<sign-up></sign-up>
 
 You'll need two things here: firstly, a new application created in the dashboard, and secondly a Vonage number tied to the application.
 
