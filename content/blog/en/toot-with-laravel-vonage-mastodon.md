@@ -25,11 +25,11 @@ Apparently, this spike then tailed off: but more recent incidents and outages at
 
 Mastodon is a Social Media platform that is open source. In terms of its behaviour and UI, it's very similar to Twitter. There are, however, major differences; I've mentioned that it's open source, but it also works as a "decentralised" network. This aspect of it is what makes it unique: the idea is that you can spin up your own Mastodon instance, that is connected to "the Fediverse" (i.e. all the other Mastodon servers). The end result is that you, as a user, can choose a Mastodon instance to sign up to, but can see content from all other users across the platform.
 
-I suppose it's pretty poetic that Mastodon's mascot is an elephant, given that I am firstly the PHP specialist in the Vonage Developer Relations Team, and secondly a user on Mastodon's [PHP community server]() run by Ian Littman and Ben Ramsey. So let's get started: firstly we want some Laravel scaffolding to fire off a request to the Mastodon API to create a new post.
+I suppose it's pretty poetic that Mastodon's mascot is an elephant, given that I am firstly the PHP specialist in the Vonage Developer Relations Team, and secondly a user on Mastodon's [PHP community server](https://phpc.social/) run by Ian Littman and Ben Ramsey. So let's get started: firstly we want some Laravel scaffolding to fire off a request to the Mastodon API to create a new post.
 
 ## Booting Up Laravel
 
-It doesn't make much sense to write a whole paragraph on how to install Laravel when [the documentation is pretty comprehensive](), so let's work on building a command to fire off a Mastodon API request. Use the console to make a new command:
+It doesn't make much sense to write a whole paragraph on how to install Laravel when [the documentation is pretty comprehensive](https://laravel.com/docs/10.x), so let's work on building a command to fire off a Mastodon API request. Use the console to make a new command:
 
 ```php
 php artisan make:command PostToMastodonCommand
