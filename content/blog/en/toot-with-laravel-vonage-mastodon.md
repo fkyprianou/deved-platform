@@ -17,15 +17,17 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-To the surprise of probably nobody, the signup rate of Mastodon has been phenomenal: in November 2022 alone, it welcomed a million new users.
+You may have heard of Mastodon in recent months, given changes that are happening within the world of Social Media, but what is it, and what can I do with it?
 
-Apparently, this spike then tailed off: but more recent incidents and outages at its main competitor have seen another surge in signups. Let's have a go at messing around with it: in this article, I'm going to use Vonage, Laravel, and Expose to receive an incoming SMS sent from your phone to 'toot' it out on a Mastodon account.
+In this article, I'm going to use Vonage, Laravel, and Expose to receive an incoming SMS sent from your phone to 'toot' it out on a Mastodon account.
 
 ## What is Mastodon?
 
-Mastodon is a Social Media platform that is open source. In terms of its behaviour and UI, it's very similar to Twitter. There are, however, major differences; I've mentioned that it's open source, but it also works as a "decentralised" network. This aspect of it is what makes it unique: the idea is that you can spin up your own Mastodon instance, that is connected to "the Fediverse" (i.e. all the other Mastodon servers). The end result is that you, as a user, can choose a Mastodon instance to sign up to, but can see content from all other users across the platform.
+Mastodon is a Social Media platform that is open source. In terms of its behaviour and UI, it's very similar to Twitter (the equivlent to a "tweet" is a "toot", for instance). There are, however, major differences; I've mentioned that it's open source, but it also works as a "decentralised" network. This aspect of it is what makes it unique: the idea is that you can spin up your own Mastodon instance, that is connected to "the Fediverse" (i.e. all the other Mastodon servers). The end result is that you, as a user, can choose a Mastodon instance to sign up to, but can see content from all other users across the platform.
 
-I suppose it's pretty poetic that Mastodon's mascot is an elephant, given that I am firstly the PHP specialist in the Vonage Developer Relations Team, and secondly a user on Mastodon's [PHP community server](https://phpc.social/) run by Ian Littman and Ben Ramsey. So let's get started: firstly we want some Laravel scaffolding to fire off a request to the Mastodon API to create a new post.
+To the surprise of probably nobody, the signup rate of Mastodon has been phenomenal: in November 2022 alone, it welcomed a million new users.
+
+I suppose it's pretty poetic that Mastodon's mascot is an Mastodon, a distant relative of the elephant, given that I am firstly the PHP specialist in the Vonage Developer Relations Team, and secondly a user on Mastodon's [PHP community server](https://phpc.social/). So let's get started: firstly we want some Laravel scaffolding to fire off a request to the Mastodon API to create a new post.
 
 ## Booting Up Laravel
 
