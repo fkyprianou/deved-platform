@@ -39,3 +39,5 @@ F﻿ollowing the talks we will have plenty of time for free networking, and a ch
 [Temporal](https://temporal.io/) is a microservice orchestration platform which enables developers to build scalable applications without sacrificing productivity or reliability. Temporal server executes units of application logic, Workflows, in a resilient manner that automatically handles intermittent failures, and retries failed operations.
 
 P﻿laces are limited, [so sign up here](https://vonage.dev/3YAWi1c), and we'll see you there!
+
+If you want to stay up to date on similar events coming to your neighbourhood, be sure to check out eh
