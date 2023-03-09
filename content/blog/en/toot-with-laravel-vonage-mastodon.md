@@ -65,17 +65,17 @@ php artisan app:post-to-mastodon
 
 Out comes the message in the terminal. Nothing particularly special here, but now it's time to configure Mastodon.
 
-## Mastodon Configuration 
+## Mastodon Configuration
 
 We're going to configure Mastodon for Laravel using Laravel conventions: the only thing we actually need to send a Toot is an access token (API keys for more advanced operations require full keypairs or rotation of keys because access has been configured via. OAuth).
 
 Our first stop is getting the access key. In your Mastodon. Head to your preferences panel while logged in. You should be able to see a `Development` tab:
 
-![[Pasted image 20230308113132.png]]
+![](/content/blog/toot-with-laravel-vonage-mastodon/1.png)
 
 Create a new application with read access in the scope (this comes as default). Once created, what you are looking for is under `Your access token`:
 
-![[Screenshot 2023-03-08 at 11.30.04.png]]
+![](/content/blog/toot-with-laravel-vonage-mastodon/2.png)
 
 This is the value we'll need in the app. Copy this, then head back to your code.
 
@@ -133,23 +133,23 @@ and hopefully, you'll get an HTTP200 response back, and your Toot should appear 
 
 ## What if we... sent an SMS to Toot instead?
 
-There is absolutely no reasoning behind this, apart from "why not?". We _could_ send a text to a number, and have it toot out the contents if we wanted to... so, let's do that!
+There is absolutely no reasoning behind this, apart from "why not?". We *could* send a text to a number, and have it toot out the contents if we wanted to... so, let's do that!
 
-You'll need a Vonage account and a number to do this. To sign up if you haven't already, [head to the Vonage API site](https://ui.idp.vonage.com/ui/auth/registration ). 
+You'll need a Vonage account and a number to do this. To sign up if you haven't already, [head to the Vonage API site](https://ui.idp.vonage.com/ui/auth/registration). 
 
 You'll need two things here: firstly, a new application created in the dashboard, and secondly a Vonage number tied to the application.
 
 Head to the `Applications` tab in your Vonage Dashboard, and hit Create Application:
 
-![[Pasted image 20230308145015.png]]
+![](/content/blog/toot-with-laravel-vonage-mastodon/3.png)
 
 Our new application is going to use the Messages API to receive SMS messages, which will then fire off webhooks for our Laravel application to listen to. Toggle the `Messages` capability, and fill the Inbound URL/StatusURL with a placeholder for the time being; we'll revisit these shortly.
 
-![[Pasted image 20230308145923.png]]
+![](/content/blog/toot-with-laravel-vonage-mastodon/4.png)
 
 We'll need a number to connect incoming messages to the application's webhooks. Create your application, and then you should see the option to `Buy more Numbers`. It's this process where you can select a number, purchase it and then link it to the application. Your end result in the application dashboard should look like this:
 
-![[Pasted image 20230308202535.png]]
+![](/content/blog/toot-with-laravel-vonage-mastodon/5.png)
 
 ## Routing our Laravel Application
 
@@ -206,7 +206,7 @@ Expose from Beyond Code essentially behaves the same as ngrok; It's a tunnel app
 composer global require beyondcode/expose
 ```
 
-You'll want to add the executable to your operating system's path - [check out the docs here]() to see how to do that.
+You'll want to add the executable to your operating system's path - [check out the docs here](<>) to see how to do that.
 
 Expose will need configuring with an access token - you can follow the steps here to create a token and assign it to your copy.
 
@@ -224,15 +224,15 @@ expose share http://127.0.0.1:8000
 
 All being well, you should now see the Expose dashboard:
 
-![[Pasted image 20230308163100.png]]
+![](/content/blog/toot-with-laravel-vonage-mastodon/6.png)
 
 You can see that there is a dashboard URL: Expose runs a UI on port 4040. If you navigate to it, you'll be presented with a pretty nice set of tools for debugging:
 
-![[Pasted image 20230308201412.png]]
+![](/content/blog/toot-with-laravel-vonage-mastodon/7.png)
 
 We'll keep this window so we can see our webhook coming in. Our final bit of configuration is to take our new public HTTPS URL and paste it back into the application settings in the Vonage Dashboard:
 
-![[Pasted image 20230308202202.png]]
+![](/content/blog/toot-with-laravel-vonage-mastodon/8.png)
 
 The only important thing here for our use case is that the Inbound URL matches the Laravel route we defined. The Status URL isn't important here as this is for deeper integrations that listen out for any changes, delivery failures, and network issues.
 
@@ -240,11 +240,11 @@ The only important thing here for our use case is that the Inbound URL matches t
 
 Everything is wired together: send an SMS with what you want to display in Mastodon, and watch our setup do its thing!
 
-![[Pasted image 20230308204428.png]]
+![](/content/blog/toot-with-laravel-vonage-mastodon/expose.png)
 
 And here's our toot!
 
-![[Pasted image 20230308204524.png]]
+![](/content/blog/toot-with-laravel-vonage-mastodon/9.png)
 
 ## Conclusion
 
