@@ -1,6 +1,6 @@
 ---
 title: Toot with Laravel, Vonage & Mastodon
-description: Mastodon is seeing an upturn in usage, so why don't we play around?
+description: "Use PHP & Laravel, the Vonage SMS API to send a Mastodon Toot "
 author: james-seconde
 published: true
 published_at: 2023-03-09T10:08:28.989Z
