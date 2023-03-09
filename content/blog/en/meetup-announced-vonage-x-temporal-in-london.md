@@ -16,17 +16,17 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-C﻿alling all London based Devs! Or maybe you're in town for CityJS London? Either way, you are invited to join the Vonage DevRex team and Temporal for a meetup event on 30th March 2023, from 18:30 - 20:00 GMT. H﻿eld at **TBC,** join us for an evening of content, networking and some fun and games.
+C﻿alling all London based Devs! Or maybe you're in town for [CityJS London](https://london.cityjsconf.org/)? Either way, you are invited to join the [Vonage DevRex Team](https://developer.vonage.com/en/team) and [Temporal](https://temporal.io/) for a meetup event on 30th March 2023, from 18:30 - 20:00 GMT. H﻿eld at **TBC,** [join us](https://vonage.dev/3YAWi1c) for an evening of content, networking and some fun and games.
 
 W﻿e are excited to announce two live talks:
 
 **\- Who Can Improve Customer Experience? You? Yes, You!**  \
-*Benjamin-Michael Aronov, Developer Advocate, Vonage*
+*[Benjamin-Michael Aronov, Developer Advocate, Vonage](https://developer.vonage.com/en/blog/authors/benjamin-aronov)*
 
 Keeping your customers happy can be difficult. They want answers, now! Help your customers get the information they are looking for, on any channel they want. In this session we'll talk about Vonage's Communication API suite and lowcode tools that help developers and non-developers alike, create delightful interactions for their end users
 
 **\- Escape Queue Abyss with Durable Execution** \
-*Maxim Fateev, Co-Founder / CEO - Temporal Technologies*
+*[Maxim Fateev, Co-Founder/CEO, Temporal Technologies](https://twitter.com/mfateev?lang=en)*
 
 "Durable Execution" is an emerging programming model concept that automatically and transparently handles the creation and use of queues in order to run your code with complete reliability at the platform level. The presentation will introduce you to some of the concepts and level you up into a whole new world called Durable Execution. It will also allow you to climb out of the abyss of disjointed services and into clouds of reliable solutions.
 
@@ -40,4 +40,4 @@ F﻿ollowing the talks we will have plenty of time for free networking, and a ch
 
 P﻿laces are limited, [so sign up here](https://vonage.dev/3YAWi1c), and we'll see you there!
 
-If you want to stay up to date on similar events coming to your neighbourhood, be sure to check out eh
+If you want to stay up to date with similar events coming to your neighbourhood, be sure to check out the Vonage Developer Community [Events Page](https://developer.vonage.com/en/community).
