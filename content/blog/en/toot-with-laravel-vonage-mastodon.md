@@ -252,4 +252,4 @@ And here's our toot!
 
 Mastodon's API is fully open by design, without 'premium features' due to the nature of the software being FOSS-first. Bearing that in mind, there is pretty much no limit to what you can do here - I wanted this to be a brief introduction, but in terms of proof-of-concept I've already got voice transcriptions using the Vonage Voice API to also Toot out recordings.
 
-Thought of something else you could do with Laravel, Mastodon, and Vonage? Hit me up, I'm always up for experimenting.
+Thought of something else you could do with Laravel, Mastodon, and Vonage? Hit me up, I'm always up for experimenting. Come join in the conversation on our [Vonage Community Slack](https://developer.vonage.com/community/slack) or hit us up on [Twitter](https://twitter.com/VonageDev).
