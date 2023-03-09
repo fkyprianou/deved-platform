@@ -19,7 +19,7 @@ replacement_url: ""
 ---
 To the surprise of probably nobody, the signup rate of Mastodon has been phenomenal: in November 2022 alone, it welcomed a million new users.
 
-Apparently, this spike then tailed off: but more recent incidents and outages at it's main competitor have seen another surge of signups. Let's have a go at messing around with it: in this article I'm going to use Vonage, Laravel and Expose to recieve an incoming SMS sent from your phone to 'toot' it out on a Mastodon account.
+Apparently, this spike then tailed off: but more recent incidents and outages at its main competitor have seen another surge in signups. Let's have a go at messing around with it: in this article, I'm going to use Vonage, Laravel, and Expose to receive an incoming SMS sent from your phone to 'toot' it out on a Mastodon account.
 
 ## What is Mastodon?
 
@@ -29,7 +29,7 @@ I suppose it's pretty poetic that Mastodon's mascot is an elephant, given that I
 
 ## Booting Up Laravel
 
-It doesn't make much sense to write a whole paragraph on how to install Laravel when [the documentation is pretty comprehensive](), so lets work on building a command to fire off a Mastodon API request. Use the console to make a new command:
+It doesn't make much sense to write a whole paragraph on how to install Laravel when [the documentation is pretty comprehensive](), so let's work on building a command to fire off a Mastodon API request. Use the console to make a new command:
 
 ```php
 php artisan make:command PostToMastodonCommand
@@ -50,7 +50,7 @@ To test execution, I'm going to write a placeholder string and then dump it out 
 ```php
 public function handle(): void  
 {  
-    $exampleMessage = "Hey! I'm writing a Blog post on integrating Mastodon, Vonage and Laravel.  
+    $exampleMessage = "Hey! I'm writing a blog post on integrating Mastodon, Vonage, and Laravel.  
     If you see this, I've just fired an artisan command to the API. Nice.";  
   
     $this->info($exampleMessage);
@@ -106,7 +106,7 @@ MASTODON_ACCESS_TOKEN=2sd09g-0h9hs-09ts-0risd-f9j4-s9d0g9s-0h8
 
 ## Fire a Toot with the Command
 
-Our last part is to hook up the config variable into the command, and send it off to our Mastodon instance. In the `PostToMastodonCommand` handler, add the following code:
+Our last part is to hook up the config variable into the command and send it off to our Mastodon instance. In the `PostToMastodonCommand` handler, add the following code:
 
 ```php
 $response = Http::asForm()->withToken(config('mastodon.access_token'))->post('https://mymastodon.social/api/v1/statuses', [  
@@ -118,7 +118,7 @@ $this->info($response->body());
 
 Laravel's Http facade gives us a pretty fluid way to send the request off without having to fiddle with configuring a Client such as Guzzle directly. Breaking down the request, we have the following components:
 
-* `asForm()`: Mastodon's API for this endpoint requires the data in the request be sent as `multipart/form-data`.
+* `asForm()`: Mastodon's API for this endpoint requires the data in the request to be sent as `multipart/form-data`.
 * `withToken()` is a neat function to automatically add a `Bearer` token to the `Authorization` of the request.
 * `config(mastodon.access_token`) retrieves our token out of the newly created config file
 * `post()` is the type of HTTP request we need to make
@@ -129,33 +129,33 @@ Fire the command into the console:
 php artisan app:post-to-mastodon
 ```
 
-and hopefully you'll get an HTTP200 response back, and your Toot should appear in Mastodon.
+and hopefully, you'll get an HTTP200 response back, and your Toot should appear in Mastodon.
 
 ## What if we... sent an SMS to Toot instead?
 
 There is absolutely no reasoning behind this, apart from "why not?". We _could_ send a text to a number, and have it toot out the contents if we wanted to... so, let's do that!
 
-You'll need a Vonage account and a number to do this. To sign up if you haven't already, [head to to the Vonage API site](https://ui.idp.vonage.com/ui/auth/registration ). 
+You'll need a Vonage account and a number to do this. To sign up if you haven't already, [head to the Vonage API site](https://ui.idp.vonage.com/ui/auth/registration ). 
 
-You'll need two things here: firstly, a new application created in the dashboard and secondly a Vonage number tied to the application.
+You'll need two things here: firstly, a new application created in the dashboard, and secondly a Vonage number tied to the application.
 
 Head to the `Applications` tab in your Vonage Dashboard, and hit Create Application:
 
 ![[Pasted image 20230308145015.png]]
 
-Our new application is going to use the Messages API to recieve SMS messages, which will then fire off webhooks for our Laravel application to listen to. Toggle the `Messages` capability, and fill the Inbound URL/StatusURL with a placeholder for the time being; we'll revisit these shortly.
+Our new application is going to use the Messages API to receive SMS messages, which will then fire off webhooks for our Laravel application to listen to. Toggle the `Messages` capability, and fill the Inbound URL/StatusURL with a placeholder for the time being; we'll revisit these shortly.
 
 ![[Pasted image 20230308145923.png]]
 
-We'll need a number to connect incoming messages into the application's webhooks. Create your application, and then you should see the option to `Buy more Numbers`. It's this process that where you can select a number, purchase it and then link it to the application. Your end result in the application dashboard should look like this:
+We'll need a number to connect incoming messages to the application's webhooks. Create your application, and then you should see the option to `Buy more Numbers`. It's this process where you can select a number, purchase it and then link it to the application. Your end result in the application dashboard should look like this:
 
 ![[Pasted image 20230308202535.png]]
 
 ## Routing our Laravel Application
 
-The URL specified in the 'InboundURL' field on the dashboard is where our webhook is going to be sent to, but we've not opened a route yet in our Laravel Application.
+The URL specified in the 'InboundURL' field on the dashboard is where our webhook is going to be sent, but we've not opened a route yet in our Laravel Application.
 
-The webhook is designed to interact with our app at an API level rather than the web routing (which would be to load pages, dashboards etc.). For this reason, we want our new route to be in `routes/api.php`. Open that up, then add the route:
+The webhook is designed to interact with our app at an API level rather than the web routing (which would be to load pages, dashboards, etc.). For this reason, we want our new route to be in `routes/api.php`. Open that up, then add the route:
 
 ```php
 Route::post('/incoming', IncomingSMSController::class);
@@ -194,13 +194,13 @@ class IncomingSMSController extends Controller
 
 So, what we're doing here is replacing the placeholder message we sent to Mastodon originally in the command with the incoming SMS text contents.
 
-There is one major missing piece here: Vonage needs a live URL to send that webhook to. So, how do we that?
+There is one major missing piece here: Vonage needs a live URL to send that webhook to. So, how do we do that?
 
 In previous examples I've written, I've turned to ngrok as an excellent tunnel application to expose your local stack to the internet. However, recently I have started using something else
 
 ## Expose to the Rescue!
 
-Expose from Beyond Code essentially behaves the same as ngrok; It's a tunnel application that allows your local web application to be exposed to the internet. You can install it in several ways, but arguably the simpest way will be via. `composer require global`:
+Expose from Beyond Code essentially behaves the same as ngrok; It's a tunnel application that allows your local web application to be exposed to the internet. You can install it in several ways, but arguably the simplest way will be via. `composer require global`:
 
 ```bash
 composer global require beyondcode/expose
@@ -234,11 +234,11 @@ We'll keep this window so we can see our webhook coming in. Our final bit of con
 
 ![[Pasted image 20230308202202.png]]
 
-The only important thing here for our use case if that the Inbound URL matches the Laravel route we defined. The Status URL isn't important here as this is for deeper integrations that listen out for any changes, delivery failures and network issues.
+The only important thing here for our use case is that the Inbound URL matches the Laravel route we defined. The Status URL isn't important here as this is for deeper integrations that listen out for any changes, delivery failures, and network issues.
 
 ## Txt me!
 
-Everything is wired together: send an SMS with what you want to display in Mastodon, and watch our setup do it's thing!
+Everything is wired together: send an SMS with what you want to display in Mastodon, and watch our setup do its thing!
 
 ![[Pasted image 20230308204428.png]]
 
@@ -250,4 +250,4 @@ And here's our toot!
 
 Mastodon's API is fully open by design, without 'premium features' due to the nature of the software being FOSS-first. Bearing that in mind, there is pretty much no limit to what you can do here - I wanted this to be a brief introduction, but in terms of proof-of-concept I've already got voice transcriptions using the Vonage Voice API to also Toot out recordings.
 
-Thought of something else you could do with Laravel, Mastodon and Vonage? Hit me up, I'm always up for experimenting.
+Thought of something else you could do with Laravel, Mastodon, and Vonage? Hit me up, I'm always up for experimenting.
