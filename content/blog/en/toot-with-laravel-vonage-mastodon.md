@@ -198,17 +198,17 @@ So, what we're doing here is replacing the placeholder message we sent to Mastod
 
 There is one major missing piece here: Vonage needs a live URL to send that webhook to. So, how do we do that?
 
-In previous examples I've written, I've turned to ngrok as an excellent tunnel application to expose your local stack to the internet. However, recently I have started using something else
+In previous examples I've written, I've turned to [ngrok](https://ngrok.com/) as an excellent tunnel application to expose your local stack to the internet. However, recently I have started using something else
 
 ## Expose to the Rescue!
 
-Expose from Beyond Code essentially behaves the same as ngrok; It's a tunnel application that allows your local web application to be exposed to the internet. You can install it in several ways, but arguably the simplest way will be via. `composer require global`:
+Expose from Beyond Code essentially behaves the same as ngrok; It's a tunnel application that allows your local web application to be exposed to the internet. [You can install it in several ways](https://expose.dev/docs/getting-started/installation), but arguably the simplest way will be via. `composer require global`:
 
 ```bash
 composer global require beyondcode/expose
 ```
 
-You'll want to add the executable to your operating system's path - [check out the docs here](<>) to see how to do that.
+You'll want to add the executable to your operating system's path - [check out the docs here to see how to do that.](https://zwbetz.com/how-to-add-a-binary-to-your-path-on-macos-linux-windows/)
 
 Expose will need configuring with an access token - you can follow the steps here to create a token and assign it to your copy.
 
