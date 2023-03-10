@@ -1,10 +1,11 @@
 ---
 title: How to Play an Audio Stream Into a Phone Call With Python
 description: How to Play an Audio Stream into a Phone Call with Python
+thumbnail: /content/blog/how-to-play-an-audio-stream-into-a-phone-call-with-python/python-audiostream.png
 author: oleksii-borysenko
 published: true
-published_at: 2023-02-28T14:02:29.730Z
-updated_at: 2023-02-28T14:02:29.741Z
+published_at: 2023-03-13T14:02:29.730Z
+updated_at: 2023-03-13T14:02:29.741Z
 category: tutorial
 tags:
   - puthon
