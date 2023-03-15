@@ -1,15 +1,16 @@
 ---
 title: How to Handle Inbound Phone Calls with Node.js
 description: Learn how to handle Inbound Phone Calls with Node.js
+thumbnail: /content/blog/how-to-handle-inbound-phone-calls-with-node-js/inbound_text-to-speech_node-js.png
 author: michael-crump
 published: true
-published_at: 2023-02-22T22:21:14.829Z
-updated_at: 2023-02-22T22:21:14.894Z
+published_at: 2023-03-16T22:21:14.829Z
+updated_at: 2023-03-16T22:21:14.894Z
 category: tutorial
 tags:
-  - voice
+  - voice-api
   - node
-  - apis
+  - text-to-speech
 comments: true
 spotlight: false
 redirect: ""
