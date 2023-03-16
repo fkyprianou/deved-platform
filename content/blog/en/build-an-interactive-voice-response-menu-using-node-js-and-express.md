@@ -36,7 +36,7 @@ Before you begin, make sure you have the following installed:
 
 ## Create a Voice-Enabled Vonage Application
 
-To use the [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview), you must create a [Vonage Application](https://developer.vonage.com/application/overview) from the developer portal. If you don't have an account, then go ahead and create one, as we provide credits to get started. No credit card is required. 
+To use the [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview), you must create a [Vonage Application](https://developer.vonage.com/application/overview) from the developer portal. 
 
 <sign-up></sign-up>
 
