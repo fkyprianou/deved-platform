@@ -18,8 +18,6 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-Build an Interactive Voice Response Menu using Node.js and Express
-
 ## Introduction
 
 The [Vonage Voice API](https://developer.vonage.com/en/voice/voice-api/overview) is the easiest way to build high-quality voice applications in the Cloud. 
@@ -40,6 +38,8 @@ Before you begin, make sure you have the following installed:
 
 To use the [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview), you must create a [Vonage Application](https://developer.vonage.com/application/overview) from the developer portal. If you don't have an account, then go ahead and create one, as we provide credits to get started. No credit card is required. 
 
+<sign-up></sign-up>
+
 We will need to configure the application's webhooks and more. Please note that this can be accomplished through the [Vonage Developer Portal](https://developer.vonage.com/) or the [Vonage CLI](https://developer.vonage.com/application/vonage-cli). For this tutorial, we'll use the Vonage Developer Dashboard. 
 
 After creating an account, log into the Vonage Developer Dashboard, look for the [Application section](https://dashboard.nexmo.com/applications), and create a new application. Give your application a name, such as **IVRMenu**.
@@ -54,7 +54,7 @@ Make a note of the **Answer**, and **Event** URLs, as we will fill those in shor
 
 Press **Generate new application** at the bottom of the page to continue. 
 
-This tutorial also uses a virtual phone number. To purchase one, go to **Numbers** > **Buy Numbers** and search for one that meets your needs. Once you have a number, link it to the Vonage Developer Dashboard, as shown below.
+This tutorial also requires a virtual phone number. To purchase one, go to **Numbers** > **Buy Numbers** and search for one that meets your needs. Once you have a number, link it to the Vonage Developer Dashboard, as shown below.
 
 ![Adding a number to the application](/content/blog/build-an-interactive-voice-response-menu-using-node-js-and-express/linkednumber.png "LinkedNumber.png")
 
@@ -148,7 +148,7 @@ app.post('/dtmf', (req, res) => {
 })
 ```
 
-The endpoint for the `event_url` needs to be POST, so let’s define `/event`:
+The endpoint for the `event_url` needs to be POST, so let’s define `/events`:
 
 ```javascript
 app.post('/events', (req, res) => {
