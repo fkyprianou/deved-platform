@@ -79,3 +79,7 @@ Library from Vonage that provides ML algorithms:
 * MediaPipe solutions are based on WebGL and wasm (SIMD).
 * The solution does not come with MediaPipe binaries bundled. We added static assets under AWS Cloud Front CDN. Here are white-listed IPs for cloud front.
 * MediaProcessorConfig allows you to define mediapipeBaseAssetsUri which allows the user to self-host MediaPipe assets. However, we do NOT recommend this.
+
+## Conclusion
+Has ideas on how to use Transformers with video content? Try it with one of the [Sample applications](https://github.com/opentok/opentok-web-samples) or create your custom one. Show off your AI creations, or let us know how we can help! Join the conversation on our [Vonage Community Slack](https://developer.vonage.com/en/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
+
