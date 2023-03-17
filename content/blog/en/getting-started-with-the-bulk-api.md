@@ -42,7 +42,7 @@ Press **Create a new List**, and you'll be prompted to enter a **Name**, **Descr
 
 > We will leave **Tags** blank, but I'd suggest adding a tag to a production application to help manage a large number of Lists.
 
-It asks for a **Data Source**. You can select either **Manual** or **Salesforce**. If you select **Manual**, you'll need to provide a CSV file, or if you select **Salesforce**, you'll be asked to provide your Integration ID **and an option to provide the** Salesforce Object Query Language (SOQL)\*\*. For this demo, we'll use a CSV File that looks like this:
+It asks for a **Data Source**. You can select either **Manual** or **Salesforce**. If you select **Manual**, you'll need to provide a CSV file, or if you select **Salesforce**, you'll be asked to provide your Integration ID **and an option to provide the** Salesforce Object Query Language (SOQL). For this demo, we'll use a CSV File that looks like this:
 
 ```text
 firstName,lastName,Number,Location
@@ -98,8 +98,6 @@ We'll provide the following information to this form:
 Note the information that we provided for the **Condition**. This matches the **Location** column from the CSV file to match only entries containing **USA**. In this case, there are only two entries. The **Recipient Correlation Id** field also uses the same data source and retrieves the **Number** provided in the CSV File. 
 
 The only remaining thing to do is specify which **Action** we want to use for that **Segment**. Click on the drop-down and select **SMS**. Under **Action parameters,** click the **+** button and you will see the **Expression Helper**. They help create valid expressions for your segment conditions, and provide examples of the items from your list data source.
-
-
 
 ![configured actions](/content/blog/getting-started-with-proactive-connect/newjob3.png "configure-actions.png")
 
