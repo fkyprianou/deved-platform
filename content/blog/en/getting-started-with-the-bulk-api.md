@@ -80,7 +80,7 @@ Select the **Jobs** under **Configurations** and press **Create a new Job**. A J
 
 You'll be prompted to enter your list's **Name**, **Description**, and **Tags**. We'll use **My Job** for the **Name**, and for the **Description**, we'll use **This is my new Job**. We'll also need to **Include a List**, so I'll select **My Lists** from the drop-down and press **Next**. We'll leave **Exclude List** as blank. 
 
-![](/content/blog/getting-started-with-proactive-connect/newjob.png)
+![Creating a new job](/content/blog/getting-started-with-proactive-connect/newjob.png "Creating a new job")
 
 We'll now be asked to **Create a Segment** to increase the success of your campaign by sending relevant content to your customers. The segments will be executed based on the order set here from left to right.
 
@@ -93,19 +93,19 @@ We'll provide the following information to this form:
 * Condition: Items.Location == "USA"
 * Recipient Correlation Id: Items.Number
 
-![](/content/blog/getting-started-with-proactive-connect/newjob2.png)
+![Step 2 - Creating a new job ](/content/blog/getting-started-with-proactive-connect/newjob2.png "Step 2 - Creating a new job ")
 
 Note the information that we provided for the **Condition**. This matches the **Location** column from the CSV file to match only entries containing **USA**. In this case, there are only two entries. The **Recipient Correlation Id** field also uses the same data source and retrieves the **Number** provided in the CSV File. 
 
 The only remaining thing to do is specify which **Action** we want to use for that **Segment**. Click on the drop-down and select **SMS**. Under **Action parameters,** click the **+** button and you will see the **Expression Helper**. They help create valid expressions for your segment conditions, and provide examples of the items from your list data source.
 
-![configured actions](/content/blog/getting-started-with-proactive-connect/newjob3.png "configure-actions.png")
+![configure actions](/content/blog/getting-started-with-proactive-connect/newjob3.png "configure-actions.png")
 
-![](/content/blog/getting-started-with-proactive-connect/expression.png)
+![Expression Helper](/content/blog/getting-started-with-proactive-connect/expression.png "Expression Helper")
 
 Go ahead and fill in the options for all the parameters listed using the **Expression Helper** as shown below.
 
-![](/content/blog/getting-started-with-proactive-connect/newjob4.png)
+![Configure Actions](/content/blog/getting-started-with-proactive-connect/newjob4.png "Configure Actions")
 
 Go ahead and press **Next**, and you'll reach the final step in creating a new job. Here you'll be allowed to define how you'll handle the responses from each of your chosen segments. This is optional, and for now, we'll press **Save** to continue. 
 
