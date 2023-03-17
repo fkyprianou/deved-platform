@@ -40,7 +40,7 @@ We'll begin by creating a new List. Go ahead and click on **Lists** under **Conf
 
 Press **Create a new List**, and you'll be prompted to enter a **Name**, **Description**, and **Tags** for your list. We'll use **My Lists** for the **Name**, and for the **Description**, we'll use **This is my lists** and press **Next**.
 
-> We could have added **Tags** to find this list, which is typically helpful when managing a large number of Lists.
+> We will leave **Tags** blank, but I'd suggest adding a tag to a production application to help manage a large number of Lists.
 
 It asks for a **Data Source**. You can select either **Manual** or **Salesforce**. If you select **Manual**, you'll need to provide a CSV file, or if you select **Salesforce**, you'll be asked to provide your Integration ID **and an option to provide the** Salesforce Object Query Language (SOQL)\*\*. For this demo, we'll use a CSV File that looks like this:
 
@@ -52,23 +52,21 @@ Daniela,Facchinetti,14259999997,UK
 Ben,Aronov,14259999996,Israel
 ```
 
-Select **Data Source** and change it to **Manual**. Copy the text listed above and save it as a CSV file. Drag and drop the CSV file to the designer. Next, you'll assign a **Label name** with the label defined in the CSV File. For example, mine looks like the following:
-
-![Map Labels to names defined in the CSV](/content/blog/getting-started-with-proactive-connect/csvlabels.png "csvlabels.png")
+Select **Data Source** and change it to **Manual**. Copy the text listed above and save it as a CSV file. Drag and drop the CSV file to the designer. 
 
 Finally, press the **Save** button. 
 
 You now have a **Lists** which defines whom to send the campaign to, the number of entries, and when it was last modified. 
 
-![Configured List](/content/blog/getting-started-with-proactive-connect/configuredlist.png "configuredlist.png")
+![Configured List](/content/blog/getting-started-with-proactive-connect/newlists.png "configuredlist.png")
 
 ## Creating a new Action
 
-Now that we have a **List**, we need to perform an action to send messages to the group using one of our communication APIs. Again, this could be via SMS, MMS, Facebook Messenger, Viber, WhatsApp, or voice. Select the **Actions** under **Configurations** and press **Create a new Action**. You'll see several pre-configured Actions that you can use or start from scratch.
+Now that we have a List, we need to perform an action to send messages to the group using one of our communication APIs. Again, this could be via SMS, MMS, Facebook Messenger, Viber, WhatsApp, or voice. Select the **Actions** under **Configurations** and press **Template actions**. You'll see several pre-configured Actions that you can use right away. There is also an option called **Advanced action**, that will allow you to create your own from scratch. 
 
-![Pre-configured actions](/content/blog/getting-started-with-proactive-connect/preconfigured-actions.png "preconfigured-actions.png")
+![Pre-configured actions](/content/blog/getting-started-with-proactive-connect/newactions.png "preconfigured-actions.png")
 
-This is where we can start seeing the power of **Proactive Connect**. Suppose we select the **SMS** pre-configured Action. In that case, it will automatically populate the fields, such as the **parameters** we'd like to use in the request, along with the **Command** used for the API call and **Response** settings that come back after a successful or unsuccessful call. 
+This is where we can start seeing the power of **Proactive Connect**. Suppose we select the **SMS** pre-configured Action (Select SMS and press Edit). In that case, it will automatically populate the fields, such as the **parameters** we'd like to use in the request, along with the **Command** used for the API call and **Response** settings that come back after a successful or unsuccessful call. 
 
 The image below shows the command and headers to send an SMS message via the Vonage APIs. 
 
@@ -80,7 +78,9 @@ We will leave all the settings as default, so go ahead and press the **Save** bu
 
 Select the **Jobs** under **Configurations** and press **Create a new Job**. A Job combines your Contact **List** and your **Actions** and allows you to apply segmentation and specify unique content to be sent to each. You can also use the Job to exclude specific groups from your campaign.
 
-You'll be prompted to enter your list's **Name**, **Description**, and **Tags**. We'll use **My Job** for the **Name**, and for the **Description**, we'll use **This is my new Job**. We'll also need to **Include a List**, so I'll select **My Lists** from the drop-down and press **Next**.
+You'll be prompted to enter your list's **Name**, **Description**, and **Tags**. We'll use **My Job** for the **Name**, and for the **Description**, we'll use **This is my new Job**. We'll also need to **Include a List**, so I'll select **My Lists** from the drop-down and press **Next**. We'll leave **Exclude List** as blank. 
+
+![](/content/blog/getting-started-with-proactive-connect/newjob.png)
 
 We'll now be asked to **Create a Segment** to increase the success of your campaign by sending relevant content to your customers. The segments will be executed based on the order set here from left to right.
 
@@ -90,19 +90,28 @@ We'll provide the following information to this form:
 
 * Name: US Customers
 * Description: This message will go out to US-based customers.
-* Condition: item.Location == "USA"
-* Recipient: {{item.Number}}
-* Template Message: Hello {{firstName}}, please visit vonage.com/usa to get your discount code. 
+* Condition: Items.Location == "USA"
+* Recipient Correlation Id: Items.Number
 
-Note the information that we provided for the **Condition**. This matches the **Location** column from the CSV file to match only entries containing **USA**. In this case, there are only two entries. The **Recipient** field also uses the same data source and retrieves the **Number** provided in the CSV File. Finally, we provide a **Template Message** that uses the **FirstName** of the customer to send location-specific instructions. 
+![](/content/blog/getting-started-with-proactive-connect/newjob2.png)
 
-The only remaining thing to do is specify which **Action** we want to use for that **Segment**. I'll click on the drop-down and select **vg-send-sms**, which we defined earlier. By default, it will automatically populate the **Action parameters** as shown below. 
+Note the information that we provided for the **Condition**. This matches the **Location** column from the CSV file to match only entries containing **USA**. In this case, there are only two entries. The **Recipient Correlation Id** field also uses the same data source and retrieves the **Number** provided in the CSV File. 
 
-![configured actions](/content/blog/getting-started-with-proactive-connect/configure-actions.png "configure-actions.png")
+The only remaining thing to do is specify which **Action** we want to use for that **Segment**. Click on the drop-down and select **SMS**. Under **Action parameters,** click the **+** button and you will see the **Expression Helper**. They help create valid expressions for your segment conditions, and provide examples of the items from your list data source.
+
+
+
+![configured actions](/content/blog/getting-started-with-proactive-connect/newjob3.png "configure-actions.png")
+
+![](/content/blog/getting-started-with-proactive-connect/expression.png)
+
+Go ahead and fill in the options for all the parameters listed using the **Expression Helper** as shown below.
+
+![](/content/blog/getting-started-with-proactive-connect/newjob4.png)
 
 Go ahead and press **Next**, and you'll reach the final step in creating a new job. Here you'll be allowed to define how you'll handle the responses from each of your chosen segments. This is optional, and for now, we'll press **Save** to continue. 
 
-Keep in mind that if we wanted to create another **Segment** that targeted individuals living in the **UK**, we could press the **Create a Segment** button again and modify our **Condition** to match that location, along with a customized **Template Message** for that locale. We could also specify an **Action** that uses something besides the SMS API. For example, we could instead use Facebook Messenger, WhatsApp, etc.
+Keep in mind that if we wanted to create another **Segment** that targeted individuals living in the **UK**, we could press the **Create a Segment** button again and modify our **Condition** to match that location, along with a customized **Template Message** for that locale. We could also specify an **Action** that uses something besides the **SMS API**. For example, we could instead use Facebook Messenger, WhatsApp, etc.
 
 ## Scheduling a Run
 
@@ -112,11 +121,11 @@ You'll be prompted to enter your list's **Name**, **Description**, and **Job**. 
 
 Next, we need to **Schedule** when the **Run** will occur. Please note that the displayed start and end dates are in UTC. Once complete, press **Schedule** as shown below. 
 
-![Create a Run](/content/blog/getting-started-with-proactive-connect/create-a-run.png "create-a-run.png")
+![Create a Run](/content/blog/getting-started-with-proactive-connect/newrun.png "create-a-run.png")
 
 If we now go to the **Runs** section and click on **Overview** and **Show More**, we can get detailed information about the run results.
 
-![Run Results](/content/blog/getting-started-with-proactive-connect/run-results.png "run-results.png")
+![Run Results](/content/blog/getting-started-with-proactive-connect/run-results1.png "run-results.png")
 
 ## Wrap-up
 
