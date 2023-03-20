@@ -2,13 +2,15 @@
 title: "Meetup Announced: Vonage x Temporal in London "
 description: "The Vonage DevRex team are excited to be partnering with Temporal
   to host a evening of content, fun and games, on 30th March 2023 in London "
+thumbnail: /content/blog/meetup-announced-vonage-x-temporal-in-london/meetup-announced_vonage-temporal.png
 author: lucinda-bone
 published: true
-published_at: 2023-03-09T11:25:40.874Z
-updated_at: 2023-03-09T11:25:40.890Z
+published_at: 2023-03-21T11:25:40.874Z
+updated_at: 2023-03-21T11:25:40.890Z
 category: event
 tags:
-  - "#meetup"
+  - meetup
+  - event
 comments: true
 spotlight: false
 redirect: ""
