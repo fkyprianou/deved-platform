@@ -1,10 +1,11 @@
 ---
-title: Toot with Laravel, Vonage & Mastodon
+title: Toot with Laravel, Vonage and Mastodon
 description: "Use PHP & Laravel, the Vonage SMS API to send a Mastodon Toot "
+thumbnail: /content/blog/toot-with-laravel-vonage-and-mastodon/toot-toot_laravel-mastodon.png
 author: james-seconde
 published: true
-published_at: 2023-03-09T10:08:28.989Z
-updated_at: 2023-03-09T10:08:29.019Z
+published_at: 2023-03-20T10:08:28.989Z
+updated_at: 2023-03-20T10:08:29.019Z
 category: tutorial
 tags:
   - php
