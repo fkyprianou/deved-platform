@@ -49,22 +49,22 @@ I personally have used Miro for my mockups, but there are many good options out 
 
 As mentioned before, having a complete representation of all your different types of [conversation](https://studio.docs.ai.vonage.com/whatsapp/nodes/conversation) nodes is essential. When creating a key, think about all the different functionalities in your agent. Luckily for us, with AI Studio we already have a blueprint for a key. Here is a simple key of components I use:
 
-![Example Key of Mockup Componenets](/content/blog/how-to-create-a-conversational-ai-mockup/screenshot-2023-03-07-at-13.04.49.png "Example Key of Mockup Componenets")
+![Example Key of Mockup Componenets](/content/blog/how-to-create-a-conversational-ai-mockup/screenshot-2023-03-07-at-13.04.49.png "key-of-mockup-components.png")
 
 ## Literally, Be Literal
 
 When using a component, write exactly what will happen in the agent. If this is sending a message, write the message text. If it’s writing a condition, what will the condition check? If it’s classification, what variable will be classified? An example of this:
 
-![Example of a Mockup Flow](/content/blog/how-to-create-a-conversational-ai-mockup/screenshot-2023-03-07-at-13.10.14.png "Example of a Mockup Flow")
+![Example of a Mockup Flow](/content/blog/how-to-create-a-conversational-ai-mockup/screenshot-2023-03-07-at-13.10.14.png "conversational-ai-flow-mockup.png")
 
 \
 In the above example, we can see how variables are also treated. The `$Topic` variable is set in the [Collect Input](https://studio.docs.ai.vonage.com/whatsapp/nodes/conversation/collect-input) node and then used in the Classification node.
 
 ## Ready to Build
 
-After building out your mockup, you might end up with many different flows for your agent. There may still be some lingering questions like error handling, the exact implementation of integrations or webhooks, or if the text in certain nodes should be edited.  But in general, you will have a picture-perfect representation of your agent, so that all stakeholders can agree on the possible outcomes and flows. Below you can see an example of a mockup I made for an agent we used to help conference attendees last year at [apiDays Paris](https://developer.vonage.com/en/blog/closing-2022-with-apidays-and-devcity-paris#connecting-with-more-developers).
+After building out your mockup, you might end up with many different flows for your agent. There may still be some lingering questions like error handling, the exact implementation of integrations or webhooks, or if the text in certain nodes should be edited.  But in general, you will have a picture-perfect representation of your agent, so that all stakeholders can agree on the possible outcomes and flows. Below you can see an example of a mockup I made for an agent we used to help conference attendees last year at [API Days Paris](<https://developer.vonage.com/en/blog/closing-2022-with-apidays-and-devcity-paris#connecting-with-more-developers)>). 
 
-![Example of a complicated mockup](/content/blog/how-to-create-a-conversational-ai-mockup/apidays-flowchart.png "Example of a complicated mockup")
+![Example of a complicated mockup](/content/blog/how-to-create-a-conversational-ai-mockup/apidays-flowchart.png "complicated-conversational-ai-mockup.png")
 
 ## Conclusion
 
