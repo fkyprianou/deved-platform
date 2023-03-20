@@ -16,7 +16,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-C﻿alling all London based Devs! Or maybe you're in town for [CityJS London](https://london.cityjsconf.org/)? Either way, you are invited to join the [Vonage DevRex Team](https://developer.vonage.com/en/team) and [Temporal](https://temporal.io/) for a meetup event on 30th March 2023, from 18:30 - 20:00 GMT. H﻿eld at **TBC,** [join us](https://vonage.dev/3YAWi1c) for an evening of content, networking and some fun and games.
+C﻿alling all London based Devs! Or maybe you're in town for [CityJS London](https://london.cityjsconf.org/)? Either way, you are invited to join the [Vonage DevRex Team](https://developer.vonage.com/en/team) and [Temporal](https://temporal.io/) for a meetup event on 30th March 2023, from 18:30 - 20:00 GMT. Held at [The Angelic](https://www.google.com/maps/place/The+Angelic/@51.5347895,-0.1073453,17z/data=!3m1!4b1!4m6!3m5!1s0x47d91328984e6d5b:0xa5aa2fea6c2d9f75!8m2!3d51.5347895!4d-0.1073453!16s%2Fg%2F11_q905dg) in Islington, [join us](https://vonage.dev/3YAWi1c) for an evening of content, networking and some fun and games.
 
 W﻿e are excited to announce two live talks:
 
