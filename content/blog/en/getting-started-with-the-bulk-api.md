@@ -5,8 +5,8 @@ description: Create outreach campaigns at a large scale using any Vonage
 thumbnail: /content/blog/getting-started-with-the-campaign-manager-api-and-ui/bulk-api.png
 author: michael-crump
 published: true
-published_at: 2022-12-14T19:23:10.732Z
-updated_at: 2022-12-14T19:23:10.825Z
+published_at: 2023-02-23T19:23:10.732Z
+updated_at: 2023-03-23T19:23:10.825Z
 category: tutorial
 tags:
   - messages
