@@ -1,5 +1,5 @@
 ---
-title: Video Communications and AI - state of play
+title: Media Processor and AI video transformers in Video API
 description: This article will consider what AI/ML tools and frameworks can be
   valuable to developers working with Vonage Video API. We will also consider a
   few sample integrations using standard tools.
@@ -43,7 +43,7 @@ Vonage Media Processor is an accelerator library for web developers who want to 
 * Class where transformation algorithms are implemented
 * ML transformers provides reference implementation
 
-![Web application scheme](/content/blog/video-communications-and-ai-state-of-play/web-application.png)
+![Web application scheme](/content/blog/media-processor-and-ai-video-transformers-in-video-api/web-application.png)
 
 ## Applying Vonage ML Transformers to video & audio streams
 
@@ -51,7 +51,7 @@ With the Media Processor as our foundation for working with insertable streams, 
 
 MediaPipe library is an open source library under MIT license. For our solution of background blur/replacement we use the [Selfie Segmentation](https://google.github.io/mediapipe/solutions/selfie_segmentation.html) solution of MediaPipe. The library adds the support for all MediaPipe JS solutions. This helps developers create cool projects with any MediaPipe JS module.
 
-![Transformers](/content/blog/video-communications-and-ai-state-of-play/media-flow.png)
+![Transformers](/content/blog/media-processor-and-ai-video-transformers-in-video-api/media-flow.png)
 
 Library from Vonage that provides ML algorithms:
 
@@ -81,5 +81,5 @@ Library from Vonage that provides ML algorithms:
 * MediaProcessorConfig allows you to define mediapipeBaseAssetsUri which allows the user to self-host MediaPipe assets. However, we do NOT recommend this.
 
 ## Conclusion
-Has ideas on how to use Transformers with video content? Try it with one of the [Sample applications](https://github.com/opentok/opentok-web-samples) or create your custom one. Show off your AI creations, or let us know how we can help! Join the conversation on our [Vonage Community Slack](https://developer.vonage.com/en/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
 
+Has ideas on how to use Transformers with video content? Try it with one of the [Sample applications](https://github.com/opentok/opentok-web-samples) or create your custom one. Show off your AI creations, or let us know how we can help! Join the conversation on our [Vonage Community Slack](https://developer.vonage.com/en/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
