@@ -1,5 +1,5 @@
 ---
-title: Running Vonage APIs with MongoDB Atlas - Part 1
+title: Using Vonage APIs with MongoDB Atlas - Part 1
 description: MongoDB Atlas and its associated products are a great complement to Vonage APIs. What is MongoDB Atlas and what does it bring to the table?
 thumbnail: 
 author: christankersley
@@ -112,5 +112,5 @@ Your MongoDB Atlas cluster is now all set up! You can administer the cluster thr
 ![MongoDB Dashboard](/content/blog/using-vonage-with-mongodb-atlas-part-1/0008-mongodb-finished.png "MongoDB Dashboard")
 
 ## Next Steps
-ß
+
 In the next part, we will add some sample data to our MongoDB cluster, and walk through setting up the demo application to run. In the meantime, feel free to poke around the MongoDB Atlas dashboard as well as the Vonage Dashboard to see all the different services both companies offer.
