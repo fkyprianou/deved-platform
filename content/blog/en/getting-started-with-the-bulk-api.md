@@ -125,10 +125,10 @@ If we now go to the **Runs** section and click on **Overview** and **Show More**
 
 ![Run Results](/content/blog/getting-started-with-proactive-connect/run-results1.png "run-results.png")
 
-You can even switch the view to show a more detailed funnel view as shown in this example. 
+There is also a "**Detailed View**" that you can switch to. 
 
-![Detailed Funnel View](/content/blog/getting-started-with-proactive-connect/detailed-view.png "detailed-view.png")
+![Detailed View](/content/blog/getting-started-with-proactive-connect/detailed-view.png "detailed-view.png")
 
 ## Wrap-up
 
-Now that you have successfully built your first campaign with sample data, you can begin incorporating your live production data. But before we go, check out the documentation for the product. If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack), and we will get back to you. Thanks again for reading, and I will catch you on the next one!
+Now that you have successfully built your first campaign with sample data, you can begin incorporating your live production data. But before we go, check out the [documentation](https://developer.vonage.com/en/documentation). If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack), and we will get back to you. Thanks again for reading, and I will catch you on the next one!
