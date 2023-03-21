@@ -1,17 +1,17 @@
 ---
-title: Media Processor and AI Video Transformers in Video API
+title: Use Media Processor and AI Video Transformers with Vonage Video API
 description: This article will consider what AI/ML tools and frameworks can be
   valuable to developers working with Vonage Video API. We will also consider a
   few sample integrations using standard tools.
+thumbnail: /content/blog/use-media-processor-and-ai-video-transformers-with-vonage-video-api/video-communications_ai.png
 author: oleksii-borysenko
 published: true
-published_at: 2023-03-21T13:11:10.203Z
-updated_at: 2023-03-21T13:11:10.218Z
+published_at: 2023-03-22T13:11:10.203Z
+updated_at: 2023-03-22T13:11:10.218Z
 category: inspiration
 tags:
-  - Video
+  - video-api
   - AI
-  - API
 comments: true
 spotlight: false
 redirect: ""
