@@ -45,6 +45,7 @@ Do you want to use NCCO builder in your application? First, you need to Install 
 ```bash
 pip install vonage
 ```
+
 And import Vonage packages
 
 ```python
@@ -54,7 +55,7 @@ from vonage import Ncco
 
 ## Build into an NCCO
 
-Method [`Ncco.build_ncco`](https://github.com/Vonage/vonage-python-sdk#build-into-an-ncco) can create an NCCO from the actions. This will be returned as a list of dicts representing each action and can be used in calls to the Voice API.
+Method [`Ncco.build_ncco`](https://github.com/Vonage/vonage-python-sdk#build-into-an-ncco) can create an NCCO from the actions. This will be returned as a list of dictionaries representing each action and can be used in calls to the Voice API.
 
 List of required and optional parameters you can find on [NCCO reference page](https://developer.vonage.com/en/voice/voice-api/ncco-reference)
 
