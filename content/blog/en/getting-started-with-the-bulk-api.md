@@ -21,7 +21,7 @@ replacement_url: ""
 ---
 ## Introduction
 
-Today, we are pleased to announce a new tool called Proactive Connect that makes it easy to create outreach campaigns at a large scale using multiple Vonage Communications APIs, including SMS, Messages, Voice, and with AI Studio. This new API allows you to schedule and send personalized messages, across multiple channels, to different large-scale contact groups and offers the ability to receive and act on customer responses in a friendly Vonage Dashboard user interface. Proactive Connect enters Beta today, and you can try it now from your [Vonage Developer Portal](https://developer.vonage.com/). This blog explains how to set up campaigns through the user interface, where all the operations shown are also available programmatically through the API.
+Today, we are pleased to announce a new tool called Proactive Connect that makes it easy to create outreach campaigns at a large scale using multiple Vonage Communications APIs, including SMS, Messages, Voice, and with AI Studio. This new API allows you to schedule and send personalized messages, across multiple channels, to different large-scale contact groups and offers the ability to receive and act on customer responses in a friendly Vonage Dashboard user interface. Proactive Connect is in Beta today, and you can try it now from your [Vonage Developer Portal](https://developer.vonage.com/). This blog explains how to set up campaigns through the user interface, where all the operations shown are also available programmatically through the API.
 
 ## Terminology
 
