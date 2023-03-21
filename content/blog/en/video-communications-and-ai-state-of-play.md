@@ -43,7 +43,7 @@ Vonage Media Processor is an accelerator library for web developers who want to 
 * Class where transformation algorithms are implemented
 * ML transformers provides reference implementation
 
-![Web application scheme](/content/blog/media-processor-and-ai-video-transformers-in-video-api/web-application.png)
+![Web application scheme](/content/blog/use-media-processor-and-ai-video-transformers-with-vonage-video-api/web-application.png)
 
 ## Applying Vonage ML Transformers to video & audio streams
 
@@ -51,7 +51,7 @@ With the Media Processor as our foundation for working with insertable streams, 
 
 MediaPipe library is an open source library under MIT license. For our solution of background blur/replacement we use the [Selfie Segmentation](https://google.github.io/mediapipe/solutions/selfie_segmentation.html) solution of MediaPipe. The library adds the support for all MediaPipe JS solutions. This helps developers create cool projects with any MediaPipe JS module.
 
-![Transformers](/content/blog/media-processor-and-ai-video-transformers-in-video-api/media-flow.png)
+![Transformers](/content/blog/use-media-processor-and-ai-video-transformers-with-vonage-video-api/media-flow.png)
 
 Library from Vonage that provides ML algorithms:
 
