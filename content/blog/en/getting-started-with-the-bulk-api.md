@@ -125,7 +125,7 @@ If we now go to the **Runs** section and click on **Overview** and **Show More**
 
 ![Run Results](/content/blog/getting-started-with-proactive-connect/run-results1.png "run-results.png")
 
-There is also a "**Detailed View**" that you can switch to. 
+There is also a **Detailed View** that you can access by clicking on the Kebab menu on the **Runs** screen.  
 
 ![Detailed View](/content/blog/getting-started-with-proactive-connect/detailed-view.png "detailed-view.png")
 
