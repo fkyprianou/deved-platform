@@ -19,7 +19,7 @@ replacement_url: ""
 
 Developers often do not pay attention to licenses when using various open-source projects. As a result, we often use open-source projects, parts of a project, or functions for our applications and programs without thinking about how they might affect the derivative work. For example, do you need to retain the copyright notice from the original author? What are the requirements and obligations of different licenses? In this article, I also highlight information about popular licenses and their main features.
 
-**Disclaimer:** Information in this blog post should not be considered legal advice. If you are seeking legal advice then please contact a lawyer.
+**Disclaimer:** Information in this blog post should not be considered legal advice. If you are seeking legal advice, then please contact a lawyer.
 
 ## What constitutes a open-source license?
 
