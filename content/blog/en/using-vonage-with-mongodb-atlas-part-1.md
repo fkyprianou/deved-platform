@@ -21,7 +21,7 @@ outdated: false
 replacement_url: ""
 ---
 
-Developing applications is hard. Not only are there the base requirements for the application itself, but there are always common problems to solve like how to authenticate users, how is the database managed, and where is all of this hosted. In 2023 we are almost spoiled with the number of services that can help solve these problems, but all of this needs to be brought together inside of an application. One solution that has come along is MongoDB Atlas, a suite of products that are designed to help developers build their applications quickly and handle many common problems.
+Developing applications is hard. Not only are there the base requirements for the application itself, but there are always common problems to solve, like how to authenticate users, how the database is managed, and where is all of this hosted. In 2023 we are almost spoiled with the number of services that can help solve these problems, but all of this needs to be brought together inside an application. One solution that has come along is MongoDB Atlas, a suite of products that are designed to help developers build their applications quickly and handle many common problems.
 
 ## What is MongoDB Atlas?
 
