@@ -107,7 +107,7 @@ For security reasons, MongoDB Atlas restricts who can talk to your cluster. For 
 
 ![MongoDB Security Settings](/content/blog/using-vonage-with-mongodb-atlas-part-1/0007-ip-access-list.png "MongoDB Security Settings")
 
-Your MongoDB Atlas cluster is now all setup! You can administer the cluster through the browser, including viewing the stored documents. The dashboard also has instructions for connecting through their VSCode plugin to access the database directly in your IDE.
+Your MongoDB Atlas cluster is now all setup! You can administer the cluster through the browser, including viewing the stored documents. The dashboard also has instructions for connecting through the [MongoDB VSCode plugin](https://code.visualstudio.com/docs/azure/mongodb) to access the database directly in your IDE.
 
 ![MongoDB Dashboard](/content/blog/using-vonage-with-mongodb-atlas-part-1/0008-mongodb-finished.png "MongoDB Dashboard")
 
