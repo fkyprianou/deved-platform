@@ -27,7 +27,7 @@ Inbound messages are received via an [Inbound Message Webhook](https://developer
 * * Enable it for the Messages API
   * Set the Inbound URL to whichever URL you wish to receive your inbound messages
 
-![Vonage Dashboard Messages Application Inbound URL setting](https://lh4.googleusercontent.com/-BpU6o0m4dK3PybRRRSuEWiG3OLvPqRtc4b1jMkDSeQKH3h_U8-oOkZvxr-FKLD3pwo9_LUcMbKo0vB6fzsQbBW-ElFq4qemRGAUeVS4bf3pNRvpaAjauoP-e7MayK4RTw_j9GIJqSUCKmx64vt-ejY "Vonage Dashboard Messages Application Inbound URL setting")
+![Vonage Dashboard Messages Application Inbound URL setting](/content/blog/secure-your-inbound-media-files-with-the-vonage-messages-api/messages-api-inbound-url.png "Vonage Dashboard Messages Application Inbound URL setting")
 
 ### Inbound Message Payload
 
@@ -78,7 +78,7 @@ For certain use-cases, an increased level of security may be desirable, such as 
 
 To enable the feature, in the Vonage Dashboard edit the Application where you set the Inbound URL for the webhook, and toggle the Enhanced Inbound Media Security switch to the ‘on’ position.
 
-![Vonage Dashboard Messages Application Enhanced Inbound Media Toggle](https://lh4.googleusercontent.com/RXgZuj7PDUkE6nnTNSz81hSQfr1BzdqCmXnJ3Y7ytT_KfxUYuM1DYM7nYVdpMdrLufXx3gjVIeJfk45PTO5IE1G9JCrBIF6nZQql1JStPaJl5Znlx2HIyIw5z57JDiZrhNUE-Kf7WvpMNiNNmkMpiow "Vonage Dashboard Messages Application Enhanced Inbound Media Toggle")
+![Vonage Dashboard Messages Application Enhanced Inbound Media Toggle](/content/blog/secure-your-inbound-media-files-with-the-vonage-messages-api/enhanced-inbound-media-toggle.png "Vonage Dashboard Messages Application Enhanced Inbound Media Toggle")
 
 With the feature enabled, inbound message webhooks will still contain a URL to access the media, but now the GET request to access the media must contain an Authorization header with a scheme of Bearer and the credentials being a [JSON Web Token](https://developer.vonage.com/en/getting-started/concepts/authentication#json-web-tokens) (JWT). The JWT must be generated using the Application ID and Private Key from the Vonage Application where you set the Inbound webhook URL. For example:
 
