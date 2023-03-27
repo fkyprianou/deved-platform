@@ -2,13 +2,14 @@
 title: "Action flows that you can do with the Voice API "
 description: This article will describe how to use NCCO builder with Python code
   snippets as an example.
+thumbnail: /content/blog/action-flows-that-you-can-do-with-the-voice-api/action-flows_python_voiceapis.jpg
 author: oleksii-borysenko
 published: true
-published_at: 2023-03-14T10:47:04.939Z
-updated_at: 2023-03-14T10:47:04.955Z
+published_at: 2023-03-27T09:47:04.939Z
+updated_at: 2023-03-27T09:47:04.955Z
 category: tutorial
 tags:
-  - puthon
+  - python
   - voice-api
   - ncco
 comments: true
