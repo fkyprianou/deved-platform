@@ -47,11 +47,11 @@ db.users.find({
 })
 ```
 
-Many developers prefer using a NoSQL database for the freedom that the schemaless document design provides. There are no major migrations as new "columns" can be added to documents by just adding them to new or existing documents. You can define a schema if you want, but it largely only helps the database engine filter through data in larger data sets. 
+Many developers prefer using a NoSQL database for the freedom of the schemaless document design. There are no major migrations as new "columns" can be added to documents by adding them to new or existing documents. You can define a schema if you want, but it largely only helps the database engine filter through data in larger data sets. 
 
-MongoDB Atlas itself also brings a few additional features that developers can use to build their applications on top of the robust NoSQL database that MongoDB brings. This is part of their "App Service" layer that adds user authentication, a serverless function runtime, an associated API gateway and router, automatic GraphQL and HTTPS data access, and a device data syncing service called MongoDB Realm.
+MongoDB Atlas also brings a few additional features that developers can use to build their applications on top of the robust NoSQL database that MongoDB brings. This is part of their "App Service" layer that adds user authentication, a serverless function runtime, an associated API gateway and router, automatic GraphQL and HTTPS data access, and a device data syncing service called MongoDB Realm.
 
-What all of this means is that a developer can start developing their application right away without having to piece together a bunch of disparate services and can focus on the business problems that the application solves, not shave the proverbial yak on how to do user authentication or how to deploy code. Atlas and its App Services can do a lot of that heavy lifting for a developer.
+This means that a developer can start developing their application right away without having to piece together a bunch of disparate services and can focus on the business problems that the application solves, not shave the proverbial yak on how to do user authentication or how to deploy code. Atlas and its App Services can do much of that heavy lifting for a developer.
 
 ## What do we plan to do?
 
@@ -75,15 +75,15 @@ While we will be breaking down how all of this works over time, feel free to tak
 * [MongoDB Account](https://www.mongodb.com/cloud/atlas/register)
 * [Vonage Developer Account](https://developer.vonage.com/sign-up)
 * [Realm CLI](https://www.mongodb.com/docs/atlas/app-services/cli/) - A command line application that makes it easier to manage App Services in MongoDB Realm
-* Node.js 16+ - Node.js is an open-source, cross-platform JavaScript runtime environment.
+* [Node.js](https://nodejs.org/) 16+ - Node.js is an open-source, cross-platform JavaScript runtime environment.
 
 ## Set up a Vonage Application
 
-Our Messages, Verify, and In-App Messaging APIs are all backed by a Vonage Application, which is a set of configuration data that can be grouped together. Once you have signed into your developer account, go to the Applications page and [create a new application](https://dashboard.nexmo.com/applications/new). Give your application a name like **MongoDB Demo**, and then click **Generate Public and Private key**. This will create the authentication keys we will use in the SDKs. 
+Our Messages, Verify, and In-App Messaging APIs are all backed by a Vonage Application, a set of configuration data that can be grouped. Once you have signed into your developer account, go to the Applications page and [create a new application](https://dashboard.nexmo.com/applications/new). Give your application a name like **MongoDB Demo**, then click **Generate Public and Private key**. This will create the authentication keys we will use in the SDKs.
 
 ![Creating a Vonage application](/content/blog/using-vonage-with-mongodb-atlas-part-1/0001-new-app-name.png "Name and Secret Keys")
 
-Now scroll down and we can turn a few different capabilities. We will need **Messages**, **RTC (In-app voice & messaging)**, and the **Meetings API**. Toggle each of those capabilities on. **Messages** and **RTC** needs a few callback URLs that we will not utilize for the moment, so just enter `https://example.com` for those handfuls of URLs that are required. **Meetings** can stay blank. Once that's all done, click on "Generate new application".
+Now scroll down, and we can turn a few different capabilities. We will need **Messages**, **RTC (In-app voice & messaging)**, and the **Meetings API**. Toggle each of those capabilities on. **Messages** and **RTC** needs a few callback URLs that we will not utilize for the moment, so enter `https://example.com` for those handfuls of URLs that are required. **Meetings** can stay blank. Once that's all done, click on "Generate new application."
 
 ![Messages API Capability](/content/blog/using-vonage-with-mongodb-atlas-part-1/0002-messages-api.png "Messages API Capability")
 
@@ -95,19 +95,19 @@ Since we are using the **Messages API**, we will need to link a telephone number
 
 ## Set up MongoDB Atlas
 
-Now that we have the Vonage side set up, let's set up the database in MongoDB Atlas. When you first log into your account, it will prompt you to deploy your database. As this is a hosted plan, we will need to set up some hosting information. Thankfully the MongoDB Atlas system has a very generous free tier. Just select the **M0** free tier to host our database. This is more than powerful enough for us to play around for our demo. The only other thing you will need to do is add a **Name** for the database cluster. For the purposes of this demo, I have just named it _VonageDemo_. If you want you can change the hosting provider or Region, but for now you can leave them at the default of "AWS" and "N. Virgina (us-east-1)". Click **Create** to move on.
+Now that we have the Vonage side let's set up the database in MongoDB Atlas. When you first log into your account, it will prompt you to deploy your database. We must set up some hosting information as this is a hosted plan. Thankfully the MongoDB Atlas system has a very generous free tier. Just select the **M0** free tier to host our database. This is powerful enough for us to play around for our demo. The only other thing you will need to do is add a **Name** for the database cluster. For this demo, I have just named it _VonageDemo_. If you want, you can change the hosting provider or Region, but for now, you can leave them at the default of "AWS" and "N. Virgina (us-east-1)". Click **Create** to move on.
 
 ![Database Cluster Settings](/content/blog/using-vonage-with-mongodb-atlas-part-1/0005-deploy-your-database.png "Database Cluster Settings")
 
-As we will be accessing the MongoDB cluster over the internet, we will need to set up some authentication. We can use **Username and Password** auth for our demo as it is the easiest to get up and running with. It will pre-fill a username and password for you, feel free to change these. Just make sure you note down the password for later, as we will need that to authenticate to MongoDB. When you are done, click **Create User**.
+We will need to set up authentication as we will be accessing the MongoDB cluster over the internet. We can use **Username and Password** auth for our demo as it is the easiest to get up and running. It will pre-fill a username and password for you. Feel free to change these. Just note down the password for later; we will need that to authenticate to MongoDB. When you are done, click **Create User**.
 
 ![MongoDB Cluster Authentication](/content/blog/using-vonage-with-mongodb-atlas-part-1/0006-authentication.png "MongoDB Cluster Authentication")
 
-For security reasons, MongoDB Atlas restricts who can talk to your cluster. For our demo, you can just select **My Local Environment**. The server component of the demo will connect directly to the cluster so we will need to allow it access to the cluster. By default, it adds your public IP address to the list. This is fine for running the demo locally, but if you are going to deploy this to a public server you will need to add that server's IP address. If you are hosting the server on another machine, please check with your hosting provider to find out your public IP address. If you are going to host the demo in a cloud provider like AWS or Google Cloud Platform, you can select **Cloud Environment** and provide the appropriate details. Click **Finish and Close** to finish up.
+For security reasons, MongoDB Atlas restricts who can talk to your cluster. For our demo, you can select **My Local Environment**. The server component of the demo will connect directly to the cluster, so we will need to allow it access to the cluster. By default, it adds your public IP address to the list. This is fine for running the demo locally, but if you are going to deploy this to a public server, you will need to add that server's IP address. If you are hosting the server on another machine, please check with your hosting provider for your public IP address. If you host the demo in a cloud provider like AWS or Google Cloud Platform, you can select **Cloud Environment** and provide the appropriate details. Click **Finish and Close** to finish up.
 
 ![MongoDB Security Settings](/content/blog/using-vonage-with-mongodb-atlas-part-1/0007-ip-access-list.png "MongoDB Security Settings")
 
-Your MongoDB Atlas cluster is now all set up! You can administer the cluster through the browser, including viewing the stored documents. The dashboard also has instructions for connecting through their VSCode plugin if you want to access the database directly in your IDE. 
+Your MongoDB Atlas cluster is now all setup! You can administer the cluster through the browser, including viewing the stored documents. The dashboard also has instructions for connecting through their VSCode plugin to access the database directly in your IDE.
 
 ![MongoDB Dashboard](/content/blog/using-vonage-with-mongodb-atlas-part-1/0008-mongodb-finished.png "MongoDB Dashboard")
 
