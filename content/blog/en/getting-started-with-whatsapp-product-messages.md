@@ -1,5 +1,5 @@
 ---
-title: Getting Started with WhatsApp Product Messages
+title: Using WhatsApp Product Messages with the Vonage Messages API
 description: Learn how to use WhatsApp Product Messages to showcase products and
   services, and customers can browse and add products to a cart.
 author: michael-crump
@@ -163,7 +163,7 @@ We have created a site where you can create a token with just a few steps. Click
 
 ## Configure Message Templates
 
-Keep in mind that a **Product Message** cannot be used to initiate a WhatsApp conversation. It can only be sent as part of an existing conversation that has been started either by the customer messaging the business or the business sending a Templated Message to the customer. In this example, we'll send a templated message to the customer using **WhatsApp Manager**. Once logged in, select **Account Tools**, then **Message Template**.
+Keep in mind that a **Product Message** cannot be used to initiate a WhatsApp conversation. It can only be sent as part of an existing conversation that has been started either by the customer messaging the business or the business sending a Template Message to the customer. In this example, we'll send a template message to the customer using **WhatsApp Manager**. Once logged in, select **Account Tools**, then **Message Template**.
 
 ![WhatsApp Manager - Message Templates](/content/blog/getting-started-with-whatsapp-product-messages/wa-message-templates.png "wa-message-templates.png")
 
