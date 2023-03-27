@@ -58,7 +58,7 @@ Select **Manual**, then **Next** to continue.
 
 ![Add a item manually](/content/blog/getting-started-with-whatsapp-product-messages/add-items-manually.png "add-items-manually.png")
 
-Here we'll need to supply fields such as the **Title**, **Description**, **Price**, etc. You'll also need an image of the product. Go ahead and add a couple of items. 
+Here we'll need to supply information for the following fields: **Title**, **Description**, **Price**,  **Website Link**, **Price**, **Sales price**, **Facebook Product Category**, **Condition**, **Availability** and **Status**. You'll also need an image of the product. Go ahead and add a couple of items. 
 
 ![Add a item manually - before](/content/blog/getting-started-with-whatsapp-product-messages/before-add-items.png "before-add-items.png")
 
