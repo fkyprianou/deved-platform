@@ -1,5 +1,5 @@
 ---
-title: "Action flows that you can do with the Voice API "
+title: Action Flows That You Can Do With the Voice API
 description: This article will describe how to use NCCO builder with Python code
   snippets as an example.
 thumbnail: /content/blog/action-flows-that-you-can-do-with-the-voice-api/action-flows_python_voiceapis.jpg
