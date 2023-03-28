@@ -2,14 +2,15 @@
 title: How to Receive an SMS Delivery Receipt with Node.js
 description: How to receive SMS delivery receipts from mobile carriers with a
   webhook written with Node.js and Express.js
+thumbnail: /content/blog/how-to-receive-an-sms-delivery-receipt-with-node-js/delievery-sms_node-js.png
 author: michael-crump
 published: true
-published_at: 2023-02-24T18:59:49.579Z
-updated_at: 2023-02-24T18:59:49.640Z
+published_at: 2023-03-28T17:59:49.579Z
+updated_at: 2023-03-28T17:59:49.640Z
 category: tutorial
 tags:
   - sms-api
-  - nodejs
+  - node
 comments: true
 spotlight: false
 redirect: ""
@@ -17,8 +18,6 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-How to Receive an SMS Delivery Receipt with Node.js
-
 ## Introduction
 
 When you send a text message to a phone number with Vonage APIs, the HTTP response from the API can tell you if the message has been successfully **sent**. However, it doesn't tell you if the message is **delivered** to the recipient. Thankfully, there is a field in your [Vonage Developer Portal](https://developer.vonage.com/) that allows you to see when the status of the delivery changes in the form of a webhook.
