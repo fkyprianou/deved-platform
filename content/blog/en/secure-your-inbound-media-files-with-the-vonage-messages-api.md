@@ -22,7 +22,7 @@ This multi-media messaging is extremely useful for a wide variety of situations.
 
 Inbound messages are received via an [Inbound Message Webhook](https://developer.vonage.com/en/api/messages-olympus#inbound-message). In order to receive inbound messages, you first need to set up this webhook. This can be done in the [Vonage Dashboard](https://dashboard.nexmo.com/), via the following steps:
 
-* Create a Vonage Application (if you haven’t already done so)
+* Create a [Vonage Application](https://developer.vonage.com/en/application/overview) (if you haven’t already done so)
 * Within that application:
 * * Enable it for the Messages API
   * Set the Inbound URL to whichever URL you wish to receive your inbound messages
