@@ -9,8 +9,7 @@ updated_at: 2023-03-23T18:34:14.222Z
 category: tutorial
 tags:
   - whatsapp
-  - messages
-  - api
+  - messages-api
 comments: true
 spotlight: false
 redirect: ""
