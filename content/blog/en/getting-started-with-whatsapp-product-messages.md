@@ -156,7 +156,7 @@ Finally, once it is created, go to **Link social channels**, select the WhatsApp
 
 JSON Web Token (JWT) defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. For security measures, it is recommended to use a JWT Token when working with the Messages API and other Vonage products. 
 
-We have created a site where you can create a token with just a few steps. Click [here](https://developer.vonage.com/en/jwt) and add your **Private Key** as well as your **Application ID**. Then you'll need to specify how long the token will be good for. Select three days, and your JWT token is available. Copy that to a safe place for now. 
+We have created a site where you can create a token with just a few steps. Click [here](https://developer.vonage.com/en/jwt) and add your **Private Key** as well as your **Application ID**. Then you'll need to specify how long the token will be good for. Select three days, and your JWT token is available. Copy that to a safe place for now. It is also worth noting that Vonage has several [Server SDKs](https://developer.vonage.com/en/tools) that can create JWTs for our products. 
 
 ![JWT Generator](/content/blog/getting-started-with-whatsapp-product-messages/jwt-generator.png "jwt-generator.png")
 
