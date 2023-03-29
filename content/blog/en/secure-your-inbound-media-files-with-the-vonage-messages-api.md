@@ -63,7 +63,7 @@ For messages where the type is some sort of media, such as image or video, that 
 
 ### Standard Security
 
-The media is stored for only 48 hours, and you need to issue a GET request to the specific URL provided in the inbound message payload in order to access the media file. For example:
+The media is stored for only 48 hours, and you must issue a GET request to the specific URL provided in the inbound message payload to access the media file. For example:
 
 ```
 GET /v3/media/1b456509-974c-458b-aafa-45fc48a4d976
