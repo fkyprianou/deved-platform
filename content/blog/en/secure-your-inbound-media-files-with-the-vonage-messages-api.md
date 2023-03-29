@@ -74,7 +74,7 @@ The fact that you need the specific URL and that it expires after a set time pro
 
 ### Enhanced Security with Secure Inbound Media
 
-For certain use-cases, an increased level of security may be desirable, such as a customer-care situation where the customer needs to send sensitive information in image or video form. This is where the Messages API [Secure Inbound Media](https://developer.vonage.com/en/messages/concepts/secure-inbound-media) feature can help!
+Increased security may be desirable for specific use cases, such as a customer-care situation requiring the customer to send sensitive information in the image or video form. This is where the Messages API [Secure Inbound Media](https://developer.vonage.com/en/messages/concepts/secure-inbound-media) feature can help!
 
 To enable the feature, in the Vonage Dashboard edit the Application where you set the Inbound URL for the webhook, and toggle the Enhanced Inbound Media Security switch to the ‘on’ position.
 
