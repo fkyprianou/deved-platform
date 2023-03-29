@@ -1,10 +1,11 @@
 ---
-title: How open-source licenses affect your projects and contributions?
+title: How Open-Source Licenses Affect Your Projects and Contributions?
 description: How open-source licenses affect your projects and contributions?
+thumbnail: /content/blog/how-open-source-licenses-affect-your-projects-and-contributions/open-source-licenses.png
 author: oleksii-borysenko
 published: true
-published_at: 2023-03-23T15:49:26.076Z
-updated_at: 2023-03-23T15:49:26.087Z
+published_at: 2023-03-29T14:49:26.076Z
+updated_at: 2023-03-29T14:49:26.087Z
 category: inspiration
 tags:
   - open-source
