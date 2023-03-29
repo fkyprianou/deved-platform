@@ -47,7 +47,7 @@ Next, we have two options to upload our product data. We can select to add our p
 
 ![Configure settings](/content/blog/getting-started-with-whatsapp-product-messages/configure-settings.png "configure-settings.png")
 
-You'll now have a new catalog, and if you click on **Items**, you'll see that you don't have any. Let's upload a couple of items by pressing the **Add items** button. 
+You'll now have a new catalog, and if you click on **Items**, you'll see that you don't have any. Let's create a couple of items by pressing the **Add items** button. 
 
 ![Add a item](/content/blog/getting-started-with-whatsapp-product-messages/add-items.png "add-items.png")
 
