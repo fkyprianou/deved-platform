@@ -88,7 +88,7 @@ Host: api-us.nexmo.com
 Authorization: Bearer eyJ0eXAiOiJKV1Qi...
 ```
 
-With the feature enabled, making a GET request to the media URL without a correctly set Authorization header will result in an 401 Unauthorized response.
+With the feature enabled, making a GET request to the media URL without a correctly set Authorization header will result in a 401 Unauthorized response.
 
 ### Generating JWTs
 
