@@ -92,7 +92,7 @@ With the feature enabled, making a GET request to the media URL without a correc
 
 ### Generating JWTs
 
-You can generate a JWT via our [online tool](https://developer.vonage.com/en/jwt), or [by using the Vonage CLI](https://developer.vonage.com/en/getting-started/concepts/authentication#using-the-vonage-cli-to-generate-jwts). In the context of a server application, you can use one of our [Server SDKs](https://developer.vonage.com/en/tools) to generate the JWT as part of your overall application workflow. Below is an example of generating a JWT using the Ruby Server SDK.
+You can generate a JWT via our [online tool](https://developer.vonage.com/en/jwt) or [by using the Vonage CLI](https://developer.vonage.com/en/getting-started/concepts/authentication#using-the-vonage-cli-to-generate-jwts). In the context of a server application, you can use one of our [Server SDKs](https://developer.vonage.com/en/tools) to generate the JWT as part of your overall application workflow. Below is an example of generating a JWT using the Ruby Server SDK.
 
 ```ruby
 require 'vonage'
