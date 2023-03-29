@@ -47,7 +47,7 @@ Next, we have two options to upload our product data. We can select to add our p
 
 ![Configure settings](/content/blog/getting-started-with-whatsapp-product-messages/configure-settings.png "configure-settings.png")
 
-You'll now have a new catalog, and if you click on **Items**, you'll see that you don't have any. Let's create a couple of items by pressing the **Add items** button. 
+You'll now have a new catalog, and if you click on **Items**, you'll see that you don't have any. Let's upload a couple of items by pressing the **Add items** button. 
 
 ![Add a item](/content/blog/getting-started-with-whatsapp-product-messages/add-items.png "add-items.png")
 
@@ -57,7 +57,7 @@ Select **Manual**, then **Next** to continue.
 
 ![Add a item manually](/content/blog/getting-started-with-whatsapp-product-messages/add-items-manually.png "add-items-manually.png")
 
-Here we'll need to supply information for the following fields: **Title**, **Description**, **Price**,  **Website Link**, **Sales price**, **Facebook Product Category**, **Condition**, **Availability** and **Status**. You'll also need an image of the product. Go ahead and add a couple of items. 
+Here we'll need to supply information for the following fields: **Title**, **Description**, **Price**,  **Website Link**, **Price**, **Sales price**, **Facebook Product Category**, **Condition**, **Availability** and **Status**. You'll also need an image of the product. Go ahead and add a couple of items. 
 
 ![Add a item manually - before](/content/blog/getting-started-with-whatsapp-product-messages/before-add-items.png "before-add-items.png")
 
@@ -130,7 +130,7 @@ You'll now have the option to connect a catalog. Go ahead and select the one tha
 
 ![WhatsApp Manager - Connect a catalog](/content/blog/getting-started-with-whatsapp-product-messages/connect-catalog.png "connect-catalog.png")
 
-Head to your **Meta Business Settings**, click on **Data Sources**, then **Catalogs**, and input Vonage as a partner using a Business ID. The ID is `2290848174274168`. Contact Vonage Support, who will arrange to approve the partner request and connect the Catalog.
+Head to your **Meta Business Settings**, click on **Data Sources**, then **Catalogs**, and input Vonage as a partner using a Business ID. The ID is `2290848174274168`. Contact [Vonage Support](https://www.vonage.com/support/), who will arrange to approve the partner request and connect the Catalog.
 
 ![WhatsApp Manager - Partners](/content/blog/getting-started-with-whatsapp-product-messages/partners.png "partners.png")
 
