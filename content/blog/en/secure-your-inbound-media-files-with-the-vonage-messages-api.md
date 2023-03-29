@@ -70,7 +70,7 @@ GET /v3/media/1b456509-974c-458b-aafa-45fc48a4d976
 Host: api-us.nexmo.com
 ```
 
-The fact that you need the specific URL and that it expires after a set time provides a certain degree of inbuilt security. There may, however, be some minor risks associated with this level of security; for example, a brute force could reveal the URL, and anyone in possession of the URL could access the media file without needing any additional credentials.
+The fact that you need the specific URL and that it expires after a set time provides a certain degree of inbuilt security. There may, however, be some minor risks associated with this level of security; for example, brute force could reveal the URL, and anyone possessing the URL could access the media file without needing additional credentials.
 
 ### Enhanced Security with Secure Inbound Media
 
