@@ -18,7 +18,7 @@ replacement_url: ""
 ---
 Vonage’s [Message API](https://developer.vonage.com/en/messages/overview) enables two-way conversations across a number of different messaging channels. Many of these channels support sending and receiving media files, such as images, audio, and video.
 
-This multi-media messaging is extremely useful for a wide variety of situations. Examples might include a customer needing to send a business a video of a faulty product malfunctioning, or images of damage caused in transit to a delivery.
+This multi-media messaging is extremely useful for a wide variety of situations. Examples might include a customer needing to send a business a video of a faulty product malfunctioning or images of the damage caused in transit to a delivery.
 
 Inbound messages are received via an [Inbound Message Webhook](https://developer.vonage.com/en/api/messages-olympus#inbound-message). In order to receive inbound messages, you first need to set up this webhook. This can be done in the [Vonage Dashboard](https://dashboard.nexmo.com/), via the following steps:
 
