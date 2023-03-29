@@ -107,4 +107,4 @@ jwt = Vonage::JWT.generate(
 
 ### Next Steps
 
-Could Secure Inbound Media be useful for your app or use-case? Then why not get started now, with Vonage APIs! Check out the [documentation](https://developer.vonage.com/en/documentation). If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack), and we will get back to you.
+Is Secure Inbound Media useful for your app or use case? Then why not get started now with Vonage APIs? Check out the [documentation](https://developer.vonage.com/en/documentation). If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack), and we will get back to you.
