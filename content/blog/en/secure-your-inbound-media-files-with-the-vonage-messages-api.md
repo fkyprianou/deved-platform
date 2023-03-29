@@ -80,7 +80,7 @@ To enable the feature, in the Vonage Dashboard, edit the Application where you s
 
 ![Vonage Dashboard Messages Application Enhanced Inbound Media Toggle](/content/blog/secure-your-inbound-media-files-with-the-vonage-messages-api/enhanced-inbound-media-toggle.png "Vonage Dashboard Messages Application Enhanced Inbound Media Toggle")
 
-With the feature enabled, inbound message webhooks will still contain a URL to access the media, but now the GET request to access the media must contain an Authorization header with a scheme of Bearer and the credentials being a [JSON Web Token](https://developer.vonage.com/en/getting-started/concepts/authentication#json-web-tokens) (JWT). The JWT must be generated using the Application ID and Private Key from the Vonage Application where you set the Inbound webhook URL. For example:
+With the feature enabled, inbound message webhooks will still contain a URL to access the media. Still, now the GET request to access the media must include an Authorization header with a scheme of Bearer and the credentials being a [JSON Web Token](https://developer.vonage.com/en/getting-started/concepts/authentication#json-web-tokens) (JWT). The JWT must be generated using the Application ID and Private Key from the Vonage Application where you set the Inbound webhook URL. For example:
 
 ```
 GET /v3/media/1b456509-974c-458b-aafa-45fc48a4d976
