@@ -19,7 +19,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-Video communication has evolved rapidly over recent years, and there are lots of features these days for customising the video calling experience for users. Many of these features focus on manipulating the video feed, such as background replacement or background blur. The audio component of a video call shouldn't be neglected though. The ability to work with audio feeds opens up a ton of possibilities for enhancing the overall user experience. If you're using Vonage's video API, then the Audio Connector feature is designed exactly for this purpose!
+Video communication has evolved rapidly over recent years, and there are many features these days for customizing the video calling experience for users. Many features focus on manipulating the video feed, such as background replacement or background blur. The audio component of a video call shouldn't be neglected though. The ability to work with audio feeds opens up a ton of possibilities for enhancing the overall user experience. If you're using Vonage's video API, then the Audio Connector feature is designed exactly for this purpose!
 
 ### What is Audio Connector?
 
