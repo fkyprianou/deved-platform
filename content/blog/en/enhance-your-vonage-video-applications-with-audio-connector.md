@@ -49,7 +49,7 @@ There are many ways in which you could set up components 1 and 2, and how you de
 
 With regards to component 3, the Vonage Video /connect REST endpoint, detailed documentation is available in our [REST API reference](https://tokbox.com/developer/rest/#starting_audio_connector) and [Developer Guide](https://tokbox.com/developer/guides/audio-connector/). In brief though, an HTTP POST request to the endpoint will start streaming the audio from the specified Vonage Video session to the designated WebSocket URI. The request body requires certain information to be included, such as the sessionId for the Video Session from which the audio will be streamed, a valid token for that session, and the URI for the WebSocket that the audio is to be streamed to. There are also some optional properties, including a streams array that allows you to specify individual audio streams to be streamed to the WebSocket; we’ll look at this property in more detail as part of the sample application walkthrough.
 
-On the Vonage Video side of things, that’s pretty much it. The audio from the session is streamed to the websocket. There are then endless possibilities for what you do with those audio streams.
+On the Vonage Video side of things, that’s pretty much it. The audio from the session is streamed to the WebSocket. There are then endless possibilities for what you do with those audio streams.
 
 Let’s look at one example of what you can do!
 
@@ -99,7 +99,7 @@ const websockify = require('koa-websocket');
 const OpenTok = require("opentok");
 ```
 
-We then instantiate a new Koa app and enable it for websocket connections, before instantiating a new Koa Router that we will use for our websocket routes. Finally, we make that router available in all of our application’s routes by adding it as a `ws` variable on `app.context`.
+We then instantiate a new Koa app and enable it for WebSocket connections, before instantiating a new Koa Router that we will use for our WebSocket routes. Finally, we make that router available in all of our application’s routes by adding it as a `ws` variable on `app.context`.
 
 ```javascript
 const app = new Koa();
@@ -165,7 +165,7 @@ The application’s http routes are defined in a couple of files:
 * `/routes/basic.js`
 * `/routes/symbl/transcription.js`
 
-We’re not going to explore all of these in detail, since most of these routes just render views. One of the key routes though is the `/transcribe` route. When the ‘Start Transcription’ button is clicked in the video call UI, a POST request is sent to this route, which in turn invokes the `postSymblTranscription` controller action, which we’ll look at next.
+We won’t explore these in detail since most routes render views. One of the key routes, though is the `/transcribe` route. When the ‘Start Transcription’ button is clicked in the video call UI, a POST request is sent to this route, invoking the `postSymblTranscription` controller action, which we’ll look at next.
 
 **The postSymblTranscription controller action**
 
