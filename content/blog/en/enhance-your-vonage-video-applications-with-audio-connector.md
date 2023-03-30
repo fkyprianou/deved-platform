@@ -3,10 +3,11 @@ title: Enhance your Vonage Video Applications with Audio Connector
 description: An overview of what the Audio Connector feature is, how to use it,
   and a walk-through of a sample application which uses it for transcribing a
   video call.
+thumbnail: /content/blog/enhance-your-vonage-video-applications-with-audio-connector/audio-connector.jpg
 author: karl-lingiah
 published: true
-published_at: 2023-03-29T12:29:34.954Z
-updated_at: 2023-03-29T12:29:35.027Z
+published_at: 2023-03-30T12:29:34.954Z
+updated_at: 2023-03-30T12:29:35.027Z
 category: inspiration
 tags:
   - video-api
