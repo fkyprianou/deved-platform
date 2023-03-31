@@ -17,17 +17,15 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-Documentation will be on developer guide. Already done at dev env ( https://www.dev.tokbox.com/developer/sdks/react-native/). On prod, it will be done early next week.
-Yes, Under official suport SLA will be part of it and customer/developer can leverage Vonage support team's help with react-native issues.
+W﻿e are proud to announce that the previously community supported React Native SDK for the Vonage Video API has now gained official support from Vonage!
+
+B﻿ut what does this mean? Well, with this becoming an official SDK developers looking to use the React Native SDK can expect the same excellent support we offer for all the official SDKs!
+
+Developers can be more confident in using the React Native SDK in their production environments, with more regular updates and long-term maintenance commitments.
+
+Come across issues when integrating this SDK? You can now access top-notch help and guidance via the Vonage support team.
+
+## Looking to get started with the React Native SDK? 
 
 
-
-
-
-9:57
-This was the latest release, https://github.com/opentok/opentok-react-native/releases/tag/v0.21.3  ( Bluetooth fix and Android/iOS update with 2.24.2)
-
-
-
-
-
+Check out the new official [documentation](https://www.tokbox.com/developer/sdks/react-native/) where you can find everything you need from installation guides to sample applications. We also have several sample applications which can be found in the [OpenTok React Native Samples repo](https://github.com/opentok/opentok-react-native-samples)
