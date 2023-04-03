@@ -50,13 +50,13 @@ I personally have used Miro for my mockups, but there are many good options out 
 
 As mentioned before, having a complete representation of all your different types of [conversation](https://studio.docs.ai.vonage.com/whatsapp/nodes/conversation) nodes is essential. When creating a key, think about all the different functionalities in your agent. Luckily for us, with AI Studio we already have a blueprint for a key. Here is a simple key of components I use:
 
-![Example Key of Mockup Componenets](/content/blog/how-to-create-a-conversational-ai-mockup/screenshot-2023-03-07-at-13.04.49.png "key-of-mockup-components.png")
+![Example Key of Mockup Componenets](/content/blog/how-to-create-a-conversational-ai-mockup/key-of-mockup-components.png "key-of-mockup-components.png")
 
 ## Literally, Be Literal
 
 When using a component, write exactly what will happen in the agent. If this is sending a message, write the message text. If it’s writing a condition, what will the condition check? If it’s classification, what variable will be classified? An example of this:
 
-![Example of a Mockup Flow](/content/blog/how-to-create-a-conversational-ai-mockup/screenshot-2023-03-07-at-13.10.14.png "conversational-ai-flow-mockup.png")
+![Example of a Mockup Flow](/content/blog/how-to-create-a-conversational-ai-mockup/conversational-ai-flow-mockup.png "conversational-ai-flow-mockup.png")
 
 \
 In the above example, we can see how variables are also treated. The `$Topic` variable is set in the [Collect Input](https://studio.docs.ai.vonage.com/whatsapp/nodes/conversation/collect-input) node and then used in the Classification node.
