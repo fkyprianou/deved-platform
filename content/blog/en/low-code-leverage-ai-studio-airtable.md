@@ -63,7 +63,7 @@ F﻿or Destinations, we'll keep it simple. There will just be two fields: Name a
 
 ![Destinations table with fields Name and Price](/content/blog/low-code-leverage-ai-studio-with-airtable/destinations-table.png "Destinations table with fields Name and Price")
 
-S﻿imilarly for the Customers tables we will just use two fields: Name and Phone_Number:
+S﻿imilarly for the Customers tables, we will just use two fields: Name and Phone_Number:
 
 ![Customers table with fields Name and Phone_Number](/content/blog/low-code-leverage-ai-studio-with-airtable/customers-table.png "Customers table with fields Name and Phone_Number")
 
