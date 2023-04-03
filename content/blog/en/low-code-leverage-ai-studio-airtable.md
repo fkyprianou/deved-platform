@@ -59,7 +59,7 @@ B﻿efore we can get started with AI Studio, we'll need to setup our Airtable da
 
 O﻿nce you've gotten comfortable, you'll want to build a new base. We'll call it "AI Taxi Demo". In this base we'll have two tables: Destinations and Customers.
 
-F﻿or Destinations, we'll keep it simple. There will be just two fields: Name and Price. 
+F﻿or Destinations, we'll keep it simple. There will just be two fields: Name and Price. 
 
 ![Destinations table with fields Name and Price](/content/blog/low-code-leverage-ai-studio-with-airtable/destinations-table.png "Destinations table with fields Name and Price")
 
