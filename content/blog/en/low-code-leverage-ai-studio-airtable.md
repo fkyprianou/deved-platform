@@ -67,7 +67,7 @@ S﻿imilarly for the Customers tables we will just use two fields: Name and Phon
 
 ![Customers table with fields Name and Phone_Number](/content/blog/low-code-leverage-ai-studio-with-airtable/customers-table.png "Customers table with fields Name and Phone_Number")
 
-W﻿e can add some dummy data for these tables so that our API calls return values. Phone numbers should be entered with only digits, no plus sign (+).
+W﻿e can add some dummy data for these tables, so our API calls return values. Phone numbers should be entered with only digits, no plus sign (+).
 
 ## Create a New Agent
 
