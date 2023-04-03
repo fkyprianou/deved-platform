@@ -22,7 +22,7 @@ W﻿e are proud to announce that the previously community-supported React Native
 
 B﻿ut what does this mean? With this becoming an official SDK, developers looking to use the React Native SDK can expect the same excellent support we offer for all the official SDKs!
 
-Developers can be more confident in using the React Native SDK in their production environments, with more regular updates and long-term maintenance commitments.
+Developers can be more confident using the React Native SDK in their production environments, with more regular updates and long-term maintenance commitments.
 
 Come across issues when integrating this SDK? You can now access top-notch help and guidance via the Vonage support team.
 
