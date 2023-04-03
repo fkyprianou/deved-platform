@@ -30,4 +30,4 @@ Come across issues when integrating this SDK? You can now access top-notch help 
 
 Check out the new official [documentation](https://www.tokbox.com/developer/sdks/react-native/), where you can find everything you need, from installation guides to sample applications. We also have several sample applications, which can be found in the [React Native Samples repo](https://github.com/opentok/opentok-react-native-samples).
 
-Y﻿ou can also find the react native package on [npm](https://www.npmjs.com/package/opentok-react-native) and the SDK source code within the SDKs GitHub [repository](https://github.com/opentok/opentok-react-native)
+You can also find the react native package on [npm](https://www.npmjs.com/package/opentok-react-native) and the SDK source code within the SDKs GitHub [repository](https://github.com/opentok/opentok-react-native).
