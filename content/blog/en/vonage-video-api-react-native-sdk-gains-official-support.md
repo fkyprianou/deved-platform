@@ -10,6 +10,7 @@ category: announcement
 tags:
   - react-native
   - video-api
+  - cross-platform
 comments: true
 spotlight: false
 redirect: ""
