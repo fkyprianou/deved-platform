@@ -57,7 +57,7 @@ N﻿ow that we have a clear picture of what we want to build, let's get building
 
 B﻿efore we can get started with AI Studio, we'll need to setup our Airtable database. Airtable is a cool tool that is like Excel with superpowers! The [documentation](https://airtable.com/developers/web/api/introduction) is fantastic and a great place to get started.
 
-O﻿nce you've gotten comfortable, you'll want to build a new base. We'll call it "AI Taxi Demo". In this base we'll have two tables; Destinations and Customers.
+O﻿nce you've gotten comfortable, you'll want to build a new base. We'll call it "AI Taxi Demo". In this base we'll have two tables: Destinations and Customers.
 
 F﻿or Destinations, we'll keep it simple. There will be just two fields: Name and Price. 
 
