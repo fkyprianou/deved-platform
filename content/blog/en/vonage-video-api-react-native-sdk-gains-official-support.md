@@ -20,7 +20,7 @@ replacement_url: ""
 ---
 W﻿e are proud to announce that the previously community-supported React Native SDK for the Vonage Video API has now gained official support from Vonage!
 
-B﻿ut what does this mean? Well, with this becoming an official SDK developers looking to use the React Native SDK can expect the same excellent support we offer for all the official SDKs!
+B﻿ut what does this mean? With this becoming an official SDK, developers looking to use the React Native SDK can expect the same excellent support we offer for all the official SDKs!
 
 Developers can be more confident in using the React Native SDK in their production environments, with more regular updates and long-term maintenance commitments.
 
