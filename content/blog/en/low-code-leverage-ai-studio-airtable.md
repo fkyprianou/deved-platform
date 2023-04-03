@@ -149,7 +149,7 @@ Now we are ready to connect to our webhook. So let’s take a look at the Airtab
 
 ![Example of Airtable POST Request](/content/blog/low-code-leverage-ai-studio-with-airtable/example-airtable-post-request.png "Example of Airtable POST Request")
 
-So now just need to open our new webhook node. First we change our request type from GET to POST. We can see that we again need to pass our personal access token in the Authorization key in the header. But now we have a second field to pass as well, we add Content-Type to tell that we are sending json with the request. And finally we’ll pass through our data in the body, with a object that has records of customers.
+Now we just need to open our new webhook node. First, we change our request type from GET to POST. We can see that we (again) need to pass our personal access token in the Authorization key in the header. But now we also have a second field to pass. Let's add Content-Type to tell that we are sending json with the request. And finally, we’ll pass through our data in the body with an object that has records of customers.
 
 ![Example of POST request webhook node](/content/blog/low-code-leverage-ai-studio-with-airtable/group-3-20-.png "Example of POST request webhook node")
 
