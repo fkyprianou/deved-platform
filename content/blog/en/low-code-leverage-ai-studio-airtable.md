@@ -153,7 +153,7 @@ Now we just need to open our new webhook node. First, we change our request type
 
 ![Example of POST request webhook node](/content/blog/low-code-leverage-ai-studio-with-airtable/group-3-20-.png "Example of POST request webhook node")
 
-First let’s pass through a test customer. Let’s say, Miss Piggy.
+First, let’s pass through a test customer. Let’s say, Miss Piggy.
 
 ![Example of sending Miss Piggy customer to Airtable](/content/blog/low-code-leverage-ai-studio-with-airtable/miss-piggy-example.png "Example of sending Miss Piggy customer to Airtable")
 
