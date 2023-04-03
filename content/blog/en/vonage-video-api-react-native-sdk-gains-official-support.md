@@ -24,7 +24,7 @@ B﻿ut what does this mean? With this becoming an official SDK, developers looki
 
 Developers can be more confident using the React Native SDK in their production environments, with more regular updates and long-term maintenance commitments.
 
-Come across issues when integrating this SDK? You can now access top-notch help and guidance via the Vonage support team.
+Come across issues when integrating this SDK? You can now access top-notch help and guidance via the [Vonage support](https://api.support.vonage.com/hc/en-us) team.
 
 ## Looking to get started with the React Native SDK?
 
