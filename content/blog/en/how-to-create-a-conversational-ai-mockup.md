@@ -2,10 +2,11 @@
 title: How to Create a Conversational AI Mockup
 description: A best practices guide to help people sketch out their chatbots by
   creating a mockup before building with AI Studio.
+thumbnail: /content/blog/how-to-create-a-conversational-ai-mockup/create-a-conversational-ai-mockup.png
 author: benjamin-aronov
 published: true
-published_at: 2023-03-07T15:48:22.516Z
-updated_at: 2023-03-07T15:48:22.543Z
+published_at: 2023-04-03T14:48:22.516Z
+updated_at: 2023-04-03T14:48:22.543Z
 category: tutorial
 tags:
   - ai-studio
