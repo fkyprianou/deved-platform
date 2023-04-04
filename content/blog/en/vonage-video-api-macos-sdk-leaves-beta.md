@@ -17,7 +17,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-After a successful Beta test period, the Vonage Video API MacOS SDK has released its first stable release!
+After a successful Beta test period, the [Vonage Video API MacOS SDK](https://tokbox.com/developer/sdks/mac/) has released its first stable release!
 
 The macOS SDK joins the JavaScript, Android, iOS, Windows, and Linux SDKs as an officially supported client SDK for the Video API. 
 
