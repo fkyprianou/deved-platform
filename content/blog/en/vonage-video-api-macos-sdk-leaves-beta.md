@@ -1,5 +1,5 @@
 ---
-title: Vonage Video API MacOS SDK Leaves Beta
+title: Vonage Video API MacOS SDK Goes GA
 description: The Vonage Video API MacOS SDK is now leaving beta for its first
   stable release!
 author: zachary-powell-1
@@ -10,6 +10,7 @@ category: release
 tags:
   - video-api
   - macos
+  - SDKS
 comments: true
 spotlight: false
 redirect: ""
