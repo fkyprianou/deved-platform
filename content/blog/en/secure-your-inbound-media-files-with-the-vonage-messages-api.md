@@ -1,11 +1,12 @@
 ---
-title: Secure your Inbound Media Files with the Vonage Messages API
+title: Secure Your Inbound Media Files With the Vonage Messages API
 description: An overview of the Vonage Messages API's Secure Inbound Media
   feature, with an explanation of how to enable and use it
+thumbnail: /content/blog/secure-your-inbound-media-files-with-the-vonage-messages-api/secure-inbound-media_messagesapi-2.png
 author: karl-lingiah
 published: true
-published_at: 2023-03-27T16:00:09.913Z
-updated_at: 2023-03-27T16:00:10.000Z
+published_at: 2023-04-04T16:00:09.913Z
+updated_at: 2023-04-04T16:00:10.000Z
 category: tutorial
 tags:
   - messages-api
