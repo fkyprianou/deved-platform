@@ -27,4 +27,4 @@ With a stable release, developers can be confident that the macOS SDK is now pro
 
 Check out the official [documentation](https://tokbox.com/developer/sdks/mac/) to learn about the SDK's requirements and functionality. 
 
-Want to dive in with some sample code? Check out the [macOS SDK sample repo](https://github.com/opentok/opentok-macos-sdk-samples) with a range of sample applications that can help you get started and understand how the SDK works!
+Want to dive in with some sample code? Check out the [macOS SDK sample repo](https://github.com/opentok/opentok-macos-sdk-samples) with a range of sample applications to help you get started and understand how the SDK works!
