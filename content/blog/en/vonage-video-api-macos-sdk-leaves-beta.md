@@ -19,7 +19,7 @@ replacement_url: ""
 ---
 After a successful Beta test period, the Vonage Video API MacOS SDK has released its first stable release!
 
-The macOS SDK joins the JavaScript, Android, iOS, Windows and Linus SDKs as an officially supported client SDK for the Video API. 
+The macOS SDK joins the JavaScript, Android, iOS, Windows, and Linux SDKs as an officially supported client SDK for the Video API. 
 
 With a stable release, developers can be confident that the macOS SDK is now production ready and will receive the same level of support and updates as the other stable client SDKs.
 
