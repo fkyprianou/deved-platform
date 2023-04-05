@@ -2,10 +2,11 @@
 title: Using WhatsApp Product Messages with the Vonage Messages API
 description: Learn how to use WhatsApp Product Messages to showcase products and
   services, and customers can browse and add products to a cart.
+thumbnail: /content/blog/using-whatsapp-product-messages-with-the-vonage-messages-api/whatsapp-product-messages.png
 author: michael-crump
 published: true
-published_at: 2023-03-23T18:34:14.171Z
-updated_at: 2023-03-23T18:34:14.222Z
+published_at: 2023-04-05T17:34:14.171Z
+updated_at: 2023-04-05T17:34:14.222Z
 category: tutorial
 tags:
   - whatsapp
