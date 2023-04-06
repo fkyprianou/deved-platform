@@ -6,8 +6,8 @@ description: Read what we've been up to in the first quarter of 2023. New
 thumbnail: /content/blog/q1-2023-vonage-developer-news-recap/quaterly-releases_q123.png
 author: benjamin-aronov
 published: true
-published_at: 2023-04-05T16:42:19.483Z
-updated_at: 2023-04-05T16:42:19.522Z
+published_at: 2023-04-11T16:42:19.483Z
+updated_at: 2023-04-11T16:42:19.522Z
 category: release
 tags:
   - proactive-connect
