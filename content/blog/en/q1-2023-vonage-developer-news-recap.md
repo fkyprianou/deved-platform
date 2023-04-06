@@ -30,7 +30,7 @@ Creating robust software is our passion. But powerful software requires an equal
 
 ### Getting Started With Proactive Connect
 
-Does your business need to manage campaigns to users, leads, or other large-scale contact groups? Of course, it does! Now with [Proactive Connect](https://developer.vonage.com/en/blog/getting-started-with-the-campaign-manager-api-and-ui), you can schedule and send personalized messages, across multiple channels, to different large-scale contact groups. But the coolest part is that now you can do it all through a GUI interface built right into your Developer Dashboard!
+Does your business need to manage campaigns for users, leads, or other large-scale contact groups? Of course, it does! Now with [Proactive Connect](https://developer.vonage.com/en/blog/getting-started-with-the-campaign-manager-api-and-ui), you can schedule and send personalized messages, across multiple channels, to different large-scale contact groups. But the coolest part is that you can now do it all through a GUI interface built into your Developer Dashboard!
 
 ### Silent Authentication
 
