@@ -34,7 +34,7 @@ Does your business need to manage campaigns to users, leads, or other large-scal
 
 ### Silent Authentication
 
-Users expect your software to be safe and secure. But they don’t want to jump through a million hoops like filling out One Time Passwords or installing Authenticator Applications to ensure their identity. Thankfully, there’s a new paradigm in security: [Silent Authentication](https://developer.vonage.com/en/blog/introducing-vonage-silent-authentication).
+Users expect your software to be safe and secure. But they don’t want to jump through a million hoops like filling out a One-time password (OTP) or installing Authenticator Applications to ensure their identity. Thankfully, there’s a new paradigm in security: [Silent Authentication](https://developer.vonage.com/en/blog/introducing-vonage-silent-authentication).
 
 ## New Features
 
