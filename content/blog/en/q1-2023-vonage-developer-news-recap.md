@@ -53,4 +53,4 @@ Our [Audio Connector](https://developer.vonage.com/en/blog/enhance-your-vonage-v
 
 ### Secure your Inbound Media files with the Vonage Messages API 
 
-With [WhatsApp Messages](https://developer.vonage.com/en/blog/secure-your-inbound-media-files-with-the-vonage-messages-api), users can send a lot more than just text. But what if those photo or video messages contain some sensitive information? You better be sure they are secure. By clicking one button in your developer dashboard and generating a JWT you can!
+With [WhatsApp Messages](https://developer.vonage.com/en/blog/secure-your-inbound-media-files-with-the-vonage-messages-api), users can send a lot more than just text. But what if those photo or video messages contain some sensitive information? You better be sure they are secure. You can by clicking one button in your developer dashboard and generating a JWT!
