@@ -49,7 +49,6 @@ One of the most significant advances for businesses is the launch of [Product Me
 ## Enhance your Vonage Video Applications with Audio Connector
 
 Developers usually focus on the video component of video calls. But why? There are so many interesting applications to improve the video call experience when you can access and transmit the audio.\
-\
 Our [Audio Connector](https://developer.vonage.com/en/blog/enhance-your-vonage-video-applications-with-audio-connector) does just that! It lets you send raw audio streams from a Vonage Video session, via your own WebSocket server, to external services for further processing. Some use cases might be transcription, translation, content moderation, and much much more!
 
 ### Secure your Inbound Media files with the Vonage Messages API 
