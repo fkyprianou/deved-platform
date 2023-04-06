@@ -26,7 +26,7 @@ In Vonage, we’re proud to look back at Q1 and see we’ve realized quite a few
 
 ## New Products
 
-Creating powerful software is our passion. But powerful software requires an equally enjoyable user experience to truly generate adoption. We’re so excited to debut two new products this quarter that bring user experience to center stage: Proactive Connect and Silent Authentication.
+Creating robust software is our passion. But powerful software requires an equally enjoyable user experience to generate adoption. We’re excited to debut two new products this quarter that bring user experience to center stage: Proactive Connect and Silent Authentication.
 
 ### Getting Started With Proactive Connect
 
