@@ -22,7 +22,6 @@ replacement_url: ""
 # Imagining New Possibilities
 
 Each new year is a new opportunity to change ourselves, to grow ourselves, and to imagine new possibilities for ourselves. As the first quarter of 2023 comes to an end, it’s a good time to reflect on the opening chapter of the year.\
-\
 In Vonage, we’re proud to look back at Q1 and see we’ve realized quite a few of our resolutions. Whether it’s imagining new products or reimagining products by adding new possibilities, we’ve opened the year by opening doors for our developers with new programmable possibilities. 
 
 ## New Products
