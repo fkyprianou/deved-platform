@@ -3,6 +3,7 @@ title: "Q1 2023: Vonage Developer News Recap"
 description: Read what we've been up to in the first quarter of 2023. New
   products for campaign management, silent authentication, WhatsApp Product
   Messages, WebRTC audio manager and more!
+thumbnail: /content/blog/q1-2023-vonage-developer-news-recap/quaterly-releases_q123.png
 author: benjamin-aronov
 published: true
 published_at: 2023-04-05T16:42:19.483Z
@@ -54,3 +55,5 @@ Our [Audio Connector](https://developer.vonage.com/en/blog/enhance-your-vonage-v
 ### Secure your Inbound Media files with the Vonage Messages API 
 
 With [WhatsApp Messages](https://developer.vonage.com/en/blog/secure-your-inbound-media-files-with-the-vonage-messages-api), users can send a lot more than just text. But what if those photo or video messages contain some sensitive information? You better be sure they are secure. You can by clicking one button in your developer dashboard and generating a JWT!
+
+If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack) or send us a Tweet on [Twitter](https://twitter.com/VonageDev), and we will get back to you!
