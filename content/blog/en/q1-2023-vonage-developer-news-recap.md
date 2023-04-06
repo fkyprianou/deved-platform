@@ -44,7 +44,7 @@ Our goal at Vonage is to empower our developers to delight their end users. Our 
 
 Millions of users love WhatsApp for its rich features. Way beyond simple text messaging, users can send multimedia messages, fun button replies, list messages, locations, and so much more.
 
-For businesses, one of the most important advances is the launch of [Product Messages](https://developer.vonage.com/en/blog/using-whatsapp-product-messages-with-the-vonage-messages-api). This new message type allows a business to showcase products and services, and customers can browse and add products to a cart without leaving the WhatsApp conversation.
+One of the most significant advances for businesses is the launch of [Product Messages](https://developer.vonage.com/en/blog/using-whatsapp-product-messages-with-the-vonage-messages-api). This new message type allows a company to showcase products and services, and customers can browse and add products to a cart without leaving the WhatsApp conversation.
 
 ## Enhance your Vonage Video Applications with Audio Connector
 
