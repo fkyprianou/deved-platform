@@ -47,13 +47,13 @@ Millions of users love WhatsApp for its rich features. Way beyond simple text me
 
 One of the most significant advances for businesses is the launch of [Product Messages](https://developer.vonage.com/en/blog/using-whatsapp-product-messages-with-the-vonage-messages-api). This new message type allows a company to showcase products and services, and customers can browse and add products to a cart without leaving the WhatsApp conversation.
 
-### Secure your Inbound Media files with the Vonage Messages API 
-
-With [WhatsApp Messages](https://developer.vonage.com/en/blog/secure-your-inbound-media-files-with-the-vonage-messages-api), users can send a lot more than just text. But what if those photo or video messages contain some sensitive information? You better be sure they are secure. You can by clicking one button in your developer dashboard and generating a JWT!
-
-## Enhance your Vonage Video Applications with Audio Connector
+### Enhance your Vonage Video Applications with Audio Connector
 
 Developers usually focus on the video component of video calls. But why? There are many interesting applications to improve the video call experience when you can access and transmit the audio.
 Our [Audio Connector](https://developer.vonage.com/en/blog/enhance-your-vonage-video-applications-with-audio-connector) does just that! It lets you send raw audio streams from a Vonage Video session, via your own WebSocket server, to external services for further processing. Some use cases are transcription, translation, content moderation, and more!
+
+### Secure your Inbound Media files with the Vonage Messages API 
+
+With [WhatsApp Messages](https://developer.vonage.com/en/blog/secure-your-inbound-media-files-with-the-vonage-messages-api), users can send a lot more than just text. But what if those photo or video messages contain some sensitive information? You better be sure they are secure. You can by clicking one button in your developer dashboard and generating a JWT!
 
 If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack) or send us a Tweet on [Twitter](https://twitter.com/VonageDev), and we will get back to you!
