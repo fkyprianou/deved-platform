@@ -2,7 +2,7 @@
 title: Vonage Video API - React Native SDK Gains Official Support
 description: The community supported "opentok-react-native" package has gained
   official support from Vonage.
-thumbnail: /content/blog/vonage-video-api-react-native-sdk-gains-official-support/react-native_opentok_support-1.png
+thumbnail: /content/blog/vonage-video-api-react-native-sdk-gains-official-support/react-native_opentok_support.png
 author: zachary-powell-1
 published: true
 published_at: 2023-04-13T13:11:41.139Z
