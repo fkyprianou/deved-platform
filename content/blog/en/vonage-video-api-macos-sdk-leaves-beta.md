@@ -25,7 +25,7 @@ The macOS SDK joins the JavaScript, Android, iOS, Windows, and Linux SDKs as an 
 
 With a stable release, developers can be confident that the macOS SDK is now production ready and will receive the same level of support and updates as the other stable client SDKs.
 
-## Looking to get started with the macOS SDK?
+## Looking to get started with the MacOS SDK?
 
 Check out the official [documentation](https://tokbox.com/developer/sdks/mac/) to learn about the SDK's requirements and functionality. 
 
