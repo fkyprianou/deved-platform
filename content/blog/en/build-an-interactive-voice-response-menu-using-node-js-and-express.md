@@ -1,11 +1,12 @@
 ---
-title: Build an Interactive Voice Response Menu using Node.js and Express
+title: Build an Interactive Voice Response Menu Using Node.js and Express
 description: This tutorial shows you how to build interactive voice response
   menus for your application using Vonage, Node.js and the Express framework.
+thumbnail: /content/blog/build-an-interactive-voice-response-menu-using-node-js-and-express/node-js_express_ivr.png
 author: michael-crump
 published: true
-published_at: 2023-03-13T22:21:34.323Z
-updated_at: 2023-03-13T22:21:34.377Z
+published_at: 2023-04-18T21:21:34.323Z
+updated_at: 2023-04-18T21:21:34.377Z
 category: tutorial
 tags:
   - voice-api
