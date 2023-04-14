@@ -2,10 +2,11 @@
 title: Vonage Video API MacOS SDK Goes GA
 description: The Vonage Video API MacOS SDK is now leaving beta for its first
   stable release!
+thumbnail: /content/blog/vonage-video-api-macos-sdk-goes-ga/opentok-macos.png
 author: zachary-powell-1
 published: true
-published_at: 2023-04-03T09:04:09.396Z
-updated_at: 2023-04-03T09:04:09.408Z
+published_at: 2023-04-19T09:04:09.396Z
+updated_at: 2023-04-19T09:04:09.408Z
 category: release
 tags:
   - video-api
