@@ -4,8 +4,8 @@ description: This tutorial will show you how to create a backend database with
   Airtable for a Conversational AI agent in Vonage's AI Studio. All in Low Code!
 author: benjamin-aronov
 published: true
-published_at: 2023-02-26T12:46:26.526Z
-updated_at: 2023-02-26T12:46:26.559Z
+published_at: 2023-04-20T11:46:26.526Z
+updated_at: 2023-04-20T11:46:26.559Z
 category: tutorial
 tags:
   - ai-studio
