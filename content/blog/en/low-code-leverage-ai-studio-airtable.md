@@ -2,6 +2,7 @@
 title: "Low Code Leverage: AI Studio with Airtable"
 description: This tutorial will show you how to create a backend database with
   Airtable for a Conversational AI agent in Vonage's AI Studio. All in Low Code!
+thumbnail: /content/blog/low-code-leverage-ai-studio-with-airtable/ai-studio-airtable.png
 author: benjamin-aronov
 published: true
 published_at: 2023-04-20T11:46:26.526Z
