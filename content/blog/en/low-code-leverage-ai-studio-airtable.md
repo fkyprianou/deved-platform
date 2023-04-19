@@ -49,7 +49,7 @@ Before building any agent in AI Studio, I highly recommend mapping out your agen
 
 In our app we'll let users look up taxi prices to popular locations and also add their contact info to subscribe to future taxi deals. The mockup for those flow look like this:
 
-![Example of mockup for inbound flows of AI Taxi Demo](blob:https://learn.vonage.com/2809d326-8c4f-43db-b91c-e952f27293a5 "Example of mockup for inbound flows of AI Taxi Demo")
+![Example of mockup for inbound flows of AI Taxi Demo](/content/blog/low-code-leverage-ai-studio-with-airtable/example-inbound-conversational-ai-mockuo.png "Example of mockup for inbound flows of AI Taxi Demo")
 
 N﻿ow that we have a clear picture of what we want to build, let's get building!
 
@@ -93,7 +93,7 @@ O﻿ur steps:
 
 N﻿ow we have the search term that we want to send to Airtable and receive back our stored price info. But how can we pass it to Airtable? The great thing about Airtable is their built-in API for each base and helpful documentation. From our AI Taxi Demo base, click on **help** in the top right corner. Then in the sidebar, at the very bottom, you will find **API Documentation**. The really cool thing is that Airtable generates the required request for you! Here you will find the prebuilt curl request, it will look something like this:
 
-![Example of CURL request to Airtable API](blob:https://learn.vonage.com/ff6ec57a-1835-427d-aa17-5b8a28aaf48b)
+![Example of CURL request to Airtable API](/content/blog/low-code-leverage-ai-studio-with-airtable/curl-request-example-airtable.png)
 
 N﻿ow we'll need to add this to our AI Studio agent. So we'll add a **Webhook node** that allows us to make REST API requests. Learn more about Webhook nodes [here](https://studio.docs.ai.vonage.com/whatsapp/nodes/integrations/webhook).
 
