@@ -1,6 +1,6 @@
 ---
-title: "Using Vonage APIs with MongoDB Atlas - Part 4: MongoDB Atlas Authentication"
-description: MongoDB Atlas and its associated products are a great complement to Vonage APIs. In Part 4, we discuss using MongoDB Atlas's built-in user authentication for our backend system
+title: "Using Vonage APIs with MongoDB Atlas - Part 4 of 5: MongoDB Atlas Authentication"
+description: In Part 4 of using Vonage APIs and MongoDB Atlas, we discuss using MongoDB Atlas's built-in user authentication for our backend system
 thumbnail: 
 author: christankersley
 published: true
