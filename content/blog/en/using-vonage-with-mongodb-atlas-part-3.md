@@ -1,6 +1,6 @@
 ---
 title: "Using Vonage APIs with MongoDB Atlas - Part 3 of 5: Using Vonage for Customer Interaction"
-description: MongoDB Atlas and its associated products are a great complement to Vonage APIs. In Part 3, we show how to use the Messaging API and Meetings for customer and restaurant communication.
+description: In Part 3 of using Vonage APIs and MongoDB Atlas, we show how to use the Messaging and Meetings APIs for customer communication.
 thumbnail: 
 author: christankersley
 published: true
