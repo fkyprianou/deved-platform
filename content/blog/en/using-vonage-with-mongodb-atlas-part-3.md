@@ -176,7 +176,7 @@ app.post('/api/website/video-call', async (req, res) => {
 });
 ```
 
-A single API call is all we need to add to our application to add video to our application. We did not have to do anything to set up the UI for the video room, and it all uses the WebRTC standard to work on almost any device. 
+A single API call is all we need to add to our application to add video conferencing to our application. We did not have to do anything to set up the UI for the video room, and it all uses the WebRTC standard to work on almost any device. 
 
 ## Conclusion
 
