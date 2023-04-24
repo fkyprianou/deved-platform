@@ -1,5 +1,5 @@
 ---
-title: Using Vonage APIs with MongoDB Atlas - Part 2
+title: Using Vonage APIs with MongoDB Atlas - Part 2 fo 5
 description: MongoDB Atlas and its associated products are a great complement to Vonage APIs. In Part 2, We look at integrating Vonage Verify into a login workflow.
 thumbnail: 
 author: christankersley
@@ -28,7 +28,7 @@ We are continuing our dive into MongoDB Atlas and it's use with various Vonage A
 
 ## What is Vonage Verify?
 
-[Vonage Verify](https://developer.vonage.com/en/verify/overview) is a [Two-Factory Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) service that Vonage provides as an API. It allows you to make a simple API call to send a code to a user, and then check its validity with another API call. This provides additional security by ensuring that not only does the user know their password, but they have a physical device that they have told us about to receive the code. Since most people have a mobile device, it's pretty safe to assume they will have access to receive the code on it.
+[Vonage Verify](https://developer.vonage.com/en/verify/overview) is a [Two-Factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) service that Vonage provides as an API. It allows you to make a simple API call to send a code to a user, and then check its validity with another API call. This provides additional security by ensuring that not only does the user know their password, but they have a physical device that they have told us about to receive the code. Since most people have a mobile device, it's pretty safe to assume they will have access to receive the code on it.
 
 Vonage Verify generates the code and contacts the customer on your behalf. We also will try to contact the customer multiple times in a variety of ways. For example, if you do not try and validate the code from a customer within a certain timeframe, we will try and call the customer with an automated message to provide them with the code. If they still do not enter it, or answer the phone, we will try SMS again. You can control how we try and contact the customer through what are known as Workflows.
 
@@ -42,15 +42,15 @@ For our demo to work, we need some food for users to order! Adding information i
 
 Let's create our first databse. From your MongoDB Atlas dashboard, click the **Browse Collections** button for your cluster.
 
-[!MongoDB Dashboard](0001)
+![MongoDB Dashboard](/content/blog/using-vonage-with-mongodb-atlas-part-2/0001-dashboard.png "MongoDB Dashboard")
 
 This will bring you to a view of all the information in your cluster. At the moment it is quite bare as we have no databases or information. Let's add a few food items for users to purchase. Click the **My Own Data** button.
 
-[!Empty Cluster](0002)
+![Adding Data](/content/blog/using-vonage-with-mongodb-atlas-part-2/0002-add-own-data.png "Adding Data")
 
 It will then ask for the database name, and a collection name. For our demo we want "restaurant_pos_demo" for the **Database name** and "inventory" for the **Collection name**. The demo is already set up to look for this database and collection, so make sure you use these names instead of something custom. Once you have that entered, click the **Create** button.
 
-[!Create Database](0003)
+![Create new Collection](/content/blog/using-vonage-with-mongodb-atlas-part-2/0003-db-info.png "Create new Collection")
 
 Now we can enter some data. Click the **Insert Document** button. This will bring up the document editor. While it gives a decent little set of drop-downs for entering information, we can also just paste in some documents. Click the **{}** button at the top to switch to the text-entry mode, and paste in the small block of JSON for the Hamburger document. Click on **Insert**, and the inventory item will be saved. Do this again, but the second time paste in the Soda document. 
 
@@ -68,11 +68,11 @@ Now we can enter some data. Click the **Insert Document** button. This will brin
 }
 ```
 
-[!Editor](0004)
+![Document Editor](/content/blog/using-vonage-with-mongodb-atlas-part-2/0004-document-editor.png "Document Editor")
 
 Once you have entered the two documents, you can see them in the database view. This editor is a great way to play around with documents and data while you build your database, and can save a lot of time during the development phase debugging data. In a larger production environment you can run queries to filter out data, but for now this is a good quick way to enter our data.
 
-[!Documents](0005)
+![Documents](/content/blog/using-vonage-with-mongodb-atlas-part-2/0005-documents.png "Documents")
 
 ## Set Up the Demo
 
@@ -89,7 +89,7 @@ Open up `.env` and make the following changes:
 
 We will also need to set the value of "MONGODB_DSN" to the connection string for your cluster. To find this value, go to your MongoDB Atlas dashboard, and click the **Connect** button for your cluster. In the pop-up, click **Connect your application**. This will bring you to a screen that has your connection string. Copy that value, and paste it into the value for "MONGODB_DSN" in `.env`. Make sure to change the "<password>" part to the password for your cluster.
 
-[!Connect to application](0006)
+![Connecting to the application](/content/blog/using-vonage-with-mongodb-atlas-part-2/0006-connect.png "Connecting to the application")
 
 We should be able to run the demo now!
 
@@ -101,11 +101,11 @@ In the first terminal, in the `webapp/` folder run `npm ci` to install all the d
 
 In the second terminal, navigate to `webapp/server`. Like the other window run `npm ci` to install all the dependencies, and then run `npm run dev`. This screen should show `nodemon` start and eventually say "Server Started". If you see an error about not being able to connect, check your MongoDB cluster connection string.
 
-[!demo Started](0007)
+![Starting the demo](/content/blog/using-vonage-with-mongodb-atlas-part-2/0007-demo-started.png "Starting the demo")
 
 Open your browser, and navigate to `http://localhost:5173/website/login` (replace the port number with whatever Vite says it's running for you.). You should be greeted with the following login screen!
 
-[!Login](0008)
+![Login Page](/content/blog/using-vonage-with-mongodb-atlas-part-2/0008-login.png "Login Page")
 
 ## Testing out Verify
 
@@ -115,7 +115,7 @@ Once you have entered your user information click **Register**.
 
 You should now be able to log in. Enter your username and password that you just registered with. If the authentication was successful, you should be taken to a small form asking you to enter your 2FA Code. 
 
-[!2FA Form](0009)
+![M2FA Form](/content/blog/using-vonage-with-mongodb-atlas-part-2/0009-2fa.png "2FA Form")
 
 After a few seconds you should receive an SMS with a four digit code. Enter that code into the form and click **Submit**. If everything worked, you will see an order screen with our hamburger and soda!
 
@@ -236,7 +236,9 @@ const verify = async() => {
 
 If you already have an authentication step in your application, adding Vonage Verify is only a few additional lines of code. For our Vue.js app it meant one additional call to our backend and a new form, and on the server-side we just needed to make the API call to send the code, and then a new route to verify the code. Since Vonage handles all the heavy lifting of generating, sending, and checking the code, the impact in our codebase is minimal. The flexibilty of MongoDB's document-based storage meant we did not need to run any database migrations and could quickly write the code to insert a new user and do the lookups. 
 
-Now that our users can log in, they should order some food! We will look at using MongoDB to store the order and the Vonage SMS API to send an order confirmation. We will also get a peek at using the Vonage Meetings API to quickly add video to our application for customer service resolutions.
+Now that our users can log in, they should order some food!
+
+In the next section, We will look at using MongoDB to store the order and the Vonage SMS API to send an order confirmation. We will also get a peek at using the Vonage Meetings API to quickly add video conferencing to our application for customer service resolutions.
 
 * [Part 1 - What is MongoDB Atlas?]()
 * Part 2 - Using Vonage Verify with Logins
