@@ -109,7 +109,7 @@ Open your browser, and navigate to `http://localhost:5173/website/login` (replac
 
 ## Testing out Verify
 
-We currently have no users, so let's create one. Click the **Or sign up for flavor** link on the page. Enter a username, password, and your mobile telephone number. Your number should include the country code prefix and no dashes. We will send a two-factor authentication code to this mobile number as part of the user login, so make sure to use a real mobile number, not something like a Google Voice number. If you are in the US, enter the number as something like "15556661234"
+We currently have no users, so let's create one. Click the **Or sign up for flavor** link on the page. Enter a username, password, and mobile telephone number. Your number should include the country code prefix and no dashes. We will send a two-factor authentication code to this mobile number as part of the user login, so make sure to use an actual mobile number, not a Google Voice number. If you are in the US, an example will look like "15556661234".
 
 Once you have entered your user information click **Register**.
 
@@ -117,11 +117,11 @@ You should now be able to log in. Enter your username and password that you just
 
 ![M2FA Form](/content/blog/using-vonage-with-mongodb-atlas-part-2/0009-2fa.png "2FA Form")
 
-After a few seconds you should receive an SMS with a four digit code. Enter that code into the form and click **Submit**. If everything worked, you will see an order screen with our hamburger and soda!
+After a few seconds, you should receive an SMS with a four-digit code. Enter that code into the form and click **Submit**. If everything works, you will see an order screen with our hamburger and soda!
 
 ## How does it work?
 
-When the user logs in, our Vue.js client-side application sends the username and password to our backend server, specifically `/api/website/authenticate`. This route connects directly to our MongoDB cluster and finds the user from a `users` collection. When we registered a new user, MongoDB automatically created the collection for us and stored a document for the user. We retrieve this document, and then compare the password to the stored hashed copy in the document.
+When the user logs in, our Vue.js client-side application sends the username and password to our backend server, specifically `/api/website/authenticate`. This route connects directly to our MongoDB cluster and finds the user from a `users` collection. When we registered a new user, MongoDB automatically created the collection for us and stored a document for the user. We retrieve this document and then compare the password to the stored hashed copy in the document.
 
 The MongoDB Node.js client is a fluent client, which means we can chain together method calls to generate a query. The line:
 
@@ -163,11 +163,11 @@ app.all('/api/website/authenticate', async (req, res) => {
 })
 ```
 
-We then generate a temporary JWT to send back to the Vue.js application. Our Vue.js app will use this temporary JWT when the user enters the code on the client-side application. If Verify is enabled in the demo with "ENABLE_VERIFY", we use the [Vonage Node.js SDK](https://github.com/Vonage/vonage-node-sdk/) to call the Verify API. We pass the user's telephone number, and set the brand to "Vonage Restaurant". When the user recieves a SMS message or the voice call, it will be identified as "Vonage Restaurant" when they recieve it.
+We then generate a temporary JWT to send back to the Vue.js application. Our Vue.js app will use this temporary JWT when the user enters the code on the client-side application. If Verify is enabled in the demo with "ENABLE_VERIFY", we use the [Vonage Node.js SDK](https://github.com/Vonage/vonage-node-sdk/) to call the Verify API. We pass the user's telephone number and set the brand to "Vonage Restaurant." When the user receives an SMS message or a voice call, it will be identified as "Vonage Restaurant" when they receive it.
 
-The Vonage API returns a "request ID". We will also send this back to the front-end, and use this request ID to check the code from the user. We then send back the temporary JWT token and the request ID to the Vue.js app.
+The Vonage API returns a "request ID." We will also send this back to the front-end and use this request ID to check the code from the user. We then send the temporary JWT token and request ID back to the Vue.js app.
 
-Once we verified the user is who they say they are, we change the Vue.js form to ask for the 2FA code. When the user enters the code, the Vue.js app sends a request to `/api/website/authenticate/verify` with the token, Verify Request ID, and the code the user entered.
+Once we verified the user was who they said they were, we changed the Vue.js form to ask for the 2FA code. When the user enters the code, the Vue.js app sends a request to `/api/website/authenticate/verify` with the token, Verify Request ID and the code the user entered.
 
 The JWT contains the user's document ID, so we decode the token and look the user back up in MongoDB. If we find them, we then call the Verify API, but this time we use the `check()` method and send along the request ID and code. The API will return a success if the code matches. If it matches, we generate a real JWT with a longer expiration and return it to the Vue.js application. 
 
@@ -203,7 +203,7 @@ app.all('/api/website/authenticate/verify', async (req, res) => {
 })
 ```
 
-The Vue.js application knows we are fully authenticated once it gets back the proper JWT. It stores this token off inside of a global store called "authenticationStore", and the rest of the application will use this JWT to authenticate the user for any further API calls.
+The Vue.js application knows we are fully authenticated once it gets back the proper JWT. It stores this token inside a global store called "authenticationStore", and the rest of the application will use this JWT to authenticate the user for any further API calls.
 
 ```typescript
 // src/views/Website/Login.vue
@@ -234,7 +234,7 @@ const verify = async() => {
 
 ## Conclusion
 
-If you already have an authentication step in your application, adding Vonage Verify is only a few additional lines of code. For our Vue.js app it meant one additional call to our backend and a new form, and on the server-side we just needed to make the API call to send the code, and then a new route to verify the code. Since Vonage handles all the heavy lifting of generating, sending, and checking the code, the impact in our codebase is minimal. The flexibilty of MongoDB's document-based storage meant we did not need to run any database migrations and could quickly write the code to insert a new user and do the lookups. 
+If you already have an authentication step in your application, adding Vonage Verify is only a few additional lines of code. For our Vue.js app, it meant one additional call to our backend and a new form, and on the server side, we just needed to make the API call to send the code and then a new route to verify the code. Since Vonage handles all the heavy lifting of generating, sending, and checking the code, the impact on our codebase is minimal. The flexibility of MongoDB's document-based storage meant we did not need to run any database migrations and could quickly write the code to insert a new user and do the lookups.
 
 Now that our users can log in, they should order some food!
 
