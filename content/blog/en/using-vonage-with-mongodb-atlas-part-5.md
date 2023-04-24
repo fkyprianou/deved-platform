@@ -1,6 +1,6 @@
 ---
-title: "Using Vonage APIs with MongoDB Atlas - Part 5: Vonage In-App Messaging"
-description: MongoDB Atlas and its associated products are a great complement to Vonage APIs. In Part 5, we add in-app alerting to our app to notify the restaurant of new meeting invites
+title: "Using Vonage APIs with MongoDB Atlas - Part 5 of 5: Vonage In-App Messaging"
+description: In Part 5 of using Vonage APIs and MongoDB Atlas, we add in-app alerting to our app to notify the restaurant of new meeting invites
 thumbnail: 
 author: christankersley
 published: true
