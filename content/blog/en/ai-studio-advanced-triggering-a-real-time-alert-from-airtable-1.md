@@ -3,6 +3,7 @@ title: "AI Studio Advanced: Triggering a Real Time Alert From Airtable"
 description: Using Postman to do GET request to Airtable and then iterating
   users to then chain an POST request for an Outbound event in AI Studio. A more
   complicated implementation of AI Studio with Airtable.
+thumbnail: /content/blog/ai-studio-advanced-triggering-a-real-time-alert-from-airtable/ai-studio-airtable_alert.png
 author: benjamin-aronov
 published: true
 published_at: 2023-04-26T09:00:49.685Z
