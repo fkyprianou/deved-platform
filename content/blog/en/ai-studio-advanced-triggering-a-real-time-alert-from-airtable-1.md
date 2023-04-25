@@ -5,8 +5,8 @@ description: Using Postman to do GET request to Airtable and then iterating
   complicated implementation of AI Studio with Airtable.
 author: benjamin-aronov
 published: true
-published_at: 2023-04-25T09:00:49.685Z
-updated_at: 2023-04-25T09:00:49.730Z
+published_at: 2023-04-26T09:00:49.685Z
+updated_at: 2023-04-26T09:00:49.730Z
 category: tutorial
 tags:
   - ai-studio
