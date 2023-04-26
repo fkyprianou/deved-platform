@@ -20,7 +20,7 @@ replacement_url: ""
 ---
 The Vonage Client SDK has a new package name! With that new name comes a new major version with a lot of new features and fixes. Under the hood, the SDK is now utilizing Kotlin Multiplatform to share core functionality code between the native Android and iOS SDKs
 
-Let's get into how you can get started with the SDK. 
+Let's get into how you can start with the SDK. 
 
 ## Adding the SDK
 
@@ -28,7 +28,7 @@ As mentioned the SDK now has a new name, to add the SDK to your app you need to 
 
 ### Android 
 
-Add the dependency to your app's `build.grade` file:
+Add the dependency to your app's `build.gradle` file:
 
 ```
 implementation 'com.vonage:client-sdk-voice'
@@ -36,7 +36,7 @@ implementation 'com.vonage:client-sdk-voice'
 
 ### iOS
 
-Add the dependency to you app's `Podfile`:
+Add the dependency to your app's `Podfile`:
 
 ```
 pod 'VonageClientSDKVoice'
@@ -73,9 +73,9 @@ val config = ClientConfig(ConfigRegion.US)
 val client = VoiceClient(this.application.applicationContext)
 client.setConfig(config)
 
-client.createSession(aliceJWT) { err, sessionID ->
+client.createSession("JWT") { err, sessionID ->
     if err == null {
-        // Connected!
+    // Connected!
     }
 }
 ```
@@ -89,7 +89,7 @@ client.setConfig(config)
 
 client.createSession("JWT") { error, sessionID in
     if error == nil {
-        // Connected!
+    // Connected!
     }
 }
 ```
@@ -106,7 +106,7 @@ Once you have successfully created a session, you can now make a call using the 
 ```kotlin
 client.serverCall(mapOf("to" to "CALLEE")) { err, callID ->
     if err == null {
-        // Connected to the call!
+    // Connected to the call!
     }
 }
 ```
@@ -116,7 +116,7 @@ client.serverCall(mapOf("to" to "CALLEE")) { err, callID ->
 ```swift
 client.serverCall(["to": "CALLEE"]) { error, callID in
     if error == nil {
-        // Connected to the call!
+    // Connected to the call!
     }
 }
 ```
@@ -125,14 +125,20 @@ client.serverCall(["to": "CALLEE"]) { error, callID in
 
 ## Receiving a Call
 
-Let us see how it looks on the other side when you receive a call:
+Let us see how it looks on the other side when you are receiving a call:
 
 ### Android 
 
-On Android you can set the call invite listener which will be run when the SDK gets an invite:
+On Android, you can set the call invite listener which will be run when the SDK gets an invite:
 
 ```kotlin
-
+client.setCallInviteListener { callId, from, channelType ->
+    client.answer(it) { err ->
+        if err == null {
+        // Connected to the call!
+        }
+    }
+}
 ```
 
 ### iOS 
@@ -143,7 +149,7 @@ On iOS make sure to set the `VGVoiceClient`'s delegate using `client.delegate = 
 func voiceClient(_ client: VGVoiceClient, didReceiveInviteForCall callId: String, from caller: String, withChannelType type: String) {
     client.answer(callId) { error in
         if error == nil {
-            // Connected to the call!
+        // Connected to the call!
         }
     }
 }
@@ -154,11 +160,11 @@ func voiceClient(_ client: VGVoiceClient, didReceiveInviteForCall callId: String
 The new Vonage Client SDK has made push notifications the default way to receive incoming calls, to ensure that all calls are received by devices whether your application is in the foreground or not. For the above behaviour you will need to enable WebSocket invites on your client's configuration:
 
 ```
-
+config.enableWebsocketInvites = true
 ```
 
-For more in-depth information on how to configure push notifications for the Vonage Client SDK, please refer to the new [Handling VoIP Push Notifications with CallKit]() and [Handling VoIP Push Notifications with ConnectionService]() blog posts. 
+For more in-depth information on how to configure push notifications for the Vonage Client SDK, please refer to the new Push Notification guides for [Android](https://developer.vonage.com/en/vonage-client-sdk/set-up-push-notifications/android) and [iOS](https://developer.vonage.com/en/vonage-client-sdk/set-up-push-notifications/ios). 
 
-## What Next?
+## What's Next?
 
-Learn more about the Vonage Client SDK on [developer.vonage.com]https://developer.vonage.com/en/vonage-client-sdk/overview), where you can try out the [step by step tutorial](https://developer.vonage.com/en/tutorials/vg-app-to-phone/introduction/kotlin) on how to make outbound calls.
+Learn more about the Vonage Client SDK on [developer.vonage.com](https://developer.vonage.com/en/vonage-client-sdk/overview), where you can try out the [step-by-step tutorial](https://developer.vonage.com/en/tutorials/vg-app-to-phone/introduction/kotlin) on how to make outbound calls.
