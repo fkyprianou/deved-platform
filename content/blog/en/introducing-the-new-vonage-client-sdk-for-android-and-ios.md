@@ -2,10 +2,11 @@
 title: Introducing the New Vonage Client SDK for Android and iOS
 description: Introducing a new major version of the Vonage Client SDK. Including
   a lot of new features and some interesting technology under the hood.
+thumbnail: /content/blog/introducing-the-new-vonage-client-sdk-for-android-and-ios/new-vonage-client-sdk.png
 author: abdul-ajetunmobi
 published: true
-published_at: 2023-04-06T11:06:44.513Z
-updated_at: 2023-04-06T11:06:44.721Z
+published_at: 2023-05-02T11:06:44.513Z
+updated_at: 2023-05-02T11:06:44.721Z
 category: announcement
 tags:
   - client-sdk
