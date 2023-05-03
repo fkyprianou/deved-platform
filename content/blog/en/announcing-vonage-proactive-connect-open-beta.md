@@ -1,15 +1,15 @@
 ---
 title: Announcing Vonage Proactive Connect Open Beta
 description: Vonage Proactive Connect Open Beta is available for everyone to try!
+thumbnail: /content/blog/announcing-vonage-proactive-connect-open-beta/proactive-connect_beta.png
 author: michael-crump
 published: true
-published_at: 2023-05-01T21:38:04.368Z
-updated_at: 2023-05-01T21:38:04.449Z
+published_at: 2023-05-03T21:38:04.368Z
+updated_at: 2023-05-03T21:38:04.449Z
 category: release
 tags:
-  - message-api
-  - campaign
-  - ""
+  - messages-api
+  - proactive-connect
 comments: true
 spotlight: false
 redirect: ""
