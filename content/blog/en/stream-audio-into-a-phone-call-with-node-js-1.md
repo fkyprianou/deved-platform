@@ -73,7 +73,7 @@ The Vonage APIs need to know your webhook endpoints so that they can make reques
 
 The application has the following external dependencies:
 
-* `dotenv` - a module that allows us to easily configure the application using a `.env` file
+* `dotenv` - a module that allows us to configure the application using a `.env` file easily
 * `express` - a lightweight web framework
 * `body-parser` - middleware to handle `POST` requests
 * `vonage` - the [REST client library for Node.js](https://github.com/Vonage/vonage-node-sdk)
@@ -84,13 +84,13 @@ These dependencies are configured in `package.json`. Run `npm install` to instal
 
 We need to expose our application to the Internet so that Vonage's servers can access our webhooks. We recommend using [ngrok](https://ngrok.io) for this. 
 
-Follow the instructions in [this blog post](https://learn.vonage.com/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr/) to install and run ngrok on port 3000. For example:
+Follow the instructions in [this blog post](https://developer.vonage.com/en/blog/local-development-nexmo-ngrok-tunnel-dr) to install and run ngrok on port 3000. For example:
 
 ```bash
 ngrok http 3000
 ```
 
-ngrok will give you a temporary URL such as `https://914288e7.ngrok.io`. Make a note of it.
+ngrok will give you a temporary URL, such as `https://914288e7.ngrok.io`. Make a note of it.
 
 Leave ngrok running while you are using the application; otherwise, the URLs will change, and you will need to reconfigure it.
 
@@ -102,7 +102,7 @@ Copy `example.env` to `.env` and enter the details you have harvested from the a
 VONAGE_API_KEY= Your Vonage API key
 VONAGE_API_SECRET= Your Vonage API secret
 VONAGE_APPLICATION_ID= The Voice API application ID
-VONAGE_APPLICATION_PRIVATE_KEY_PATH=private.key
+VONAGE_APPLICATION_PRIVATE_KEY_PATH= private.key
 VONAGE_NUMBER= The number you rented from Vonage
 TO_NUMBER= The number you want the application to call
 BASE_URL= The Ngrok temporary URL
@@ -188,7 +188,7 @@ This is one way of streaming audio into a call. But the focus of this post is ho
 These resources are served from the application's `public` directory as follows:
 
 ```javascript
-// Serve contents of public folder in the /audio path
+// Serve contents of the public folder in the /audio path
 app.use('/audio', express.static(path.join(__dirname, 'public')))
 
 const answer_url = BASE_URL + '/audio/answer.json'
@@ -281,7 +281,7 @@ const stop_stream = (call_uuid) => {
 
 ## Conclusion
 
-In this post, you learned how to play audio into an existing call and about some of the NCCO `action`s that govern the call flow. Feel free to experiment by substituting different audio files and NCCO `actions`. The following resources might help:
+In this post, you learned how to play audio into an existing call and about some of the NCCO `actions` that govern the call flow. Feel free to experiment by substituting different audio files and NCCO `actions`. The following resources might help:
 
 * [Voice API reference](https://developer.vonage.com/api/voice)
 * [NCCO reference](https://developer.vonage.com/voice/voice-api/ncco-reference)
