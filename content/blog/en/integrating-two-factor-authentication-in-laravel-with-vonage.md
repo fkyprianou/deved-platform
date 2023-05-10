@@ -1,11 +1,11 @@
 ---
-title: Integrating Two-factor authentication in Laravel with Vonage
+title: Integrating Two-Factor Authentication in Laravel with Vonage
 description: Learn how to use the Laravel Vonage package to leverage the power of 2FA
 thumbnail: /content/blog/integrating-two-factor-authentication-in-laravel-with-vonage/2fa_laravel.png
 author: ashley-allen
 published: true
-published_at: 2023-05-10T10:35:04.866Z
-updated_at: 2023-05-10T10:35:04.904Z
+published_at: 2023-05-11T10:35:04.866Z
+updated_at: 2023-05-11T10:35:04.904Z
 category: tutorial
 tags:
   - php
