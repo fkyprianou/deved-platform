@@ -116,6 +116,8 @@ We'll be making the following assumptions:
 
 Before we get started with writing any code, we'll first need to get our API keys from Vonage. You can do this by signing up for a Vonage account if you don't already have one.
 
+<﻿sign-up></sign-up>
+
 You'll need to keep hold of your API key and API secret so that we can add them to our Laravel application.
 
 ### Installing the Vonage SDK
