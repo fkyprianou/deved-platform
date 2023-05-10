@@ -118,8 +118,6 @@ Before we get started with writing any code, we'll first need to get our API key
 
 You'll need to keep hold of your API key and API secret so that we can add them to our Laravel application.
 
-<﻿/signup>
-
 ### Installing the Vonage SDK
 
 Now that we have our API keys, we can install Vonage's Laravel package that we'll be using to interact with the Verify API. We can do this via Composer by running the following command in our project root:
@@ -146,8 +144,7 @@ We'll add two methods to this class:
 
 The class may look something like this:
 
-`﻿``php
-
+```php
 declare(strict_types=1);
 
 namespace App\Services;
@@ -226,21 +223,21 @@ use Symfony\Component\HttpFoundation\Response;
 
 final class VerifyTwoFactorAuth
 {
-public function handle(Request $request, Closure $next): Response
-{
-if ($this->shouldRedirectToTwoFactorAuthPage($request)) {
-return redirect()->route('auth.2fa.show');
-}
+    public function handle(Request $request, Closure $next): Response
+    {
+        if ($this->shouldRedirectToTwoFactorAuthPage($request)) {
+            return redirect()->route('auth.2fa.show');
+        }
 
-return $next($request);
-}
+        return $next($request);
+    }
 
-private function shouldRedirectToTwoFactorAuthPage(Request $request): bool
-{
-return !$request->session()->has('two_factor_auth_verified')
-&& $request->route()->getName() !== 'auth.2fa.show'
-&& $request->route()->getName() !== 'auth.2fa.verify';
-}
+    private function shouldRedirectToTwoFactorAuthPage(Request $request): bool
+    {
+        return !$request->session()->has('two_factor_auth_verified')
+            && $request->route()->getName() !== 'auth.2fa.show'
+            && $request->route()->getName() !== 'auth.2fa.verify';
+    }
 }
 ```
 
@@ -254,9 +251,9 @@ use App\Http\Middleware\VerifyTwoFactorAuth;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth', VerifyTwoFactorAuth::class])->group(function () {
-Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 ```
 
@@ -281,16 +278,16 @@ use Symfony\Component\HttpFoundation\Response;
 
 final class PreventRequestsIfTwoFactorAuthVerified
 {
-public function handle(Request $request, Closure $next): Response
-{
-// If we have already verified the user's 2FA code, redirect them to the dashboard.
-// We don't want to keep allowing them to access the 2FA verification page.
-if ($request->session()->get('two_factor_auth_verified')) {
-return redirect()->route('dashboard');
-}
+    public function handle(Request $request, Closure $next): Response
+    {
+        // If we have already verified the user's 2FA code, redirect them to the dashboard.
+        // We don't want to keep allowing them to access the 2FA verification page.
+        if ($request->session()->get('two_factor_auth_verified')) {
+            return redirect()->route('dashboard');
+        }
 
-return $next($request);
-}
+        return $next($request);
+    }
 }
 ```
 
@@ -316,13 +313,13 @@ use App\Http\Middleware\VerifyTwoFactorAuth;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth', VerifyTwoFactorAuth::class])->group(function () {
+    
+    // ...
 
-// ...
-
-Route::controller(TwoFactorAuthController::class)->middleware(PreventRequestsIfTwoFactorAuthVerified::class)->group(function () {
-Route::get('/auth/2fa', 'show')->name('auth.2fa.show');
-Route::post('/auth/2fa', 'verify')->name('auth.2fa.verify');
-});
+    Route::controller(TwoFactorAuthController::class)->middleware(PreventRequestsIfTwoFactorAuthVerified::class)->group(function () {
+        Route::get('/auth/2fa', 'show')->name('auth.2fa.show');
+        Route::post('/auth/2fa', 'verify')->name('auth.2fa.verify');
+    });
 });
 ```
 
@@ -349,47 +346,47 @@ use Illuminate\Http\Request;
 
 final class TwoFactorAuthController extends Controller
 {
-/**
-* Show the two-factor authentication page.
-*/
-public function show(Request $request, TwoFactorAuthService $twoFactorAuthService): View
-{
-// If the user hasn't already started the verification process, start it.
-// We check this here to prevent the user re-triggering the 2FA process
-// if the page is refreshed.
-if (! $request->session()->has('two_factor_auth_request_id')) {
-$requestId = $twoFactorAuthService->sendVerification($request->user());
+    /**
+     * Show the two-factor authentication page.
+     */
+    public function show(Request $request, TwoFactorAuthService $twoFactorAuthService): View
+    {
+        // If the user hasn't already started the verification process, start it.
+        // We check this here to prevent the user re-triggering the 2FA process
+        // if the page is refreshed.
+        if (! $request->session()->has('two_factor_auth_request_id')) {
+            $requestId = $twoFactorAuthService->sendVerification($request->user());
 
-$request->session()->put('two_factor_auth_request_id', $requestId);
-}
+            $request->session()->put('two_factor_auth_request_id', $requestId);
+        }
 
-return view('auth.two-factor-auth');
-}
+        return view('auth.two-factor-auth');
+    }
 
-/**
-* Verify the two-factor authentication code entered by the user.
-*/
-public function verify(Request $request, TwoFactorAuthService $twoFactorAuthService): RedirectResponse
-{
-$validated = $request->validate([
-'two_factor_auth_code' => ['required', 'numeric'],
-]);
+    /**
+     * Verify the two-factor authentication code entered by the user.
+     */
+    public function verify(Request $request, TwoFactorAuthService $twoFactorAuthService): RedirectResponse
+    {
+        $validated = $request->validate([
+            'two_factor_auth_code' => ['required', 'numeric'],
+        ]);
 
-$isValidCode = $twoFactorAuthService->verify(
-code: $validated['two_factor_auth_code'],
-requestId: $request->session()->get('two_factor_auth_request_id')
-);
+        $isValidCode = $twoFactorAuthService->verify(
+            code: $validated['two_factor_auth_code'],
+            requestId: $request->session()->get('two_factor_auth_request_id')
+        );
 
-if (! $isValidCode) {
-return back()->withErrors([
-'two_factor_auth_code' => 'The code you entered was invalid.',
-]);
-}
+        if (! $isValidCode) {
+            return back()->withErrors([
+                'two_factor_auth_code' => 'The code you entered was invalid.',
+            ]);
+        }
 
-$request->session()->put('two_factor_auth_verified', true);
+        $request->session()->put('two_factor_auth_verified', true);
 
-return redirect()->route('dashboard');
-}
+        return redirect()->route('dashboard');
+    }
 }
 ```
 
@@ -404,29 +401,25 @@ In the `show` method of the `TwoFactorAuthController`, we are returning an `auth
 For the purpose of this guide, we'll create a simple form that doesn't contain any styling. The Blade view may look something like so:
 
 ```html
+<form method="POST" action="{{ route('auth.2fa.verify') }}">
+    @csrf
 
+    <!-- Two-factor Auth Code -->
+    <div>
+        <label for="two_factor_auth_code">Two Factor Auth Code')</label>
+        <input id="two_factor_auth_code" type="text" name="two_factor_auth_code" required autofocus />
 
-@csrf
-
-
-
-
-Two Factor Auth Code')
-
-
-@if ($errors->get('two_factor_auth_code'))
-
-@foreach ((array) $errors->get('two_factor_auth_code') as $error)
-{{ $error }}
-@endforeach
-
-@endif
-
-
-
-Verify
-
-
+        @if ($errors->get('two_factor_auth_code'))
+            <ul>
+                @foreach ((array) $errors->get('two_factor_auth_code') as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
+    </div>
+    
+    <button type="submit">Verify</button>
+</form>
 ```
 
 As we can see in the Blade view above, we have added a single `two_factor_auth_code` text input field, label, and submit button. We've also added a condition and loop that will output any error messages we may want to display to the user (such as when they enter an invalid code).
