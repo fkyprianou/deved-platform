@@ -23,7 +23,7 @@ In this tutorial, you will use [CallKit](https://developer.apple.com/documentati
 
 ## Prerequisites
 
-* A Vonage API account. If you don't have one already, you can [sign up today](https://dashboard.nexmo.com/sign-up)
+* A Vonage API account. If you don't have one already, you can [sign up today](https://dashboard.nexmo.com/sign-up).
 * An Apple Developer account and an iOS device.
 * A GitHub account.
 * Xcode 12 and Swift 5 or greater.
@@ -32,7 +32,7 @@ In this tutorial, you will use [CallKit](https://developer.apple.com/documentati
 
 ### The Starter Project
 
-This blog will be building on top of the ["Receiving a phone call in-app"](https://developer.vonage.com/en/tutorials/vg-phone-to-app/introduction/swift) from the Vonage developer portal. This tutorial will start from the finished state of the tutorial project. Either follow along or if you are already familiar with building a Vonage Client SDK voice application you can clone the starter project from [GitHub](https://github.com/Vonage-Community/blog-clientsdk-ios_swift-callkit).
+This blog will be building on top of the ["Receiving a phone call in-app"](https://developer.vonage.com/en/tutorials/vg-phone-to-app/introduction/swift) from the Vonage developer portal. This tutorial will start from the finished state of the tutorial project. Either follow along, or if you are already familiar with building a Vonage Client SDK voice application, you can clone the starter [project from GitHub](https://github.com/Vonage-Community/blog-clientsdk-ios_swift-callkit).
 
 ## Set up Push Certificates
 
@@ -76,7 +76,7 @@ To get the push certificate in the format that is needed by the Vonage servers, 
 
 Now that you have a push certificate linked to your iOS application, you need to upload it to the Vonage servers. You upload your certificate to the Vonage servers by making a POST request, you can do so using your terminal or using the upload tool. 
 
-Using the terminal, clone the upload [tool](https://github.com/Vonage-Community/tool-clientsdk-javascript-ios_push_uploader):
+Using the terminal, clone the [upload tool](https://github.com/Vonage-Community/tool-clientsdk-javascript-ios_push_uploader):
 
 ```
 git clone git@github.com:Vonage-Community/tool-clientsdk-javascript-ios_push_uploader.git
@@ -96,7 +96,7 @@ Enter your Vonage Application ID, private key, certificate file, and optional pa
 
 ## The ClientManager Class
 
-Create a new Swift file (CMD + N) and call it `ClientManager`. This class will encapsulate the code needed to interface with the Client SDK since you will need to get information from the Client SDK in multiple places in future steps:
+Create a new Swift file (`CMD + N`) and call it `ClientManager`. This class will encapsulate the code needed to interface with the Client SDK since you will need to get information from the Client SDK in multiple places in future steps:
 
 ```swift
 protocol ClientManagerDelegate: AnyObject {
@@ -242,7 +242,7 @@ final class ClientManager: NSObject {
 }
 ```
 
-The `registerPushIfNeeded` function takes a token and then uses the `shouldRegisterToken` function to check if the token has already been registered. If it has not, `registerDevicePushToken` on the client will register the push notification with Vonage. In the `AppDelegate` class you can now register for VoIP push notifications. Import `PushKit` at the top of the file:
+The `registerPushIfNeeded` function takes a token and then uses the `shouldRegisterToken` function to check if the token has already been registered. If it has not, `registerDevicePushToken` on the client will register the push notification with Vonage. In the `AppDelegate` class, you can now register for VoIP push notifications. Import `PushKit` at the top of the file:
 
 ```swift
 import PushKit
@@ -270,7 +270,7 @@ extension AppDelegate: PKPushRegistryDelegate {
 }
 ```
 
-Update the didFinishLaunchingWithOptions function to call the `registerForVoIPPushes` function and log in the Client SDK:
+Update the `didFinishLaunchingWithOptions` function to call the `registerForVoIPPushes` function and log in the Client SDK:
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -346,9 +346,9 @@ private func handleLogin() {
 
 ## Handle Incoming Push Notifications
 
-With the device registered, it can now receive push notifications from Vonage. The Client SDK has functions for checking is a push notification payload is the expected payload and for processing the payload. When `processCallInvitePushData` is called, it converts the payload into an call which is received on the `didReceiveInviteForCall` function of the `VGVoiceClientDelegate`. 
+With the device registered, it can now receive push notifications from Vonage. The Client SDK has functions for checking if a push notification payload is the expected payload and for processing the payload. When `processCallInvitePushData` is called, it converts the payload into a call that is received on the `didReceiveInviteForCall` function of the `VGVoiceClientDelegate`. 
 
-Much like registering a push token, you only want to process an incoming push when the Client SDK has been logged in. Implement the functions on the `ClientManager` class alongside a local variables to store an incoming push: 
+Like registering a push token, you only want to process an incoming push when the Client SDK has been logged in. Implement the functions on the `ClientManager` class alongside a local variable to store an incoming push: 
 
 ```swift
 final class ClientManager: NSObject {
@@ -384,7 +384,7 @@ func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload
 }
 ```
 
-It is recommended that you perform a login when you have an incoming VoIP push notification which is why `login` is called here. This uses the logic in the `ClientManager` class that stores information about a push to be used after the login has been completed. The logic will be implemented in a later stage.
+It is recommended that you perform a login when you have an incoming VoIP push notification which is why `login` is called here. This uses the logic in the `ClientManager` class that stores information about a push to be used after the login has been completed. The logic will be implemented at a later stage.
 
 When your iOS application has an incoming VoIP push notification, you must handle it using the [`CXProvider`](https://developer.apple.com/documentation/callkit/cxprovider) class in the CallKit framework. Create a new Swift file (CMD + N) called `ProviderDelegate`:
 
@@ -551,7 +551,7 @@ extension ClientManager: VGVoiceClientDelegate {
 }
 ```
 
-After the SDK has processed the call, you will get a call invite on the `didReceiveInviteForCall` delegate function which will, in turn, report the call. `didReceiveHangupForCall` and `didReceiveInviteCancelForCall` also call their respective functions on the provider delegate. To complete the `ClientManager` class. add the `answer` and `reject` functions:
+After the SDK has processed the call, you will get a call invite on the `didReceiveInviteForCall` delegate function, which will, in turn, report the call. `didReceiveHangupForCall` and `didReceiveInviteCancelForCall` also call their respective functions on the provider delegate. To complete the `ClientManager` class, add the `answer` and `reject` functions:
 
 ```swift
 func answer(_ callID: String, completion: @escaping (Error?) -> Void) {
@@ -586,7 +586,7 @@ func reject(_ callID: String, completion: @escaping (Error?) -> Void) {
 }
 ```
 
-Again, you can only answer or reject a call after the Client SDK has been logged in. Both functions use the `ongoingPushLogin` to check if the login has been successfully completed, if not the action is stored using `storedAction`. If you look at the `handlePushLogin` function, you can see that when the login is complete, it calls a stored action if there is one.
+Again, you can only answer or reject a call after the Client SDK has been logged in. Both functions use the `ongoingPushLogin` to check if the login has been successfully completed; if not, the action is stored using `storedAction`. If you look at the `handlePushLogin` function, you can see that when the login is complete, it calls a stored action if there is one.
 
 ## Try it out
 
@@ -602,4 +602,4 @@ If you check the call logs on the device, you will also see the call listed ther
 
 ## What's Next?
 
-You can find the completed project on [GitHub](https://github.com/Vonage-Community/blog-clientsdk-ios_swift-callkit). You can do a lot more with the Client SDK and CallKit; you can use CallKit for outbound calls. Learn more about the Client SDK on [developer.nexmo.com](https://developer.vonage.com/vonage-client-sdk/overview) and CallKit on [developer.apple.com](https://developer.apple.com/documentation/callkit)
+You can find the completed project on [GitHub](https://github.com/Vonage-Community/blog-clientsdk-ios_swift-callkit). You can do a lot more with the Client SDK and CallKit; you can use CallKit for outbound calls. Learn more about the Client SDK on the [Vonage Client SDK Overview](https://developer.vonage.com/vonage-client-sdk/overview) and CallKit on [developer.apple.com](https://developer.apple.com/documentation/callkit).
