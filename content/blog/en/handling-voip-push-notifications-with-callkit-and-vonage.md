@@ -66,7 +66,7 @@ Choose *Apple Push Notification service SSL (Sandbox & Production)* and continue
 
 You will now need to choose the App ID for the app that you want to add VoIP push notifications to and continue. If your app is not listed, you will have to create an App ID. Xcode can do this for you if it automatically manages your signing. Otherwise, you can create a new App ID on the [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/certificates/list) page under Identifiers. Make sure to select the push notifications capability when doing so.
 
-You will be prompted to upload a Certificate Signing Request (CSR). You can follow the instructions on [Apple's help website](https://help.apple.com/developer-account/#/devbfa00fef7) to create a CSR on your Mac. Once the CSR is uploaded, you will be able to download the certificate. Double-click the `.cer` file to install it in Keychain Access.
+You will be prompted to upload a Certificate Signing Request (CSR). You can follow the instructions on [Apple's help website](https://developer.apple.com/help/account/create-certificates/create-a-certificate-signing-request/) to create a CSR on your Mac. Once the CSR is uploaded, you will be able to download the certificate. Double-click the `.cer` file to install it in Keychain Access.
 
 To get the push certificate in the format that is needed by the Vonage servers, you will need to export it. Locate your VoIP Services certificate in Keychain Access and right-click to export it. Name the export `applecert` and select `.p12` as the format:
 
@@ -270,7 +270,7 @@ extension AppDelegate: PKPushRegistryDelegate {
 }
 ```
 
-Update the `didFinishLaunchingWithOptions` function to call the `registerForVoIPPushes` function and log in the Client SDK:
+Update the `didFinishLaunchingWithOptions` function to call the `registerForVoIPPushes` function and log in to the Client SDK:
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
