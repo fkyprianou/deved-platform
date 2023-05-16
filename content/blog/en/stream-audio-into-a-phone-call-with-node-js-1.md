@@ -5,7 +5,7 @@ description: In this blog post you will learn how to play an audio file into an
 thumbnail: /content/blog/stream-audio-into-a-phone-call-with-node-js/Stream-Audio-into-a-Phone-Call-with-Node.js.png
 author: marklewin
 published: true
-published_at: 2023-05-04T08:19:48.880Z
+published_at: 2023-05-25T08:19:48.880Z
 updated_at: 2023-05-04T08:19:48.891Z
 category: tutorial
 tags:
@@ -26,7 +26,7 @@ To work through this example, you'll need Node.js. If you don't already have it 
 
 You can provision a number in the Developer Dashboard, but we'll talk you through using the [Vonage CLI](https://github.com/Vonage/vonage-cli) to rent a number, create a voice application and then link your number to it.
 
-Finally, you'll want the source code, which is available [on GitHub](https://github.com/nexmo-community/voice-stream-audio-node). [Clone the repository](https://help.github.com/articles/cloning-a-repository/) and `cd` into the application's root directory.
+Finally, you'll want the source code, which is available [on GitHub](https://github.com/Vonage-Community/blog-voice-node-stream-audio-into-a-phone-call-with-node-js/). [Clone the repository](https://help.github.com/articles/cloning-a-repository/) and `cd` into the application's root directory.
 
 ## Installing the Vonage CLI
 
@@ -80,7 +80,6 @@ The application has the following external dependencies:
 
 * `dotenv` - a module that allows us to configure the application using a `.env` file easily
 * `express` - a lightweight web framework
-* `body-parser` - middleware to handle `POST` requests
 * `vonage` - the [REST client library for Node.js](https://github.com/Vonage/vonage-node-sdk)
 
 These dependencies are configured in `package.json`. Run `npm install` to install them to the `node_modules` subdirectory.
@@ -198,7 +197,7 @@ app.use('/audio', express.static(path.join(__dirname, 'public')))
 
 const answer_url = BASE_URL + '/audio/answer.json'
 const audio_url = BASE_URL + '/audio/music.mp3'
-const event_url = BASE_URL + `/webhooks/events`
+const event_url = BASE_URL + '/webhooks/events'
 ```
 
 ### Making the Outbound Call
