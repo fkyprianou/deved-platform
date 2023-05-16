@@ -15,11 +15,11 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-We're excited to announced that Verify, our API for Two-Factor Authentication (2FA), has just had Version 2 released for General Availability! This evolution of our 2FA solution has been designed to work better for developers, by using Webhooks for asyncronous integrations and offering more options and flexibility. Let's go through the differences between V1 and V2. You can also [check out a comprehensive guide to switching versions on this page in our documentation]().
+We're excited to announce that Verify, our API for Two-Factor Authentication (2FA), has just had Version 2 released for General Availability! This evolution of our 2FA solution has been designed to work better for developers, by using Webhooks for asyncronous integrations and offering more options and flexibility. Let's go through the differences between V1 and V2. You can also [check out a comprehensive guide to switching versions on this page in our documentation](https://developer.vonage.com/en/verify/verify-v2/guides/verify-migration-guide).
 
 ### Goodbye Polling, Hello Webhooks
 
-Version 1 of Verify was designed to have a more synchronous flow - an example of this is after starting a request, the API needs to be polled if you need to know the status of the request, before the user submits a PIN code (which effectively counts as the 'start' and 'end' of the request lifecycle).
+Version 1 of Verify was designed to have a more synchronous flow - an example of this is after starting a request, the API needs to be polled if you need to know the status of the request before the user submits a PIN code (which effectively counts as the 'start' and 'end' of the request lifecycle).
 
 The first iteration of Verify was built around a synchronous flow, with API polling required to check the status of a request after its initiation and prior to the submission of the user's PIN code.
 
@@ -31,7 +31,7 @@ In contrast, Verify Version 2 harnesses the power of webhooks. Initiating a requ
 
 ## Strengthened Fraud Protection
 
-With the surge in fraudulent activity exploiting Communications APIs, we have integrated the [Verify Anti-Fraud System](https://chat.openai.com/?model=gpt-4) with Version 2. This system detects suspicious activity and triggers a Network Block. For added flexibility, users can also [customize this feature](https://chat.openai.com/?model=gpt-4) according to their requirements.
+With the surge in fraudulent activity exploiting Communications APIs, we have integrated the [Verify Anti-Fraud System](https://developer.vonage.com/en/verify/verify-v2/guides/v2-anti-fraud) with Version 2. This system detects suspicious activity and triggers a Network Block. For added flexibility, users can also [customize this feature](https://developer.vonage.com/en/verify/verify-v2/guides/v2-anti-fraud) according to their requirements if necessary.
 
 ## Enhanced Delivery Methods
 
@@ -51,7 +51,7 @@ I make that a product expansion of... 200%!
 
 ## Enhanced Workflow Control
 
-Related to the new channels, you now have the ability to control exactly how your request workflow is structured. Previously, you would send a `workflow_id` in the request, taken from a [predefined list in our developer portal](). Instead, for V2 you can include a custom payload for your workflow. For instance, if you want the attempted order of channels to be Silent Auth -> Email -> SMS, the request would look like this:
+Related to the new channels, you now have the ability to control exactly how your request workflow is structured. Previously, you would send a `workflow_id` in the request, taken from a [predefined list in our developer portal](https://developer.vonage.com/en/verify/guides/workflows-and-events). Instead, for V2 you can include a custom payload for your workflow. For instance, if you want the attempted order of channels to be Silent Auth -> Email -> SMS, the request would look like this:
 
 ```json
 {
@@ -95,11 +95,11 @@ Developers also have the ability to send a custom code for channels that require
 
 Version 2 of Verify makes better use of HTTP response codes. Yes, yes, OK: so not REST (I just wanted to put it in the heading), but better use of the HTTP protocol. Here are some examples:
 
-- When starting a request that has already been fired, you now get a [409]() response.
-- Hitting the rate limit now gives you a standard [429]()
-- An invalid payload for either the request start or PIN submission endpoints gives you a [422]()
-- This one is quite a nice use case: if you submit an incorrect PIN too many times, you eventually get a [410]() to indicate the request entity is now no longer available for any state changes.
+- When starting a request that has already been fired, you now get a [409](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409) response.
+- Hitting the rate limit now gives you a standard [429](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)
+- An invalid payload for either the request start or PIN submission endpoints gives you a [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+- This one is quite a nice use case: if you submit an incorrect PIN too many times, you eventually get a [410](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410) to indicate the request entity is now no longer available for any state changes.
 
 ## What Will YOU Build?
 
-The new channels we've launched now give developers a wealth of options to integrate 2FA into their systems, side-projects and enterprise applications. The question is, what have you built? A passionate side-project turned startup with Laravel or Rails? A rollout across a Node microservice architected enterprise? We want to know! 
+The new channels we've launched now give developers a wealth of options to integrate 2FA into their systems, side project,s and enterprise applications. The question is, what have you built? A passionate side-project turned startup with Laravel or Rails? A rollout across a Node microservice architected enterprise? We want to know! 
