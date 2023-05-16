@@ -67,7 +67,7 @@ To use the Voice API, you must create a [Voice API application](https://develope
 Create an application using the CLI and make a note of the application ID it returns:
 
 ```bash
- vonage apps:create "Play audio app"  --voice_answer_url=http://example.com/answer  --voice_event_url=http://example.com/event
+ vonage apps:create "Play audio app" --voice_answer_url=http://example.com/answer --voice_event_url=http://example.com/event
 ```
 
 Note that the `apps:create` command shown uses a few parameters. These are to set the webhook endpoints and generate your private key to authenticate your application.
@@ -227,7 +227,7 @@ const makeOutboundCall = (req, res) => {
 
 ### Playing Audio into the Call
 
-In the event webhook, we check the call `status`. If it is  `answered`, then we retrieve the call ID so that we can play the audio into the correct call and stop playing the audio after 20 seconds. After the audio is stopped, we use the `vonage.calls.update()` method to replace the existing NCCO `action` with a new one: `hangup`, which disconnects the call:
+In the event webhook, we check the call `status`. If it is `answered`, then we retrieve the call ID so that we can play the audio into the correct call and stop playing the audio after 20 seconds. After the audio is stopped, we use the `vonage.calls.update()` method to replace the existing NCCO `action` with a new one: `hangup`, which disconnects the call:
 
 ```javascript
 app.post('/webhooks/events', (req, res) => {
@@ -285,7 +285,7 @@ const stop_stream = (call_uuid) => {
 
 ## Conclusion
 
-In this post, you learned how to play audio into an existing call and about some of the NCCO `actions` that govern the call flow. Feel free to experiment by substituting different audio files and NCCO `actions`. The following resources might help:
+In this post, you learned how to play audio into an existing call and about the NCCO `actions` that govern the call flow. Feel free to experiment by substituting different audio files and NCCO `actions`. The following resources might help:
 
 * [Voice API reference](https://developer.vonage.com/api/voice)
 * [NCCO reference](https://developer.vonage.com/voice/voice-api/ncco-reference)
