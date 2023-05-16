@@ -46,10 +46,15 @@ Replace the `VONAGE_API_KEY` and `VONAGE_API_SECRET` with your own details to au
 
 ## Renting a Vonage Number
 
-You need a number to make calls from. Rent one by executing the following command, replacing the country code as appropriate. For example, if you are in the USA, replace `GB` with `US`:
+You need a number to make calls from. Rent one by executing the following command, replacing the country code as appropriate. For example, if you are in the USA, replace `[COUNTRYCODE]` with `US`:
 
 ```bash
-vonage numbers:search US
+vonage numbers:search [COUNTRYCODE]
+```
+
+Y﻿ou can then purchase the phone number by running the below piece of code from your terminal. It is important to note that some countries require an address validation and the purchase will have to be made via the Vonage dashboard, and not via command line.
+
+```bash
 vonage numbers:buy [NUMBER] [COUNTRYCODE]
 ```
 
@@ -57,7 +62,7 @@ Make a note of the telephone number that the command returns.
 
 ## Creating the Voice Application
 
-To use the Voice API, you must create a [Voice API application](https://developer.nexmo.com/concepts/guides/applications). This is not the same thing as the web application you are building. It is merely a container for the configuration and security information you need to connect to Vonage's APIs.
+To use the Voice API, you must create a [Voice API application](https://developer.vonage.com/en/application/overview). This is not the same thing as the web application you are building. It is merely a container for the configuration and security information you need to connect to Vonage's APIs.
 
 Create an application using the CLI and make a note of the application ID it returns:
 
