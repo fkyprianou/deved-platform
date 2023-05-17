@@ -51,7 +51,7 @@ I make that a product expansion of... 200%!
 
 ## Enhanced Workflow Control
 
-Related to the new channels, you now have the ability to control exactly how your request workflow is structured. Previously, you would send a `workflow_id` in the request, taken from a [predefined list in our developer portal](https://developer.vonage.com/en/verify/guides/workflows-and-events). Instead, for V2 you can include a custom payload for your workflow. For instance, if you want the attempted order of channels to be Silent Auth -> Email -> SMS, the request would look like this:
+Related to the new channels, you can now control exactly how your request workflow is structured. Previously, you would send a `workflow_id` in the request, taken from a [predefined list in our developer portal](https://developer.vonage.com/en/verify/guides/workflows-and-events). Instead, for V2, you can include a custom payload for your workflow. For instance, if you want the attempted order of channels to be Silent Auth -> Email -> SMS, the request would look like this:
 
 ```json
 {
