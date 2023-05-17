@@ -46,7 +46,7 @@ The Vonage Video API provides several API callbacks that can be secured with thi
 
 We’ll use **Session Monitoring** for this example, but the knowledge gained in this section applies to any of the other callbacks mentioned. 
 
-**Session Monitoring**
+## Session Monitoring
 
 Developers can monitor certain activities of clients from within their app server. By registering for callbacks, your callback URL will receive HTTP POST requests when any client connects or publishes.
 
