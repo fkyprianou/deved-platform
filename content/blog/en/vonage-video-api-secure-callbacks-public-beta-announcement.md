@@ -56,7 +56,7 @@ To enable it on your current video project, scroll down until you see **Session 
 
 You can configure the callback URL and toggle the **Signature Secret** to on. It provides a randomly generated signature by default, but you can specify your own. Click **Submit** to continue. The system will report that secure callbacks have been configured with the URL and signature secret.
 
-**Validate the Request**
+## Validate the Request
 
 There are two primary ways to validate secure callbacks:
 
