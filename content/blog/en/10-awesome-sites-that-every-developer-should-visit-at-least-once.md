@@ -19,7 +19,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-## Introduction
+## Introduction1
 
 As I have stumbled around the internet over the years as a developer, I have found and bookmarked some links that I tend to go back to and usually learn something new. Here is a list that I think every developer should visit (at least once). You'll find everything from a way to generate a silly donut, free programming books, and interactive ways to learn "Git" to my favorite Communication API platform - Vonage!
 
