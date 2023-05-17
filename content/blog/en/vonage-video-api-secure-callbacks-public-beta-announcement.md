@@ -25,7 +25,7 @@ The Vonage Video API uses callbacks to provide events and status updates to the 
 
 **Enabling Secure Callbacks**
 
-Head over to the [Video API Dashboard](https://tokbox.com/account/#/) and select a project that you’d like to implement this feature. Scroll down until you see **Project Settings** and the **Secured Callback** slider button, as shown below. 
+Head over to the [Video API Dashboard](https://tokbox.com/account/) and select a project that you’d like to implement this feature. Scroll down until you see **Project Settings** and the **Secured Callback** slider button, as shown below. 
 
 ![Project Settings](/content/blog/vonage-video-api-secure-callbacks-public-beta-announcement/projectsettings.png "Project Settings inside the Video API Dashboard")
 
