@@ -1,6 +1,6 @@
 ---
 title: Vonage Video API - Secure Callbacks Public Beta Announcement
-description: Learn how to secure your Video Webhooks with a feature called Secure Callbacks
+description: Learn How To Secure Your Video Webhooks With a Feature Called Secure Callbacks
 author: michael-crump
 published: true
 published_at: 2023-05-17T18:52:53.618Z
