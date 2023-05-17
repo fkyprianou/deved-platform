@@ -15,7 +15,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-We're excited to announce that Verify, our API for Two-Factor Authentication (2FA), has just had Version 2 released for General Availability! This evolution of our 2FA solution has been designed to work better for developers, by using Webhooks for asyncronous integrations and offering more options and flexibility. Let's go through the differences between V1 and V2. You can also [check out a comprehensive guide to switching versions on this page in our documentation](https://developer.vonage.com/en/verify/verify-v2/guides/verify-migration-guide).
+We're excited to announce that Verify, our API for Two-Factor Authentication (2FA), has just had Version 2 released for General Availability! This evolution of our 2FA solution has been designed to work better for developers by using Webhooks for asynchronous integrations and offering more options and flexibility. Let's go through the differences between V1 and V2. You can also check out a comprehensive guide to [switching versions on this page in our documentation](https://developer.vonage.com/en/verify/verify-v2/guides/verify-migration-guide).
 
 ### Goodbye Polling, Hello Webhooks
 
