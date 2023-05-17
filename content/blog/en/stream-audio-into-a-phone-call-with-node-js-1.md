@@ -26,7 +26,7 @@ To work through this example, you'll need Node.js. If you don't already have it 
 
 You can provision a number in the Developer Dashboard, but we'll talk you through using the [Vonage CLI](https://github.com/Vonage/vonage-cli) to rent a number, create a voice application and then link your number to it.
 
-Finally, you'll want the source code, which is available [on GitHub](https://github.com/Vonage-Community/blog-voice-node-stream-audio-into-a-phone-call-with-node-js/). [Clone the repository](https://help.github.com/articles/cloning-a-repository/) and `cd` into the application's root directory.
+Finally, you'll want the [source code, which is available on GitHub](https://github.com/Vonage-Community/blog-voice-node-stream_audio_into_a_phone_call_with_node_js). [Clone the repository](https://help.github.com/articles/cloning-a-repository/) and `cd` into the application's root directory.
 
 ## Installing the Vonage CLI
 
