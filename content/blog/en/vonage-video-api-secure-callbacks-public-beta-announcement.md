@@ -86,6 +86,6 @@ Notice that the `payload_hash` field is an SHA-256 hash of the request payload. 
 
 A [Node.js code sample can be found here](https://tokbox.com/developer/guides/secure-callbacks/). 
 
-**Wrap-up**
+## Wrap-up
 
 To recap, **[Secure Callbacks](https://tokbox.com/developer/guides/secure-callbacks)** is a security feature that ensures that each callback has not been tampered with in transit. This defends against intercept and later replay. It verifies that the request originates from Vonage and ensures compliance needs are met for many important industries. You can use it today, free of charge, with general availability starting in June 2023. Please visit [this page](https://tokbox.com/developer/guides/secure-callbacks/#known-limitations-considerations) for a list of limitations and considerations, as information is updated frequently.
