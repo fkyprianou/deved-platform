@@ -35,7 +35,7 @@ Press the **Edit** button and toggle the **Secured Callback** slider button to o
 
 Now that the feature has been enabled let’s discuss the various API callbacks and what each does before enabling one. 
 
-**Vonage Video API callbacks** 
+## Vonage Video API Callbacks
 
 The Vonage Video API provides several API callbacks that can be secured with this feature, including: 
 
