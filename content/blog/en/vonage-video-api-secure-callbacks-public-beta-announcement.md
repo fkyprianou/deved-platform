@@ -17,7 +17,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-**Introduction**
+## Introduction
 
 The [Vonage Video API](https://www.vonage.com/communications-apis/video/features/) has a new feature called [Secure Callbacks](https://tokbox.com/developer/guides/secure-callbacks/) which is in public beta today, with general availability coming in June 2023. The secure callbacks feature provides a way to verify a webhook callback request is coming from Vonage and that its payload has not been tampered with during transit. This will protect against unauthorized callbacks and adds additional security benefits for those industries with specific compliance requirements. 
 
