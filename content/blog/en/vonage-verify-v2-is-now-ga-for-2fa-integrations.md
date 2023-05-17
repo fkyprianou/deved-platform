@@ -35,7 +35,7 @@ With the surge in fraudulent activity exploiting Communications APIs, we have in
 
 ## Enhanced Delivery Methods
 
-The most significant change we've made to the API is, naturally, adding new communication channel options. When you start a new request, the following existing methods can be used:
+The most significant change we've made to the API is adding new communication channel options. When you start a new request, the following existing methods can be used:
 
 * SMS
 * Voice Text to Speech (TTS)
