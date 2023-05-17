@@ -1,6 +1,7 @@
 ---
-title: "Laravel Resource Roundup: Guides, Samples, & More"
+title: "Laravel Resource Roundup: Guides, Samples, and More"
 description: Several available resources for developers working with Vonage and Laravel
+thumbnail: /content/blog/laravel-resource-roundup-guides-samples-and-more/laravel-resource-roundup.png
 author: michael-crump
 published: true
 published_at: 2023-04-18T22:49:25.371Z
