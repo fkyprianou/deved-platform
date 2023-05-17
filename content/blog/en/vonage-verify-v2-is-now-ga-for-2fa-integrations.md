@@ -23,7 +23,7 @@ Version 1 of Verify was designed to have a more synchronous flow - an example of
 
 The first iteration of Verify was built around a synchronous flow, with API polling required to check the status of a request after its initiation and prior to the submission of the user's PIN code.
 
-In contrast, Verify Version 2 harnesses the power of webhooks. Initiating a request now provides you with a unique GUID. Your integration, assuming JWTs are your authorization method, will listen for incoming webhooks corresponding to the request GUID for updates. The associated endpoints with these webhooks are:
+In contrast, Verify Version 2 harnesses the power of webhooks. Initiating a request now provides you with a unique GUID. Assuming JWTs are your authorization method, your integration will listen for incoming webhooks corresponding to the GUID request for updates. The associated endpoints with these webhooks are:
 
 -   Initiate the request
 -   Verify the user's PIN
