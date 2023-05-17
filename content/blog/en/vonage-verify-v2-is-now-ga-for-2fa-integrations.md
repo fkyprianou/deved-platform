@@ -76,7 +76,7 @@ Related to the new channels, you can now control exactly how your request workfl
 
 ## Custom PIN Generation
 
-Developers also have the ability to send a custom code for channels that require it (i.e. all apart from WhatsApp Interactive and Silent Authentication). This code can be between 4 and 10 characters in length and is alphanumeric. Here's an example of the JSON payload sent when using your own generated PIN:
+Developers also can send a custom code for channels that require it (i.e., all apart from WhatsApp Interactive and Silent Authentication). This code can be between 4 and 10 characters in length and is alphanumeric. Here's an example of the JSON payload sent when using your own generated PIN:
 
 ```json
 {
