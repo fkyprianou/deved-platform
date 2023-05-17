@@ -19,7 +19,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-In this tutorial, you will use [CallKit](https://developer.apple.com/documentation/callkit) to handle the VoIP push notifications sent to an iOS device when using the Vonage Client SDK for iOS. CallKit allows you to integrate your iOS application into the system so your application can look like a native iOS phone call. 
+In this tutorial, you will use [CallKit](https://developer.apple.com/documentation/callkit) to handle the VoIP push notifications sent to an iOS device when using the [Vonage Client SDK for iOS](https://developer.vonage.com/en/vonage-client-sdk/overview). VoIP push notifications are the primary method for receiving inbound calls with the Client SDK since they will reach the device regardless of whether your application is in the foreground or not. CallKit allows you to integrate your iOS application into the system so your application can look like a native iOS phone call. Using the Vonage Client SDK with Callkit will allow you to build calling into your application while having a consistent and familiar interface for inbound calls.
 
 ## Prerequisites
 
