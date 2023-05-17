@@ -102,4 +102,4 @@ Version 2 of Verify makes better use of HTTP response codes. Yes, yes, OK: so no
 
 ## What Will YOU Build?
 
-The new channels we've launched now give developers a wealth of options to integrate 2FA into their systems, side projects, and enterprise applications. The question is, what have you built? A passionate side-project turned startup with [Laravel](https://laravel.com/) or [Rails?](https://rubyonrails.org/) A rollout across a Node microservice architected enterprise? We want to know!
+The new channels we've launched now give developers a wealth of options to integrate 2FA into their systems, side projects, and enterprise applications. The question is, what have you built? A passionate side-project turned startup with [Laravel](https://laravel.com/) or [Rails?](https://rubyonrails.org/) A rollout across a Node microservice architected enterprise? We want to know! [Head to our Community Slack](https://developer.vonage.com/en/community/slack) to talk to us.
