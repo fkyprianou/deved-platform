@@ -95,7 +95,7 @@ Developers also can send a custom code for channels that require it (i.e., all a
 
 Version 2 of Verify makes better use of HTTP response codes. Yes, yes, OK: so not REST (I just wanted to put it in the heading), but better use of the HTTP protocol. Here are some examples:
 
-- When starting a request that has already been fired, you now get a [409](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409) response.
+- When starting a request that has already run, you get a [409](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409) response.
 - Hitting the rate limit now gives you a standard [429](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)
 - An invalid payload for either the request start or PIN submission endpoints gives you a [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
 - This one is quite a nice use case: if you submit an incorrect PIN too many times, you eventually get a [410](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410) to indicate the request entity is now no longer available for any state changes.
