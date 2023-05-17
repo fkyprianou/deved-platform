@@ -76,7 +76,7 @@ client.openWithDataCellular(url: url, debug: true) { response in
 
 ## Silent Authentication Sandbox
 
-Testing silent authentication can be difficult. To test a successful verification, code must be run from an application running on a phone over a mobile network, which can be tricky to set up. To help with this, Vonage has provided a sandbox that bypasses the check with the carrier. Instead, you’ll use the data returned in your callbacks to complete the check yourself, therefore removing the need for a mobile network connection.
+Testing silent authentication can be difficult. To test a successful verification, code must be run from an application running on a phone over a mobile network, which can be tricky to set up. To help with this, Vonage has provided a sandbox that bypasses the check with the carrier. Instead, you’ll use the data returned in your callbacks to complete the check yourself, removing the need for a mobile network connection.
 
 To do this, add `"sandbox": "true"` to your workflow:
 
