@@ -21,7 +21,7 @@ We're excited to announce that Verify, our API for Two-Factor Authentication (2F
 
 Version 1 of Verify was designed to have a more synchronous flow - an example of this is after starting a request, the API needs to be polled if you need to know the status of the request before the user submits a PIN code (which effectively counts as the 'start' and 'end' of the request lifecycle).
 
-The first iteration of Verify was built around a synchronous flow, with API polling required to check the status of a request after its initiation and prior to the submission of the user's PIN code.
+The first iteration of Verify was built around a synchronous flow, with API polling required to check the status of a request after its initiation and before submitting the user's PIN code.
 
 In contrast, Verify Version 2 harnesses the power of webhooks. Initiating a request now provides you with a unique GUID. Assuming JWTs are your authorization method, your integration will listen for incoming webhooks corresponding to the GUID request for updates. The associated endpoints with these webhooks are:
 
