@@ -34,7 +34,7 @@ Silent Authentication is not just reliant on the user having a mobile phone - it
 
 ### Android
 
-The [Android SDK is available on Github](https://github.com/Vonage/verify-silent-auth-sdk-android), where you can find information on permissions, compatibility, and examples of how to integrate silent auth into your applications:
+The [Android SDK is available on GitHub](https://github.com/Vonage/verify-silent-auth-sdk-android), where you can find information on permissions, compatibility, and examples of how to integrate silent auth into your applications:
 
 ```java
 import com.vonage.silentauth.VGSilentAuthClient
@@ -55,7 +55,7 @@ val resp: JSONObject = VGSilentAuthClient.getInstance().openWithDataCellular(URL
 
 ### i﻿OS
 
-The [iOS SDK is also available on Github](https://github.com/Vonage/verify-silent-auth-sdk-ios), where you can find information on installation, compatibility, and usage examples:
+The [iOS SDK is also available on GitHub](https://github.com/Vonage/verify-silent-auth-sdk-ios), where you can find information on installation, compatibility, and usage examples:
 
 ```swift
 import VonageClientSDKSilentAuth
