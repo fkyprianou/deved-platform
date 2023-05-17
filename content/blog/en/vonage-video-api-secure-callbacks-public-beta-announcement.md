@@ -84,7 +84,7 @@ An example of what the **Signed** **JSON Web Token** **(JWT)** would look like:
 
 Notice that the `payload_hash` field is an SHA-256 hash of the request payload. It can be compared to the request payload to ensure it has not been tampered with during transit.
 
-A Node.js code sample can be found [here](https://tokbox.com/developer/guides/secure-callbacks/). 
+A [Node.js code sample can be found here](https://tokbox.com/developer/guides/secure-callbacks/). 
 
 **Wrap-up**
 
