@@ -133,7 +133,7 @@ The [complete guide on using the silent authentication sandbox can be found here
 
 ## Fallback to Other Channels
 
-There are several situations where silent authentication may not work, for example if the user is:
+There are several situations where silent authentication may not work, for example, if the user is:
 
 * On a desktop device
 * Out of their network’s coverage
