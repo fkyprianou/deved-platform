@@ -42,7 +42,7 @@ The Vonage Video API provides several API callbacks that can be secured with thi
 1. **Session Monitoring** - Monitors session activity.
 2. **Archiving Monitoring** - Monitors archive (or recordings) status. 
 3. **SIP Call Monitoring** - Monitors SIP call activity.
-4. **Experience Composer Monitoring** - Monitors [Experience Composer](https://tokbox.com/developer/guides/experience-composer/) 
+4. **Experience Composer Monitoring** - Monitors [Experience Composer](https://tokbox.com/developer/guides/experience-composer/).
 
 We’ll use **Session Monitoring** for this example, but the knowledge gained in this section applies to any of the other callbacks mentioned. 
 
