@@ -23,7 +23,7 @@ The [Vonage Video API](https://www.vonage.com/communications-apis/video/features
 
 The Vonage Video API uses callbacks to provide events and status updates to the application for Session Monitoring, Archiving/Recording, SIP, and Experience Composer. The secure callbacks are signed by a signature secret that the user configures through the Video Account Portal, which can be verified by the receiving application to validate that the callback originated from Vonage. 
 
-**Enabling Secure Callbacks**
+## Enabling Secure Callbacks
 
 Head over to the [Video API Dashboard](https://tokbox.com/account/) and select a project that you’d like to implement this feature. Scroll down until you see **Project Settings** and the **Secured Callback** slider button, as shown below. 
 
