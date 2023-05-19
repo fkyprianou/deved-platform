@@ -1,10 +1,11 @@
 ---
-title: Vonage Verify V2 is now GA for 2FA Integrations
+title: Vonage Verify V2 Is Now GA for 2FA Integrations
 description: The new version of Verify adds new channels and more customisation
+thumbnail: /content/blog/vonage-verify-v2-is-now-ga-for-2fa-integrations/verify-v2_ga.png
 author: james-seconde
-published: false
-published_at: 2023-05-16T18:57:59.057Z
-updated_at: 2023-05-16T18:57:59.081Z
+published: true
+published_at: 2023-05-22T18:57:59.057Z
+updated_at: 2023-05-22T18:57:59.081Z
 category: announcement
 tags:
   - verify-api
@@ -17,7 +18,7 @@ replacement_url: ""
 ---
 We're excited to announce that Verify, our API for Two-Factor Authentication (2FA), has just had Version 2 released for General Availability! This evolution of our 2FA solution has been designed to work better for developers by using Webhooks for asynchronous integrations and offering more options and flexibility. Let's go through the differences between V1 and V2. You can also check out a comprehensive guide to [switching versions on this page in our documentation](https://developer.vonage.com/en/verify/verify-v2/guides/verify-migration-guide).
 
-### Goodbye Polling, Hello Webhooks
+## Goodbye Polling, Hello Webhooks
 
 Version 1 of Verify was designed to have a more synchronous flow - an example of this is after starting a request, the API needs to be polled if you need to know the status of the request before the user submits a PIN code (which effectively counts as the 'start' and 'end' of the request lifecycle).
 
