@@ -17,7 +17,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-We are thrilled to announce the relaunch of the Vonage Developer Community, a vibrant hub for developers, innovators, and technology enthusiasts using Vonage APIs. Packed with exciting new features, channels, and a revamped structure, our community is the perfect place to connect, learn, and collaborate with like-minded individuals.
+We are thrilled to announce the relaunch of the Vonage Developer Community, a vibrant hub for developers using Vonage APIs. Packed with exciting new features, channels, and a revamped structure, our community is the perfect place to connect, learn, and collaborate with like-minded individuals.
 
 Here's what you can expect from the new Vonage Developer Community:
 
@@ -33,7 +33,7 @@ Here's what you can expect from the new Vonage Developer Community:
 
 **Connect**: Network and collaborate with a global community of passionate developers, share ideas, and seek guidance from experienced professionals.
 
-**Learn:** Expand your knowledge through in-depth discussions, tutorials, articles, and documentation shared by experts in various domains.
+**Learn:** Expand your knowledge through in-depth discussions, tutorials, articles, and documentation shared by experts.
 
 **Innovate:** Discover new ways to leverage Vonage APIs, exchange best practices, and get inspired by real-world success stories.
 
