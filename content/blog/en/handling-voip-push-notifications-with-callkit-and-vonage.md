@@ -24,7 +24,7 @@ In this tutorial, you will use [CallKit](https://developer.apple.com/documentati
 ## Prerequisites
 
 * A Vonage API account. If you don't have one already, you can [sign up today](https://dashboard.nexmo.com/sign-up).
-* An Apple Developer account and an iOS device.
+* An Apple Developer account and an iOS device (or simulator in Xcode 14 and above).
 * A GitHub account.
 * Xcode 12 and Swift 5 or greater.
 * [Cocoapods](https://cocoapods.org) to install the Vonage Client SDK for iOS.
@@ -596,7 +596,7 @@ Again, you can only answer or reject a call after the Client SDK has been logged
 
 ## Try it out
 
-Build and Run (CMD + R) the project onto your iOS device, accept the microphone permissions and lock the device. Then call the number linked to your Vonage Application from earlier. You will see the incoming call directly on your lock screen; then once you pick it up it will go into the familiar iOS call screen: 
+Build and Run (CMD + R) the project onto your iOS device (or simulator in Xcode 14 and above), accept the microphone permissions and lock the device. Then call the number linked to your Vonage Application from earlier. You will see the incoming call directly on your lock screen; then once you pick it up it will go into the familiar iOS call screen: 
 
 ![incoming call with locked screen](/content/blog/handling-voip-push-notifications-with-callkit-and-vonage/locked.png)
 
