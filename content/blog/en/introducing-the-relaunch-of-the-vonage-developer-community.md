@@ -9,7 +9,7 @@ published_at: 2023-06-05T12:51:33.107Z
 updated_at: 2023-05-22T12:51:33.117Z
 category: announcement
 tags:
-  - Community
+  - community
 comments: true
 spotlight: false
 redirect: ""
