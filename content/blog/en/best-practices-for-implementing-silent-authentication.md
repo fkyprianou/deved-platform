@@ -2,10 +2,11 @@
 title: Best Practices for Implementing Silent Authentication
 description: Discover more about silent authentication using the Verify V2 API,
   with useful hints and tips for implementation.
+thumbnail: /content/blog/best-practices-for-implementing-silent-authentication/best-practices_silent-authentication.png
 author: helena-bower
 published: true
-published_at: 2023-05-17T09:43:46.590Z
-updated_at: 2023-05-17T09:43:46.604Z
+published_at: 2023-05-23T09:43:46.590Z
+updated_at: 2023-05-23T09:43:46.604Z
 category: tutorial
 tags:
   - verify-api
