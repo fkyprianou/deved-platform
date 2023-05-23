@@ -1,5 +1,5 @@
 ---
-title: " Introducing the Relaunch of the Vonage Developer Community!"
+title: "Introducing the Relaunch of the Vonage Developer Community!"
 description: " Join the relaunched Vonage Developer Community where you can
   connect with developers, access new channels, API-specific support, and
   intelligent automations. Sign up now and be a part of our vibrant community!"
