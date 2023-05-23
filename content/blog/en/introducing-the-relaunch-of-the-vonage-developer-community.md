@@ -17,7 +17,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-We are thrilled to announce the relaunch of the Vonage Developer Community, a vibrant hub for developers using Vonage APIs. Packed with exciting new features, channels, and a revamped structure, our community is the perfect place to connect, learn, and collaborate with like-minded individuals.
+We are thrilled to announce the relaunch of the Vonage Developer Community, a vibrant hub for developers using Vonage APIs. Packed with exciting new features, channels, and a revamped structure, our community is perfect for connecting, learning, and collaborating with like-minded individuals.
 
 Here's what you can expect from the new Vonage Developer Community:
 
@@ -25,9 +25,9 @@ Here's what you can expect from the new Vonage Developer Community:
 
 **API-Specific Channels:** We understand that each Vonage API has its unique set of features and use cases. That's why we've introduced dedicated channels for each API to provide focused support and discussions. Whether you have questions about Vonage SMS, Voice, Verify, or any other API, you'll find a dedicated space to connect with experts and fellow developers.
 
-**Intelligent Automations:** To streamline the support process, we've implemented intelligent automations that will redirect your queries to the most appropriate API channel. This means you can receive faster and more accurate support for your specific API-related questions. Say goodbye to confusion and hello to targeted assistance!
+**Intelligent Automation:** To streamline the support process, we've implemented intelligent automation to redirect your queries to the most appropriate API channel. This means you can receive faster and more accurate support for your specific API-related questions. Say goodbye to confusion and hello to targeted assistance!
 
-**Updated Code of Conduct:** Along with the relaunch, we have updated our Code of Conduct to ensure a safe, inclusive, and respectful environment for all community members. By joining the Vonage Developer Community, you agree to abide by the following guidelines: <https://www.vonage.com/legal/communications-apis/code-of-conduct-for-the-vonage-developer-community/> 
+**Updated Code of Conduct:** Along with the relaunch, we have updated our Code of Conduct to ensure a safe, inclusive, and respectful environment for all community members. By joining the Vonage Developer Community, you agree to abide by the [following guidelines](https://www.vonage.com/legal/communications-apis/code-of-conduct-for-the-vonage-developer-community)
 
 **Ready to be a part of this exciting journey? [Sign up now](https://developer.vonage.com/en/community/slack) and experience the amazing benefits of being a member of the Vonage Developer Community:** 
 
@@ -41,5 +41,4 @@ Here's what you can expect from the new Vonage Developer Community:
 
 **Explore:** Engage with a diverse range of topics, participate in events, join hackathons, and stay updated with the latest industry trends.
 
-**\
-Joining the Vonage Developer Community is simple! Just visit our website <https://developer.vonage.com/en/community> and sign up today. Don't miss out on your opportunity to connect with a vibrant community of developers using Vonage!**
+Joining the Vonage Developer Community is simple! Just visit [our website](https://developer.vonage.com/en/community) and sign up today. Don't miss out on your opportunity to connect with a vibrant community of developers using Vonage!
