@@ -22,7 +22,7 @@ We are thrilled to announce the relaunch of the Vonage Developer Community, a vi
 
 Here's what you can expect from the new Vonage Developer Community:
 
-**New Channels:** Our community now offers an expanded range of channels designed to enhance your experience. Stay up-to-date with the latest happenings in the developer world through our "Events" channel. Explore the latest features, updates, and enhancements in the "Vonage-Whats-New" channel. Discover inspiring success stories from fellow developers in the "Success Stories" channel. And, if you're just getting started, our "Begin-Building" channel is the ideal space for you to kickstart your development journey with Vonage.
+**New Slack Channels:** Our community now offers an expanded range of channels designed to enhance your experience. Stay up-to-date with the latest happenings in the developer world through our "Events" channel. Explore the latest features, updates, and enhancements in the "Vonage-Whats-New" channel. Discover inspiring success stories from fellow developers in the "Success Stories" channel. And, if you're just getting started, our "Begin-Building" channel is the ideal space for you to kickstart your development journey with Vonage.
 
 **API-Specific Channels:** We understand that each Vonage API has its unique set of features and use cases. That's why we've introduced dedicated channels for each API to provide focused support and discussions. Whether you have questions about Vonage SMS, Voice, Verify, or any other API, you'll find a dedicated space to connect with experts and fellow developers.
 
