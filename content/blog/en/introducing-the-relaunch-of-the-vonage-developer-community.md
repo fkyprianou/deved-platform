@@ -44,4 +44,4 @@ Here's what you can expect from the new Vonage Developer Community:
 
 Joining the Vonage Developer Community is simple! Just visit [our website](https://developer.vonage.com/en/community) and sign up today. Don't miss out on your opportunity to connect with a vibrant community of developers using Vonage!
 
-We always welcome community involvement. Please feel free to join us on [GitHub](https://github.com/Vonage/), the [Vonage Community Slack](https://developer.nexmo.com/community/slack), or send us a message on [Twitter](https://twitter.com/VonageDev).
+We always welcome community involvement. Please feel free to join us on [GitHub](https://github.com/Vonage-Community), the [Vonage Community Slack](https://developer.vonage.com/community/slack), or send us a message on [Twitter](https://twitter.com/VonageDev).
