@@ -1,5 +1,5 @@
 ---
-title: "Introducing the Relaunch of the Vonage Developer Community!"
+title: Introducing the Relaunch of the Vonage Developer Community!
 description: " Join the relaunched Vonage Developer Community where you can
   connect with developers, access new channels, API-specific support, and
   intelligent automations. Sign up now and be a part of our vibrant community!"
@@ -10,6 +10,7 @@ updated_at: 2023-05-22T12:51:33.117Z
 category: announcement
 tags:
   - community
+  - slack
 comments: true
 spotlight: false
 redirect: ""
@@ -42,3 +43,5 @@ Here's what you can expect from the new Vonage Developer Community:
 **Explore:** Engage with a diverse range of topics, participate in events, join hackathons, and stay updated with the latest industry trends.
 
 Joining the Vonage Developer Community is simple! Just visit [our website](https://developer.vonage.com/en/community) and sign up today. Don't miss out on your opportunity to connect with a vibrant community of developers using Vonage!
+
+We always welcome community involvement. Please feel free to join us on [GitHub](https://github.com/Vonage/), the [Vonage Community Slack](https://developer.nexmo.com/community/slack), or send us a message on [Twitter](https://twitter.com/VonageDev).
