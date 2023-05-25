@@ -1,5 +1,5 @@
 ---
-title: Vonage Video on Appwrite Cloud
+title: Implement Vonage Video on Appwrite Cloud
 description: Using Appwrite Cloud to power a Video Conferencing site
 thumbnail: 
 author: christankersley
