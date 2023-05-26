@@ -222,7 +222,7 @@ Open your browser and navigate to this URL: <http://localhost:3000>. You should 
 
 Click on "Therapies" button on the menu, you can see all the types of therapies.
 
-![Therapies-page.png](/content/blog/enable-video-call-for-a-next-js-application-using-vonage-video-api/Therapies-page.png "Therapies Page")
+![Therapies-page.png](/content/blog/enable-video-call-for-a-next-js-application-using-vonage-video-api/therapies-page.png "Therapies Page")
 
 Click on the "Cognitive Therapy" option, to see all the available therapists in "Cognitive Therapy" category.
 
