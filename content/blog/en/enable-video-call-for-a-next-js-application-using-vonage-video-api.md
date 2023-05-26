@@ -53,13 +53,14 @@ Now that you have prepared all these prerequisites let's build the Next.js appli
 Since the application requires you to create several directories and files to implement the application logic and the user interface, let’s clone the existing application code from this [GitHub repository](https://github.com/cuongld2/vonage-therapist-video-embed). Open up your terminal, create a new Projects directory, and clone the application code under that directory.
 
 ```bash
-
+cd ~/Projects
+git clone https://github.com/cuongld2/vonage-therapist-video-embed.git
 ```
 
 Change the current directory to `vonage-therapist-video-embed` directory.
 
 ```bash
-
+cd vonage-therapist-video-embed 
 ```
 
 You should see the following directories and files listed below:
@@ -77,7 +78,16 @@ In the Next.js application project, you must pay attention to the following file
 This file defines the common configuration for the Next.js app. For example, you can set your application's image path, so if any images do not match these paths, Next.js will complain with an error message.
 
 ```js
+/** @type {import('next').NextConfig} */
 
+const nextConfig = {
+  …
+  images: {
+	domains: ['images.unsplash.com',],
+  },
+};
+
+module.exports = nextConfig;
 ```
 
 2. `pages` directory:
@@ -130,7 +140,9 @@ Click the "Next" button, and copy the Iframe-generated code to somewhere safe.
 Create a new file named `embedCode.json` inside the `data` directory. Inside the `embedCode.json`, you add the following content to it:
 
 ```json
-
+{
+"embedCode":""
+}
 ```
 
 Inside the blank value, you put the iframe-generated content to it. Remember to escape the iframe-generated content's special characters to match the JSON file rules.
@@ -138,19 +150,22 @@ Inside the blank value, you put the iframe-generated content to it. Remember to 
 The content of `embedCode.json` file looks similar to the one below:
 
 ```json
-
+{
+	"embedCode": "&lt;iframe src='https://tokbox.com/embed/embed/ot-embed.js?embedId=YOUR_EMBED_ID&room=DEFAULT_ROOM&iframe=true' width='800px' height='640px' scrolling='auto' allow='microphone; camera'>&lt;/iframe>"
+}
 ```
 
 Look at the `index.js` file inside the `pages/meetings` directory. This file implements the meeting page so the user and the therapist can communicate.
 
 ```js
-
+const meetingData = data.replace('DEFAULT_ROOM', `meeting${meetingId}`);
 ```
 
 The above code will replace the `DEFAULT_ROOM` value from the iframe-embedded code with the randomly generated `meetingId`, so each meeting will differ. This allows each meeting to be separate from others, so you don’t end up having a bunch of users in the same meeting.
 
 ```html
-
+&lt;div id="ot_embed_demo_container" dangerouslySetInnerHTML={{__html: meetingData}}>
+&lt;/div>
 ```
 
 In this code, the `meetingData` value is included inside the `dangerouslySetInnerHTML` field to allow the meeting page to show the video-embedded screen. You can learn more about how Next.js handle embedded scripts at [this page](https://nextjs.org/docs/pages/building-your-application/optimizing/scripts).
@@ -164,13 +179,19 @@ To enable SMS sending capability, you must provide the following environment var
 * ```VONAGE_API_KEY`` and```VONAGE_API_SECRET: to be able to send the SMS message using Vonage SMS API, you need to provide the Vonage API Key. You can grab the values of `VONAGE_API_KEY` and `VONAGE_API_SECRET` from the [Vonage SMS API getting started page](https://dashboard.nexmo.com/getting-started/sms).
 
 ```bash
-
+export VONAGE_SMS_BRAND="Vonage Sample App"
+export THERAPIST_PHONE_NUMBER="your_therapist_phone_number"
+export VONAGE_API_KEY="your_vonage_api_key"
+export VONAGE_API_SECRET="your_vonage_api_secret"
 ```
 
 Using Windows you can set the values using PowerShell with the following commands:
 
 ```powershell
-
+$env:VONAGE_SMS_BRAND = "Vonage Sample App"
+$env:THERAPIST_PHONE_NUMBER = "your_therapist_phone_number"
+$env:VONAGE_API_KEY = "your_vonage_api_key"
+$env:VONAGE_API_SECRET = "your_vonage_api_secret"
 ```
 
 ## Step 5: Bring up the Application
@@ -178,19 +199,21 @@ Using Windows you can set the values using PowerShell with the following command
 You need to install the dependencies that the application needs by running:
 
 ```bash
-
+npm install
 ```
 
 Then, to bring up the application in the local machine, run the following command:
 
 ```bash
-
+npm run dev
 ```
 
 The server will start on port 3000 as shown below. 
 
 ```txt
-
+> therapist-mental-health-app@0.1.0 dev
+> next dev
+ready - started server on 0.0.0.0:3000, url: http://localhost:3000
 ```
 
 Open your browser and navigate to this URL: <http://localhost:3000>. You should be able to see the home page of the application.
@@ -199,7 +222,7 @@ Open your browser and navigate to this URL: <http://localhost:3000>. You should 
 
 Click on "Therapies" button on the menu, you can see all the types of therapies.
 
-![Therapies-page.png](/content/blog/enable-video-call-for-a-next-js-application-using-vonage-video-api/therapies-page.png "Therapies Page")
+![Therapies-page.png](/content/blog/enable-video-call-for-a-next-js-application-using-vonage-video-api/Therapies-page.png "Therapies Page")
 
 Click on the "Cognitive Therapy" option, to see all the available therapists in "Cognitive Therapy" category.
 
@@ -216,7 +239,7 @@ Here you can see a number of time slot options. Let’s choose the time as "02-0
 You will see that you have successfully registered for the meeting with the `therapist-1`. Also, an SMS message will be sent with the following content:
 
 ```txt
-
+A user has booked a meeting with you. The meeting time is : ${therapyTime}. The meeting link is : http://localhost:3000/meetings?meetingId=${meetingId}
 ```
 
 > ***NOTE:*** If you registered using the same phone number that has existed and met the error message “This phoneNumber xxx has already been registered”, you remove the phone number by:
