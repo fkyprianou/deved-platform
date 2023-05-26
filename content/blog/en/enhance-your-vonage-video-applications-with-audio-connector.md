@@ -19,7 +19,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-Video communication has evolved rapidly over recent years, and there are lots of features these days for customising the video calling experience for users. Many of these features focus on manipulating the video feed, such as background replacement or background blur. The audio component of a video call shouldn't be neglected though. The ability to work with audio feeds opens up a ton of possibilities for enhancing the overall user experience. If you're using Vonage's video API, then the Audio Connector feature is designed exactly for this purpose!
+Video communication has evolved rapidly over recent years, and there are many features these days for customizing the video calling experience for users. Many features focus on manipulating the video feed, such as background replacement or background blur. The audio component of a video call shouldn't be neglected though. The ability to work with audio feeds opens up a ton of possibilities for enhancing the overall user experience. If you're using Vonage's video API, then the Audio Connector feature is designed exactly for this purpose!
 
 ### What is Audio Connector?
 
@@ -35,7 +35,7 @@ There are a few ways in which this feature can be used:
 
 ### What can you do with Audio Connector?
 
-There are many potential applications and use-cases for the Audio Connector feature. For example, processing audio streams to create live captioning, or live or offline transcriptions or translations of the audio could be useful for improving accessibility, as well as in a record-keeping context. Scanning for specific words in an audio stream could be used for content moderation, or for search and index applications. Audio streams can also be used in media intelligence applications, such as creating a textual summary of a call or meeting. Another application is using an audio stream for sentiment analysis of a conversation. These are just a few examples of the many possibilities made available via this feature.
+There are many potential applications and use cases for the Audio Connector feature. For example, processing audio streams to create live captioning, live or offline transcriptions, or translations of the audio could help improve accessibility in a record-keeping context. Scanning for specific words in an audio stream could be used for content moderation or search and index applications. Audio streams can also be used in media intelligence applications, such as creating a textual summary of a call or meeting. Another application uses an audio stream for sentiment analysis of a conversation. These are just a few examples of the many available possibilities via this feature.
 
 ### How can you use Audio Connector in your applications?
 
@@ -45,11 +45,11 @@ Adding Audio Connector functionality to your Vonage Video applications requires 
 2. An external service to process the audio in some way
 3. The Vonage Video /connect REST endpoint
 
-There are many ways in which you could set up components 1 and 2, and how you decide to do this is really up to you. Later in this article,we’ll walk through of a sample application which uses [Koa Websocket](https://github.com/kudos/koa-websocket) for the websocket component, and [Symbl.ai](https://symbl.ai/) for the audio processing component.
+There are many ways in which you could set up components 1 and 2, and how you decide to do this is really up to you. Later in this article, we’ll walk through of a sample application that uses [Koa WebSocket](https://github.com/kudos/koa-websocket) for the WebSocket component, and [Symbl.ai](https://symbl.ai/) for the audio processing component.
 
-With regards to component 3, the Vonage Video /connect REST endpoint, detailed documentation is available in our [REST API reference](https://tokbox.com/developer/rest/#starting_audio_connector) and [Developer Guide](https://tokbox.com/developer/guides/audio-connector/). In brief though, an HTTP POST request to the endpoint will start streaming the audio from the specified Vonage Video session to the designated websocket URI. The request body requires certain information to be included, such as the sessionId for the Video Session from which the audio will be streamed, a valid token for that session, and the uri for the websocket that the audio is to be streamed to. There are also some optional properties, including a streams array which allows you to specify individual audio streams to be streamed to the websocket; we’ll look at this property in more detail as part of the sample application walkthrough.
+With regards to component 3, the Vonage Video /connect REST endpoint, detailed documentation is available in our [REST API reference](https://tokbox.com/developer/rest/#starting_audio_connector) and [Developer Guide](https://tokbox.com/developer/guides/audio-connector/). In brief though, an HTTP POST request to the endpoint will start streaming the audio from the specified Vonage Video session to the designated WebSocket URI. The request body requires certain information to be included, such as the sessionId for the Video Session from which the audio will be streamed, a valid token for that session, and the URI for the WebSocket that the audio is to be streamed to. There are also some optional properties, including a streams array that allows you to specify individual audio streams to be streamed to the WebSocket; we’ll look at this property in more detail as part of the sample application walkthrough.
 
-On the Vonage Video side of things, that’s pretty much it. The audio from the session is streamed to the websocket. There are then endless possibilities for what you do with those audio streams.
+On the Vonage Video side of things, that’s pretty much it. The audio from the session is streamed to the WebSocket. There are then endless possibilities for what you do with those audio streams.
 
 Let’s look at one example of what you can do!
 
@@ -61,13 +61,13 @@ Note: this is a high-level walkthrough of some of the key elements of the applic
 
 #### Application Overview
 
-The first thing we need to do is join the video session by entering a name and clicking on ‘Join’. The name entered will later be used to identify the speaker for the specific audio stream.
+We first need to join the video session by entering a name and clicking on ‘Join’. The name entered will later be used to identify the speaker for the specific audio stream.
 
 ![Screenshot of the application UI showing a field to enter a name and a Join button](/content/blog/enhance-your-vonage-video-applications-with-audio-connector/join-call-screenshot.png "Join Call screenshot")
 
 You can then share the meeting link with other participants. Once all the participants have joined the session, clicking on ‘Start Transcription’ will start the transcription process.
 
-Conduct the video call as normal. When you want to see the transcription of the call, clicking the ‘Get Transcription’ button will render a view showing the speaker names and transcribed audio.
+Conduct the video call as normal. When you want to see the call transcription, clicking the ‘Get Transcription’ button will render a view showing the speaker names and transcribed audio.
 
 ![Screenshot of the Transcription View of the application with the participant names and their transcribed audio](/content/blog/enhance-your-vonage-video-applications-with-audio-connector/transcription-view-screenshot.png "Transcription View screenshot")
 
@@ -77,9 +77,9 @@ You can watch a video of the application in action below:
 
 #### Application Components
 
-The demo is a Node application, and uses the Koa Webserver framework. If you’re already familiar with Express.js, then Koa is fairly similar. The app also uses a bunch of Koa middlewares for functionality such as routing, rendering views, serving static assets and so on. One of the middlewares used is [Koa Websocket](https://github.com/kudos/koa-websocket) library. This library enables you to create and use websockets as part of your overall Koa application.
+The demo is a Node application and uses the Koa Webserver framework. If you’re already familiar with Express.js, then Koa is relatively similar. The app also uses a bunch of Koa middleware for functionality, such as routing, rendering views, serving static assets, etc. One of the middlewares used is [Koa WebSocket](https://github.com/kudos/koa-websocket) library. This library enables you to create and use WebSockets as part of your overall Koa application.
 
-Additionally the application uses the [Symbl.ai JavaScript SDK](https://docs.symbl.ai/docs/js-sdk) for simplifying interactions with the Symbli.ai streaming API. On the Vonage Video side of things, it uses the Vonage Video [OpenTok Node server SDK](https://tokbox.com/developer/sdks/node/) to handle the server-side API calls, and the [Opentok JavaScript Client SDK](https://tokbox.com/developer/sdks/js/) in our application’s view templates to handle client-side interactions such as publishing and subscribing to video streams.
+Additionally, the application uses the [Symbl.ai JavaScript SDK](https://docs.symbl.ai/docs/js-sdk) for simplifying interactions with the Symbli.ai streaming API. On the Vonage Video side of things, it uses the Vonage Video [OpenTok Node server SDK](https://tokbox.com/developer/sdks/node/) to handle the server-side API calls, and the [Opentok JavaScript Client SDK](https://tokbox.com/developer/sdks/js/) in our application’s view templates to handle client-side interactions such as publishing and subscribing to video streams.
 
 **The index.js file**
 
@@ -99,7 +99,7 @@ const websockify = require('koa-websocket');
 const OpenTok = require("opentok");
 ```
 
-We then instantiate a new Koa app and enable it for websocket connections, before instantiating a new Koa Router that we will use for our websocket routes. Finally, we make that router available in all of our application’s routes by adding it as a `ws` variable on `app.context`.
+We then instantiate a new Koa app and enable it for WebSocket connections, before instantiating a new Koa Router that we will use for our WebSocket routes. Finally, we make that router available in all of our application’s routes by adding it as a `ws` variable on `app.context`.
 
 ```javascript
 const app = new Koa();
@@ -147,7 +147,7 @@ opentok.createSession({ mediaMode: "routed" }, function (err, session) {
 
 An important thing to note here is the `mediaMode` for the session is set to `routed`. We can only use the Audio Connector for sessions where the streams are routed via the Vonage Video Media Servers.
 
-We then have some code which sets up the serving of static assets and rendering of view templates (which we won’t detail here), before finally setting up the up to use the routes that have been defined in the routes files as well as the websocket routes which we will later define as part of the transcription functionality. Finally, we initialize the application.
+We then have some code that sets up the serving of static assets and rendering of view templates (which we won’t detail here) before finally setting the app to use the routes that have been defined in the routes files as well as the WebSocket routes which we will later define as part of the transcription functionality. Finally, we initialize the application.
 
 ```javascript
 app.use(basicHttp.routes()).use(basicHttp.allowedMethods());
@@ -165,11 +165,11 @@ The application’s http routes are defined in a couple of files:
 * `/routes/basic.js`
 * `/routes/symbl/transcription.js`
 
-We’re not going to explore all of these in detail, since most of these routes just render views. One of the key routes though is the `/transcribe` route. When the ‘Start Transcription’ button is clicked in the video call UI, a POST request is sent to this route, which in turn invokes the `postSymblTranscription` controller action, which we’ll look at next.
+We won’t explore these in detail since most routes render views. One of the key routes, though is the `/transcribe` route. When the ‘Start Transcription’ button is clicked in the video call UI, a POST request is sent to this route, invoking the `postSymblTranscription` controller action, which we’ll look at next.
 
 **The postSymblTranscription controller action**
 
-This is really the key component in managing the transcription functionality. This controller does a number of things, but the first thing it needs to do is get a list of all the streams being published to the Vonage Video session. It does this by using the Vonage OpenTok Node SDK’s listStreams streams method. This provides an array of objects, with each object representing a stream which is published to the session. 
+This is the key component in managing the transcription functionality. This controller does several things, but the first thing it needs to do is get a list of all the streams being published to the Vonage Video session. It uses the Vonage OpenTok Node SDK’s listStreams streams method. This provides an array of objects, with each object representing a stream which is published to the session. 
 
 ```javascript
 opentok.listStreams(otSession.sessionId, function(error, streams) {
@@ -179,7 +179,7 @@ opentok.listStreams(otSession.sessionId, function(error, streams) {
  });
 ```
 
-We then iterate through the array of streams, and for each stream perform a certain set of actions. We do this specifically so that we can later identify the speaker for each piece of transcribed audio.
+We then iterate through the streams and perform a particular set of actions for each stream. We do this specifically so that we can later identify the speaker for each piece of transcribed audio.
 
 ```javascript
 streams.forEach(async stream => {
@@ -229,8 +229,8 @@ symblConnection = await symblSdk.startRealtimeRequest({
 
 You can read more about exactly how this works in the [Symbl.ai documentation](https://docs.symbl.ai/docs/code-snippets-streaming-api#streaming-audio-in-real-time). Some things to note though are:
 
-* We set an `id` which is the `stream_id` we obtained from the Vonage Video session
-* We define a `speaker` object, with a `name` property, the value of which is the name set for the stream from the Vonage Video session
+* We set an `id`, which is the `stream_id` we obtained from the Vonage Video session
+* We define a `speaker` object with a `name` property, the value of which is the name set for the stream from the Vonage Video session.
 * We set some `config` options. Of particular interest are the `confidenceThreshold` and `languageCode`, both of which can help improve the accuracy of your transcriptions.
 * We define an event handler for the `onSpeechDetected` event. This takes the data returned by the Symbl.ai streaming API and uses that data to populate an object with name and transcription properties which we then push to our `transcriptions` array.
 
@@ -262,7 +262,7 @@ We do this by creating a `get` route on our Koa Websocket object with the `strea
 
 *Request the Audio Connector to start streaming audio*
 
-The final action we need to carry out is to send a request to the Vonage Video API Audio Connector endpoint to start streaming audio for the specific audio stream to the websocket that we’ve defined for that stream:
+The final action we need to carry out is to send a request to the Vonage Video API Audio Connector endpoint to start streaming audio for the specific audio stream to the WebSocket that we’ve defined for that stream:
 
 ```javascript
 opentok.websocketConnect(otSession.sessionId, token, socketUriForStream, {streams: \[stream_id]}, function(error, socket) {
@@ -276,10 +276,10 @@ opentok.websocketConnect(otSession.sessionId, token, socketUriForStream, {stream
 
 Two of the arguments to the method are key here:
 
-* The `socketUriForStream` which is the websocket URI we earlier created to receive streaming data for this specific audio stream
-* The object specifying an array of which `streams` we want to the Audio Connector to stream audio for. Note that there is only one element in the array: the `stream_id` for the specific stream in the current iteration.
+* The `socketUriForStream` is the WebSocket URI we earlier created to receive streaming data for this specific audio stream.
+* The object specifies an array of which `streams` we want to the Audio Connector to stream audio for. Note that the array has only one element: the `stream_id` for the specific stream in the current iteration.
 
-The above steps are repeated for each stream in the session, so that each of them is transcribed separately with an identifiable speaker.
+The above steps are repeated for each stream in the session so that each is transcribed separately with an identifiable speaker.
 
 **The symbl-transcription Route and View**
 
@@ -297,7 +297,7 @@ exports.getSymblTranscription = (ctx) => {
 };
 ```
 
-In the body of the view, each transcription is rendered as a paragraph, showing the name of the speaker and the transcribed text.
+In the body of the view, each transcription is rendered as a paragraph, showing the speaker's name and the transcribed text.
 
 ```html
 <body>
