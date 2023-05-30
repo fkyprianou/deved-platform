@@ -48,7 +48,7 @@ The Live Captions API takes the audio streams (from both Video and SIP dial-in p
 
 # Enabling Live Captions in Your Application
 
-A more detailed description can be found in the [documentation](https://tokbox.com/developer/guides/live-captions/).
+A more detailed description can be found in the [live captions documentation](https://tokbox.com/developer/guides/live-captions/).
 
 First, a POST request will need to be made to the Live Captions API endpoint with some credentials. Then you can use any of the many Client SDKs that we offer to interact with the API to start/stop sending and receiving captions.
 
