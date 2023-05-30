@@ -2,6 +2,7 @@
 title: Evolving the Vonage Helpdesk with Laravel & Deepgram
 description: In part one of this series, we introduced Helpdesk with SMS. Now,
   we move onto Voice
+thumbnail: /content/blog/evolving-the-vonage-helpdesk-with-laravel-deepgram/laravel-vonage-helpdesk.png
 author: james-seconde
 published: true
 published_at: 2023-05-30T09:58:49.801Z
@@ -24,9 +25,10 @@ In the first part, we created a new Laravel application, pulled in the vonage-la
 
 In this article, we're going to add the capability of using Vonage's Text-to-speech (TTS) Voice capabilities using the Voice API, with the ability of the customer to speak a response that gets transcribed back to the ticket conversation.
 
-### Prerequistes
+### Prerequisites
 
 We'll assume that the first tutorial has been completed, which will give us:
+
 * The helpdesk repository, cloned locally from Github
 * Laravel Sail up and running, to dockerise the local development environment
 * Migrations run
@@ -37,9 +39,9 @@ We'll assume that the first tutorial has been completed, which will give us:
 
 OK, so it's time to go through Voice capabilities. The flow of how conversations happen here is exactly the same: you create a new ticket as a customer and it opens the conversation view. However, when we create it this time, we're going to set up the ticket as a voice conversation. Head to your preferences in the dashboard, and change the notification method to Voice.
 
-![[Pasted image 20230526154132.png]]
+![Helpdesk user settings with Voice chosen as notification method](/content/blog/evolving-the-vonage-helpdesk-with-laravel-deepgram/pasted-image-20230526154132.png)
 
-This switch is all there is to it from the frontend perspective, but we have two important steps to compete first to make this work.
+This switch is all there is to it from the frontend perspective, but we have two important steps to complete first to make this work.
 
 ### Setting up Voice Webhooks
 
@@ -53,11 +55,11 @@ Deepgram is a product/company that focuses on automatic speech recognition (ACR)
 
 Setting up a Deepgram account is free, and you'll have a decent amount of starting credit added. Follow this guide for setting up your API secret. Once you have your key, you should be able to access it from this screen:
 
-![[Screenshot 2023-05-26 at 21.12.01.png]]
+![Deepgram dashboard showing an API key](/content/blog/evolving-the-vonage-helpdesk-with-laravel-deepgram/screenshot-2023-05-26-at-21.12.01.png)
 
 Once you've created your key, we need to add it to our `env` file. You can see in the `example.env` file in the repo that we have a placeholder for it:
 
-![[Pasted image 20230526211505.png]]
+![Screenshot from code editor of example environment variables required by Helpdesk](/content/blog/evolving-the-vonage-helpdesk-with-laravel-deepgram/pasted-image-20230526211505.png)
 
 I've included the others in the screenshot because it's important to note that this feature won't work without all of these environment variables set:
 
@@ -89,7 +91,7 @@ if ($userTicket->notification_method === 'voice') {
 We'll skip over the fact that I'm calling the `env()` method (never do this in Laravel on account of config caching, I left this in on purpose to demonstrate this common mistake) and instead explain what the Vonage PHP SDK code is doing.
 
 * We know we want to make an outbound call in this logic block, so we create a new `OutboundCall` that pulls in the customers' phone number from the ticket, and the sending number from the config.
-* This is the neat bit. You know how in part one of this tutorial, we set an ngrok URL in the Vonage Dashboard for SMS webhooks? We've not done that here, because each call using the Voice SDK can be configured to _use a specific callback URL for this call we're making_. This part is really important, because it _allows us to configure state._ In this case, we take the ngrok public URL from `$currentHost` (i.e. the constant `PUBLIC_URL`), a route defined by us for our application (`/webhook/answer/`) and the key to making this work: the ticket ID as part of the route.
+* This is the neat bit. You know how in part one of this tutorial, we set an ngrok URL in the Vonage Dashboard for SMS webhooks? We've not done that here, because each call using the Voice SDK can be configured to *use a specific callback URL for this call we're making*. This part is really important, because it *allows us to configure state.* In this case, we take the ngrok public URL from `$currentHost` (i.e. the constant `PUBLIC_URL`), a route defined by us for our application (`/webhook/answer/`) and the key to making this work: the ticket ID as part of the route.
 
 So, now we need a new controller to handle what comes in when the customer has competed their ticket call. The two parts to this are:
 
@@ -110,7 +112,6 @@ Route::post('/webhook/answer/{ticketEntry:id}', [WebhookController::class, 'answ
 The route points to `WebhookController::answer()`, so our TTS response looks like this:
 
 ```php
-
 public function answer(TicketEntry $ticketEntry): JsonResponse
 {
     if (!$ticketEntry->exists) {
@@ -207,7 +208,6 @@ This is the last part - getting our transcription. There are ways to do this asy
 The transcription in the method controller is handled by the `transcribeRecording()` function, so let's take a look at that:
 
 ```php
-
 public function transcribeRecording($audio)  
 {  
     $client = new GuzzleHttp\Client([  
