@@ -52,7 +52,7 @@ A more detailed description can be found in the [documentation](https://tokbox.c
 
 First, a POST request will need to be made to the Live Captions API endpoint with some credentials. Then you can use any of the many Client SDKs that we offer to interact with the API to start/stop sending and receiving captions.
 
-# Give It a Try.
+# Give It a Try
 
 Instantly deploy a Basic Live Captions API demo to [Stackblitz](https://stackblitz.com/fork/github/opentok/opentok-web-samples/tree/main/Basic-Captions) and point to a running server URL in config.js. The source code can be found in the GitHub [repository](https://github.com/opentok/opentok-web-samples/tree/main/Basic-Captions).
 
