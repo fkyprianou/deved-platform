@@ -46,7 +46,7 @@ The Live Captions API takes the audio streams (from both Video and SIP dial-in p
 * No need to further strain your users' computers and/or mobile devices by sending another stream to be transcribed.
 * No third-party transcription library/service to learn and implement.
 
-# Enabling Live Captions in Your Application.
+# Enabling Live Captions in Your Application
 
 A more detailed description can be found in the [documentation](https://tokbox.com/developer/guides/live-captions/).
 
