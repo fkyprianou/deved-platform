@@ -41,7 +41,7 @@ The Live Captions API takes the audio streams (from both Video and SIP dial-in p
 
 # Advantages for developers.
 
-* Live Captions is enabled by default for all projects.
+* Live Captions are enabled by default for all projects.
 * Your application is already sending media streams to the Media Router.
 * No need to further strain your users' computers and/or mobile devices by sending another stream to be transcribed.
 * No third-party transcription library/service to learn and implement.
