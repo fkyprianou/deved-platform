@@ -33,7 +33,7 @@ The Vonage Live Captions API is in Beta and ready to be used in your application
 
 ![](/content/blog/live-captions-api-is-in-beta/yougov-poll.jpeg)
 
-# How the Live Captions API Works.
+# How the Live Captions API Works
 
 The Live Captions API takes the audio streams (from both Video and SIP dial-in participants) that come through the Media Router and passes them to a transcription service.
 
