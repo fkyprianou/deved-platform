@@ -37,7 +37,7 @@ The Vonage Live Captions API is in Beta and ready to be used in your application
 
 The Live Captions API takes the audio streams (from both Video and SIP dial-in participants) that come through the Media Router and passes them to a transcription service.
 
-![](/content/blog/live-captions-api-is-in-beta/live-captions.png)
+![Diagram showing how the Vonage Video Live Captions API works.](/content/blog/live-captions-api-is-in-beta/live-captions.png)
 
 # Advantages for developers
 
