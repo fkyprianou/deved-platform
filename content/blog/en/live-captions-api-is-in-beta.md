@@ -31,7 +31,7 @@ The Vonage Live Captions API is in Beta and ready to be used in your application
 
 **Preference**: According to a poll from [YouGov](https://yougov.co.uk/topics/media/survey-results/daily/2023/02/24/9a34f/3), a sizeable amount of people prefer to have captions/subtitles on. I know I do.
 
-![](/content/blog/live-captions-api-is-in-beta/yougov-poll.jpeg)
+![YouGov poll asking When watching TV shows or movies in your native language, do you generally prefer to have the subtitles on or off? Overall 28% prefer subtitles on, 65% prefer subtitles off, 4% don't know, and 3% don't watch TV shows/movies ](/content/blog/live-captions-api-is-in-beta/yougov-poll.jpeg)
 
 # How the Live Captions API Works
 
