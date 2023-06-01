@@ -1,10 +1,11 @@
 ---
 title: Live Captions API Is in Beta!
 description: The Vonage Live Captions API is in Beta and here's what you need to know.
+thumbnail: /content/blog/live-captions-api-is-in-beta/live-captions_videoapi.png
 author: dwanehemmings
 published: true
-published_at: 2023-05-16T20:30:36.817Z
-updated_at: 2023-05-16T20:30:36.853Z
+published_at: 2023-06-01T20:30:36.817Z
+updated_at: 2023-06-01T20:30:36.853Z
 category: announcement
 tags:
   - video-api
