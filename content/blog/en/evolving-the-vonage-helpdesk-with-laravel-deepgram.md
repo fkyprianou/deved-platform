@@ -29,23 +29,19 @@ In this article, we're going to add the capability of using Vonage's Text-to-spe
 
 We'll assume that the first tutorial has been completed, which will give us:
 
-- The [helpdesk](https://github.com/Vonage-Community/sample-messages_voice-php-helpdesk) repository, cloned locally from Github
-- [Laravel Sail](https://laravel.com/docs/10.x/sail) up and running, to dockerise the local development environment
-- [Migrations run](https://laravel.com/docs/10.x/migrations)
-- [Vite](https://vitejs.dev/) development server running to build [Laravel Breeze](https://laravel.com/docs/10.x/starter-kits)'s boilerplate assets
-- [Ngrok](https://ngrok.com/) running locally, and a Vonage application instance configured to send webhooks to it
+* The [helpdesk](https://github.com/Vonage-Community/sample-messages_voice-php-helpdesk) repository, cloned locally from Github
+* [Laravel Sail](https://laravel.com/docs/10.x/sail) up and running, to dockerise the local development environment
+* [Migrations run](https://laravel.com/docs/10.x/migrations)
+* [Vite](https://vitejs.dev/) development server running to build [Laravel Breeze](https://laravel.com/docs/10.x/starter-kits)'s boilerplate assets
+* [Ngrok](https://ngrok.com/) running locally, and a Vonage application instance configured to send webhooks to it
 
 ### How does it do that? Part 2: Voice
 
-OK, so it's time to go through Voice capabilities. The flow of how conversations happen here is exactly the same: you create a new ticket as a customer and it opens the conversation view. However, when we create it this time, we're going to set up the ticket as a voice conversation. Head to your preferences in the dashboard, and change the notification method to Voice.
-
-![[Pasted image 20230602094726.png]]
-
-This switch is all there is to it from the frontend perspective, but we have two important steps to complete first to make this work.
+OK, so it's time to go through Voice capabilities. The flow of how conversations happen here is exactly the same: you create a new ticket as a customer and it opens the conversation view. However, when we create it this time, we're going to set up the ticket as a voice conversation. 
 
 ### Enabling Voice
 
-Before this will work, we're going to need a Voice-enabled application ID in the [Vonage Dashboard](https://dashboard.nexmo.com/). You can either edit the previous application from the last tutorial or create a new one. Enabling the application ID is all you need: don't worry about using the UI to send webhooks to the correct local route (we'll go through this later) as the code constructs the webhook reply URL for you (this is different from how we've set up SMS, and I'll go through why later).
+Before this will work, we're going to need a Voice-enabled application ID in the [Vonage Dashboard](https://dashboard.nexmo.com/). You can either edit the previous application from the last tutorial or create a new one. Enabling the application ID  is all you need: don't worry about using the UI to send webhooks to the correct local route (we'll go through this later) as the code constructs the webhook reply URL for you (this is different from how we've set up SMS, and I'll go through why later).
 
 ### What is OpenAI?
 
@@ -59,19 +55,19 @@ Yes, that paragraph was written by ChatGPT. But what you might not know is the c
 
 Firstly, you'll need an OpenAI account. Follow this link to create an account, and when you're done you'll need to head to 'Manage Account' under your top right hand profile menu. Opening this up will show you the following screen - head to API Keys and set up a new key. The end result should look something like this:
 
-![[Pasted image 20230602104034.png]]
+![](/content/blog/evolving-the-vonage-laravel-helpdesk-with-openai/screenshot-2023-06-02-at-10.22.45.png)
 
 When you create the key, you'll have one chance to copy it - make sure you do that.
 
 We need to add that secret to our `env` file. You can see in the `example.env` file in the repo that we have a placeholder for it:
 
-![[Pasted image 20230602104353.png]]
+![](/content/blog/evolving-the-vonage-laravel-helpdesk-with-openai/screenshot-2023-06-02-at-10.43.28.png)
 
 I've included the others in the screenshot because it's important to note that this feature won't work without all of these environment variables set:
 
-- `VONAGE_SMS_FROM` is re-used as the outbound calling number
-- `PUBLIC_URL` is your [Ngrok](https://ngrok.com/) (or any other tool such as Beyond Code's [Expose](https://expose.dev/docs/introduction)) public-facing address. This is essential, as the code will stitch together the response URL to the API when making a call
-- `VONAGE_APPICATION_ID` and `VONAGE_PRIVATE_KEY`. In the last tutorial, we could have used basic authentication, but for webhooks to work they need to be tied to an application ID. For using the Vonage Voice API, we have to have a private key and application ID, which the Vonage PHP SDK will use to generate and handle JWT authorisation for us.
+* `VONAGE_SMS_FROM` is re-used as the outbound calling number
+* `PUBLIC_URL` is your [Ngrok](https://ngrok.com/) (or any other tool such as Beyond Code's [Expose](https://expose.dev/docs/introduction)) public-facing address. This is essential, as the code will stitch together the response URL to the API when making a call
+* `VONAGE_APPICATION_ID` and `VONAGE_PRIVATE_KEY`. In the last tutorial, we could have used basic authentication, but for webhooks to work they need to be tied to an application ID. For using the Vonage Voice API, we have to have a private key and application ID, which the Vonage PHP SDK will use to generate and handle JWT authorisation for us.
 
 ### Under the Hood
 
@@ -93,19 +89,18 @@ if ($userTicket->notification_method === 'voice') {
         );
     Vonage::voice()->createOutboundCall($outboundCall);
 }
-
 ```
 
 Here's a synopsis of what the code is doing here:
 
-- We know we want to make an outbound call in this logic block, so we create a new `OutboundCall` that pulls in the customers' phone number from the ticket, and the sending number from the config.
-- This is the neat bit. You know how in part one of this tutorial, we set an Ngrok URL in the Vonage Dashboard for SMS webhooks? We've not done that here, because each call using the Voice SDK can be configured to _use a specific callback URL for this call we're making_. This part is really important because it _allows us to configure state._ In this case, we take the Ngrok public URL from `$currentHost` (i.e. the constant `PUBLIC_URL`), a route defined by us for our application (`/webhook/answer/`) and the key to making this work: the ticket entry ID as part of the route. Later, in the `WebhookController` we can pull the parent ticket out, plus the owner of that ticket.
+* We know we want to make an outbound call in this logic block, so we create a new `OutboundCall` that pulls in the customers' phone number from the ticket, and the sending number from the config.
+* This is the neat bit. You know how in part one of this tutorial, we set an Ngrok URL in the Vonage Dashboard for SMS webhooks? We've not done that here, because each call using the Voice SDK can be configured to *use a specific callback URL for this call we're making*. This part is really important because it *allows us to configure state.* In this case, we take the Ngrok public URL from `$currentHost` (i.e. the constant `PUBLIC_URL`), a route defined by us for our application (`/webhook/answer/`) and the key to making this work: the ticket entry ID as part of the route. Later, in the `WebhookController` we can pull the parent ticket out, plus the owner of that ticket.
 
 So, now we need a new controller to handle what comes in when the customer has completed their ticket call. The two parts to this are:
 
-- Read out a response when the customer picks up their phone call (this will be set in the controller assigned to the route)
-- Have a route to read incoming answer events (we set these when setting up the outbound call)
-- From the recording event generated after the call is complete, fetch a voice recording of the customers' response, transcribe it using OpenAI, and write it as a new `TicketEntry`.
+* Read out a response when the customer picks up their phone call (this will be set in the controller assigned to the route)
+* Have a route to read incoming answer events (we set these when setting up the outbound call)
+* From the recording event generated after the call is complete, fetch a voice recording of the customers' response, transcribe it using OpenAI, and write it as a new `TicketEntry`.
 
 Phew! Quite a bit to digest here, so let's start tucking in:
 
@@ -240,7 +235,7 @@ public function transcribeRecordingOpenAi(): string
 
 This has been hacked together for demonstration reasons, so firstly I'd like to make it clear that if your application has a dependency on a 3rd party API such as this one (or Vonage), you should wrap this client and its configuration [as a service provider](https://laravel.com/docs/10.x/providers).
 
-The method creates a new [Guzzle](https://docs.guzzlephp.org/en/stable/) Client, and prepares the request as a `MultipartStream`, as OpenAI requires the request to be a encoded form. We set the base url and fetch our temporary file we created earlier (`call_recording.mp3`). We can now use `fopen()` to write the file out, and then delete it after the request has been completed. 
+The method creates a new [Guzzle](https://docs.guzzlephp.org/en/stable/) Client, and prepares the request as a `MultipartStream`, as OpenAI requires the request to be an encoded form. We set the base url and fetch our temporary file we created earlier (`call_recording.mp3`). We can now use `fopen()` to write the file out, and then delete it after the request has been completed. 
 
 All being well, you'll get a transcription array back, which will contain the key `text`, which is sent back for updating the `TicketEntry`. Congratulations: we now have a working TTS ticketing system!
 
