@@ -3,10 +3,11 @@ title: Introducing the Relaunch of the Vonage Developer Community!
 description: " Join the relaunched Vonage Developer Community where you can
   connect with developers, access new channels, API-specific support, and
   intelligent automations. Sign up now and be a part of our vibrant community!"
+thumbnail: /content/blog/introducing-the-relaunch-of-the-vonage-developer-community/developer-community.png
 author: rachel-sunderland
 published: true
-published_at: 2023-06-05T12:51:33.107Z
-updated_at: 2023-05-22T12:51:33.117Z
+published_at: 2023-06-06T12:51:33.107Z
+updated_at: 2023-06-06T12:51:33.117Z
 category: announcement
 tags:
   - community
