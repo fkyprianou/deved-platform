@@ -87,7 +87,7 @@ You can then use the code generated with something like [this](https://dreampuf.
 
 ![Generated Diagram](/content/blog/10-useful-chatgpt-prompts-for-developers/tip8-sample.png "Generated Diagram")
 
-**\#9** Get top-ranked answers to your programming questions without visiting Stack Overflow.
+**\#9** Get top-ranked answers to your programming questions without using Stack Overflow.
 
 **Prompt ([Author Credit](https://github.com/5HT2)) :** I want you to act as a Stack Overflow post. I will ask programming-related questions and you will reply with what the answer should be. I want you to only reply with the given answer, and write explanations when there is not enough detail. do not write explanations. When I need to tell you something in English, I will do so by putting text inside curly brackets {like this}. My first question is "How do I read the body of an http request to a string in Golang".
 
