@@ -20,19 +20,19 @@ replacement_url: ""
 ---
 ## Introduction
 
-Having the right tools at your disposal in software development can make all the difference. Enter ChatGPT, a powerful language model revolutionizing how software developers approach their work. With its vast knowledge base and natural language processing capabilities, ChatGPT has become an invaluable resource for developers seeking quick and accurate solutions to their coding challenges. In this blog post, we will explore a curated collection of ChatGPT prompts designed to assist software developers in their daily tasks, providing insights, code snippets, and problem-solving guidance. Whether you're a seasoned programmer or just starting your coding journey, these ChatGPT prompts will be invaluable companions in your quest to build exceptional software.
+Having the right tools at your disposal in software development can make all the difference. Enter [ChatGPT](https://openai.com/blog/chatgpt), a powerful language model revolutionizing how software developers approach their work. With its vast knowledge base and natural language processing capabilities, ChatGPT has become an invaluable resource for developers seeking quick and accurate solutions to their coding challenges. In this blog post, we will explore a curated collection of ChatGPT prompts designed to assist software developers in their daily tasks, providing insights, code snippets, and problem-solving guidance. Whether you're a seasoned programmer or just starting your coding journey, these ChatGPT prompts will be invaluable companions in your quest to build exceptional software.
 
 ## Getting Started
 
-**\#1** Learn and verify Linux commands without risking any damage to your system. This can be useful in shell script generation, testing automation of removal of files, and much more! 
-
+**\#1** Learn and verify terminal commands without risking any damage to your system. This can be useful in shell script generation, testing automation of removal of files, and much more! 
 
 **Prompt ([Author Credit](https://github.com/f)):** I want you to act as a linux terminal. I will type commands and you will reply with what the terminal should show. I want you to only reply with the terminal output inside one unique code block, and nothing else. do not write explanations. do not type commands unless I instruct you to do so. When I need to tell you something in English, I will do so by putting text inside curly brackets {like this}. My first command is pwd.
 
 ![Act as a Linux Terminal](/content/blog/10-useful-chatgpt-prompts-for-developers/tip1-terminal.png "Act as a Linux Terminal")
 
-**\#2** Use ChatGPT as a JavaScript console to test in a "clean" environment.
+**Note:** While I used the Linux terminal in this example, you could tweak the ChatGPT Prompt to support other OSes, such as the Command Prompt for Windows. 
 
+**\#2** Use ChatGPT as a JavaScript console to test in a "clean" environment.
 
 **Prompt ([Author Credit](https://github.com/omerimzali)):** I want you to act as a javascript console. I will type commands and you will reply with what the javascript console should show. I want you to only reply with the terminal output inside one unique code block, and nothing else. do not write explanations. do not type commands unless I instruct you to do so. when I need to tell you something in english, I will do so by putting text inside curly brackets {like this}. My first command is console.log("Hello World");
 
@@ -41,33 +41,17 @@ Having the right tools at your disposal in software development can make all the
 **\#3** Generate code for publicly known APIs with instructions on how to use it and what needs to be installed.
 
 \
-**Prompt :** Write a Python function to fetch data from https://api.chucknorris.io/.
+**Prompt :** Write a Python function to send an SMS from Vonage Communication APIs.
 
-![Fetch data from a public API](/content/blog/10-useful-chatgpt-prompts-for-developers/tip3-codefetch.png "Fetch data from a public API")
-
-Result:
-
-```json
-{
-  "categories": [],
-  "created_at": "2020-01-05 13:42:22.089095",
-  "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
-  "id": "eCVbb8QsT7SjTldIKeBqIw",
-  "updated_at": "2020-01-05 13:42:22.089095",
-  "url": "https://api.chucknorris.io/jokes/eCVbb8QsT7SjTldIKeBqIw",
-  "value": "The rule about never looking directly at the sun applies to looking into Chuck Norris' eyes as well."
-}
-```
+![Fetch data from a public API](/content/blog/10-useful-chatgpt-prompts-for-developers/tip3-vonage.png "Fetch data from a public API")
 
 **\#4** Practice SQL commands without deploying a SQL Instance or creating a table.
-
 
 **Prompt ([Author Credit](https://github.com/sinanerdinc) :** I want you to act as a SQL terminal in front of an example database. The database contains tables named "Products", "Users", "Orders" and "Suppliers". I will type queries and you will reply with what the terminal would show. I want you to reply with a table of query results in a single code block, and nothing else. Do not write explanations. Do not type commands unless I instruct you to do so. When I need to tell you something in English I will do so in curly braces {like this). My first command is 'SELECT TOP 10 * FROM Products ORDER BY Id DESC'.
 
 ![Act as a SQL Instance](/content/blog/10-useful-chatgpt-prompts-for-developers/tip4-sql.png "Act as a SQL Instance")
 
 **\#5** Become a \[programming language] interpreter without installing any of the tools. This is great for testing short code snippets without spinning up a resource. 
-
 
 **Prompt ([Author Credit](https://github.com/akireee)) :** I want you to act like a Python interpreter. I will give you Python code, and you will execute it. Do not provide any explanations. Do not respond with anything except the output of the code. The first code is: "print('hello world!')"
 
@@ -81,7 +65,6 @@ Result:
 ![Help with Regular Expressions](/content/blog/10-useful-chatgpt-prompts-for-developers/tip6-regularexpressions.png "Help with Regular Expressions")
 
 **\#7** Find bugs in short code snippets. 
-
 
 **Prompt :** Find bugs in the following JavaScript code: 
 
@@ -104,15 +87,13 @@ You can then use the code generated with something like [this](https://dreampuf.
 
 ![Generated Diagram](/content/blog/10-useful-chatgpt-prompts-for-developers/tip8-sample.png "Generated Diagram")
 
-**\#9** Get top-ranked answers to your programming questions without visiting StackOverflow.
+**\#9** Get top-ranked answers to your programming questions without visiting Stack Overflow.
 
-
-**Prompt ([Author Credit](https://github.com/5HT2)) :** I want you to act as a stackoverflow post. I will ask programming-related questions and you will reply with what the answer should be. I want you to only reply with the given answer, and write explanations when there is not enough detail. do not write explanations. When I need to tell you something in English, I will do so by putting text inside curly brackets {like this}. My first question is "How do I read the body of an http.Request to a string in Golang".
+**Prompt ([Author Credit](https://github.com/5HT2)) :** I want you to act as a Stack Overflow post. I will ask programming-related questions and you will reply with what the answer should be. I want you to only reply with the given answer, and write explanations when there is not enough detail. do not write explanations. When I need to tell you something in English, I will do so by putting text inside curly brackets {like this}. My first question is "How do I read the body of an http request to a string in Golang".
 
 ![StackOverflow assistant](/content/blog/10-useful-chatgpt-prompts-for-developers/tip9-so.png "StackOverflow assistant")
 
 **\#10** Identify potential performance improvements in your code to suggest changes that could result in faster execution times or lower memory consumption. 
-
 
 **Prompt :** Optimize the following JavaScript code: 
 
@@ -128,7 +109,6 @@ codeBlock='''function example() {
 ![Optimize Code Snippets](/content/blog/10-useful-chatgpt-prompts-for-developers/tip10-optimize.png "Optimize Code Snippets")
 
 **BONUS!** I'm sure all of us have been stuck with some Git problems before. Use ChatGPT to provide guidance on how to overcome it. 
-
 
 **Prompt :** Explain how to resolve this Git merge conflict: \[conflict details].”
 
