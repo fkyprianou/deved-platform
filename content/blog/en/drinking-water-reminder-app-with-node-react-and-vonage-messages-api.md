@@ -282,16 +282,20 @@ The purpose of CORS is to prevent a malicious web page from making unauthorized 
 
 Run this file with `node app.js`. You will be able to see the “Server started on port 5000” once the server is running:
 
-[This image shows the console logs for the node backend. The server was started with the command node app.js. The image shows the server was started on port 5000. The text “Send a message to <mobile number> with frequency <your selected frequency>. Next, as each message is sent at an interval of the selected frequency, we log the corresponding message UUID on the terminal. ](vonage_10)
+![This image shows the console logs for the node backend. The server was started with the command node app.js. The image shows the server was started on port 5000. The text “Send a message to <mobile number> with frequency <your selected frequency>. Next, as each message is sent at an interval of the selected frequency, we log the corresponding message UUID on the terminal.](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image6.png "Console log")
 
 
 The server starts listening on port 5000, and a message is printed to the console indicating that the server has started. When you pass some input in the application's frontend, the logs will be printed on the console with the message UUIDs.
+
+
 Great! The backend is done, and it is up and running. Now it’s time to add the frontend code.
 
 ## Frontend UI With React.Js
 
 The frontend of this app will use the React.js framework.
-A few prerequisites are you must have Node.js and npm installed on your system. Make sure you are using the most suitable version of Node.
+
+
+A few prerequisites are you must have Node.js and npm installed on your system. Make sure you are using the most suitable version.
 
 ```
 nvm install <version>
@@ -309,6 +313,8 @@ Run the React app:
 `npm start`
 
 Verify the app is running by visiting `http://localhost:3000` in your browser. You should see the default React app.
+
+
 Create a new component `DrinkingWaterForm` in the `frontend/src` directory with the following code to allow users to sign up for reminders:
 
 ```javascript
@@ -459,7 +465,11 @@ export default App;
 
 ## Connect the Backend and the Frontend
 
-Time to run both the frontend and backend together. Navigate to a terminal and enter the backend directory from the project's root. Type `node app.js` to get the backend running.
+Time to run both the frontend and backend together. 
+
+Navigate to a terminal and enter the backend directory from the project's root. 
+
+Type `node app.js` to get the backend running.
 Next, in a separate terminal, cd into `frontend` and type:
 
 ```
@@ -482,6 +492,6 @@ This article showed how to build a subscription-based Drinking Water Reminder we
 
 If you're interested in learning more about Vonage APIs and what they can do, check out the [Vonage API Developer Portal](https://developer.vonage.com/). You can find documentation, code samples, and tutorials for a wide range of APIs, including SMS, voice, video, and more.
 
-You can also stay updated on the latest news and updates from Vonage by following them on Twitter (@VonageDev) and joining their [Slack community](https://developer.vonage.com/en/community/slack). These channels are great places to connect with other developers, ask questions, and learn more about Vonage and its APIs.
+You can also stay updated on the latest news and updates from Vonage by following them on [Twitter (@VonageDev)](www.twitter.com/vonagedev) and joining their [Slack community](https://developer.vonage.com/en/community/slack). These channels are great places to connect with other developers, ask questions, and learn more about Vonage and its APIs.
 
 We encourage you to keep exploring different APIs and frameworks with Vonage. There are many possibilities for creating innovative and useful applications. Cheers!
