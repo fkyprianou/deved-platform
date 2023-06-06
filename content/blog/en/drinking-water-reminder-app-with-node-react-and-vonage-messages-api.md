@@ -111,7 +111,7 @@ You will be able to view this application page:
 
 Save the **Application ID** and the generated private key. You can also [purchase a number and link your Vonage number here](https://developer.vonage.com/en/numbers/code-snippets/buy).
 
-Next, you need to install some dependances. Type the following in your terminal:
+Next, you need to install some dependencies. Type the following in your terminal:
 
 ```
 npm install cors@2.8.5 cypress@12.11.0 express@4.18.2 node-schedule@2.1.1 react-dom@18.2.0 react@18.2.0 webpack@5.81.0
@@ -147,15 +147,25 @@ messagesClient
 ```
 
 This is the `test_sms.js` file in the GitHub repository. This code uses the Vonage Messages API to send an SMS message to a phone number. To run this file, type `node test_sms.js` in your terminal.
+
+
 Here’s an explanation of the `test_sms.js` code. The first three lines import three modules from the `@vonage` library: `Auth`, `Messages`, and `SMS`. `Auth` is used to authenticate with the Vonage API, `Messages` is used to send SMS messages, and `SMS` is a subclass of `Messages` used to construct SMS messages.
+
+
 Next, the code defines a constant `PRIVATE_KEY_PATH` with the path to a private key file.
 After that, an instance of `Messages` is created with the `new` keyword, passing in an `Auth` object as an argument with the `apiKey`, `apiSecret`, `applicationId`, and `privateKey` properties set. This instance of `Messages` is stored in a constant called `messagesClient`.
+
+
 Finally, the `send()` method is called on `messagesClient` to send an SMS message. The `send()` method takes an instance of `SMS` as an argument, with the `to`, `from`, and `text` properties set to the recipient phone number, the sender name or number, and the message text respectively. The `then()` method is called on the returned Promise to log the response from the Vonage API, and the `catch()` method is called to log any errors that occur during the sending process.
+
+
 Once this runs successfully, we can create our backend application using this code.
 
 ### Scheduler
 
 The next step is sending an SMS to the number entered in the frontend in the `sign-up` endpoint. We will schedule reminders for each subscriber based on the frequency they select from the UI. 
+
+
 Create a file `app.js` in the backend folder and add the following code:
 
 ```
@@ -244,21 +254,37 @@ app.listen(5000, () => {
 ```
 
 This is a Node.js server-side application that uses the Express framework to create a web server. It also integrates with the Vonage Messages API to send reminders to subscribers.
+
+
 The code starts by importing the required modules: `express`, `body-parser`, `cors`, `@vonage/messages`, `node-schedule`, and `@vonage/auth`. Then it defines a constant variable `PRIVATE_KEY_PATH` with the path to the private key for the Vonage API. After that, it creates a list called `subscribers` to store phone numbers and the frequency of reminders.
 Next, it creates a new instance of the `Messages` class from the `@vonage/messages` module, which is used to send SMS messages via the Vonage API. It sets the required API key, API secret, application ID, and private key using an instance of the Auth class.
-The `sendReminders` function is defined to send reminders to a specific phone number. It takes the phone number as an argument, sets the `from` and `text` variables for the SMS message, and then sends the message via the `messagesClient` using the `send` method.
+T
+
+he `sendReminders` function is defined to send reminders to a specific phone number. It takes the phone number as an argument, sets the `from` and `text` variables for the SMS message, and then sends the message via the `messagesClient` using the `send` method.
+
+
 The code then creates a new instance of the `express` application and sets up middleware for handling JSON requests and enabling cross-origin resource sharing (CORS) for web applications.
-The server sets up a route for the `POST` request to `/sign-up`. When a client sends a request to this endpoint with a phone number and frequency in the request body, the server adds the phone number and frequency to the `subscribers` list. It then sends a welcome message to the subscriber's phone number via the `messagesClient` and schedules reminders at the specified frequency using the `node-schedule` module. Finally, the server returns a JSON response indicating the request succeeded.
+
+
+The server sets up a route for the `POST` request to `/sign-up`. When a client sends a request to this endpoint with a phone number and frequency in the request body, the server adds the phone number and frequency to the `subscribers` list. It then sends a welcome message to the subscriber's phone number via the `messagesClient` and schedules reminders at the specified frequency using the `node-schedule` module. 
+
+Finally, the server returns a JSON response indicating the request succeeded.
 
 ### Why Did We Enable CORS?
 
 CORS (Cross-Origin Resource Sharing) is a mechanism that allows resources (such as scripts, images, or styles) to be requested from a different domain than the one that served the web page.
+
+
 CORS errors occur when a web page attempts to make a request (for example, via JavaScript) to a different domain from the one that served the web page, and the server hosting the requested resource does not return the appropriate CORS headers.
+
+
 The purpose of CORS is to prevent a malicious web page from making unauthorized requests to another domain. Browsers enforce CORS restrictions by checking for the presence of specific HTTP headers in the response from the server, such as Access-Control-Allow-Origin.
 
 Run this file with `node app.js`. You will be able to see the “Server started on port 5000” once the server is running:
 
 [This image shows the console logs for the node backend. The server was started with the command node app.js. The image shows the server was started on port 5000. The text “Send a message to <mobile number> with frequency <your selected frequency>. Next, as each message is sent at an interval of the selected frequency, we log the corresponding message UUID on the terminal. ](vonage_10)
+
+
 The server starts listening on port 5000, and a message is printed to the console indicating that the server has started. When you pass some input in the application's frontend, the logs will be printed on the console with the message UUIDs.
 Great! The backend is done, and it is up and running. Now it’s time to add the frontend code.
 
