@@ -1,0 +1,11 @@
+{
+  "bio": "Donald is a software engineer with 10 years of experience. He is passionate about creating software products fast with high quality. He has hands-on experience in building automation frameworks, mentoring his colleagues about software quality mindset and how to get their hands dirty in the automation path. His tech stack includes JavaScript, Typescript, Java, Python, Go, Scala, and Rust recently, along with frameworks such as Playwright, Cypress, Serenity, Selenium, Gatling, k6, ZAP. His is also familiar with NoSQL and SQL databases such as Redis, PostgreSQL, MySQL, MongoDB.\n\nDonald also has more than 3 years of experience in the technical writing field, with blogs writing for famous publications in Medium , dev.to or other big clients in the tech world.",
+  "hidden": false,
+  "image_url": "/content/images/donald-le.jpeg",
+  "name": "Donald Le",
+  "twitter": "ledinhcuong99",
+  "spotlight": true,
+  "noteworthy": false,
+  "team": false,
+  "alumni": false
+}
