@@ -2,10 +2,11 @@
 title: "Enable Video Call for a Next.js Application Using Vonage Video API "
 description: "Learn how to enable video calling for a Next.js application using
   the Vonage Video API "
-author: michael-crump
+thumbnail: /content/blog/enable-video-call-for-a-next-js-application-using-vonage-video-api/video-call_next-js.png
+author: donald-le
 published: true
-published_at: 2023-05-26T17:27:26.759Z
-updated_at: 2023-05-26T17:27:26.821Z
+published_at: 2023-06-07T17:27:26.759Z
+updated_at: 2023-06-07T17:27:26.821Z
 category: tutorial
 tags:
   - video-api
