@@ -101,7 +101,6 @@ public class SendSMS {
     // Our code will go here!
     }
 }
-
 ﻿```
 
 What this does is import all necessary parts of the Vonage SDK and create a method for our code.
@@ -125,6 +124,8 @@ Add this snippet to your `main` method:
 
 The following code creates a `VonageClient` object that can be used to send SMS messages. Now that your client object is configured, you can send an SMS message:
 
+`﻿``java
+
     TextMessage message = new TextMessage(VONAGE_BRAND_NAME,
                     TO_NUMBER,
                     "A text message sent using the Vonage SMS API"
@@ -137,6 +138,7 @@ The following code creates a `VonageClient` object that can be used to send SMS 
             } else {
                 System.out.println("Message failed with error: " + response.getMessages().get(0).getErrorText());
             }
+`﻿``
 
 Again, you'll want to replace `VONAGE_BRAND_NAME` with the virtual number you purchased and `TO_NUMBER` with your own mobile phone number. They should both be written as strings. Make sure to provide the `TO_NUMBER` in [E.164 format](https://developer.vonage.com/en/voice/voice-api/guides/numbers)—for example, 447401234567.  
 
