@@ -106,7 +106,7 @@ Click on the **Generate new application** button:
 
 You will be able to view this application page:
 
-![Drink water POC application page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image5.png "Drink water POC application page")
+![Drink water POC application page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image8.png "Drink water POC application page")
 
 
 Save the **Application ID** and the generated private key. You can also [purchase a number and link your Vonage number here](https://developer.vonage.com/en/numbers/code-snippets/buy).
@@ -294,7 +294,6 @@ Great! The backend is done, and it is up and running. Now it’s time to add the
 
 The frontend of this app will use the React.js framework.
 
-
 A few prerequisites are you must have Node.js and npm installed on your system. Make sure you are using the most suitable version.
 
 ```
@@ -478,7 +477,9 @@ npm start
 
 Great, you got both the frontend and the backend running simultaneously! Open `http://localhost:3000` in your web browser to see the **Drinking Water Reminder app**.
 
-[Drinking water Reminder Service home page](vonage_11)
+
+
+![Drinking water Reminder Service home page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image5.png "Drinking water Reminder Service home page")
 
 Perfect! You created a drinking water reminder app with Node, Vonage, and React! Now you can test it with your desired input.
 
