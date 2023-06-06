@@ -59,7 +59,7 @@ Next, we will use the [Vonage Messages API](https://www.vonage.co.uk/communicati
 
 ### Vonage
 
-Vonage is a global cloud communications platform that enables users to make and receive phone calls, send and receive text messages, and more. It offers a range of services, including voice-over-IP (VoIP) and unified communications, as well as messaging, video chat, and other features. Vonage also provides a range of APIs and SDKs that allow developers to integrate their applications with the Vonage platform. You cancreate a Vonage account from [the dashboard](https://dashboard.nexmo.com/sign-up?utm_source=DEV_REL&utm_medium=github&utm_campaign=PythonCodeNemesis/Python_Vonage_Reminder_App).
+Vonage is a global cloud communications platform that enables users to make and receive phone calls, send and receive text messages, and more. It offers a range of services, including voice-over-IP (VoIP) and unified communications, as well as messaging, video chat, and other features. Vonage also provides a range of APIs and SDKs that allow developers to integrate their applications with the Vonage platform. You can create a Vonage account from [the dashboard](https://dashboard.nexmo.com/sign-up?utm_source=DEV_REL&utm_medium=github&utm_campaign=PythonCodeNemesis/Python_Vonage_Reminder_App).
 
 Enter your details and verify your mail ID:
 
@@ -78,19 +78,26 @@ Next, you will be able to view the below screen, where you choose if you are a d
 [](vonage_3)
 Your account comes with a 2€ credit, which you can use for a trial, which is perfect for this use case. Go to the dashboard to use the Messages API:
 
+![This is the Vonage API Dashboard page. It has information on the account balance, analytics, delivery and quality, and logs. On the left sidebar, there are more tabs for API settings, numbers and applications. You can click any of these options to view them. The main page shows the API key, the API secret the Try our APIs section. This has information and resources on how to develop with the Vonage APIs. You can choose to send an SMS, make a voice call, send a Whatsapp message, and more!](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image7.png "Vonage API Dashboard page")
 
 
-[This is the Vonage API Dashboard page. It has information on the account balance, analytics, delivery and quality, and logs. On the left sidebar, there are more tabs for API settings, numbers and applications. You can click any of these options to view them. The main page shows the API key, the API secret the Try our APIs section. This has information and resources on how to develop with the Vonage APIs. You can choose to send an SMS, make a voice call, send a Whatsapp message, and more!](vonage_4)
 Copy your **API key** and **API secret** for later use.
-Time to create a new application. Go to https://dashboard.nexmo.com/applications or the **Applications** tab in the left sidebar:
+Time to create a new application. Go to [applications](https://dashboard.nexmo.com/applications) or the **Applications** tab in the left sidebar:
 
-[Vonage applications page](vonage_5)
-Click on “Create a new application” to create a new application :
+![Vonage applications page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image4.png "Vonage applications page")
 
-[Create a new vonage application page](vonage_6)
+Click on “Create a new application” to create a new application:
+
+![Create a new Vonage application page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image11.png "Create a new Vonage application page")
+
+
 Select Messages in the capabilities. Add the inbound and status URL as `https://www.google.com/`. At this step, you can generate your private key. It will be downloaded and saved locally.
 
-[Choose application specifications page](vonage_7)
+[](vonage_7)
+
+![Choose application specifications page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image1.png "Choose application specifications page")
+
+[](vonage_7)
 Click on the **Generate new application** button:
 
 \[Choose application specifications page](vonage 8)
