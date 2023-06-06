@@ -68,11 +68,17 @@ Enter your details and verify your mail ID:
 
 
 
-[The above image displays the Vonage Verify your email page. On the top, there are the steps displayed along with the step you are on being highlighted. It mentions that an email has been sent from Vonage to the email you entered. You will have to click on the link to verify you account to continue. Below there is a message saying if you havent received the email from Vonage you can click on a hyperlinked text to resend that email. There is also a button called “Go back and edit email” on the lower left corner to edit the email address entered on the previous page.](vonage_2)
+![The above image displays the Vonage Verify your email page. On the top, there are the steps displayed along with the step you are on being highlighted. It mentions that an email has been sent from Vonage to the email you entered. You will have to click on the link to verify you account to continue. Below there is a message saying if you havent received the email from Vonage you can click on a hyperlinked text to resend that email. There is also a button called “Go back and edit email” on the lower left corner to edit the email address entered on the previous page.](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/2.png "Sign up")
+
+
 Next, you will be able to view the below screen, where you choose if you are a developer. Select the Vonage products you plan to use. For this tutorial, we will select SMS.
 
-[This is the “Let’s get Started” page. The page asks for more information about your needs so that Vonage can tailor your experience. There is a question : “Are you a developer?”, which says that you should select yes if you want to see code. You can select yes or no here.](vonage_3)
+![This is the “Let’s get Started” page. The page asks for more information about your needs so that Vonage can tailor your experience. There is a question : “Are you a developer?”, which says that you should select yes if you want to see code. You can select yes or no here.](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/3.png "Let's get started page")
+
+[](vonage_3)
 Your account comes with a 2€ credit, which you can use for a trial, which is perfect for this use case. Go to the dashboard to use the Messages API:
+
+
 
 [This is the Vonage API Dashboard page. It has information on the account balance, analytics, delivery and quality, and logs. On the left sidebar, there are more tabs for API settings, numbers and applications. You can click any of these options to view them. The main page shows the API key, the API secret the Try our APIs section. This has information and resources on how to develop with the Vonage APIs. You can choose to send an SMS, make a voice call, send a Whatsapp message, and more!](vonage_4)
 Copy your **API key** and **API secret** for later use.
