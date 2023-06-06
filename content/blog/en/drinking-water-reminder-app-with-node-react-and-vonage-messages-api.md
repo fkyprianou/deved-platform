@@ -61,7 +61,7 @@ Next, we will use the [Vonage Messages API](https://www.vonage.co.uk/communicati
 
 Vonage is a global cloud communications platform that enables users to make and receive phone calls, send and receive text messages, and more. It offers a range of services, including voice-over-IP (VoIP) and unified communications, as well as messaging, video chat, and other features. Vonage also provides a range of APIs and SDKs that allow developers to integrate their applications with the Vonage platform. You can create a Vonage account from [the dashboard](https://dashboard.nexmo.com/sign-up?utm_source=DEV_REL&utm_medium=github&utm_campaign=PythonCodeNemesis/Python_Vonage_Reminder_App).
 
-Enter your details and verify your mail ID:
+Enter your details and verify your email ID:
 
 ![This image displays the Vonage home page. It has several tabs including Products, Solutions, Developers and Resources. There is some information on Vonage, mentioning how it accelerates connections that matter to your business. You can power your customer experiences across the journey. You can connect employees at any time, from anywhere, on any device. There are two buttons, the first being “How Vonage Connects”. The other button is “Talk to an expert”.](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/1.png "Vonage homepage")
 
