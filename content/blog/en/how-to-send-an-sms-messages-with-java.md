@@ -24,12 +24,12 @@ In this tutorial, we'll show you how to send SMS messages with Java.
 
 Before we dive in, make sure you have the following:
 
-- A [Vonage API account](https://developer.vonage.com/sign-up). Access your Vonage API Dashboard to locate your API Key and API Secret, which can be found at the top of the page
-- A Vonage phone number. To purchase one, go to Numbers > Buy Numbers and search for one that meets your needs.
-- [JDK](https://www.oracle.com/java/technologies/downloads/) (17 or higher) or its open-source equivalent OpenJDK
-- [Gradle](https://gradle.org/) (version 3.4 or newer) 
+* A [Vonage API account](https://developer.vonage.com/sign-up). Access your Vonage API Dashboard to locate your API Key and API Secret, which can be found at the top of the page
+* A Vonage phone number. To purchase one, go to Numbers > Buy Numbers and search for one that meets your needs.
+* [JDK](https://www.oracle.com/java/technologies/downloads/) (17 or higher) or its open-source equivalent OpenJDK
+* [Gradle](https://gradle.org/) (version 3.4 or newer) 
 
-If you need some help getting started, don't worry! We've got you covered. You can find Mark Smith's [source code]() for this tutorial on GitHub.
+If you need some help getting started, don't worry! We've got you covered. You can find Mark Smith's [source code](<>) for this tutorial on GitHub.
 
 ## Using the Vonage SDK
 
@@ -37,14 +37,13 @@ To begin, set up your Gradle project and download the [Vonage Java SDK](https://
 
 Create a directory for your project. Go inside your directory and run `gradle init`. If you're unfamiliar with Gradle, fret not - we won't be delving into anything overly complex!
 
-Select  _1: basic_  as the type of project to generate.
-_1: Groovy_  as build script DSL.
+Select  *1: basic*  as the type of project to generate.
+*1: Groovy*  as build script DSL.
 Name your project—or press Enter for the default option.
 
 Once that's complete, open the build.gradle file and replace its contents with the following code snippet:
 
 ```java
-
     // We're creating a Java Application:
     plugins {
         id 'application'
@@ -84,7 +83,6 @@ On macOS and Linux, you can create this path by running:
 Inside the `getstarted` directory, create a file called `SendSMS.java`. Once you have it opened in your favorite IDE, add this code:
 
 ```java
-
 package getstarted;
 
 import com.vonage.client.VonageClient;
@@ -101,7 +99,8 @@ public class SendSMS {
     // Our code will go here!
     }
 }
-﻿```
+
+```
 
 What this does is import all necessary parts of the Vonage SDK and create a method for our code.
 
@@ -109,22 +108,21 @@ We then store our API Key and API secret as variables. Fill in  `YOUR_API_KEY`  
 
 If you run `gradle run`, it should run your main method. However, since we don't have anything there yet, it won't do anything. Let's change that!
 
-
 ## Send SMS Message
+
 Add this snippet to your `main` method:
 
-`﻿``java
-
+```java
     VonageClient client = VonageClient.builder()
     
     .apiKey(YOUR_API_KEY)
     .apiSecret(YOUR_API_SECRET)
     .build();
-`﻿``
+```
 
 The following code creates a `VonageClient` object that can be used to send SMS messages. Now that your client object is configured, you can send an SMS message:
 
-`﻿``java
+```java
 
     TextMessage message = new TextMessage(VONAGE_BRAND_NAME,
                     TO_NUMBER,
@@ -138,7 +136,7 @@ The following code creates a `VonageClient` object that can be used to send SMS 
             } else {
                 System.out.println("Message failed with error: " + response.getMessages().get(0).getErrorText());
             }
-`﻿``
+```
 
 Again, you'll want to replace `VONAGE_BRAND_NAME` with the virtual number you purchased and `TO_NUMBER` with your own mobile phone number. They should both be written as strings. Make sure to provide the `TO_NUMBER` in [E.164 format](https://developer.vonage.com/en/voice/voice-api/guides/numbers)—for example, 447401234567.  
 
@@ -150,12 +148,13 @@ Finally, save and run `gradle run`, and you should see something like this:
 
 If it didn't work, there may be some text after `ERR:`. Correct the issue and try again.
 
----
+- - -
+
 **NOTE**
 
 In some countries (US), VONAGE_BRAND_NAME has to be one of your Vonage virtual numbers. In other countries (UK), you're free to pick an alphanumeric string value—for example, your brand name like AcmeInc. Read about country-specific SMS features on the [dev portal](https://developer.vonage.com/en/messaging/sms/guides/country-specific-features).
 
----
+- - -
 
 ## Conclusion
 
@@ -163,9 +162,9 @@ You now know how to send an SMS in Java using Vonage's API! For further informat
 
 ## Further Reading
 
--   [General information about the SMS API](https://www.vonage.com/communications-apis/verify/?adobe_mc=MCMID%3D71754636778742462354437363657516985404%7CMCORGID%3DA8833BC75245AF9E0A490D4D%2540AdobeOrg%7CTS%3D1685566451https://developer.vonage.com/en/messaging/sms/overview)
--   [SMS API Documentation](https://developer.vonage.com/en/api/sms)
--   [Send an SMS Documentation](https://developer.vonage.com/en/messaging/sms/code-snippets/send-an-sms#further-reading)
+* [General information about the SMS API](https://www.vonage.com/communications-apis/verify/?adobe_mc=MCMID%3D71754636778742462354437363657516985404%7CMCORGID%3DA8833BC75245AF9E0A490D4D%2540AdobeOrg%7CTS%3D1685566451https://developer.vonage.com/en/messaging/sms/overview)
+* [SMS API Documentation](https://developer.vonage.com/en/api/sms)
+* [Send an SMS Documentation](https://developer.vonage.com/en/messaging/sms/code-snippets/send-an-sms#further-reading)
 
 ## Stay in Touch
 
