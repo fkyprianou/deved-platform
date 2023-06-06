@@ -20,37 +20,53 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-Drinking water is important because it helps to keep the body hydrated, which is essential for proper functioning. Proper hydration can help to improve energy levels, boost immune system functioning, and even help to prevent certain illnesses.
+\#Introduction
+
 In this article, we will build a web application with Node, React, and the Vonage Messages API to allow users to subscribe to the service and choose a certain frequency for reminders. All subscribers will receive reminders to drink water at regular intervals based on their chosen frequency. 
+
+Drinking water is important because it helps to keep the body hydrated, which is essential for proper functioning. Proper hydration can help to improve energy levels, boost immune system functioning, and even help to prevent certain illnesses.
+
 You are welcome to clone the [GitHub repository](link) for this tutorial.
 
 ## Agenda
 
 In this tutorial, you will learn how to:
-Create a backend server with Node.js
-Add message sender in Express and Node with the Vonage Messages API
-Add frequency handler with node-scheduler
-Create a frontend UI with React.js
-Connect the backend and the frontend
-Test the application
+
+* Create a backend server with Node.js 
+* Add message sender in Express and Node with the Vonage Messages API
+* Add frequency handler with node-scheduler
+* Create a frontend UI with React.js
+* Connect the backend and the frontend
+* Test the application
 
 ## Prerequisites
 
-A Vonage account and phone number
-Node and npm installed
+* A Vonage account and phone number
+* Node and npm installed
 
 ### Create a Backend Server With Node.js
 
-Time to get started with the backend for the application. Create a main app directory `Vonage_Drinking_App`. Go to your terminal and type in `mkdir Vonage_Drinking_App`.
-Enter this directory by typing `cd Vonage_Drinking_App` in the terminal. Create a directory inside this directory called `backend`. Next, we will use the **Vonage Messages API** to send SMS to subscribers.
+Time to get started with the backend for the application. 
+
+Create a main app directory `Vonage_Drinking_App`.
+
+Go to your terminal and type in `mkdir Vonage_Drinking_App`.
+Enter this directory by typing `cd Vonage_Drinking_App` in the terminal. 
+
+Create a directory inside this directory called `backend`. 
+
+Next, we will use the [Vonage Messages API](https://www.vonage.co.uk/communications-apis/messages/) to send SMS to subscribers.
 
 ### Vonage
 
-Vonage is a global cloud communications platform that enables users to make and receive phone calls, send and receive text messages, and more. It offers a range of services, including voice-over-IP (VoIP) and unified communications, as well as messaging, video chat, and other features. Vonage also provides a range of APIs and SDKs that allow developers to integrate their applications with the Vonage platform.
-Create a Vonage account from [the dashboard](https://dashboard.nexmo.com/sign-up?utm_source=DEV_REL&utm_medium=github&utm_campaign=PythonCodeNemesis/Python_Vonage_Reminder_App).
+Vonage is a global cloud communications platform that enables users to make and receive phone calls, send and receive text messages, and more. It offers a range of services, including voice-over-IP (VoIP) and unified communications, as well as messaging, video chat, and other features. Vonage also provides a range of APIs and SDKs that allow developers to integrate their applications with the Vonage platform. You cancreate a Vonage account from [the dashboard](https://dashboard.nexmo.com/sign-up?utm_source=DEV_REL&utm_medium=github&utm_campaign=PythonCodeNemesis/Python_Vonage_Reminder_App).
 
-[This image displays the Vonage home page. It has several tabs including Products, Solutions, Developers and Resources. There is some information on Vonage, mentioning how it accelerates connections that matter to your business. You can power your customer experiences across the journey. You can connect employees at any time, from anywhere, on any device. There are two buttons, the first being “How Vonage Connects”. The other button is “Talk to an expert”.](vonage_1)
 Enter your details and verify your mail ID:
+
+![This image displays the Vonage home page. It has several tabs including Products, Solutions, Developers and Resources. There is some information on Vonage, mentioning how it accelerates connections that matter to your business. You can power your customer experiences across the journey. You can connect employees at any time, from anywhere, on any device. There are two buttons, the first being “How Vonage Connects”. The other button is “Talk to an expert”.](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/1.png "Vonage homepage")
+
+
+
 
 [The above image displays the Vonage Verify your email page. On the top, there are the steps displayed along with the step you are on being highlighted. It mentions that an email has been sent from Vonage to the email you entered. You will have to click on the link to verify you account to continue. Below there is a message saying if you havent received the email from Vonage you can click on a hyperlinked text to resend that email. There is also a button called “Go back and edit email” on the lower left corner to edit the email address entered on the previous page.](vonage_2)
 Next, you will be able to view the below screen, where you choose if you are a developer. Select the Vonage products you plan to use. For this tutorial, we will select SMS.
@@ -249,7 +265,6 @@ Run the React app:
 
 `npm start`
 
-
 Verify the app is running by visiting `http://localhost:3000` in your browser. You should see the default React app.
 Create a new component `DrinkingWaterForm` in the `frontend/src` directory with the following code to allow users to sign up for reminders:
 
@@ -368,7 +383,7 @@ const submitButtonStyle = {
 };
 
 export default DrinkingWaterForm;
-````
+```
 
 This React component represents a form for users to sign up for a drinking water reminder service. The form allows the user to enter their phone number and the frequency at which they want to receive reminders to drink water.
 
