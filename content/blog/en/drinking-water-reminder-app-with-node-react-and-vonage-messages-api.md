@@ -20,7 +20,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-\#Introduction
+## Introduction
 
 In this article, we will build a web application with Node, React, and the Vonage Messages API to allow users to subscribe to the service and choose a certain frequency for reminders. All subscribers will receive reminders to drink water at regular intervals based on their chosen frequency. 
 
