@@ -100,11 +100,15 @@ Select Messages in the capabilities. Add the inbound and status URL as `https://
 [](vonage_7)
 Click on the **Generate new application** button:
 
-\[Choose application specifications page](vonage 8)
+
+
+![Choose application specifications page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image10.png "Choose application specifications page")
 
 You will be able to view this application page:
 
-[Drink water POC application page](vonage_9)
+![Drink water POC application page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image5.png "Drink water POC application page")
+
+
 Save the **Application ID** and the generated private key. You can also [purchase a number and link your Vonage number here](https://developer.vonage.com/en/numbers/code-snippets/buy).
 
 Next, you need to install some dependances. Type the following in your terminal:
