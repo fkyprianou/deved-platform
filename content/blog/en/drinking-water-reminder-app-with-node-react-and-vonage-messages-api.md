@@ -26,7 +26,7 @@ In this article, we will build a web application with Node, React, and the Vonag
 
 Drinking water is important because it helps to keep the body hydrated, which is essential for proper functioning. Proper hydration can help to improve energy levels, boost immune system functioning, and even help to prevent certain illnesses.
 
-You are welcome to clone the [GitHub repository](link) for this tutorial.
+You are welcome to clone the [GitHub repository](https://github.com/Vonage-Community/blog-messages_api-react_python-drinking_water_reminder_app) for this tutorial.
 
 ## Agenda
 
@@ -146,7 +146,7 @@ messagesClient
  .catch((err) => console.error(err));
 ```
 
-This is the `test_sms.js` file in the GitHub repository. This code uses the Vonage Messages API to send an SMS message to a phone number. To run this file, type `node test_sms.js` in your terminal.
+This is the `test_sms.js` file in the [GitHub repository](https://github.com/Vonage-Community/blog-messages_api-react_python-drinking_water_reminder_app). This code uses the Vonage Messages API to send an SMS message to a phone number. To run this file, type `node test_sms.js` in your terminal.
 
 
 Here’s an explanation of the `test_sms.js` code. The first three lines import three modules from the `@vonage` library: `Auth`, `Messages`, and `SMS`. `Auth` is used to authenticate with the Vonage API, `Messages` is used to send SMS messages, and `SMS` is a subclass of `Messages` used to construct SMS messages.
