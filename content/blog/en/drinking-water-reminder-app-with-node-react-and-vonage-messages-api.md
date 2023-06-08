@@ -206,8 +206,7 @@ app.post("/sign-up", (req, res) => {
 
  const from = "Reminder App";
  const to = phoneNumber;
- const text =
-   "Welcome to the Drinking Water Reminder App! You will receive reminders as per your selected frequency.";
+ const text = "Welcome to the Drinking Water Reminder App! You will receive reminders as per your selected frequency.";
 
  messagesClient
    .send(
