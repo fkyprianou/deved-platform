@@ -168,4 +168,4 @@ You now know how to send an SMS in Java using Vonage's API! For further informat
 
 ## Stay in Touch
 
-If you have questions or feedback, join us on the  [Vonage Developer Slack](https://developer.vonage.com/community/slack)  or send me a Tweet on  [Twitter](https://twitter.com/dianasoyster). Thanks again for reading, and I will catch you on the next one!
+If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack) or send me a Tweet on [Twitter](https://twitter.com/dianasoyster). Thanks again for reading, and I will catch you on the next one!
