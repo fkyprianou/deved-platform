@@ -140,11 +140,11 @@ public function answer(TicketEntry $ticketEntry): JsonResponse
         ]    ]);}
 ```
 
-Each array gives a payload of instructions that are fairly straightforward, but the important glue here to answer the question "How do we capture the customer's response?" is in the `record` action. You can see it gives a `beepStart` prompt, and most importantly we define the behaviour after the call is complete. The `eventUrl` will be hit with a webhook that will contain a URL of this recording.
+Each array gives a payload of instructions that are fairly straightforward, but the important glue here to answer the question "how do we capture the customer's response?" is in the `record` action. You can see it gives a `beepStart` prompt, and most importantly we define the behaviour after the call is complete. The `eventUrl` will be hit with a webhook that will contain a URL of this recording.
 
 ### Processing the Recording
 
-Our next route is the one that will contain a link to the customer's response as a recorded MP3, as well as the ticket ID, so we know what entity it belongs to. Here's an example payload we can expect to receive:
+Our next route is the one that will contain a link to the customer's response as a recorded MP3, as well as the ticket ID so we know what entity it belongs to. Here's an example payload we can expect to receive:
 
 ```json
 {
@@ -193,9 +193,9 @@ public function recording(TicketEntry $ticketEntry, Request $request): Response|
 
 This uses Route Model Binding to take the relevant `TicketEntry` and inject it as a dependency, then pulls out the `recording_url`. The Vonage SDK has a useful method named `getRecording()` that will return a `StreamInterface` contained in the body. 
 
-For security reasons, you cannot write out the stream from the audio straight to the OpenAI request we will send for transcription, so we need to save the file temporarily. Once we've saved it, we can use the `Storage` facade to read it back out during the transcription request and then delete it.
+For security reasons, you cannot write out the stream from the audio straight to the OpenAI request we're going to send for transcription, so we need to save the file temporariy. Once we've saved it, we can then use the `Storage` facade to read it back out during the transcription request and then delete it.
 
-The `transcribeRecording()` is a custom method in this class controller that we'll get to in a moment, but assuming that a string comes back from the transcription, we create a new `TicketEntry`, associate it with the ticket owner (we know this is the customer as it's an incoming webhook route), and save it to the `Ticket`.
+The `transcribeRecording()` is a custom method in this class controller that we'll get to in a moment, but assuming that a string comes back from the transcription, we create a new `TicketEntry`, associate it with the ticket owner (we know this is the customer as it's an incoming webhook route), and save it to the `Ticket`
 
 ### OpenAI Transcription
 
@@ -238,6 +238,10 @@ This has been hacked together for demonstration reasons, so firstly I'd like to 
 The method creates a new [Guzzle](https://docs.guzzlephp.org/en/stable/) Client, and prepares the request as a `MultipartStream`, as OpenAI requires the request to be an encoded form. We set the base url and fetch our temporary file we created earlier (`call_recording.mp3`). We can now use `fopen()` to write the file out, and then delete it after the request has been completed. 
 
 All being well, you'll get a transcription array back, which will contain the key `text`, which is sent back for updating the `TicketEntry`. Congratulations: we now have a working TTS ticketing system!
+
+### G﻿et Involved
+
+We always welcome community involvement. Please feel free to join us on [GitHub](https://github.com/Vonage/) and the [Vonage Community Slack](https://developer.nexmo.com/community/slack). You can also send us a message on [Twitter](https://twitter.com/VonageDev).
 
 ### And, Stay Tuned
 
