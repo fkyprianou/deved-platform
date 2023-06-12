@@ -132,7 +132,7 @@ First, connect a `http` input node to a `http response` node and a `debug` node,
 
 ![Delivery Receipt](/content/blog/how-to-send-sms-messages-with-node-red/deliveryr.png "Delivery Receipt")
 
-In the `http` input node, select `POST` as a `Method` and fill in the `URL` field with `/receipt`.
+In the `http in` input node, select `POST` as a `Method` and fill in the `URL` field with `/receipt`.
 
 ![Post Method](/content/blog/how-to-send-sms-messages-with-node-red/nodepostmethod.png "Post Method")
 
