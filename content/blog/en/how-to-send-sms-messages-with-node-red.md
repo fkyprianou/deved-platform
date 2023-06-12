@@ -57,7 +57,7 @@ Welcome to Node-RED
 31 May 13:16:14 - [info] Node.js version: v20.2.0
 31 May 13:16:14 - [info] Windows_NT 10.0.22000 x64 LE
 31 May 13:16:16 - [info] Loading palette nodes
-31 May 13:16:17 - [info] Settings file  : 
+31 May 13:16:17 - [info] Settings file: 
 ...
 ```
 
