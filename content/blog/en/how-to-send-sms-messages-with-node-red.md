@@ -65,7 +65,7 @@ Welcome to Node-RED
 
 You can then access the Node-RED editor by pointing your browser at <http://localhost:1880>.
 
-Once you have your editor open, you'll need to install the Vonage node. Click on the **Hamburger Icon** on the right-hand side, then **Manage palette**, then search for the `node-red-contrib-nexmo` package and click **Install** as shown below. 
+Once you have your editor open, you'll need to install the Vonage packages. Click on the **Hamburger Icon** on the right-hand side, then **Manage palette**, then search for the `node-red-contrib-nexmo` package and click **Install** as shown below. 
 
 ![Install the Vonage Node-RED package](/content/blog/how-to-send-sms-messages-with-node-red/installnode.png "Install the Vonage Node-RED package")
 
