@@ -29,7 +29,7 @@ In this article, we're going to add the capability of using Vonage's Text-to-spe
 
 We'll assume that the first tutorial has been completed, which will give us:
 
-* The [helpdesk](https://github.com/Vonage-Community/sample-messages_voice-php-helpdesk) repository, cloned locally from Github
+* The [helpdesk](https://github.com/Vonage-Community/sample-messages_voice-php-helpdesk) repository, cloned locally from GitHub
 * [Laravel Sail](https://laravel.com/docs/10.x/sail) up and running, to dockerise the local development environment
 * [Migrations run](https://laravel.com/docs/10.x/migrations)
 * [Vite](https://vitejs.dev/) development server running to build [Laravel Breeze](https://laravel.com/docs/10.x/starter-kits)'s boilerplate assets
