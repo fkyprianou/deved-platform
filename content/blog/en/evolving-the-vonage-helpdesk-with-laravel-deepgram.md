@@ -1,7 +1,7 @@
 ---
 title: Evolving the Vonage Laravel Helpdesk with OpenAI
 description: In part one of this series, we introduced Helpdesk with SMS. Now,
-  we move onto Voice
+  we move on to Voice
 thumbnail: /content/blog/evolving-the-vonage-helpdesk-with-laravel-deepgram/laravel-vonage-helpdesk.png
 author: james-seconde
 published: true
