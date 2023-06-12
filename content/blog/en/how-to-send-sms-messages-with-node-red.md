@@ -110,7 +110,7 @@ Double click on `debug` and set the `Output` to `complete msg object` as shown b
 
 ![Adding the Debug Node](/content/blog/how-to-send-sms-messages-with-node-red/debugnode.png "Adding the Debug Node")
 
-Press **Deploy** if you haven't already, then place a check in the node called `timestamp` and your SMS should be on its way!
+Press **Deploy** if you haven't already, then place a check by clicking on the blue square on the left side in the node called `timestamp`, and your SMS should be on its way!
 
 ![SMS Deployed Successfully](/content/blog/how-to-send-sms-messages-with-node-red/deploynode.gif "SMS Deployed Successfully")
 
