@@ -37,7 +37,7 @@ To begin, set up your Gradle project and download the [Vonage Java SDK](https://
 
 Create a directory for your project. Go inside your directory and run `gradle init`. If you're unfamiliar with Gradle, fret not - we won't be delving into anything overly complex!
 
-Select  *1: basic*  as the type of project to generate.
+Select *1: basic* as the type of project to generate.
 *1: Groovy*  as build script DSL.
 Name your project—or press Enter for the default option.
 
