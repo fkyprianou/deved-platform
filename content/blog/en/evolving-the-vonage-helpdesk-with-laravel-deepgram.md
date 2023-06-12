@@ -61,7 +61,7 @@ When you create the key, you'll have one chance to copy it - make sure you do th
 
 We need to add that secret to our `env` file. You can see in the `example.env` file in the repo that we have a placeholder for it:
 
-![](/content/blog/evolving-the-vonage-laravel-helpdesk-with-openai/screenshot-2023-06-02-at-10.43.28.png)
+![Screenshot of Helpdesk's environment variables example file](/content/blog/evolving-the-vonage-laravel-helpdesk-with-openai/screenshot-2023-06-02-at-10.43.28.png)
 
 I've included the others in the screenshot because it's important to note that this feature won't work without all of these environment variables set:
 
