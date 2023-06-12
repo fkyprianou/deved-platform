@@ -166,6 +166,6 @@ The `status` and `err-code` parameters both indicate that the message has succes
 
 ## Wrap-up
 
-Now that you have learned how to get started with Node-RED and Vonage Communications API, you could extend this project by using additional flows through the [Node-RED Library](https://flows.nodered.org/). You also might want to try implementing this solution with several recipe's from the [Node-RED Cookbook](https://cookbook.nodered.org/). 
+Now that you have learned how to get started with Node-RED and Vonage Communications API, you could extend this project by using additional flows through the [Node-RED Library](https://flows.nodered.org/). You also might want to try implementing this solution with several recipes from the [Node-RED Cookbook](https://cookbook.nodered.org/). 
 
 If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack) or send me a Tweet on [Twitter](https://twitter.com/mbcrump), and I will get back to you. Thanks again for reading, and I will catch you on the next one!
