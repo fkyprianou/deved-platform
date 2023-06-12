@@ -16,7 +16,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-The [Vonage SMS API](https://developer.vonage.com/en/messaging/sms/overview) is a service that allows you to send and receive SMS messages anywhere in the world. Vonage provides REST APIs, but it's much easier to use the Java SDK that we've written for you.
+The [Vonage SMS API](https://developer.vonage.com/en/messaging/sms/overview) is a service that allows you to send and receive SMS messages. Vonage provides REST APIs, but it's much easier to use the Java SDK that we've written for you.
 
 In this tutorial, we'll show you how to send SMS messages with Java.
 
