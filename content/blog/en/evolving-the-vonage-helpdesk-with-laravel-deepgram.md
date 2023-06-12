@@ -67,7 +67,7 @@ I've included the others in the screenshot because it's important to note that t
 
 * `VONAGE_SMS_FROM` is re-used as the outbound calling number
 * `PUBLIC_URL` is your [Ngrok](https://ngrok.com/) (or any other tool such as Beyond Code's [Expose](https://expose.dev/docs/introduction)) public-facing address. This is essential, as the code will stitch together the response URL to the API when making a call
-* `VONAGE_APPICATION_ID` and `VONAGE_PRIVATE_KEY`. In the last tutorial, we could have used basic authentication, but for webhooks to work they need to be tied to an application ID. For using the Vonage Voice API, we have to have a private key and application ID, which the Vonage PHP SDK will use to generate and handle JWT authorisation for us.
+* `VONAGE_APPICATION_ID` and `VONAGE_PRIVATE_KEY`. In the last tutorial, we could have used basic authentication, but for webhooks to work, they need to be tied to an application ID. For using the Vonage Voice API, we have to have a private key and application ID, which the Vonage PHP SDK will use to generate and handle JWT authorisation for us.
 
 ### Under the Hood
 
