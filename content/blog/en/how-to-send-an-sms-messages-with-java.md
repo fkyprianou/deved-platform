@@ -57,7 +57,7 @@ Once that's complete, open the build.gradle file and replace its contents with t
     
     // Install the Vonage Java SDK
     dependencies {
-        implementation 'com.vonage:client:7.2.0'
+        implementation 'com.vonage:client:7.4.0'
     }
     
     // We'll create this class to contain our code:
