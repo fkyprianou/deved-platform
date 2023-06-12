@@ -41,7 +41,7 @@ OK, so it's time to go through Voice capabilities. The flow of how conversations
 
 ### Enabling Voice
 
-Before this will work, we're going to need a Voice-enabled application ID in the [Vonage Dashboard](https://dashboard.nexmo.com/). You can either edit the previous application from the last tutorial or create a new one. Enabling the application ID  is all you need: don't worry about using the UI to send webhooks to the correct local route (we'll go through this later) as the code constructs the webhook reply URL for you (this is different from how we've set up SMS, and I'll go through why later).
+Before this works, we will need a Voice-enabled application ID in the [Vonage Dashboard](https://dashboard.nexmo.com/). You can edit the previous application from the last tutorial or create a new one. Enabling the application ID is all you need: don't worry about using the UI to send webhooks to the correct local route (we'll go through this later) as the code constructs the webhook reply URL for you (this is different from how we've set up SMS, and I'll go through why later).
 
 ### What is OpenAI?
 
