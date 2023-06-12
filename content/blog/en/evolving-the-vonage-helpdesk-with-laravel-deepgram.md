@@ -193,7 +193,7 @@ public function recording(TicketEntry $ticketEntry, Request $request): Response|
 
 This uses Route Model Binding to take the relevant `TicketEntry` and inject it as a dependency, then pulls out the `recording_url`. The Vonage SDK has a useful method named `getRecording()` that will return a `StreamInterface` contained in the body. 
 
-For security reasons, you cannot write out the stream from the audio straight to the OpenAI request we're going to send for transcription, so we need to save the file temporariy. Once we've saved it, we can then use the `Storage` facade to read it back out during the transcription request and then delete it.
+For security reasons, you cannot write out the stream from the audio straight to the OpenAI request we will send for transcription, so we need to save the file temporarily. Once we've saved it, we can use the `Storage` facade to read it back out during the transcription request and then delete it.
 
 The `transcribeRecording()` is a custom method in this class controller that we'll get to in a moment, but assuming that a string comes back from the transcription, we create a new `TicketEntry`, associate it with the ticket owner (we know this is the customer as it's an incoming webhook route), and save it to the `Ticket`
 
