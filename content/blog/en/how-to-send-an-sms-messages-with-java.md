@@ -162,7 +162,7 @@ You now know how to send an SMS in Java using Vonage's API! For further informat
 
 ## Further Reading
 
-* [General information about the SMS API](https://www.vonage.com/communications-apis/verify/?adobe_mc=MCMID%3D71754636778742462354437363657516985404%7CMCORGID%3DA8833BC75245AF9E0A490D4D%2540AdobeOrg%7CTS%3D1685566451https://developer.vonage.com/en/messaging/sms/overview)
+* [General information about the SMS API](https://www.vonage.com/communications-apis/verify
 * [SMS API Documentation](https://developer.vonage.com/en/api/sms)
 * [Send an SMS Documentation](https://developer.vonage.com/en/messaging/sms/code-snippets/send-an-sms#further-reading)
 
