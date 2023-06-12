@@ -98,9 +98,9 @@ Here's a synopsis of what the code is doing here:
 
 So, now we need a new controller to handle what comes in when the customer has completed their ticket call. The two parts to this are:
 
-* Read out a response when the customer picks up their phone call (this will be set in the controller assigned to the route)
-* Have a route to read incoming answer events (we set these when setting up the outbound call)
-* From the recording event generated after the call is complete, fetch a voice recording of the customers' response, transcribe it using OpenAI, and write it as a new `TicketEntry`.
+* Read out a response when the customer picks up their phone call (this will be set in the controller assigned to the route).
+* Have a route to read incoming answer events (we set these when setting up the outbound call).
+* From the recording event generated after the call is complete, fetch a voice recording of the customers' response, transcribe it using OpenAI, and write it as a new `TicketEntry.`
 
 Phew! Quite a bit to digest here, so let's start tucking in:
 
