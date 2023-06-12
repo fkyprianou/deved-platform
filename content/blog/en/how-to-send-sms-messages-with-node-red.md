@@ -126,7 +126,7 @@ When the message gets delivered, the mobile phone carrier returns a [Delivery Re
 
 ## Receiving a Delivery Receipt from a Mobile Carrier
 
-To find out the `status` of your outbound message, you'll need to set up a webhook endpoint that Vonage can forward the **Delivery Receipt** to.
+To find out the `status` of your outbound message, you'll need to set up a webhook endpoint that Vonage can forward the **Delivery Receipt**.
 
 First, connect a `http` input node to a `http response` node and a `debug` node, so that you can view your delivery receipt in the debug area. Your screen should look like the following: 
 
