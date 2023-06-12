@@ -43,7 +43,7 @@ sudo npm install -g --unsafe-perm node-red
 
 Note: If you are using Windows, do not start the command with `sudo`.
 
-Once installed you can use the `node-red` command to start it in your terminal. You can use Ctrl-C or close the terminal window to stop Node-RED.
+Once installed, you can use the `node-red` command to start it in your terminal. You can use Ctrl-C or close the terminal window to stop Node-RED.
 
 ```bash
 node-red
