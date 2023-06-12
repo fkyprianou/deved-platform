@@ -79,7 +79,7 @@ Scroll down to the `Send SMS` node and drag it into your workspace.
 
 ![Adding the Send SMS Node to the canva](/content/blog/how-to-send-sms-messages-with-node-red/sendsmsnode.png "Adding the Send SMS Node to the canva")
 
-Double click it and fill in the parameters below. 
+Double-click it and fill in the parameters below. 
 
 | Parameter  | Description                                                                                                                                               |     |     |     |     |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --- | --- | --- | --- |
