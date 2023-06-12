@@ -49,7 +49,7 @@ The most common product you may have heard of in association with this name is [
 
 ChatGPT is a cutting-edge language model developed by [OpenAI](https://openai.com/), designed to engage in natural language conversations with users. As an AI-based assistant, ChatGPT can provide information, answer questions, and assist with various tasks. It uses deep learning techniques to understand and generate human-like text, making the interactions feel more personalized.
 
-Yes, that paragraph was written by ChatGPT. But what you might not know is the company behind it, OpenAI, have [several other products](https://openai.com/product) that can all be accessed via. their API. One such product is [Whisper](https://platform.openai.com/docs/guides/speech-to-text), which we're going to use to transcribe what a customer says as a recorded message in response to a ticket entry from the Helpdesk app.
+Yes, that paragraph was written by ChatGPT. But what you might not know is the company behind it, OpenAI, has [several other products](https://openai.com/product) that can all be accessed via. their API. One such product is [Whisper](https://platform.openai.com/docs/guides/speech-to-text), which we're going to use to transcribe what a customer says as a recorded message in response to a ticket entry from the Helpdesk app.
 
 ### Setting up the OpenAI API
 
