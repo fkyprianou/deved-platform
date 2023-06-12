@@ -116,7 +116,7 @@ Press **Deploy** if you haven't already, then place a check by clicking on the b
 
 When you make a successful request, it returns an array of message objects. When looking at the `status` field, if you see a 0, it indicates that your message has been sent successfully. There are other details like recipient number, message-id, remaining balance, price, and carrier network that are also available. 
 
-You can at this response object in the **Debug** area in the right side of your Node-RED editor.
+You can at this response object in the **Debug** area on the right side of your Node-RED editor.
 
 ![Debug Area](/content/blog/how-to-send-sms-messages-with-node-red/debug.png "Debug Area")
 
