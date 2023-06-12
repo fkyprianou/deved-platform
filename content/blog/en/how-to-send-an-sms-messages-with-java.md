@@ -104,7 +104,7 @@ public class SendSMS {
 
 What this does is import all necessary parts of the Vonage SDK and create a method for our code.
 
-We then store our API Key and API secret as variables. Fill in  `YOUR_API_KEY`  and  `YOUR_API_SECRET`  with the values you copied from the [Vonage API Dashboard](https://dashboard.nexmo.com/).
+We then store our API Key and API secret as variables. Fill in `YOUR_API_KEY` and `YOUR_API_SECRET` with the values you copied from the [Vonage API Dashboard](https://dashboard.nexmo.com/).
 
 If you run `gradle run`, it should run your main method. However, since we don't have anything there yet, it won't do anything. Let's change that!
 
