@@ -75,7 +75,7 @@ Now you should see all of the Vonage nodes appear on the left side of your scree
 
 ## Sending an SMS with Node-RED
 
-Scroll down to the `sendsms` node and drag it into your workspace. 
+Scroll down to the `Send SMS` node and drag it into your workspace. 
 
 ![Adding the Send SMS Node to the canva](/content/blog/how-to-send-sms-messages-with-node-red/sendsmsnode.png "Adding the Send SMS Node to the canva")
 
