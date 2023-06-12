@@ -144,7 +144,7 @@ Each array gives a payload of instructions that are fairly straightforward, but 
 
 ### Processing the Recording
 
-Our next route is the one that will contain a link to the customer's response as a recorded MP3, as well as the ticket ID so we know what entity it belongs to. Here's an example payload we can expect to receive:
+Our next route is the one that will contain a link to the customer's response as a recorded MP3, as well as the ticket ID, so we know what entity it belongs to. Here's an example payload we can expect to receive:
 
 ```json
 {
