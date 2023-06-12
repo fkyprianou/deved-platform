@@ -140,7 +140,7 @@ public function answer(TicketEntry $ticketEntry): JsonResponse
         ]    ]);}
 ```
 
-Each array gives a payload of instructions that are fairly straightforward, but the important glue here to answer the question "how do we capture the customer's response?" is in the `record` action. You can see it gives a `beepStart` prompt, and most importantly we define the behaviour after the call is complete. The `eventUrl` will be hit with a webhook that will contain a URL of this recording.
+Each array gives a payload of instructions that are fairly straightforward, but the important glue here to answer the question "How do we capture the customer's response?" is in the `record` action. You can see it gives a `beepStart` prompt, and most importantly we define the behaviour after the call is complete. The `eventUrl` will be hit with a webhook that will contain a URL of this recording.
 
 ### Processing the Recording
 
