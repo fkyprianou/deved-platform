@@ -33,7 +33,7 @@ Before we begin, ensure the following has been completed:
 
 ## Setting Up Your Node-RED Editor
 
-First, you’ll need to [install](https://nodered.org/docs/getting-started/local) Node-RED. For the purposes of this tutorial, we'll do this on our local machine but but it could be done on a Raspberry Pi or Debian-based operating system, or a number of other  options. 
+First, you’ll need to [install](https://nodered.org/docs/getting-started/local) Node-RED. For this tutorial, we'll do this on our local machine but it could be done on a Raspberry Pi or Debian-based operating system or a number of other options. 
 
 In my case, I prefer to install Node-RED using npm. 
 
