@@ -20,7 +20,7 @@ replacement_url: ""
 ---
 ## Introduction
 
-[Node-RED](https://nodered.org/) is a low-code programming tool designed to quickly connect hardware devices, APIs, and online services with a browser-based editor. The editor makes it easy to wire together flows using the wide range of nodes in the palette and can be deployed with a single-click. In this article, we'll combine Node-RED with Vonage's Communications API to send and receive SMS worldwide, using a simple HTTP-based API. 
+[Node-RED](https://nodered.org/) is a low-code programming tool designed to quickly connect hardware devices, APIs, and online services with a browser-based editor. The editor makes it easy to wire together flows using the wide range of nodes in the palette and can be deployed with a single click. In this article, we'll combine Node-RED with Vonage's Communications API to send and receive SMS worldwide using a simple HTTP-based API. 
 
 ## Prerequisites
 
