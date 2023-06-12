@@ -35,7 +35,7 @@ We'll assume that the first tutorial has been completed, which will give us:
 * [Vite](https://vitejs.dev/) development server running to build [Laravel Breeze](https://laravel.com/docs/10.x/starter-kits)'s boilerplate assets
 * [Ngrok](https://ngrok.com/) running locally, and a Vonage application instance configured to send webhooks to it
 
-### How does it do that? Part 2: Voice
+### How Does It Do That? Part 2: Voice
 
 OK, so it's time to go through Voice capabilities. The flow of how conversations happen here is exactly the same: you create a new ticket as a customer and it opens the conversation view. However, when we create it this time, we're going to set up the ticket as a voice conversation. 
 
