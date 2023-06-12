@@ -24,7 +24,7 @@ In this tutorial, we'll show you how to send SMS messages with Java.
 
 Before we dive in, make sure you have the following:
 
-* A [Vonage API account](https://developer.vonage.com/sign-up). Access your Vonage API Dashboard to locate your API Key and API Secret, which can be found at the top of the page
+* A [Vonage API account](https://developer.vonage.com/sign-up). Access your Vonage API Dashboard to locate your API Key and API Secret, which can be found at the top of the page.
 * A Vonage phone number. To purchase one, go to Numbers > Buy Numbers and search for one that meets your needs.
 * [JDK](https://www.oracle.com/java/technologies/downloads/) (17 or higher) or its open-source equivalent OpenJDK
 * [Gradle](https://gradle.org/) (version 3.4 or newer) 
