@@ -114,7 +114,7 @@ Press **Deploy** if you haven't already, then place a check by clicking on the b
 
 ![SMS Deployed Successfully](/content/blog/how-to-send-sms-messages-with-node-red/deploynode.gif "SMS Deployed Successfully")
 
-When you make a successful request, it returns an array of message objects. When looking at the `status` field, if you see a 0 then it indicates that your message has been sent succesfully. There are a few other details like recipient number, message-id, remaining balance, price and the carrier network that is also available. 
+When you make a successful request, it returns an array of message objects. When looking at the `status` field, if you see a 0, it indicates that your message has been sent successfully. There are other details like recipient number, message-id, remaining balance, price, and carrier network that are also available. 
 
 You can at this response object in the **Debug** area in the right side of your Node-RED editor.
 
