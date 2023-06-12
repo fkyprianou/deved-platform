@@ -154,7 +154,7 @@ Your local server now has a ngrok URL that can be used as your webhook endpoint.
 
 The last step is letting the Vonage API know where it should forward the delivery receipts. You can do so under your [API settings](https://dashboard.nexmo.com/settings) in the **SMS Setting** section.
 
-Ensure the **Webhook format** is set to **POST** then  set the default webhook URL for delivery receipts to `YOUR_NGROK_URL/receipt`, then `Save changes`.
+Ensure the **Webhook format** is set to **POST**, then set the default webhook URL for delivery receipts to `YOUR_NGROK_URL/receipt`, then `Save changes`.
 
 ![Delivery receipt endpoint URL in dashboard](/content/blog/how-to-send-sms-messages-with-node-red/smssettings.png "Delivery receipt endpoint URL in dashboard")
 
