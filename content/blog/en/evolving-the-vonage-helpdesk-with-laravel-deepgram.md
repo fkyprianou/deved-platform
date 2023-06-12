@@ -21,7 +21,7 @@ replacement_url: ""
 ---
 This is the second part of a continuous series about an evolving [Laravel](https://laravel.com/) application that leverages Vonage APIs to replicate common real-world use cases.
 
-In the first part, we created a new Laravel application, pulled in the [vonage-laravel](https://github.com/Vonage/vonage-laravel) library, and created a Helpdesk ticket view. The customer selects their chosen communication method (in this case, it was SMS only) so that any message posted by an admin would be sent to the customer's mobile phone. Replying to the message would then be added using incoming webhooks and written to the ticket conversation.
+[In the first part](https://developer.vonage.com/en/blog/introducing-the-laravel-vonage-helpdesk), we created a new Laravel application, pulled in the [vonage-laravel](https://github.com/Vonage/vonage-laravel) library, and created a Helpdesk ticket view. The customer selects their chosen communication method (in this case, it was SMS only) so that any message posted by an admin would be sent to the customer's mobile phone. Replying to the message would then be added using incoming webhooks and written to the ticket conversation.
 
 In this article, we're going to add the capability of using Vonage's Text-to-speech (TTS) Voice capabilities using the [Voice API](https://developer.vonage.com/en/voice/voice-api/overview), with the ability of the customer to speak a response that gets transcribed back to the ticket conversation.
 
