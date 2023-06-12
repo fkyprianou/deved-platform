@@ -138,7 +138,7 @@ The following code creates a `VonageClient` object that can be used to send SMS 
             }
 ```
 
-Again, you'll want to replace `VONAGE_BRAND_NAME` with the virtual number you purchased and `TO_NUMBER` with your own mobile phone number. They should both be written as strings. Make sure to provide the `TO_NUMBER` in [E.164 format](https://developer.vonage.com/en/voice/voice-api/guides/numbers)—for example, 447401234567.  
+Again, you'll want to replace `VONAGE_BRAND_NAME` with the virtual number you purchased and `TO_NUMBER` with your own mobile phone number. They should both be written as strings. Make sure to provide the `TO_NUMBER` in [E.164 format](https://developer.vonage.com/en/voice/voice-api/guides/numbers)—for example, 447401234567.
 
 Finally, save and run `gradle run`, and you should see something like this:
 
