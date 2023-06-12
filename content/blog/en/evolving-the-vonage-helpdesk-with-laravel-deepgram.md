@@ -169,25 +169,26 @@ And the `recording()` method to handle it:
 ```php
 public function recording(TicketEntry $ticketEntry, Request $request): Response|Application|ResponseFactory  
 {  
-    $params = $request->all();  
-    Log::info('Recording event', $params);  
+    $params = $request->all();
+    Log::info('Recording event', $params);
   
-    $audio = Vonage::voice()->getRecording($params['recording_url']);  
-    Storage::put('call_recording.mp3', $audio);  
+    $audio = Vonage::voice()->getRecording($params['recording_url']);
+    Storage::put('call_recording.mp3', $audio);
   
-    $ticketContent = $this->transcribeRecordingOpenAi();  
+    $ticketContent = $this->transcribeRecordingOpenAi();
   
-    $newTicketEntry = new TicketEntry([  
-        'content' => $ticketContent,  
-        'channel' => 'voice',  
-    ]);  
-    $parentTicket = $ticketEntry->ticket()->get()->first();  
-    $newTicketEntryUser = $parentTicket->user()->get()->first();  
-    $newTicketEntry->user()->associate($newTicketEntryUser);  
-    $newTicketEntry->ticket()->associate($parentTicket);  
-    $newTicketEntry->save();  
+    $newTicketEntry = new TicketEntry([
+        'content' => $ticketContent,
+        'channel' => 'voice',
+    ]);
+
+    $parentTicket = $ticketEntry->ticket()->get()->first();
+    $newTicketEntryUser = $parentTicket->user()->get()->first();
+    $newTicketEntry->user()->associate($newTicketEntryUser);
+    $newTicketEntry->ticket()->associate($parentTicket);
+    $newTicketEntry->save();
   
-    return response('', 204);  
+    return response('', 204);
 }
 ```
 
