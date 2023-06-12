@@ -45,7 +45,7 @@ Note: If you are using Windows, do not start the command with `sudo`.
 
 Once installed, you can use the `node-red` command to start it in your terminal. You can use Ctrl-C or close the terminal window to stop Node-RED.
 
-If you are on MacOS and get the error `zsh: command not found: node-red`, then you can [view ](https://stackoverflow.com/questions/12743928/command-not-found-after-npm-install-in-zsh)these suggestions or run it inside a Docker container. 
+If you are on MacOS and get the error `zsh: command not found: node-red`, then you can [view](https://stackoverflow.com/questions/12743928/command-not-found-after-npm-install-in-zsh) these suggestions or run it inside a Docker container. 
 
 ```bash
 node-red
