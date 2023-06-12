@@ -55,7 +55,7 @@ Yes, that paragraph was written by ChatGPT. But what you might not know is the c
 
 Firstly, you'll need an OpenAI account. [Follow this link to create an account](https://auth0.openai.com/u/signup), and when you're done you'll need to head to 'Manage Account' under your top right hand profile menu. Opening this up will show you the following screen - head to API Keys and set up a new key. The end result should look something like this:
 
-![](/content/blog/evolving-the-vonage-laravel-helpdesk-with-openai/screenshot-2023-06-02-at-10.22.45.png)
+![Screenshot of the OpenAI dashboard showing API Key creation](/content/blog/evolving-the-vonage-laravel-helpdesk-with-openai/screenshot-2023-06-02-at-10.22.45.png)
 
 When you create the key, you'll have one chance to copy it - make sure you do that.
 
