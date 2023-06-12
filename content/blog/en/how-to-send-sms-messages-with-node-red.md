@@ -99,7 +99,7 @@ The `inject` node can be used to manually trigger a flow by clicking the node’
 
 We'll use it to set off our flow since we hard-coded the parameters in the `sendsms` node.
 
-Note that the `TO`, `FROM`  and `TEXT` parameters have a `{}` sign beside them, this means that [Mustache templating](https://mustache.github.io/) is supported for those fields. You could take advantage of this to pass information dynamically rather than hard coding it as we did earlier. A simple example would be setting the `TEXT` parameter to: 
+Note that the `TO`, `FROM` and `TEXT` parameters have a `{}` sign beside them, this means that [Mustache templating](https://mustache.github.io/) is supported for those fields. You could take advantage of this to pass information dynamically rather than hard coding it as we did earlier. A simple example would be setting the `TEXT` parameter to: 
 
 ```
 The timestamp is {{msg.payload}}.
