@@ -2,10 +2,11 @@
 title: 10 Useful ChatGPT Prompts For Developers
 description: Explore a curated collection of ChatGPT prompts designed to assist
   software developers in their daily tasks
+thumbnail: /content/blog/10-useful-chatgpt-prompts-for-developers/chatgpt-prompts.png
 author: michael-crump
 published: true
-published_at: 2023-05-18T19:04:36.457Z
-updated_at: 2023-05-18T19:04:36.539Z
+published_at: 2023-06-13T19:04:36.457Z
+updated_at: 2023-06-13T09:28:34.684Z
 category: inspiration
 tags:
   - chatgpt
