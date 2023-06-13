@@ -293,14 +293,14 @@ In this post, you learned how to play audio into an existing call and about the 
 * [Using SSML in TTS](https://developer.vonage.com/voice/voice-api/guides/text-to-speech#ssml) (text-to-speech)
 * The REST API [client library](https://github.com/Vonage/vonage-node-sdk) for Node.js
 
-\#﻿# Related Content
+#﻿# Related Content
 
 [﻿How to stream audio into a phone call with node.js](https://developer.vonage.com/en/blog/how-to-play-an-audio-stream-into-a-call-with-python-dr)
 
-\#﻿# Further Reading
+#﻿# Further Reading
 
 [﻿How to stream audio into a phone call with node.js](https://developer.vonage.com/en/voice/voice-api/code-snippets/controlling-media/play-an-audio-stream-into-a-call)
 
-\#﻿# Where Next
+#﻿# Where Next
 
 [﻿How to stream audio into a phone call with Node.js](https://developer.vonage.com/en/blog/stream-audio-node-red-dr)
