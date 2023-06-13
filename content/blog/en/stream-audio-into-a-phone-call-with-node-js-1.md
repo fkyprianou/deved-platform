@@ -29,8 +29,6 @@ You can provision a number in the Developer Dashboard, but we'll talk you throug
 
 Finally, you'll want the [source code, which is available on GitHub](https://github.com/Vonage-Community/blog-voice-node-stream_audio_into_a_phone_call_with_node_js). [Clone the repository](https://help.github.com/articles/cloning-a-repository/) and `cd` into the application's root directory.
 
-W﻿e also have this [a video of this tutorial](https://www.youtube.com/watch?v=Rtzk_hzmzME) if you'd like to follow along on Youtube.
-
 ## Installing the Vonage CLI
 
 Install the Vonage CLI globally using the following command:
