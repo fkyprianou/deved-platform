@@ -242,7 +242,7 @@ All being well, you'll get a transcription array back, which will contain the ke
 
 ### G﻿et Involved
 
-We always welcome community involvement. Please feel free to join us on [GitHub](https://github.com/Vonage/) and the [Vonage Community Slack](https://developer.nexmo.com/community/slack). You can also send us a message on [Twitter](https://twitter.com/VonageDev).
+We always welcome community involvement. Please feel free to join us on [GitHub](https://github.com/Vonage/) and the [Vonage Community Slack](https://developer.vonage.com/community/slack). You can also send us a message on [Twitter](https://twitter.com/VonageDev).
 
 ### And, Stay Tuned
 
