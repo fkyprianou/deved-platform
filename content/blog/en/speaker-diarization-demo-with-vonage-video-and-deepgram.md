@@ -3,10 +3,11 @@ title: Speaker Diarization Demo With Vonage Video and Deepgram
 description: This blog post explains what speaker diarization is and how to
   implement diarization in WebRTC video applications with Vonage Video API and
   Deepgram.
+thumbnail: /content/blog/speaker-diarization-demo-with-vonage-video-and-deepgram/deepgram_multi-speaker-rooms.png
 author: mark-berkeland
 published: true
-published_at: 2023-06-14T12:20:31.522Z
-updated_at: 2023-06-14T12:20:31.556Z
+published_at: 2023-06-15T12:20:31.522Z
+updated_at: 2023-06-15T12:20:31.556Z
 category: tutorial
 tags:
   - video-api
