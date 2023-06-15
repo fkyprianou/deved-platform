@@ -40,6 +40,6 @@ W﻿e will then be serving cold drinks from the booth while we wait for the famo
 
 **Let The Countdown Begin**
 
-E﻿xcited? We are too. **To stay up to date with all the event news make sure you're following us on Twitter [@VonageDev](https://twitter.com/VonageDev)** and join the Events channel of our [Community Slack](https://developer.vonage.com/en/community/slack), and we look forward to seeing you there!
+E﻿xcited? We are too. To stay up to date with all the event news make sure you're following us on Twitter [@VonageDev](https://twitter.com/VonageDev) and join the Events channel of our [Community Slack](https://developer.vonage.com/en/community/slack), and we look forward to seeing you there!
 
 *D﻿iscounted tickets? Whatsapp bot?*
