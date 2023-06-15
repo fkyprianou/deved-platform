@@ -16,4 +16,12 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-t﻿bc
+F﻿or the second year in a row we are so excited to return to Berlin for the [WeAreDevelopers World Congress](https://www.wearedevelopers.com/world-congress) in July. The team loved the vibrancy and buzz of the event last year, so with over 10,000 of you planning to attend we simply had to come back - and this time we're bringing content. Read on to find out how you can get involved with everything we have going on.
+
+**I﻿t's a Disco - And You're Invited**
+
+What better way to celebrate one of our favourite developer events than throwing a two day party?! This year the Vonage booth is bringing the disco to Berlin, so find us in Hall A at Stand #50 to join in the fun - think disco ball selfies, must have party accessories and general good vibes. Here you can meet the team, find out all about our suite of Communication APIs and even watch them in action at our demo station.
+
+O﻿f course we have the swag too - we're giving away disco branded shirts and much more, as well as offering you the chance to win an electric scooter to take home after the event! Drop by to find out how to enter. 
+
+**V﻿onage Takes to the Stage**
