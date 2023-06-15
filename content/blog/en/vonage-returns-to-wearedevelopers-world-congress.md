@@ -25,3 +25,9 @@ What better way to celebrate one of our favourite developer events than throwing
 O﻿f course we have the swag too - we're giving away disco branded shirts and much more, as well as offering you the chance to win an electric scooter to take home after the event! Drop by to find out how to enter. 
 
 **V﻿onage Takes to the Stage**
+
+B﻿rand new for 2023, this year we will be delivering fresh content from the Micro Stage opposite our booth in Hall A, with a Vonage takeover starting at 16:30 local time on Thursday 27th July (Day 1). 
+
+Making his WeAreDevelopers debut we have [J﻿im Seconde](https://www.linkedin.com/in/secondej/?originalSubdomain=uk), Senior PHP Developer Advocate at Vonage. O﻿ne part content, one part comedy - this is one session you won't want to miss. It will also give you the full low down on our Communications APIs so you can get cracking with your projects. 
+
+F﻿ollowing Jim we welcome [Max Mednikov](https://www.linkedin.com/in/maxmednikov/?originalSubdomain=uk)
