@@ -34,5 +34,7 @@ Following Jim we welcome [Max Mednikov](https://www.linkedin.com/in/maxmednikov/
 
 **T﻿est Your Knowledge and Win Big**
 
-<gameshow content to follow>
+gameshow content to follow
+
+T
 
