@@ -34,7 +34,12 @@ Following Jim we welcome [Max Mednikov](https://www.linkedin.com/in/maxmednikov/
 
 **T﻿est Your Knowledge and Win Big**
 
-gameshow content to follow
+*gameshow content to follow*
 
-T
+W﻿e will then be serving cold drinks from the booth while we wait for the famous WeAreDevs party to start.
 
+**Let The Countdown Begin**
+
+E﻿xcited? We are too. **To stay up to date with all the event news make sure you're following us on Twitter [@VonageDev](https://twitter.com/VonageDev)** and join the Events channel of our [Community Slack](https://developer.vonage.com/en/community/slack), and we look forward to seeing you there!
+
+*D﻿iscounted tickets? Whatsapp bot?*
