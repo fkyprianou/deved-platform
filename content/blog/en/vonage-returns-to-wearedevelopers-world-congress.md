@@ -42,4 +42,6 @@ W﻿e will then be serving cold drinks from the booth while we wait for the famo
 
 E﻿xcited? We are too. To stay up to date with all the event news make sure you're following us on Twitter [@VonageDev](https://twitter.com/VonageDev) and join the Events channel of our [Community Slack](https://developer.vonage.com/en/community/slack), and we look forward to seeing you there!
 
-*D﻿iscounted tickets? Whatsapp bot?*
+**D﻿on't have your ticket yet? Get 10% off with our exclusive partner discount! Just [click here](https://ti.to/wearedevelopers/world-congress-2023/discount/WWC23-FRIENDS10) and use code WWC23-FRIENDS10.** 
+
+*Whatsapp bot? Landing page?*
