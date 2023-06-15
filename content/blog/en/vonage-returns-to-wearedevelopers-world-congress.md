@@ -30,4 +30,4 @@ B﻿rand new for 2023, this year we will be delivering fresh content from the Mi
 
 Making his WeAreDevelopers debut we have [J﻿im Seconde](https://www.linkedin.com/in/secondej/?originalSubdomain=uk), Senior PHP Developer Advocate at Vonage. O﻿ne part content, one part comedy - this is one session you won't want to miss. It will also give you the full low down on our Communications APIs so you can get cracking with your projects. 
 
-F﻿ollowing Jim we welcome [Max Mednikov](https://www.linkedin.com/in/maxmednikov/?originalSubdomain=uk)
+Following Jim we welcome Max Mednikov, Vonage's Software Engineering Director with his session that takes you through how you can develop, test and run a communications application in a serverless cloud
