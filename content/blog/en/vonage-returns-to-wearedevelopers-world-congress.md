@@ -32,3 +32,7 @@ Making his WeAreDevelopers debut we have [J﻿im Seconde](https://www.linkedin.c
 
 Following Jim we welcome [Max Mednikov](https://www.linkedin.com/in/maxmednikov/?originalSubdomain=uk), Vonage's Software Engineering Director with his session that takes you through how you can develop, test and run a communications application in a serverless cloud. 
 
+**T﻿est Your Knowledge and Win Big**
+
+<gameshow content to follow>
+
