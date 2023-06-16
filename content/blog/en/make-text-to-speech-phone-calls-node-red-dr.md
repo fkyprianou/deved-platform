@@ -29,7 +29,6 @@ Before getting started, you’ll need a few things:
 * [Node.js](https://nodejs.org/en/) and [Node-RED](https://nodered.org/docs/getting-started/installation) installed on your machine
 * Optional: [ngrok](https://ngrok.com/download) - get up to speed with [Aaron's blog post](https://learn.vonage.com/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr/)
 
-
 <sign-up number></sign-up>
 
 ### Getting Your Credentials
@@ -68,21 +67,20 @@ Since the end goal is to make an outbound call, use the **`createcall`** node, w
 Once you have it in your workspace, double-click on the **`createcall`** node to open up the node editor.
 Next to the `Nexmo Credentials`, select "Add new nexmovoiceapp..." from the drop-down menu and click the edit button. Fill in the details below and click `Create New Application`.
 
-| KEY          | DESCRIPTION                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Name`       | Choose a name for your Voice Application, for example `TTS call Node-RED`.                                                                                                                                                                                                                                                                                                                                          |
-| `API Key`    | Your Nexmo API key, shown in your [account overview](https://dashboard.nexmo.com/getting-started-guide).                                                                                                                                                                                                                                                                                                            |
-| `API Secret` | Your Nexmo API secret, shown in your [account overview](https://dashboard.nexmo.com/getting-started-guide).                                                                                                                                                                                                                                                                                                         |
-| `Answer URL` | The URL that Nexmo makes a request to when handling [inbound calls](https://www.nexmo.com/blog/2019/05/09/receive-phone-calls-node-red-dr/). Won't need one for this tutorial, so use http://example.com for now.                                                                                                                                                                                                   |
-| `Event URL`  | Nexmo will send call events (e.g. ringing, answered) to this URL. If you’d like to receive events about the progress of your call, make sure your server is exposed to the internet, then use `YOUR_URL/event` for this field.\
+| KEY          | DESCRIPTION                                                                                                                                                                                                                     |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Name`       | Choose a name for your Voice Application, for example `TTS call Node-RED`.                                                                                                                                                      |
+| `API Key`    | Your Nexmo API key, shown in your [account overview](https://dashboard.nexmo.com/getting-started-guide).                                                                                                                        |
+| `API Secret` | Your Nexmo API secret, shown in your [account overview](https://dashboard.nexmo.com/getting-started-guide).                                                                                                                     |
+| `Answer URL` | The URL that Nexmo makes a request to when handling [inbound calls](https://www.nexmo.com/blog/2019/05/09/receive-phone-calls-node-red-dr/). Won't need one for this tutorial, so use http://example.com for now.               |
+| `Event URL`  | Nexmo will send call events (e.g. ringing, answered) to this URL. If you’d like to receive events about the progress of your call, make sure your server is exposed to the internet, then use `YOUR_URL/event` for this field.\ |
+
 \
 Otherwise, feel free to use http://example.com - this will respond with 200 OK.\
 \
 You could also override this eventURL for a specific `createCall` node in its node properties. |
 
 Node-RED will then create a new Nexmo Application on your account and fill in the App ID and Private Key fields for you to save. Now you can find this application in your Nexmo Dashboard under *Voice* > *[Your Applications](https://dashboard.nexmo.com/voice/your-applications)*.
-
-
 
 ![Showing how to create a voice application](/content/blog/how-to-make-text-to-speech-phone-calls-with-node-red/create-voice-app-example.png)
 
@@ -147,11 +145,7 @@ $ ./ngrok http 1880
 
 Navigate to the URL displayed, to find your Node-RED Editor.
 
-![Ngrok Node-Red TTS Outbound call](/content/blog/how-to-make-text-to-speech-phone-calls-with-node-red/ngrok-nodered-tts-outbound-call.png)
-
 Finally, go to the **`createcall`** node properties, select `URL` from the `Answer` drop-down, and fill in the field with `YOUR_URL/answer`.
-
-
 
 ![Ngrok update answer call url](/content/blog/how-to-make-text-to-speech-phone-calls-with-node-red/ngrok-update-answer-url-createcall.png)
 
