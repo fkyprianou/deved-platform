@@ -26,7 +26,13 @@ Increasingly, conferencing systems are turning to artificial intelligence capabi
 
 Knowing who said what to whom is important to make any sense of a conversation and in providing value from meeting notes and transcripts. Speaker identification goes beyond conversation comprehension, it allows for added value like meeting notes and transcripts. Separating out who is talking from a single audio source is a task humans have specially adapted for, but is a complex challenge for machines. This process is called **speaker diarization**. 
 
-In this blog, we will demonstrate how we built a video conferencing system for multi-speaker room systems with diarization. To implement this solution, we needed to make sure:
+In this blog, we will demonstrate how we built a video conferencing system for multi-speaker room systems with diarization. 
+
+B﻿elow you can see a video of this demo in action!
+
+<youtube id="aXWJZSAlRKc"></youtube>
+
+To implement this solution, we needed to make sure:
 
 1. **The video conferencing system had secure access to raw audio on the server** to ensure the fastest processing times, as well as capture from SIP devices for any dial-in participants. 
 2. **The automatic speech recognition (ASR) service could separate individual speakers** in an audio stream so that each speaker's utterances are identified uniquely.
@@ -160,7 +166,5 @@ And that’s it!  We can send these messages back to the GUI, for it to display 
 Now we have a room system that takes meeting notes and handles multiple speakers, even if they are in the same room! 
 
 ## Explore More
-
-[Click here](https://vids.vonage.com/Vonage_Deepgram.mp4) to see a video of this demo in action!
 
 You can also [request a personal demo](https://www.vonage.com/communications-apis/contact-api/) from one of our experts. If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack) or send us a Tweet on [Twitter.](https://twitter.com/vonagedev)
