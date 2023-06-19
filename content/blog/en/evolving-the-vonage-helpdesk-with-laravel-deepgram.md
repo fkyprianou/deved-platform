@@ -55,13 +55,13 @@ Yes, that paragraph was written by ChatGPT. But what you might not know is the c
 
 Firstly, you'll need an OpenAI account. [Follow this link to create an account](https://auth0.openai.com/u/signup), and when you're done you'll need to head to 'Manage Account' under your top right hand profile menu. Opening this up will show you the following screen - head to API Keys and set up a new key. The end result should look something like this:
 
-![Screenshot of the OpenAI dashboard showing API Key creation](/content/blog/evolving-the-vonage-laravel-helpdesk-with-openai/screenshot-2023-06-02-at-10.22.45.png)
+![Screenshot of the OpenAI dashboard showing API Key creation](/content/blog/evolving-the-vonage-laravel-helpdesk-with-openai/openai_dashboard_showing_api_key_creation.png)
 
 When you create the key, you'll have one chance to copy it - make sure you do that.
 
 We need to add that secret to our `env` file. You can see in the `example.env` file in the repo that we have a placeholder for it:
 
-![Screenshot of Helpdesk's environment variables example file](/content/blog/evolving-the-vonage-laravel-helpdesk-with-openai/screenshot-2023-06-02-at-10.43.28.png)
+![Screenshot of Helpdesk's environment variables example file](/content/blog/evolving-the-vonage-laravel-helpdesk-with-openai/helpdesk_environment_variables_example_file.png)
 
 I've included the others in the screenshot because it's important to note that this feature won't work without all of these environment variables set:
 
