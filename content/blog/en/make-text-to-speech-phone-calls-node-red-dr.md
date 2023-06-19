@@ -147,10 +147,7 @@ $ ./ngrok http 1880
 
 Navigate to the URL displayed, to find your Node-RED Editor.
 
-![Ngrok Node-Red TTS Outbound call](/content/blog/how-to-make-text-to-speech-phone-calls-with-node-red/ngrok-nodered-tts-outbound-call.png)
-
-Finally, go to the **`createcall`** node properties, select `URL` from the `Answer` drop-down, and fill in the field with `YOUR_URL/answer`.
-
+Finally, go to the **`createcall`** node properties, select `URL` from the `Answer` drop-down, and fill in the field with `YOUR_URL/answer`
 
 
 ![Ngrok update answer call url](/content/blog/how-to-make-text-to-speech-phone-calls-with-node-red/ngrok-update-answer-url-createcall.png)
