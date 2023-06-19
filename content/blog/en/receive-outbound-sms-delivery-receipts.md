@@ -135,8 +135,6 @@ The above URL is your full webhook URL.
 
 Visit the [settings](https://dashboard.nexmo.com/settings) page on your dashboard and go to the **SMS settings** section to select Messages API. You can maintain the other defaults such as the version of the Messages API at `1.0`.
 
-
-
 ![Enable Messages API In Dashboard](/content/blog/receive-outbound-sms-delivery-receipts/enable-messages-api.png "messages-api-enabled-in-vonage-dashboard.png")
 
 Next, go to the [applications](https://dashboard.nexmo.com/applications) page to create a Vonage application.
@@ -164,7 +162,11 @@ Now, you can start the Flask application in another terminal window to keep the 
 python receipt.py
 ```
 
-To test our code, we’ll need to send an SMS from our Vonage number through the Messages API. So first we’ll create a new file in our project called `send-sms.sh`
+To test our code, we’ll need to send an SMS from our Vonage number through the Messages API. You can follow [this tutorial](https://developer.vonage.com/en/blog/authors/jekayinoluwa-olabemiwo) to add this functionality to your Flask app.
+
+
+
+So first we’ll create a new file in our project called `send-sms.sh`
 
 In that file we’ll add the following code:
 
@@ -229,8 +231,6 @@ Notice that the status is `submitted`. In a few seconds you should get a second 
  'timestamp': '2023-06-19T10:23:23Z',
  'to': '972532208911'}
 ```
-
-
 
 ## Conclusion
 
