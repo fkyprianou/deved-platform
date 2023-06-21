@@ -3,11 +3,11 @@ title: Stream Audio into a Phone Call with Node.js
 description: Learn how to stream audio into phone calls using Node.js. Vonage's
   comprehensive guide provides step-by-step instructions for seamless
   integration.
-thumbnail: /content/blog/stream-audio-into-a-phone-call-with-node-js/Stream-Audio-into-a-Phone-Call-with-Node.js.png
-author: marklewin
+thumbnail: /content/blog/stream-audio-into-a-phone-call-with-node-js/stream-audio-node.png
+author: amanda-cavallaro
 published: true
-published_at: 2023-05-25T08:19:48.880Z
-updated_at: 2023-05-04T08:19:48.891Z
+published_at: 2023-06-22T08:19:48.880Z
+updated_at: 2023-06-22T08:19:48.891Z
 category: tutorial
 tags:
   - voice-api
