@@ -32,12 +32,12 @@ These coupon codes will only be valid for a specific period of time, so be sure 
 
 In order to redeem your coupon code, you will need to create a [Vonage API account](https://dashboard.nexmo.com/sign-up). Once you have created your account and confirmed your email address, take a look at your [Dashboard](https://dashboard.nexmo.com/). 
 
-![Screenshot of Vonage API Dashboard view.](/content/blog/how-to-redeem-a-vonage-coupon-code/screenshot-2023-06-21-at-14.59.58.png "Screenshot of Vonage API Dashboard view.")
+![Screenshot of Vonage API Dashboard view.](/content/blog/how-to-redeem-a-vonage-coupon-code/vonage_api_dashboard.png "Screenshot of Vonage API Dashboard view.")
 
 On the left-hand side of your dashboard, you will see what your balance is. Typically, if you created a new account, you will see a balance of €2.
 (**Note**: Your balance will be shown in Euro (€) regardless of your location). 
 
-![Screenshot of extended profile dropdown menu with Coupons highlighted.](/content/blog/how-to-redeem-a-vonage-coupon-code/screenshot-2023-06-21-at-15.02.40.png "Screenshot of extended profile dropdown menu with Coupons highlighted.")
+![Screenshot of extended profile dropdown menu with Coupons highlighted.](/content/blog/how-to-redeem-a-vonage-coupon-code/extended_profile_dropdown_menu_with_coupons_highlighted.png "Screenshot of extended profile dropdown menu with Coupons highlighted.")
 
 Next, click on Billing on the left hand side, and then Coupons. 
 
@@ -45,7 +45,7 @@ E﻿nter your coupon code where prompted and click submit.
 
 **Note:** If this is your first time redeeming a coupon, you will see a prompt to enter a service address first. See below image. This is done for tax purposes and can not be skipped. If you don't have a business address, please enter your home address.
 
-![Enter service address prompt](/content/blog/how-to-redeem-a-vonage-coupon-code/screenshot-2023-06-21-at-15.05.32.png "Service address prompt")
+![Enter service address prompt](/content/blog/how-to-redeem-a-vonage-coupon-code/service_address_prompt.png "Service address prompt")
 
 If your coupon was successfully redeemed, you will see two things:
 
@@ -56,7 +56,7 @@ If your coupon was successfully redeemed, you will see two things:
 
 ### What if Something Went Wrong?
 
-![Coupon failed screenshot with arrow pointing at the error message.](/content/blog/how-to-redeem-a-vonage-coupon-code/screenshot-2023-06-21-at-15.10.57.png "Coupon failed screenshot with arrow pointing at the error message.")
+![Coupon failed screenshot with arrow pointing at the error message.](/content/blog/how-to-redeem-a-vonage-coupon-code/coupon_failed_error_message.png "Coupon failed screenshot with arrow pointing at the error message.")
 
 If your coupon redemption has failed, you will see a red border around the coupon code box with an error message stating why the coupon redemption has failed. In this case, double-check that you have entered the coupon code correctly and try again. 
 
