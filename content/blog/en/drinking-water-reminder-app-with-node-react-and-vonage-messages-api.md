@@ -96,7 +96,7 @@ Click on the **Generate new application** button:
 
 You will be able to view this application page:
 
-![Drink water POC application page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image8.png "Drink water POC application page")
+![Drink water POC application page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/poc.png "Drink water POC application page")
 
 Save the **Application ID** and the generated private key. You can also [purchase a number and link your Vonage number here](https://developer.vonage.com/en/numbers/code-snippets/buy).
 
