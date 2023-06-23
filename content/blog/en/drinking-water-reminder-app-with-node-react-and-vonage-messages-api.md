@@ -80,11 +80,11 @@ Your account comes with a 2€ credit, which you can use for a trial, which is p
 Copy your **API key** and **API secret** for later use.
 Time to create a new application. Go to [applications](https://dashboard.nexmo.com/applications) or the **Applications** tab in the left sidebar:
 
-![Vonage applications page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image4.png "Vonage applications page")
+![Vonage applications page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/vonageapplicationspage.png "Vonage applications page")
 
 Click on Create a new application" to create a new application:
 
-![Create a new Vonage application page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image11.png "Create a new Vonage application page")
+![Create a new Vonage application page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/createanapplication.png "Create a new Vonage application page")
 
 Select Messages in the capabilities. Add the inbound and status URL as `https://www.google.com/`. At this step, you can generate your private key. It will be downloaded and saved locally.
 
