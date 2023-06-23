@@ -75,7 +75,7 @@ Next, you will be able to view the below screen, where you choose if you are a d
 
 Your account comes with a 2€ credit, which you can use for a trial, which is perfect for this use case. Go to the dashboard to use the Messages API:
 
-![This is the Vonage API Dashboard page. It has information on the account balance, analytics, delivery and quality, and logs. On the left sidebar, there are more tabs for API settings, numbers and applications. You can click any of these options to view them. The main page shows the API key, the API secret the Try our APIs section. This has information and resources on how to develop with the Vonage APIs. You can choose to send an SMS, make a voice call, send a Whatsapp message, and more!](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image7.png "Vonage API Dashboard page")
+![This is the Vonage API Dashboard page. It has information on the account balance, analytics, delivery and quality, and logs. On the left sidebar, there are more tabs for API settings, numbers and applications. You can click any of these options to view them. The main page shows the API key, the API secret the Try our APIs section. This has information and resources on how to develop with the Vonage APIs. You can choose to send an SMS, make a voice call, send a Whatsapp message, and more!](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/vonageapidashboardpage.png "Vonage API Dashboard page")
 
 Copy your **API key** and **API secret** for later use.
 Time to create a new application. Go to [applications](https://dashboard.nexmo.com/applications) or the **Applications** tab in the left sidebar:
