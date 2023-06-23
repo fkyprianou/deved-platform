@@ -15,7 +15,7 @@ tags:
   - python
   - messages-api
 comments: true
-spotlight: false
+spotlight: true
 redirect: ""
 canonical: ""
 outdated: false
