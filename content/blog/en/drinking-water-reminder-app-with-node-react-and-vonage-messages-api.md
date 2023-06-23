@@ -451,7 +451,7 @@ npm start
 
 Great, you got both the frontend and the backend running simultaneously! Open `http://localhost:3000` in your web browser to see the **Drinking Water Reminder app**.
 
-![Drinking water Reminder Service home page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image5.png "Drinking water Reminder Service home page")
+![Drinking water Reminder Service home page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/webpageexample.png "Drinking water Reminder Service home page")
 
 Perfect! You created a drinking water reminder app with Node, Vonage, and React! Now you can test it with your desired input.
 
