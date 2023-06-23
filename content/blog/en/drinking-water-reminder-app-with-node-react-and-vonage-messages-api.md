@@ -88,7 +88,7 @@ Click on Create a new application" to create a new application:
 
 Select Messages in the capabilities. Add the inbound and status URL as `https://www.google.com/`. At this step, you can generate your private key. It will be downloaded and saved locally.
 
-![Choose application specifications page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image1.png "Choose application specifications page")
+![Choose application specifications page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/capabilities.png "Choose application specifications page")
 
 Click on the **Generate new application** button:
 
