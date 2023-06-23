@@ -65,7 +65,7 @@ Vonage is a global cloud communications platform that enables users to make and 
 
 Enter your details and verify your email ID:
 
-![This image displays the Vonage home page. It has several tabs including Products, Solutions, Developers and Resources. There is some information on Vonage, mentioning how it accelerates connections that matter to your business. You can power your customer experiences across the journey. You can connect employees at any time, from anywhere, on any device. There are two buttons, the first being “How Vonage Connects”. The other button is “Talk to an expert”.](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/1.png "Vonage homepage")
+![This image displays the Vonage home page. It has several tabs including Products, Solutions, Developers and Resources. There is some information on Vonage, mentioning how it accelerates connections that matter to your business. You can power your customer experiences across the journey. You can connect employees at any time, from anywhere, on any device. There are two buttons, the first being “How Vonage Connects”. The other button is “Talk to an expert”.](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/vonagehomepage.png "Vonage homepage")
 
 ![The above image displays the Vonage Verify your email page. On the top, there are the steps displayed along with the step you are on being highlighted. It mentions that an email has been sent from Vonage to the email you entered. You will have to click on the link to verify you account to continue. Below there is a message saying if you havent received the email from Vonage you can click on a hyperlinked text to resend that email. There is also a button called “Go back and edit email” on the lower left corner to edit the email address entered on the previous page.](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/2.png "Sign up")
 
@@ -413,14 +413,12 @@ The component uses the `useState` hook to manage the state of the `phoneNumber` 
 
 If the request is successful, the function returns the JSON response. Otherwise, it displays an alert window with the response status code.
 
-
 The component renders the form with the `Form` and `Button` components from React Bootstrap. The form includes two input fields for phone number and frequency and a submit button. 
 
 When the user enters data into the input fields and clicks the submit button, the `handleSubmit` function is called to submit the form data to the backend API endpoint.
 The component also displays an image and a title for the form and applies the styles defined earlier to the various elements of the form.
 
 Add any image to the directory you want to display on the UI and replace the path of the image with the correct path.
-
 
 Update the `frontend/src/App.js` file to include the `DrinkingWaterForm` component:
 
