@@ -4,6 +4,7 @@ description: "We will build a web application with Node, React, and the Vonage
   Messages API to allow users to subscribe to the service and choose a certain
   frequency for reminders. All subscribers will receive reminders to drink water
   at regular intervals based on their chosen frequency. "
+thumbnail: /content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/drinking-water-reminder.png
 author: minakshmi-bardhan
 published: true
 published_at: 2023-06-27T14:05:47.155Z
