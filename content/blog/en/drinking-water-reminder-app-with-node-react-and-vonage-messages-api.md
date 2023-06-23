@@ -92,7 +92,7 @@ Select Messages in the capabilities. Add the inbound and status URL as `https://
 
 Click on the **Generate new application** button:
 
-![Choose application specifications page](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image10.png "Choose application specifications page")
+![Choose application specifications page scrolled down](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/generateapplication.png "Choose application specifications page scrolled down")
 
 You will be able to view this application page:
 
