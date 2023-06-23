@@ -259,7 +259,7 @@ The purpose of CORS is to prevent a malicious web page from making unauthorized 
 
 Run this file with `node app.js`. You will be able to see the Server started on port 5000" once the server is running:
 
-![This image shows the console logs for the node backend. The server was started with the command node app.js. The image shows the server was started on port 5000. The text “Send a message to <mobile number> with frequency <your selected frequency>. Next, as each message is sent at an interval of the selected frequency, we log the corresponding message UUID on the terminal.](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/image6.png "Console log")
+![This image shows the console logs for the node backend. The server was started with the command node app.js. The image shows the server was started on port 5000. The text “Send a message to <mobile number> with frequency <your selected frequency>. Next, as each message is sent at an interval of the selected frequency, we log the corresponding message UUID on the terminal.](/content/blog/drinking-water-reminder-app-with-node-react-and-vonage-messages-api/consolelog.png "Console log")
 
 The server starts listening on port 5000, and a message is printed to the console indicating that the server has started. When you pass some input in the application's frontend, the logs will be printed on the console with the message UUIDs.
 
