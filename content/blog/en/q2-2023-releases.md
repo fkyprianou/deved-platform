@@ -30,7 +30,7 @@ Our Video API team has rolled out a new feature called Secure Callbacks, current
 
 ## [Vonage Video API's Secure Callbacks Now in Public Beta](https://developer.vonage.com/en/blog/vonage-video-api-secure-callbacks-public-beta-announcement)
 
-In an exciting update by our Android dev advocate Zachary, the React Native SDK for the Vonage Video API transitions from community to official Vonage support! This means improved, consistent assistance for developers and boosted confidence when integrating the SDK, assured of routine updates and long-term maintenance. Need help? Our Vonage support team is ready to assist. For guides and samples, check our official documentation, the React Native package on npm, and the SDK source code on the SDKs GitHub repository.
+The React Native SDK for the Vonage Video API transitions from community to official Vonage support! This means improved, consistent assistance for developers and boosted confidence when integrating the SDK, assured of routine updates and long-term maintenance. Need help? Our Vonage support team is ready to assist. For guides and samples, check our official documentation, the React Native package on npm, and the SDK source code on the SDKs GitHub repository.
 
 ## [Vonage Video API - React Native SDK Gains Official Support](https://developer.vonage.com/en/blog/vonage-video-api-react-native-sdk-gains-official-support)
 
