@@ -21,7 +21,7 @@ And just like that, we're halfway into 2023! Our Vonage DevRel team wrapped up a
 
 ## [Live Captions API Is in Beta!](https://developer.vonage.com/en/blog/live-captions-api-is-in-beta)
 
-Our very own JS developer advocate, Dwane, announces the Beta release of Vonage's Live Captions API, now ready to run in your applications. Dwane illustrates the essential benefits of live captions: their crucial role in fostering accessibility, counteracting the nuisance of noisy environments, forming a foundation for translation, and the ability to recapture any lost dialogue in a conversation. Notably, he cites a YouGov poll that unveils that a good 28% of people appreciate having subtitles on.
+[Dwane](https://developer.vonage.com/en/blog/authors/dwanehemmings) announces the Beta release of Vonage's Live Captions API, now ready to run in your applications. Live captioning provide many benefits. They improve accessibility for users by providing dialogue visually when environments are noisy. They allow developers the ability to provide real-time multilingual translation.
 
 ## [Vonage Video API - Secure Callbacks Public Beta Announcement](https://developer.vonage.com/en/blog/vonage-video-api-secure-callbacks-public-beta-announcement)
 
