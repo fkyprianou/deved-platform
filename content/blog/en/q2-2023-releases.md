@@ -48,7 +48,12 @@ Our developer advocate Abdul covers key concepts, including Session, Invite, Cal
 
 Prepare to level-up your outreach campaigns with Proactive Connect! Seamlessly integrating with multiple Vonage Communications APIs - including SMS, Messages, Voice, and AI Studio - Proactive Connect lets you design large-scale, tailor-made campaigns across diverse channels. This API not only enables message scheduling and personalization, but also allows for effective customer response management within your Vonage Dashboard.
 
+
+## [Cloud Runtime Marketplace in Beta](https://developer.vonage.com/en/blog/announcing-cloud-runtime-marketplace)
+We're thrilled to introduce the Beta availability of the Vonage [Cloud Runtime Marketplace](https://developer.vonage.com/cloud-runtime), our innovative cloud-native, serverless development platform! Vonage Cloud Runtime, the very same tool that our Solutions and Services teams use to deploy API interactions, is now at your fingertips. We have easy-to-use guides and tools that take your application build, deployment, and production from zero to hero. And here's the kicker - we host this serverless platform, so you don't have to worry about maintaining infrastructure to use Vonage APIs! During this Beta period, there's no fee to access the Vonage Cloud Runtime, so you can dive right in and start crafting extraordinary customer engagement applications today!
+
 ## [Vonage Verify V2 Is Now GA for 2FA Integrations](https://developer.vonage.com/en/blog/vonage-verify-v2-is-now-ga-for-2fa-integrations)
+
 
 In a significant Q2 milestone, we're delighted to share the General Availability of Version 2 of our Verify API for Two-Factor Authentication (2FA). This revised 2FA solution caters to developers, employing Webhooks for asynchronous integrations, which offers more choices and flexibility. With the synchronous flow of V1 behind us, we can now use webhooks with V2, which gives a unique GUID upon initiating a request. We've also bolstered fraud protection with the integration of the Verify Anti-Fraud System to ward off malicious activities.
 
