@@ -1,5 +1,5 @@
 ---
-title: Announcing Cloud Runtime Marketplace
+title: Cloud Runtime Marketplace Open Beta Now Available
 description: The Cloud Runtime Marketplace provides you with guides and tools to
   facilitate application build, deployment, and production.
 author: michael-crump
