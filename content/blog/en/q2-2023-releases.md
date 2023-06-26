@@ -34,7 +34,6 @@ The React Native SDK for the Vonage Video API transitions from community to offi
 
 ## [Vonage Video API - React Native SDK Gains Official Support](https://developer.vonage.com/en/blog/vonage-video-api-react-native-sdk-gains-official-support)
 
-Exciting times ahead as Zachary reveals that Vonage Video API's React Native SDK has graduated from community support to being officially backed by Vonage! This shift is a game-changer, offering developers dependable, top-tier assistance and increased reliability when implementing the SDK, all thanks to committed updates, maintenance plans, and our team's support. To get started or for sample references, check out our official documentation, explore the React Native package on npm, or sift through the SDK source code available on the GitHub repository.
   
 ## [Vonage Video API MacOS SDK Hits General Availability](https://developer.vonage.com/en/blog/vonage-video-api-macos-sdk-goes-ga)
 
