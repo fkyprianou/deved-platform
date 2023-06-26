@@ -44,6 +44,10 @@ We're revving things up in Q2 with the grand unveiling of the newly renamed Vona
 
 Our developer advocate Abdul covers key concepts, including Session, Invite, Call, and Leg, to familiarize you with its workings. He also guides you through creating a session, making and receiving a call, and push notifications.
 
+## [Announcing Vonage Proactive Connect GA](LINK)
+
+Prepare to level-up your outreach campaigns with Proactive Connect! Seamlessly integrating with multiple Vonage Communications APIs - including SMS, Messages, Voice, and AI Studio - Proactive Connect lets you design large-scale, tailor-made campaigns across diverse channels. This API not only enables message scheduling and personalization, but also allows for effective customer response management within your Vonage Dashboard.
+
 ## [Vonage Verify V2 Is Now GA for 2FA Integrations](https://developer.vonage.com/en/blog/vonage-verify-v2-is-now-ga-for-2fa-integrations)
 
 In a significant Q2 milestone, we're delighted to share the General Availability of Version 2 of our Verify API for Two-Factor Authentication (2FA). This revised 2FA solution caters to developers, employing Webhooks for asynchronous integrations, which offers more choices and flexibility. With the synchronous flow of V1 behind us, we can now use webhooks with V2, which gives a unique GUID upon initiating a request. We've also bolstered fraud protection with the integration of the Verify Anti-Fraud System to ward off malicious activities.
