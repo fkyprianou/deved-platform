@@ -35,7 +35,7 @@ The React Native SDK for the Vonage Video API transitions from community to offi
 ## [Vonage Video API - React Native SDK Gains Official Support](https://developer.vonage.com/en/blog/vonage-video-api-react-native-sdk-gains-official-support)
 
   
-## [Vonage Video API MacOS SDK Hits General Availability](https://developer.vonage.com/en/blog/vonage-video-api-macos-sdk-goes-ga)
+## [Vonage Video API macOS SDK Hits General Availability](https://developer.vonage.com/en/blog/vonage-video-api-macos-sdk-goes-ga)
 
 After an awesome Beta ride, the Vonage Video API MacOS SDK is now officially making its mark with its first-ever stable release. Now, you can flexibly use the MacOS SDK in production, and expect the same maintenance and frequent updates as our other SDKs (JavaScript, Android, iOS, Windows, and Linux). Whether you're just starting out or eager to dive straight into the code, we've got you covered. Our official documentation and MacOS SDK sample repo are filled with all the details and sample apps to kick-start your journey with the SDK.
 
