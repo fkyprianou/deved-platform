@@ -27,7 +27,6 @@ And just like that, we're halfway into 2023! Our Vonage DevRel team wrapped up a
 
 Our Video API team has rolled out a new feature called Secure Callbacks, currently in public beta and anticipated for a full launch. Michael explains how the feature validates webhook callback requests from Vonage and ensures their payload hasn't been tampered with. It's a big win for app security and also a plus for compliance-heavy industries.
 
-The Vonage Video API uses callbacks for Session Monitoring, Archiving/Recording, SIP, and Experience Composer. These callbacks are now signed by a user-configured signature, confirming they come from Vonage.
 
 ## [Vonage Video API's Secure Callbacks Now in Public Beta](https://developer.vonage.com/en/blog/secure-callbacks-beta)
 
