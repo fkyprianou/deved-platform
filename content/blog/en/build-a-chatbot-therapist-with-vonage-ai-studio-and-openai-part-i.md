@@ -35,7 +35,7 @@ Here's an example of a conversation with ELIZA:
 
 ![Conversation with ELIZA](/content/blog/build-a-chatbot-therapist-with-vonage-ai-studio-and-openai-part-i/eliza-convo.png "eliza-convo.png")
 
-*https://www.codecademy.com/article/history-of-chatbots*
+Source: *https://www.codecademy.com/article/history-of-chatbots*
 
 ### ALICE
 
