@@ -6,15 +6,15 @@ description: Learn how to ensure that your SMS messages are being delivered with
 thumbnail: /content/blog/receive-outbound-sms-delivery-receipts-with-python/sms-delivery-receipts_python.png
 author: jekayinoluwa-olabemiwo
 published: true
-published_at: 2023-06-19T10:36:55.460Z
-updated_at: 2023-06-19T10:36:55.479Z
+published_at: 2023-07-12T10:36:55.460Z
+updated_at: 2023-07-12T10:36:55.479Z
 category: tutorial
 tags:
   - messages-api
   - python
   - sms
 comments: true
-spotlight: false
+spotlight: true
 redirect: ""
 canonical: ""
 outdated: false
