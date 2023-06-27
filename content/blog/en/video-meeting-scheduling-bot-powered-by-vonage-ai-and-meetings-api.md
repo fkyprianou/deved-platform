@@ -1,5 +1,5 @@
 ---
-title: Video Meeting Scheduling Bot Powered by Vonage AI and Meetings API
+title: "Video + AI: Video Meeting Scheduling Bot With Vonage AI + Meetings API"
 description: Learn how to enhance your user experience around video meetings
   with Meetings API and AI Studio, two nocode/lowcode APIs from Vonage. Just a
   little javascript to make custom video calls and chat bot experience.
