@@ -105,7 +105,6 @@ const { type, expires_at, recording_options, ui_settings, display_name } =
     .catch((error) => {
       res.status(500).json({ error: "Failed to create meeting" });
     });
-
 ```
 
 The code extracts the required data from the request body. As said in the paragraph above, these parameters will be sent by the bot. After it, we need to authenticate the request. We do that by generating the JWT and passing the required parameters `(ApplicationId, privateKey)`
@@ -151,7 +150,9 @@ Now, the critical aspect at this stage is to select the appropriate entity type 
 
 Once we have collected all the necessary information from the user, we need to connect our WhatsApp bot with the Node.js server we created earlier. To achieve this, we utilize the webhook block provided by Vonage AI. This block allows us to make HTTP requests to external endpoints, enabling seamless integration between different systems. By configuring the webhook block to call the relevant endpoints of our Node.js API, we can pass the collected meeting details and trigger the creation of the meeting.
 
-// Is it possible to add a video of the bot? https://youtu.be/V3yu6MH7fLs
+Is it possible to add a video of the bot?
+
+<youtube id="V3yu6MH7fLs"></youtube>
 
 ## Conclusion
 
