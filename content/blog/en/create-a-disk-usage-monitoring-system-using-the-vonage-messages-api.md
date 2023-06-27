@@ -3,16 +3,17 @@ title: Create a Disk Usage Monitoring System Using the Vonage Messages API
 description: In this guide, we will be going over exactly how to build a custom
   disk usage monitoring system using the Python programming language and the
   Vonage Messages API
+thumbnail: /content/blog/create-a-disk-usage-monitoring-system-using-the-vonage-messages-api/disk-usage-monitoring-system.png
 author: adrian-francis
 published: true
-published_at: 2023-06-14T15:51:29.041Z
-updated_at: 2023-06-14T15:51:29.061Z
+published_at: 2023-07-18T15:51:29.041Z
+updated_at: 2023-07-18T15:51:29.061Z
 category: tutorial
 tags:
   - python
-  - ""
+  - messages-api
 comments: true
-spotlight: false
+spotlight: true
 redirect: ""
 canonical: ""
 outdated: false
