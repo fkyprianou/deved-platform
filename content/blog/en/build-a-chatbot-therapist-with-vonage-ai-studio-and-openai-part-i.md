@@ -32,7 +32,10 @@ ELIZA, created in 1966, was the brainchild of Joseph Weizenbaum. She was the fir
 As expected, ELIZA had her shortcomings. She didn't really understand the words she was processing; she simply reflected the user's input back as a question. Plus, her memory was short-lived and she lacked understanding of the broader world (like asking, "is your hamster still dead?" because she doesn't know that once something is dead, they stay dead).
 
 Here's an example of a conversation with ELIZA:
-[IMAGE]
+
+![Conversation with ELIZA](/content/blog/build-a-chatbot-therapist-with-vonage-ai-studio-and-openai-part-i/eliza-convo.png "eliza-convo.png")
+
+*https://www.codecademy.com/article/history-of-chatbots*
 
 ### ALICE
 
@@ -42,7 +45,7 @@ Fast forward to 2001, and along comes ALICE (Artificial Linguistic Internet Comp
 
 Then, there's Mitsuku, the creation of Steve Worswick. Her goal was to be a 24/7 virtual friend. Mitsuku won the AI Loebner Prize five times, showing off her ability to reason with specific objects. She's built on a supervised learning model, which means developers can fine-tune the rules to make her interactions feel more human. However, she still had her issues as seen in the conversation below.
 
-[image]
+![Conversation with Mitsuku](/content/blog/build-a-chatbot-therapist-with-vonage-ai-studio-and-openai-part-i/mitsuku-convo.png "mitsuku-convo.png")
 
 ### ChatGPT
 
@@ -62,16 +65,15 @@ Stay tuned for Part 2, where we'll dig into how we can use tools like Vonage AI 
 
 ## References and Resources
 
-- [Vonage AI Studio Documentation](https://studio.docs.ai.vonage.com/)
-- [OpenAI Documentation](https://platform.openai.com/docs/)
-- [Investing in a Diverse Mental Health Workforce Is Critical in This Moment](https://healthcity.bmc.org/policy-and-industry/investing-diverse-mental-health-workforce-critical-moment#:~:text=According%20to%20a%202020%20report,even%20lower%20in%20rural%20communities.)
-- [The ELIZA Effect](https://99percentinvisible.org/episode/the-eliza-effect/)
-- [ALICE chatbot: Trials and outputs](https://www.researchgate.net/publication/289684788_ALICE_chatbot_Trials_and_outputs)
-- [Try Kuki (Mitsuku)](https://www.kuki.ai/)
-- [History of Chatbots](https://www.codecademy.com/article/history-of-chatbots)
-- [Twitter Thread by Michelle Huang](https://twitter.com/michellehuang42/status/1597005489413713921?lang=en)
+* [Vonage AI Studio Documentation](https://studio.docs.ai.vonage.com/)
+* [OpenAI Documentation](https://platform.openai.com/docs/)
+* [Investing in a Diverse Mental Health Workforce Is Critical in This Moment](https://healthcity.bmc.org/policy-and-industry/investing-diverse-mental-health-workforce-critical-moment#:~:text=According%20to%20a%202020%20report,even%20lower%20in%20rural%20communities.)
+* [The ELIZA Effect](https://99percentinvisible.org/episode/the-eliza-effect/)
+* [ALICE chatbot: Trials and outputs](https://www.researchgate.net/publication/289684788_ALICE_chatbot_Trials_and_outputs)
+* [Try Kuki (Mitsuku)](https://www.kuki.ai/)
+* [History of Chatbots](https://www.codecademy.com/article/history-of-chatbots)
+* [Twitter Thread by Michelle Huang](https://twitter.com/michellehuang42/status/1597005489413713921?lang=en)
 
 ## Stay in Touch
 
 If you have questions or feedback, join us on the  [Vonage Developer Slack](https://developer.vonage.com/community/slack)  or send me a Tweet on [Twitter](https://twitter.com/dianasoyster). Thanks again for reading, and I will catch you on the next one!
-
