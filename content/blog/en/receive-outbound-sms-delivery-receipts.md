@@ -3,6 +3,7 @@ title: Receive Outbound SMS Delivery Receipts With Python
 description: Learn how to ensure that your SMS messages are being delivered with
   Messages API and the message status feature. This tutorial shows how to build
   a Python Flask app to receive delivery receipts.
+thumbnail: /content/blog/receive-outbound-sms-delivery-receipts-with-python/sms-delivery-receipts_python.png
 author: jekayinoluwa-olabemiwo
 published: true
 published_at: 2023-06-19T10:36:55.460Z
