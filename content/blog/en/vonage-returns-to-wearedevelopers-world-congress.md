@@ -2,13 +2,15 @@
 title: "Vonage Returns to WeAreDevelopers World Congress!  "
 description: Find out what the Vonage Developer Relations team will be up to at
   one of our favourite developer events of the year.
+thumbnail: /content/blog/vonage-returns-to-wearedevelopers-world-congress/wad_blogpost_23.png
 author: lucinda-bone
 published: true
-published_at: 2023-06-15T09:47:03.855Z
-updated_at: 2023-06-15T09:47:03.867Z
+published_at: 2023-07-05T09:47:03.855Z
+updated_at: 2023-07-05T09:47:03.867Z
 category: event
 tags:
   - event
+  - wearedevelopers
 comments: true
 spotlight: false
 redirect: ""
