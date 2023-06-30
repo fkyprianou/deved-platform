@@ -1,5 +1,5 @@
 ---
-title: Q2 2023 Releases
+title: Spring 2023 in a Nutshell
 description: All Vonage releases from April to June 2023
 author: diana-pham-1
 published: true
@@ -60,7 +60,8 @@ In a significant Q2 milestone, we're delighted to share the General Availability
 V2 also expanded the communication channel options, supporting WhatsApp, Email, and Silent Authentication, alongside existing SMS and Voice Text to Speech (TTS). Developers now have complete control over the structure of their request workflow. Lastly, the enhanced usage of HTTP response codes offers better protocol compliance. Try Verify V2 now and experience a more intuitive, secure, and flexible 2FA integration!
 
 ## MongoDB series
-  1. [Part 1 - What is MongoDB Atlas?](https://developer.vonage.com/en/blog/using-vonage-apis-with-mongodb-atlas-part-1)
+
+1. [Part 1 - What is MongoDB Atlas?](https://developer.vonage.com/en/blog/using-vonage-apis-with-mongodb-atlas-part-1)
     
 2.  [Part 2 - Using Vonage Verify with Logins](https://developer.vonage.com/en/blog/using-vonage-apis-with-mongodb-atlas-part-2)
     
@@ -73,3 +74,7 @@ V2 also expanded the communication channel options, supporting WhatsApp, Email, 
 In this blog series, Chris Tankersley demonstrates how MongoDB Atlas and Vonage APIs can be seamlessly integrated to build sophisticated applications. MongoDB Atlas, a cloud-based database service, alleviates the challenge of managing databases across multiple platforms such as AWS, Azure, and Google Cloud, enabling developers to focus on creating rich user experiences. Its built-in user authentication system adds an extra layer of security, ensuring the safety of user credentials.
 
 On the other hand, Vonage APIs, used in conjunction with MongoDB Atlas, allow developers to establish secure, multifaceted communication with users. The Vonage Verify API, when tied with MongoDB's database, presents an added security measure via two-factor authentication. Further, the Messages API enhances customer engagement by enabling multi-channel communication including SMS, MMS, WhatsApp, Facebook Messenger, and Viber. When a situation requires direct customer interaction, the Vonage Meetings API can be employed to quickly establish video chats. With the help of MongoDB Atlas and the In-App Messaging API, the application can send real-time notifications to authenticated users. Through the example of a restaurant demo application, Chris shows the practical usage and combined strength of MongoDB Atlas and Vonage APIs.
+
+# Join the Party
+
+Spring was a fabulous season for our team, and we can’t wait for you to see everything in store for summer. Until then, follow us on [Twitter](https://twitter.com/VonageDev) and join our [Community Slack](https://developer.vonage.com/en/community/slack) group. We love chatting with our developers and are always open to feedback. Cheers!
