@@ -59,7 +59,7 @@ The final step can be skipped as *External Accounts* will not be used in this tu
 
 Note down the *Application ID*, it will join your API key, API secret and Private Key in the code we will work on next.
 
-## Sending MMS using Node.js
+## Sending MMS Using Node.js
 
 Now that the admin is complete, let's create a Node.js script that will use the [Vonage Server SDK for Node.js](https://github.com/vonage/vonage-node-sdk) to send an MMS to a pre-set number when run.
 
