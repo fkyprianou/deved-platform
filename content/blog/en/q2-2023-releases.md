@@ -1,11 +1,12 @@
 ---
-title: Q2 2023 Releases
+title: Spring 2023 Releases
 description: All Vonage releases from April to June 2023
+thumbnail: /content/blog/spring-2023-vonage-releases/quaterly-releases_q223.png
 author: diana-pham-1
 published: true
-published_at: 2023-06-12T21:35:45.175Z
-updated_at: 2023-06-12T21:35:45.189Z
-category: community
+published_at: 2023-07-06T21:35:45.175Z
+updated_at: 2023-07-06T21:35:45.189Z
+category: release
 tags:
   - releases
   - video-api
