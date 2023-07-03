@@ -34,7 +34,7 @@ Our developer advocate Abdul covers key concepts, including Session, Invite, Cal
 
 ## [Get Even More Out of Your 2FA Solution With Verify](https://developer.vonage.com/en/blog/vonage-verify-v2-is-now-ga-for-2fa-integrations)
 
-In a significant Q2 milestone, we're delighted to share the General Availability of Version 2 of our Verify API for Two-Factor Authentication (2FA). This revised 2FA solution caters to developers, employing Webhooks for asynchronous integrations, which offers more choices and flexibility. With the synchronous flow of V1 behind us, we can now use webhooks with V2, which gives a unique GUID upon initiating a request. We've also bolstered fraud protection with the integration of the Verify Anti-Fraud System to ward off malicious activities.
+In a significant Q2 milestone, we're delighted to share the [General Availability of Version 2 of our Verify API for Two-Factor Authentication (2FA)](https://developer.vonage.com/en/blog/vonage-verify-v2-is-now-ga-for-2fa-integrations). This revised 2FA solution caters to developers, employing Webhooks for asynchronous integrations, which offers more choices and flexibility. With the synchronous flow of V1 behind us, we can now use webhooks with V2, which gives a unique GUID upon initiating a request. We've also bolstered fraud protection with the integration of the Verify Anti-Fraud System to ward off malicious activities.
 
 V2 also expanded the communication channel options, supporting WhatsApp, Email, and Silent Authentication, alongside existing SMS and Voice Text to Speech (TTS). Developers now have complete control over the structure of their request workflow. Lastly, the enhanced usage of HTTP response codes offers better protocol compliance. Try Verify V2 now and experience a more intuitive, secure, and flexible 2FA integration!
 
@@ -45,6 +45,7 @@ V2 also expanded the communication channel options, supporting WhatsApp, Email, 
 Our Video API team has rolled out a new feature called Secure Callbacks, currently in public beta and anticipated for a full launch. Michael explains how the feature validates webhook callback requests from Vonage and ensures their payload hasn't been tampered with. It's a big win for app security and also a plus for compliance-heavy industries.
 
 ## [Vonage Video API - React Native SDK Gains Official Support](https://developer.vonage.com/en/blog/vonage-video-api-react-native-sdk-gains-official-support)
+
 The React Native SDK for the Vonage Video API transitions from community to official Vonage support! This means improved, consistent assistance for developers and boosted confidence when integrating the SDK, assured of routine updates and long-term maintenance. Need help? Our Vonage support team is ready to assist. For guides and samples, check our official documentation, the React Native package on npm, and the SDK source code on the SDKs GitHub repository.
 
 ## [Vonage Video API macOS SDK Hits General Availability](https://developer.vonage.com/en/blog/vonage-video-api-macos-sdk-goes-ga)
@@ -54,18 +55,16 @@ After an awesome Beta ride, the Vonage Video API MacOS SDK is now officially mak
 # Keeping Our Head in the Cloud
 
 ## [A Better Way to Build & Deploy Programmable Communications](https://developer.vonage.com/en/blog/announcing-cloud-runtime-marketplace)
-We're thrilled to introduce the Beta availability of the Vonage [Cloud Runtime Marketplace](https://developer.vonage.com/cloud-runtime), our innovative cloud-native, serverless development platform! Vonage Cloud Runtime, the very same tool that our Solutions and Services teams use to deploy API interactions, is now at your fingertips. We have easy-to-use guides and tools that take your application build, deployment, and production from zero to hero. And here's the kicker - we host this serverless platform, so you don't have to worry about maintaining infrastructure to use Vonage APIs! During this Beta period, there's no fee to access the Vonage Cloud Runtime, so you can dive right in and start crafting extraordinary customer engagement applications today!
+
+We're thrilled to introduce the Beta availability of the[ Vonage Cloud Runtime Marketplace](https://developer.vonage.com/en/cloud-runtime), our innovative cloud-native, serverless development platform! Vonage Cloud Runtime, the very same tool that our Solutions and Services teams use to deploy API interactions, is now at your fingertips. We have easy-to-use guides and tools that take your application build, deployment, and production from zero to hero. And here's the kicker - we host this serverless platform, so you don't have to worry about maintaining infrastructure to use Vonage APIs! During this Beta period, there's no fee to access the Vonage Cloud Runtime, so you can dive right in and start crafting extraordinary customer engagement applications today!
 
 ## MongoDB series
-  1. [Part 1 - What is MongoDB Atlas?](https://developer.vonage.com/en/blog/using-vonage-apis-with-mongodb-atlas-part-1)
-    
-2.  [Part 2 - Using Vonage Verify with Logins](https://developer.vonage.com/en/blog/using-vonage-apis-with-mongodb-atlas-part-2)
-    
-3.  [Part 3 - Using Vonage for Customer Interactions](https://developer.vonage.com/en/blog/using-vonage-apis-with-mongodb-atlas-part-3)
-    
-4.  [Part 4 - Using Atlas for User Authentication](https://developer.vonage.com/en/blog/using-vonage-apis-with-mongodb-atlas-part-4)
-    
-5.  [Part 5 - Using Vonage In-App Messaging for Notifications](https://developer.vonage.com/en/blog/using-vonage-apis-with-mongodb-atlas-part-5)
+
+1. [Part 1 - What is MongoDB Atlas?](https://developer.vonage.com/en/blog/using-vonage-apis-with-mongodb-atlas-part-1)
+2. [Part 2 - Using Vonage Verify with Logins](https://developer.vonage.com/en/blog/using-vonage-apis-with-mongodb-atlas-part-2)
+3. [Part 3 - Using Vonage for Customer Interactions](https://developer.vonage.com/en/blog/using-vonage-apis-with-mongodb-atlas-part-3)
+4. [Part 4 - Using Atlas for User Authentication](https://developer.vonage.com/en/blog/using-vonage-apis-with-mongodb-atlas-part-4)
+5. [Part 5 - Using Vonage In-App Messaging for Notifications](https://developer.vonage.com/en/blog/using-vonage-apis-with-mongodb-atlas-part-5)
 
 In this blog series, Chris Tankersley demonstrates how MongoDB Atlas and Vonage APIs can be seamlessly integrated to build sophisticated applications. MongoDB Atlas, a cloud-based database service, alleviates the challenge of managing databases across multiple platforms such as AWS, Azure, and Google Cloud, enabling developers to focus on creating rich user experiences. Its built-in user authentication system adds an extra layer of security, ensuring the safety of user credentials.
 
