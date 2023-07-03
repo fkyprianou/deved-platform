@@ -1,7 +1,7 @@
 ---
 title: Spring 2023 at a Glance
 description: All Vonage releases from April to June 2023
-thumbnail: /content/blog/spring-2023-vonage-releases/quaterly-releases_q223.png
+thumbnail: /content/blog/spring-2023-at-a-glance/quaterly-releases_q223.png
 author: diana-pham-1
 published: true
 published_at: 2023-07-06T21:35:45.175Z
