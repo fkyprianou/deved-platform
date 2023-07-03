@@ -1,5 +1,5 @@
 ---
-title: Spring 2023 Releases
+title: Spring 2023 in a Nutshell
 description: All Vonage releases from April to June 2023
 thumbnail: /content/blog/spring-2023-vonage-releases/quaterly-releases_q223.png
 author: diana-pham-1
