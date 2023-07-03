@@ -20,7 +20,7 @@ replacement_url: ""
 ---
 And just like that, we're halfway into 2023! Our Vonage DevRel team wrapped up another season of dropping game-changing releases. Let's check them out.
 
-#﻿ Leveling Up in Accessibility, Availability, and Armor (Security)
+# Leveling Up in Accessibility, Availability, and Armor (Security)
 
 ## [Live Captions API Is in Beta!](https://developer.vonage.com/en/blog/live-captions-api-is-in-beta)
 
