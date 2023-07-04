@@ -24,7 +24,7 @@ And just like that, we're halfway into 2023! Our Vonage DevRel team wrapped up a
 
 ## [Live Captions API Is in Beta!](https://developer.vonage.com/en/blog/live-captions-api-is-in-beta)
 
-[Dwane](https://developer.vonage.com/en/blog/authors/dwanehemmings) announces the Beta release of Vonage's Live Captions API, now ready to run in your applications. Live captioning provide many benefits. They improve accessibility for users by providing dialogue visually when environments are noisy. They allow developers the ability to provide real-time multilingual translation.
+Dwane announces the Beta release of Vonage's Live Captions API, now ready to run in your applications. Live captioning provide many benefits. They improve accessibility for users by providing dialogue visually when environments are noisy. They allow developers the ability to provide real-time multilingual translation.
 
 ## [New Vonage Client SDKs for Android and iOS](https://developer.vonage.com/en/blog/introducing-the-new-vonage-client-sdk-for-android-and-ios)
 
@@ -36,9 +36,9 @@ Our developer advocate Abdul covers key concepts, including Session, Invite, Cal
 
 In a significant Q2 milestone, we're delighted to share the [General Availability of Version 2 of our Verify API for Two-Factor Authentication (2FA)](https://developer.vonage.com/en/blog/vonage-verify-v2-is-now-ga-for-2fa-integrations). This revised 2FA solution caters to developers, employing Webhooks for asynchronous integrations, which offers more choices and flexibility. With the synchronous flow of V1 behind us, we can now use webhooks with V2, which gives a unique GUID upon initiating a request. We've also bolstered fraud protection with the integration of the Verify Anti-Fraud System to ward off malicious activities.
 
-V2 also expanded the communication channel options, supporting WhatsApp, Email, and Silent Authentication, alongside existing SMS and Voice Text to Speech (TTS). Developers now have complete control over the structure of their request workflow. Lastly, the enhanced usage of HTTP response codes offers better protocol compliance. Try Verify V2 now and experience a more intuitive, secure, and flexible 2FA integration!
+V2 also expanded the communication channel options, supporting WhatsApp, Email, and Silent Authentication, alongside existing SMS and Voice Text to Speech (TTS). Developers now have complete control over the structure of their request workflow. Lastly, the enhanced usage of HTTP response codes offers better protocol compliance. [Try Verify V2 now ](https://developer.vonage.com/en/verify/overview)and experience a more intuitive, secure, and flexible 2FA integration!
 
-# Roll the Cameras: Our Toolkit Just Got Bigger!
+# Roll the Cameras: Our Video Toolkit Just Got Bigger!
 
 ## [Vonage Video API - Secure Callbacks Public Beta Announcement](https://developer.vonage.com/en/blog/vonage-video-api-secure-callbacks-public-beta-announcement)
 
