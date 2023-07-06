@@ -34,7 +34,7 @@ Making his WeAreDevelopers debut we have [J﻿im Seconde](https://www.linkedin.c
 
 Following Jim we welcome [Max Mednikov](https://www.linkedin.com/in/maxmednikov/?originalSubdomain=uk), Vonage's Software Engineering Director with his session that takes you through how you can develop, test and run a communications application in a serverless cloud. 
 
-**T﻿est Your Knowledge with Who Wants To Be a Vonage Millionaire!** 
+**T﻿est Your Knowledge with The Vonage Trivia Voyage: Quiz Your Way to the Top!**
 
 Do you have what it takes to be in the hot seat, and win big with our brand new gameshow? We will be asking ChatGPT to generate 10 developer trivia questions - the more you answer, the better the prizes! Come down to the Vonage booth at 18:00 local time on Thursday 27th July to take part. 
 
