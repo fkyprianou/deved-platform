@@ -37,9 +37,9 @@ Before you start, make sure you have the following:
 
 Before we begin, let's get set up for success by taking care of a few things inside the Vonage dashboard.
 
-Let's start by creating a new Messages & Dispatch Application. To do this, head to the [Messages & Dispatch section](https://dashboard.nexmo.com/messages/applications) of your admin dashboard and click on *Create Application*.
+Let's start by creating a new Messages & Dispatch Application. To do this, head to the [Application section](https://dashboard.nexmo.com/messages/applications) of your admin dashboard and click on *Create Application*.
 
-![](https://cl.ly/2c9355eb99fc/Image%202019-01-14%20at%205.55.31%20pm.png)
+![Your Applications page containing a purple button to create a new application](/content/blog/how-to-send-mms-messages-with-node-js/yourapplications.jpg "Your applications page")
 
 Next, you will need to fill out the form with your application name and the required webhook URLs. 
 
@@ -91,18 +91,17 @@ const vonage = new Vonage({
 
 Finally, add the code to send the MMS message using the Messages & Dispatch API:
 
-```
+```javascript
 vonage.messages.send(
   new Image({ "url": https://placekitten.com/200/300 }, TO_NUMBER, FROM_NUMBER)
 )
   .then(resp => console.log(resp.message_uuid))
   .catch(err => console.error(err));
-
 ```
 
 The above code sends a single message (a picture of a cat) to any number you add into the first object. If for any reason there is a failure in sending the message, the issues will be logged to the console, otherwise, if everything works as it should then the `message_uuid` will be logged instead.
 
-**N﻿ote: 'https://placekitten.com/200/300', // This is a placeholder image you can use
+\*\*N﻿ote: 'https://placekitten.com/200/300', // This is a placeholder image you can use
 
 With that, head to your terminal of choice and run:
 
