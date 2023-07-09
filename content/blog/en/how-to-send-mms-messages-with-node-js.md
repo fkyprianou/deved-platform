@@ -43,9 +43,11 @@ Let's start by creating a new Messages & Dispatch Application. To do this, head 
 
 Next, you will need to fill out the form with your application name and the required webhook URLs. 
 
-![](https://cl.ly/bcddad2230f1/Screen%20Recording%202019-01-14%20at%2006.04%20pm.gif)
+![Messages capability showing inbound and status URLs using MockBin](/content/blog/how-to-send-mms-messages-with-node-js/messages.jpg "Message capability with added URLs ")
 
 Every Messages & Dispatch application requires you to specify a `Status URL` and an `Inbound URL`. In larger, production-ready applications, you would have these pointing to a URL on your own server. For this tutorial there is no need for that, you'll just need a URL that can respond with a `200 OK` status, you can use a service such as [MockBin](http://mockbin.org) to provide what you need as I did in the example above.
+
+![Generate Public and Private Key](/content/blog/how-to-send-mms-messages-with-node-js/keys.jpg "Generate Public and Private Key")
 
 In order to authenticate API requests alongside your API key and API secret you will also need a public/private key pair, which can be automatically generated for you by clicking the *Generate public/private key pair* link.
 
