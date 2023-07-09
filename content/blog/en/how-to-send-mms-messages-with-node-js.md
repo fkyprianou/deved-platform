@@ -70,6 +70,7 @@ Run the following commands to set up a new Node.js application and to install th
 ```
 npm init -y
 npm install -g @vonage/cli
+npm install @vonage/server-sdk
 ```
 
 Then create a new file called `send-mms.js`, and open it inside your editor.
