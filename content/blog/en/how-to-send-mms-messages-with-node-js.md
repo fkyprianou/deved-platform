@@ -55,7 +55,7 @@ In order to authenticate API requests alongside your API key and API secret you 
 
 This will set a public key in the form field, and also download a `private.key` file to your machine. You will need to put this file wherever you will write the code we put together.
 
-Finish up by clicking *Create a new application.* You will then be asked to select a number to use with this application by clicking the *Link* button next to your number of choice. If you do not have any numbers on your dashboard you can purchase them there or via the command line.
+Finish up by clicking *Create a new application.* You will then be asked to select a number to use with this application by clicking the *Link* button next to your number of choice. If you do not have any numbers on your dashboard you can purchase them there or via the command line using the [Vonage CLI](https://github.com/Vonage/vonage-cli).
 
 Note down the *Application ID*, it will join your API key, API secret and Private Key in the code we will work on next.
 
