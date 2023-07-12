@@ -209,7 +209,7 @@ Here are some examples of things you can say:
 
 Below is an example conversation I had with our chatbot therapist. Keep in mind that in our conversation flow, we put an End Call Node right after we receive our output in the Speak Node. Normally, a therapist wouldn't just hang up on you after responding to your message–that'd be a horrible therapist! If we wanted to, we can modify our flow to continue back-and-forth conversations.
 
-\[IMAGE]
+![test-chat.png](/content/blog/build-a-chatbot-therapist-with-vonage-ai-studio-and-openai-part-i/test-chat.png "Tester Conversation")
 
 And voilà, you've built your very own chatbot therapist! Remember, the power of AI holds enormous potential, but it's up to us to use it responsibly. With these tools at your disposal, you're well on your way to making mental health care more accessible and innovative.
 
