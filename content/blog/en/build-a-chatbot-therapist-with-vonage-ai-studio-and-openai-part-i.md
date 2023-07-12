@@ -1,5 +1,5 @@
 ---
-title: Build a ChatBot Therapist with Vonage AI Studio and OpenAI (Part I)
+title: Build a ChatBot Therapist with Vonage AI Studio and OpenAI
 description: This blog covers the history of chatbot therapists and introduces
   how to build your own.
 author: diana-pham-1
@@ -30,7 +30,7 @@ The mental health care system in the U.S. is, to put it mildly, not great. The c
 
 ## History of Chatbot Therapists
 
-Now, chatbot therapists have a bit of history. ELIZA was one of the first, built to show superficial computer-to-human interactions. ALICE came along to up the game as an improved version. However, it was Misuku that really showed us how a chatbot could lend an 'ear'. These innovative technologies have each played a significant role in evolving the conversation (pun intended) around digital mental health solutions.
+Now, chatbot therapists have a bit of history. ELIZA was one of the first, built to show superficial computer-to-human interactions. ALICE came along to up the game as an improved version. However, it was Mitsuku that really showed us how a chatbot could lend an 'ear'. These innovative technologies have each played a significant role in evolving the conversation (pun intended) around digital mental health solutions.
 
 Nowadays, OpenAI's ChatGPT is stepping up, not just chatting, but offering a little therapy as well.
 
@@ -211,7 +211,7 @@ Below is an example conversation I had with our chatbot therapist. Keep in mind 
 
 ![test-chat.png](/content/blog/build-a-chatbot-therapist-with-vonage-ai-studio-and-openai-part-i/test-chat.png "Tester Conversation")
 
-And voilà, you've built your very own chatbot therapist! Remember, the power of AI holds enormous potential, but it's up to us to use it responsibly. With these tools at your disposal, you're well on your way to making mental health care more accessible and innovative.
+And voilà, you've built your very own chatbot therapist! Remember, the power of AI holds enormous potential, but it's up to us to use it responsibly. With these tools at our disposal, we are well on your way to making mental health care more accessible and innovative.
 
 ## Stay in Touch
 
