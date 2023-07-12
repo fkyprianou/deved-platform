@@ -31,7 +31,7 @@ Before you start, make sure you have the following:
 * Node.js installed on your machine
 * A fresh US SMS & MMS capable number. You can reference our [Numbers Guide](https://developer.vonage.com/en/numbers/guides/number-management) for details on how to buy a number if you don't have one.
 
-*﻿*Note: MMS messaging only works for A2P (Application to person) use cases. Therefore if you were to purchase two virtual phone numbers to send and receive the message to each other other.
+**Note**: MMS messaging only works for A2P (Application to person) use cases. Therefore if you were to purchase two virtual phone numbers to send and receive the message to each other other.
 
 <sign-up number></sign-up>
 
@@ -57,9 +57,7 @@ This will set a public key in the form field, and also download a `private.key` 
 
 Finish up by clicking *Create a new application.* You will then be asked to select a number to use with this application by clicking the *Link* button next to your number of choice. If you do not have any numbers on your dashboard you can purchase them there or via the command line.
 
-The final step can be skipped as *External Accounts* will not be used in this tutorial.
 
-![](https://cl.ly/05692353092f/Image%202019-01-14%20at%206.24.50%20pm.png)
 
 Note down the *Application ID*, it will join your API key, API secret and Private Key in the code we will work on next.
 
@@ -112,7 +110,7 @@ vonage.messages
 
 The above code sends a single message (a picture of a cat) to any number you add into the first object. If for any reason there is a failure in sending the message, the issues will be logged to the console, otherwise, if everything works as it should then the `messageUUID` will be logged instead.
 
-**N﻿ote: 'https://placekitten.com/200/300', // This is a placeholder image you can use
+**N﻿ote**: 'https://placekitten.com/200/300', // This is a placeholder image you can use
 
 With that, head to your terminal of choice and run:
 
