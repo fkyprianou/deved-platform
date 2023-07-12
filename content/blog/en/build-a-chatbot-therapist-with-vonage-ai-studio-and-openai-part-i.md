@@ -158,7 +158,7 @@ Now comes the fun part! With Vonage AI Studio's easy-to-use interface, you can d
 
 Ours should look like this:
 
-\[IMAGE]
+![flow.png](/content/blog/build-a-chatbot-therapist-with-vonage-ai-studio-and-openai-part-i/flow.png "Conversation Flow")
 
 * 2 Parameters to store the value that the user enters and the response that OpenAI responds with.
 
