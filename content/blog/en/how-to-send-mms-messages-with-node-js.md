@@ -1,10 +1,10 @@
 ---
 title: How to Send MMS Messages with Node.js
-description: The Vonage Messages & Dispatch API now allows you to send MMS
-  (Multimedia Messaging Service) from any US shortcode number you have in your
-  dashboard to other numbers within the United States. In this article you will
-  learn how to send an MMS using Node.js using the official vonage-node client
-  library. Prerequisites Before you start, […]
+description: The Vonage Messages allows you to send MMS (Multimedia Messaging
+  Service) from US shortcode numbers you have in your dashboard to other numbers
+  within the United States. In this article you will learn how to send an MMS
+  using Node.js using the official vonage-node client library. Prerequisites
+  Before you start, […]
 thumbnail: /content/blog/how-to-send-mms-with-node-js-dr/send-mms-nodejs.png
 author: amanda-cavallaro
 published: true
@@ -57,8 +57,6 @@ This will set a public key in the form field, and also download a `private.key` 
 
 Finish up by clicking *Create a new application.* You will then be asked to select a number to use with this application by clicking the *Link* button next to your number of choice. If you do not have any numbers on your dashboard you can purchase them there or via the command line.
 
-
-
 Note down the *Application ID*, it will join your API key, API secret and Private Key in the code we will work on next.
 
 ## Sending MMS Using Node.js
@@ -80,7 +78,7 @@ Then create a new file called `send-mms.js`, and open it inside your editor.
 Initialise a new Vonage instance:
 
 ```
-const { Vonage } = require('@vonage/server-sdk')
+const { Vonage } = require("@vonage/server-sdk")
 const { MMSImage } = require("@vonage/messages")
 
 const vonage = new Vonage({
@@ -110,7 +108,7 @@ vonage.messages
 
 The above code sends a single message (a picture of a cat) to any number you add into the first object. If for any reason there is a failure in sending the message, the issues will be logged to the console, otherwise, if everything works as it should then the `messageUUID` will be logged instead.
 
-**N﻿ote**: 'https://placekitten.com/200/300', // This is a placeholder image you can use
+**N﻿ote**: 'https://placekitten.com/200/300', // This is a placeholder image you can use.
 
 With that, head to your terminal of choice and run:
 
