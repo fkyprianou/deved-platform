@@ -31,7 +31,7 @@ Before you start, make sure you have the following:
 * Node.js installed on your machine
 * A fresh US SMS & MMS capable number. You can reference our [Numbers Guide](https://developer.vonage.com/en/numbers/guides/number-management) for details on how to buy a number if you don't have one.
 
-**Note**: MMS messaging only works for A2P (Application to person) use cases. Therefore if you were to purchase two virtual phone numbers to send and receive the message to each other other.
+**Note**: MMS messaging only works for A2P (Application to Person) use cases. The Vonage Messages API cannot be used to send MMS messages from one virtual number to another virtual number.
 
 <sign-up number></sign-up>
 
@@ -47,7 +47,7 @@ Next, you will need to fill out the form with your application name and the requ
 
 ![Messages capability showing inbound and status URLs using MockBin](/content/blog/how-to-send-mms-messages-with-node-js/messages.jpg "Message capability with added URLs ")
 
-Every Messages & Dispatch application requires you to specify a `Status URL` and an `Inbound URL`. In larger, production-ready applications, you would have these pointing to a URL on your own server. For this tutorial there is no need for that, you'll just need a URL that can respond with a `200 OK` status, you can use a service such as [MockBin](http://mockbin.org) to provide what you need as I did in the example above.
+Every Messages application requires you to specify a `Status URL` and an `Inbound URL`. In larger, production-ready applications, you would have these pointing to a URL on your own server. For this tutorial there is no need for that, you'll just need a URL that can respond with a `200 OK` status, you can use a service such as [MockBin](http://mockbin.org) to provide what you need as I did in the example above.
 
 ![Generate Public and Private Key](/content/blog/how-to-send-mms-messages-with-node-js/keys.jpg "Generate Public and Private Key")
 
