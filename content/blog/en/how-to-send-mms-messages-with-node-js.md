@@ -19,7 +19,7 @@ comments: true
 redirect: ""
 canonical: ""
 ---
-The Vonage Messages API now allows you to send MMS (Multimedia Messaging Service) from US shortcode numbers you have in your dashboard to other numbers within the United States. 
+The Vonage Messages API now allows you to send MMS (Multimedia Messaging Service) from US 10DLC, TFN, and Shortcode numbers you have in your dashboard to other numbers within the United States. 
 
 In this article, you will learn how to send an MMS using Node.js using the official [vonage-node-sdk](https://github.com/vonage/vonage-node-sdk) client library.
 
