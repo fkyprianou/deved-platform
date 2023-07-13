@@ -143,7 +143,7 @@ _computePosition(frame) {
   }
 ```
 
-Alt:”watermark transformer form,” title “watermark transformer”
+![Watermark transformer form](/content/blog/enhancing-video-streams-with-qr-codes-and-watermarking/watermark.png "Watermark transformer")
 
 ## Code Walkthrough
 
