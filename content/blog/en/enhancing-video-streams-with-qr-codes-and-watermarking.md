@@ -103,7 +103,7 @@ async transform(frame, controller) {
 
 From the user interface, you can set the URL for the QR code, the size, and the position of the QR code in the video stream. 
 
-Alt:”QR code generator transformer,” title “QR code transformer”
+![QR code generator transformer](/content/blog/enhancing-video-streams-with-qr-codes-and-watermarking/qr-code-generator.png "QR code transformer")
 
 ## Using Watermarks
 
