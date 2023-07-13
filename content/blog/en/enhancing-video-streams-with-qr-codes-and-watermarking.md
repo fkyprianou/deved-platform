@@ -157,10 +157,7 @@ The 'Apply' button calls the appropriate function based on the selected option, 
 
 ![QR code generator example](/content/blog/enhancing-video-streams-with-qr-codes-and-watermarking/qrcodeexample.png "QR code generator example")
 
-
-
-
-alt” watermark generator example,” title: “ watermark generator example”
+![Watermark generator example](/content/blog/enhancing-video-streams-with-qr-codes-and-watermarking/watermark-example.png "Watermark generator example")
 
 ## Conclusion
 
