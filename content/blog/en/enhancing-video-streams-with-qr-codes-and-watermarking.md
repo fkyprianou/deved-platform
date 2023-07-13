@@ -154,7 +154,11 @@ In the `applyQrCode` function, we retrieve user inputs for the QR Code (URL, siz
 Similarly, in the `applyWatermark` function, we take the uploaded image, adjust it as needed (flip horizontally), set up the watermark transformer, and apply it to the video stream.
 
 The 'Apply' button calls the appropriate function based on the selected option, and the 'Clear' button can be used to remove all transformations from the video stream.
-alt” QR code generator example,” title: “QR code generator example”
+
+![QR code generator example](/content/blog/enhancing-video-streams-with-qr-codes-and-watermarking/qrcodeexample.png "QR code generator example")
+
+
+
 
 alt” watermark generator example,” title: “ watermark generator example”
 
