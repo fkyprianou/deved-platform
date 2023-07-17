@@ -89,3 +89,5 @@ A [Node.js code sample can be found here](https://tokbox.com/developer/guides/se
 ## Wrap-up
 
 To recap, **[Secure Callbacks](https://tokbox.com/developer/guides/secure-callbacks)** is a security feature that ensures that each callback has not been tampered with in transit. This defends against intercept and later replay. It verifies that the request originates from Vonage and ensures compliance needs are met for many important industries. You can use it today as a generally available feature, free of charge, by enabling it within your project. Please visit [this page](https://tokbox.com/developer/guides/secure-callbacks/#known-limitations-considerations) for a list of limitations and considerations, as information is updated frequently.
+
+If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack) or send us a Tweet on [Twitter](https://twitter.com/VonageDev), and I will get back to you. Thanks again for reading, and I will catch you on the next one!
