@@ -19,7 +19,7 @@ replacement_url: ""
 ---
 ## Introduction
 
-The [Vonage Video API](https://www.vonage.com/communications-apis/video/features/) has a new feature called [Secure Callbacks](https://tokbox.com/developer/guides/secure-callbacks/) which is in General Availability today.. The secure callbacks feature provides a way to verify a webhook callback request is coming from Vonage and that its payload has not been tampered with during transit. This will protect against unauthorized callbacks and adds additional security benefits for those industries with specific compliance requirements. 
+The [Vonage Video API](https://www.vonage.com/communications-apis/video/features/) has a new feature called [Secure Callbacks](https://tokbox.com/developer/guides/secure-callbacks/) which is in General Availability today. The secure callbacks feature provides a way to verify a webhook callback request is coming from Vonage and that its payload has not been tampered with during transit. This will protect against unauthorized callbacks and adds additional security benefits for those industries with specific compliance requirements. 
 
 The Vonage Video API uses callbacks to provide events and status updates to the application for Session Monitoring, Archiving/Recording, SIP, and Experience Composer. The secure callbacks are signed by a signature secret that the user configures through the Video Account Portal, which can be verified by the receiving application to validate that the callback originated from Vonage.
 
