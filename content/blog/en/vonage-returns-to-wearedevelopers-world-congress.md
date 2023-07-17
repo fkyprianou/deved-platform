@@ -30,13 +30,9 @@ O﻿f course we have the swag too - we're giving away disco branded shirts and m
 
 B﻿rand new for 2023, this year we will be delivering fresh content from the Micro Stage opposite our booth in Hall A, with a Vonage takeover starting at 16:30 local time on Thursday 27th July (Day 1). 
 
-Making his WeAreDevelopers debut we have [J﻿im Seconde](https://www.linkedin.com/in/secondej/?originalSubdomain=uk), Senior PHP Developer Advocate at Vonage. O﻿ne part content, one part comedy, this is one session you won't want to miss: Awful APIs: A History Lesson in Painful Industry Mistakes. It will also give you the full low down on our Communications APIs so you can get cracking with your projects. 
+Making his WeAreDevelopers debut we have [J﻿im Seconde](https://www.linkedin.com/in/secondej/?originalSubdomain=uk), Senior PHP Developer Advocate at Vonage. O﻿ne part content, one part comedy, this is one session you won't want to miss: APIs: A History Lesson in Industry Mistakes and Mishaps. It will also give you the full low down on our Communications APIs so you can get cracking with your projects. 
 
 Following Jim we welcome [Max Mednikov](https://www.linkedin.com/in/maxmednikov/?originalSubdomain=uk), Vonage's Software Engineering Director with his session that takes you through how you can develop, test and run a communications application in a serverless cloud. 
-
-**T﻿est Your Knowledge with Who Wants To Be a Vonage Millionaire!** 
-
-Do you have what it takes to be in the hot seat, and win big with our brand new gameshow? We will be asking ChatGPT to generate 10 developer trivia questions - the more you answer, the better the prizes! Come down to the Vonage booth at 18:00 local time on Thursday 27th July to take part. 
 
 W﻿e will then be serving cold drinks from the booth while we wait for the famous WeAreDevs party to start.
 
