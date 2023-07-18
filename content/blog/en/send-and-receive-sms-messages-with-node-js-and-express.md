@@ -110,7 +110,6 @@ vonage.messages
   })
   .then((resp) => console.log(resp.message_uuid))
   .catch((err) => console.error(err));
-
 ```
 
 Replace `TO_NUMBER` with the destination phone number as a string and add your assigned phone number to the `FROM_NUMBER` field, then run the code with:
@@ -195,6 +194,6 @@ Now send an SMS message from your phone to your Vonage number. You should see th
 
 ## Wrap-up
 
-Now that you have learned how to send and receive SMS messages with the Vonage Messages API and Node.js, you could extend this project to reply to incoming SMS messages or include more complex, interactive elements for your current or future SMS needs. 
+Now that you have learned how to send and receive SMS messages with the Vonage Messages API and Node.js, you could extend this project to reply to incoming SMS messages or include more complex, interactive elements for your current or future SMS needs. You can also use Node.js to send messages on WhatsApp and other platforms.
 
 As always, if you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack) or send me a Tweet on [Twitter](https://twitter.com/mbcrump), and I will get back to you. Thanks again for reading, and I will catch you on the next one!
