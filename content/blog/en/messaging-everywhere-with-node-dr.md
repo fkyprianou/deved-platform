@@ -273,4 +273,4 @@ The script to submit the form responds to the click of a generic button. It gets
 
 ## Send Some Messages
 
-With the device or devices of your whitelisted accounts and SMS numbers handy, you can try sending some messages via your form. Once you've verified it worked, you can adapt this code to set up testing with the Vonage Messages API Sandbox for your application's logic. With the Vonage API, you can use Node to send messages via WhatsApp, Viber, and other messaging platforms.
+With the device or devices of your whitelisted accounts and SMS numbers handy, you can try sending some messages via your form. Once you've verified it worked, you can adapt this code to set up testing with the Vonage Messages API Sandbox for your application's logic. With the Vonage API, you can use Node to send messages via [WhatsApp](https://developer.vonage.com/en/blog/send-a-whatsapp-message-with-node-dr), Viber, and other messaging platforms.
