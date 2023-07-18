@@ -25,11 +25,11 @@ There are slight differences between the sandbox and the regular [Vonage Message
 
 You don't need much more than Node.js and the [Nexmo Node SDK](https://www.npmjs.com/package/nexmo) for this code. However, you'll need a correctly configured application for it to work. We'll go through that in detail, so for now, create a new project directory and be sure it has:
 
-- Node and npm
-- The beta Nexmo Node.js SDK
-- [Express.js](https://expressjs.com/)
-- [body-parser](https://www.npmjs.com/package/body-parser)
-- [dotenv](https://www.npmjs.com/package/dotenv)
+* Node and npm
+* The beta Nexmo Node.js SDK
+* [Express.js](https://expressjs.com/)
+* [body-parser](https://www.npmjs.com/package/body-parser)
+* [dotenv](https://www.npmjs.com/package/dotenv)
 
 From the command line, you can run `npm init` to prepare your project. Then you can install the packages with:
 
@@ -143,9 +143,9 @@ module.exports = [
 
 After requiring your data file, you can handle POST requests to `/send`. You'll get the `contact`, `method`, and `message` from the request body, and use the contact ID to find the corresponding user object. You'll set the default client to be `sandbox`, then check whether `method` is in your array of production channels and change the client to `nexmo` if it is.
 
-You'll build _to_ and _from_ objects in separate functions and pass them, along with the `message`, to the client's `channel.send` method. That method will return an error if there was a problem, and some data about the message sent. Don't forget to send a response back to the client to close the request.
+You'll build *to* and *from* objects in separate functions and pass them, along with the `message`, to the client's `channel.send` method. That method will return an error if there was a problem, and some data about the message sent. Don't forget to send a response back to the client to close the request.
 
-The last thing to add to the server are the `getFrom` and `getTo` functions. These make sure the _to_ and _from_ objects are structured correctly for the channel selected:
+The last thing to add to the server are the `getFrom` and `getTo` functions. These make sure the *to* and *from* objects are structured correctly for the channel selected:
 
 ```javascript
 const users = require('./.data/contacts');
@@ -273,4 +273,4 @@ The script to submit the form responds to the click of a generic button. It gets
 
 ## Send Some Messages
 
-With the device or devices of your whitelisted accounts and SMS numbers handy, you can try sending some messages via your form. Once you've verified it worked, you can adapt this code to set up testing with the Vonage Messages API Sandbox for your application's logic.
+With the device or devices of your whitelisted accounts and SMS numbers handy, you can try sending some messages via your form. Once you've verified it worked, you can adapt this code to set up testing with the Vonage Messages API Sandbox for your application's logic. With the Vonage API, you can use Node to send messages via WhatsApp, Viber, and other messaging platforms.
