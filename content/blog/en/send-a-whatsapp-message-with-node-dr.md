@@ -67,7 +67,7 @@ You'll see several additional options for joining the allowlist, including manua
 
 To make a call to the sandbox API you'll need to supply a unique username, password, and to and from WhatsApp numbers. 
 
-The username and password will be the two halves of the `u` argument in the cURL command from your dashboard. Copy the masked value, which will look like `12ab3456:123AbcdefghIJklM`. The part before the colon is your username and the part after is your password. They're the same as your Vonage API key and secret, which are also available from "[Getting Started](https://dashboard.nexmo.com/getting-started-guide) in the dashboard.
+The username and password will be the two halves of the `u` argument in the cURL command from your dashboard. Copy the masked value, which will look like `12ab3456:123AbcdefghIJklM`. The part before the colon is your username and the part after is your password. They're the same as your Vonage API key and secret, which are also available from "Getting Started" in the dashboard.
 
 You can also copy the data for your request straight from the cURL command and stringify it. This tells the API to send a text message from the sandbox number to your allowlisted number. You can change the text of the message to whatever you like, including generating it programmatically:
 
@@ -152,10 +152,7 @@ From the directory where the file is saved, run:
 > node app.js
 ```
 
-
 If you’ve followed the instructions in this post, your Node file should successfully send a message from the WhatsApp sandbox. At this point, the test message should appear in WhatsApp on your allowlisted device.
-
-
 
 ### Troubleshooting
 
