@@ -74,9 +74,9 @@ This creates a new instance of `SlimApp` and registers a route that we can call.
 
 We're going to make a HTTP `POST` request to `http://localhost:8000/sms/` using an application called [Postman](https://www.getpostman.com/).
 
-When we click on `Send`, we should get a response that says "Sending an SMS to [number]". This lets us know that our Slim application is running correctly and that we can move on to building our SMS functionality.
+When we click on `Send`, we should get a response that says "Sending an SMS to \[number]". This lets us know that our Slim application is running correctly and that we can move on to building our SMS functionality.
 
-![Make an HTTP request with Postman](/content/blog/sending-sms-messages-with-php-dr/send-sms-postman.gif)
+![Animation of a user in Postman selecting POST, entering  a URL, and submitting a request.](/content/blog/sending-sms-messages-with-php-dr/send-sms-postman.gif)
 
 As we already have our route set up, we can take our existing code that sends an SMS and drop it in to place.
 
