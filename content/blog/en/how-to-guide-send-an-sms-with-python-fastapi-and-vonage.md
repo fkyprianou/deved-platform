@@ -482,3 +482,8 @@ Later that evening, you lay in bed watching Loki, thinking to yourself: Thank go
 The end.
 
 Let me know if you sent an SMS using this tutorial. You can Tweet me at [@tonyasims](https://twitter.com/TonyaSims).
+
+## Related Content
+
+*[How to Receive SMS Messages in Python with the Vonage API](https://developer.vonage.com/en/blog/how-to-send-sms-messages-with-python-flask-and-vonage)
+
