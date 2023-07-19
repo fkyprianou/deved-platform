@@ -148,3 +148,7 @@ They can be used as a way to glue together services provided by multiple API pro
 * storing analytics data from your mobile app in a database like Firestore
 
 Once you've built your first function, you start realising how they can solve all sorts of problems you are working on.
+
+## Related Content
+
+* [How to Receive SMS Messages in Python with the Vonage API](https://developer.vonage.com/en/blog/how-to-send-sms-messages-with-python-flask-and-vonage)
