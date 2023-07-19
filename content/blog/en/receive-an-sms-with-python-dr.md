@@ -1,7 +1,7 @@
 ---
-title: Receive an SMS with Python
-description: In this post, we'll show you how to receive SMS messages on your
-  Nexmo virtual number with Python and the Flask framework.
+title: How to Receive SMS Messages in Python with the Vonage API
+description: Find out how to receive inbound SMS messages in Python using the
+  Vonage API. Learn more in this tutorial from Vonage Developer.
 thumbnail: /content/blog/receive-an-sms-with-python-dr/Receive-an-SMS-with-Python.png
 author: marklewin
 published: true
@@ -157,3 +157,7 @@ If you want to learn more about the SMS API, check out the following resources:
 * [SMS API reference](https://developer.nexmo.com/api/sms)
 * [Inbound SMS guide](https://developer.nexmo.com/messaging/sms/guides/inbound-sms)
 * [Concatenation and encoding](https://developer.nexmo.com/messaging/sms/guides/concatenation-and-encoding)
+
+## Related Content
+
+* [How to Receive SMS Messages in Python with the Vonage API](https://developer.vonage.com/en/blog/how-to-send-sms-messages-with-python-flask-and-vonage)
