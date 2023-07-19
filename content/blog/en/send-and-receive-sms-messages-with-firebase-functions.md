@@ -178,23 +178,50 @@ The vital piece from the output is `Function URL (inboundSMS)`. This URL is requ
 
 <sign-up number></sign-up>
 
-From the [Vonage dashboard settings](https://dashboard.nexmo.com/settings), make sure you are using the SMS API, choose `post` and and copy the output Function URL(inbound SMS) from the terminal console and paste it in the webhook on Vonage.
+From the [Vonage dashboard settings](https://dashboard.nexmo.com/settings), make sure you are using the SMS API, choose `post` and and copy the output Function URL (inbound SMS) from the terminal console and paste it in the webhook on Vonage.
 
 ![Settings](/content/blog/send-and-receive-sms-messages-with-firebase-functions/settings.png "Vonage Dashboard Settings")
 
-Setup the [Vonage CLI](https://github.com/Vonage/vonage-cli)
+Install the [Vonage CLI](https://github.com/Vonage/vonage-cli)
 
-Create a new application `vonage apps:create`
+```shell
+npm install --g @vonage/cli
+```
+
+Create a new application 
+
+```shell
+vonage apps:create 
+```
 
 Purchase a new US phone number using the below commands. For more information on SMS Countries and Features - visit the [API Support Help Center](https://help.nexmo.com/hc/en-us/articles/115011451687-SMS-Numbers-Features-Overview)
 
-`vonage numbers:search US`
+```
+vonage numbers:search US
+vonage numbers:buy [NUMBER] --country_code US
+```
 
-`vonage numbers:buy [NUMBER] --country_code US`
+Link the application ID to the purchased phone number 
 
-Link the function route to the number \`vonage apps:link:sms 15555555555 https://\[LOCATION]-\[YOUR-PROJECT-ID].cloudfunctions.net/inboundSMS\`
+```
+vonage apps:link [APPID] --number=[NUMBER]
+```
 
-Add your Vonage keys to the Firebase environment variables \`firebase functions:config:set vonage.api_key="Your Key" vonage.api_secret="Your Secret"\`
+
+
+Add your Vonage keys to the Firebase environment variables 
+
+```
+firebase functions:config:set vonage.api_key="Your Key" vonage.api_secret="Your Secret"
+```
+
+Deploy your functions for the change to take effect by running 
+
+```
+firebase deploy --only functions
+```
+
+
 
 ### Try It Out So Far
 
@@ -240,7 +267,7 @@ require('dotenv').config();
 
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
-const Vonage = require('@vonage/server-sdk');
+const { Vonage } = require('@vonage/server-sdk');
 
 admin.initializeApp();
 
