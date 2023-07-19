@@ -1,7 +1,7 @@
 ---
-title: How to Send an SMS Messages with Java
-description: Find out how to receive inbound SMS messages in Python using the
-  Vonage API. Learn more in this tutorial from Vonage Developer.
+title: How to Send SMS Messages with Java and the Vonage API
+description: Find out how to send SMS messages with Java and the Vonage API.
+  Learn more in this tutorial from Vonage Developer.
 author: diana-pham-1
 published: true
 published_at: 2023-06-06T21:23:49.560Z
