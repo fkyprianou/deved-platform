@@ -140,7 +140,7 @@ Web components contain 3 main elements:
 
 1. Custom element
 
-This is the “host” element. It will be seen in the DOM, and will usually have a unique name. For example, in Vivid components, the name of the custom element always starts with vwc. These initials stand for Vivid Web Components. The second part of the element is the name of the element which acts as a description of its purpose. For example vwc-button, vwc-dialog, etc.
+This is the “host” element. It will be seen in the DOM and will usually have a unique name. For example, in Vivid components, the name of the custom element always starts with vwc. These initials stand for Vivid Web Components. The second part of the element is the name of the element which acts as a description of its purpose. For example vwc-button, vwc-dialog, etc.
 
 2. Shadow-dom
 
