@@ -80,7 +80,7 @@ Gmail is a great example of design systems creating order and efficiency gains. 
 
 ### Implement a Design System In Iterations
 
-Do not build a ux design system first! Think of ux design systems in a LEAN way. You want to build the most useful, most scalable components. So you need to know which components are actually used by your design team. This means that your organization should first build its product or products and then evaluate which components are reused the most. Design systems are not for V0.1 of your product, only from V1.0 and onwards.
+Do not build a UX design system first! Think of UX design systems in a LEAN way. You want to build the most useful, most scalable components. So you need to know which components are actually used by your design team. This means that your organization should first build its product or products and then evaluate which components are reused the most. Design systems are not for V0.1 of your product, only from V1.0 and onwards.
 
 How can you identify which components you will need? You can always start with the most basic elements; typography, colors, buttons, etc. These elements will be widely used regardless of product. From there your design system will evolve. Nathan Curtis has an excellent [post](https://medium.com/eightshapes-llc/the-component-cut-up-workshop-1378ae110517) about this called, “The Component Cut-Up Workshop”, where you can see the workflow of dividing a website into the components that make up the design system.
 
