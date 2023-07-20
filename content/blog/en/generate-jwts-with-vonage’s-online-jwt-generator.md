@@ -48,7 +48,7 @@ But notice that we need to add a $JWT to this operation to let Vonage know that 
 
 JWTs play a vital role in secure authentication for your Vonage applications. Learn best practices for secure authentication with JWTs in our [comprehensive guide](https://developer.vonage.com/en/getting-started/concepts/authentication#json-web-tokens).
 
-## Creating a JWT:
+## Creating a JWT
 
 To create a JWT for your Vonage application, follow these simple steps:
 
