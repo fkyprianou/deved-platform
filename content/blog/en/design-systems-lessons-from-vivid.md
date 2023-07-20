@@ -109,7 +109,7 @@ Not only does Vivid-3 have all the advantages of Fast but also improved:
 
 ### Build a Bridge
 
-#### Team As A Bridge
+#### Team as a Bridge
 
 Your design system should act as a bridge. Build your team with the right stakeholders, who will each share their expertise and mold the design system to meet the needs of each business function.
 
