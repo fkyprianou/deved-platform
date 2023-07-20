@@ -31,7 +31,7 @@ The brand book was the single source of truth to maintain the integrity and unif
 
 ![Coca Cola Brand Book Example](https://lh4.googleusercontent.com/WxHHu2hkPtdGsPeB7BJeQcHDd8YWJV53lON0TNTS-FgQDtm10GxH6drPZrGDeVIHeNESk4XI4yYSA4Pq2bkULMvttLCs4smKh_66buUwY5sguvy3HMqyuuS1ihVvz_PuCGQKgPRFIfuXnaM5A3rYPm4 "coca-cola-brand-book.png")
 
-A distant time ago, back when humans could survive without the internet companies had a brand book. This book contained the company’s brand philosophy: colors, fonts, imagery, etc. It defined different styles in different settings; e.g. a newspaper ad versus a billboard ad. Coca-Cola’s brand book for example even had guidelines for the shape of their glass bottles! This book made it possible to maintain the brand and its visibility, no matter who released the final product.
+A distant time ago, back when humans could survive without the internet companies had a brand book. This book contained the company’s brand philosophy: colors, fonts, imagery, etc. It defined different styles in different settings; e.g. a newspaper ad versus a billboard ad. Coca-Cola’s brand book, for example, even had guidelines for the shape of their glass bottles! This book made it possible to maintain the brand and its visibility, no matter who released the final product.
 
 ### Brand Books Go Digital: Style Guides
 
