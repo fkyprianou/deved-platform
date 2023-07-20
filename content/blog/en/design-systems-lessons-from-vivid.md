@@ -113,7 +113,7 @@ Not only does Vivid-3 have all the advantages of Fast but also improved:
 
 Your design system should act as a bridge. Build your team with the right stakeholders, who will each share their expertise and mold the design system to meet the needs of each business function.
 
-Who is responsible for building the design system? In short - the development team. The development team should have primary responsibility for the creation of the design system, but it is not solely responsible. One of the most important advantages of a design system is that it acts as a bridge between your designers and developers. The design system acts as a guide, providing a common language to clarify communication between developers and designers. The more responsibility is shared between these teams, and the more input from each team is invested in the creation of a design system, the better the final product will be and improve synergies across your organization.
+Who is responsible for building the design system? In short - the development team. The development team should have primary responsibility for the creation of the design system, but it is not solely responsible. One of the most important advantages of a design system is that it acts as a bridge between your designers and developers. The design system acts as a guide, providing a common language to clarify communication between developers and designers. The more responsibility shared between these teams, and the more input from each team is invested in the creation of a design system, the better the final product will be and improve synergies across your organization.
 
 #### Bridge with Tooling
 
