@@ -67,7 +67,7 @@ Simply put, good design improves user experience and maintains brand consistency
    * ***Order*** in Development: Creates order in the mess, helps clean code, and prevents code duplication.
 2. Efficiency
 
-   * ***Efficient Development***: Decreases development time, Allows designers to make better decisions, saving your organization time and money
+   * ***Efficient Development***: Decreases development time, Allows designers to make better decisions, saving your organization time and money.
    * ***Efficient Updates***: - System-wide updates in a breeze.
 
 ![Gmail UI Uniformity Across Devices](https://lh6.googleusercontent.com/nTcOtu9o0cZPfnJF9-zmEfkvX5Zj-48_5EFHIqBZzk7KS7X797nKDIWKulBB1Vaah9bd9Um1IpJo2L9l12Zw9feeUo8dFlse0K6hMcGkH4e9VWsW5Ec4uquXIu9wnInr79uxuaUBbVGTVTjwxu2X8_A "gmail-ui-uniformity-example.png")
