@@ -178,7 +178,7 @@ Under the hood, inside the shadow-dom, all this code will actually be added to t
 </vwc-elevation>
 ```
 
-And to ensure that the Dialog opens inside a Modal, the opening must be activated with a functionshowModal
+And to ensure that the Dialog opens inside a Modal, the opening must be activated with a functionshowModal.
 
 ```javascript
 <script>
