@@ -115,7 +115,7 @@ Your design system should act as a bridge. Build your team with the right stakeh
 
 Who is responsible for building the design system? In short - the development team. The development team should have primary responsibility for the creation of the design system, but it is not solely responsible. One of the most important advantages of a design system is that it acts as a bridge between your designers and developers. The design system acts as a guide, providing a common language to clarify communication between developers and designers. The more responsibility is shared between these teams, and the more input from each team is invested in the creation of a design system, the better the final product will be and improve synergies across your organization.
 
-#### Bridge With Tooling
+#### Bridge with Tooling
 
 In parallel with our API, we maintain a component library in Figma for the designers. When they are working on the design of a page, app or anything, they can quickly add Vivid’s asset library to their design components. This way they keep a uniform design. In the final Figma file, the developers have everything they need to code: exactly which components to use and their exact pixel-perfect specifications (size, shape, font, etc.).
 
