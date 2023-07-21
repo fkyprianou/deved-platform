@@ -33,13 +33,9 @@ Below is a full list of what you’ll need to start sending SMS messages via PHP
 * [PHP](https://www.php.net/downloads) (5.6 or above)
 * [Composer](https://getcomposer.org/) to install the PHP client
 
-[image]
-
 <sign-up number></sign-up>
 
 ## Instructions
-
-COME BACK TO THIS
 
 ### How to Send an SMS with PHP Using nexmo-php
 
