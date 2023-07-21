@@ -39,7 +39,6 @@ curl -X POST https://api.nexmo.com/v1/messages \
           "from": "'$FROM_NUMBER'",
           "channel": "sms"
 }'
-
 ```
 
 But notice that we need to add a $JWT to this operation to let Vonage know that this is a legitimate request, i.e. authenticated.
@@ -57,8 +56,6 @@ To create a JWT for your Vonage application, follow these simple steps:
 Open your [Vonage Dashboard](https://dashboard.nexmo.com/applications) and navigate to the desired application. Once you’ve opened your application it should look something like this:
 
 ![Vonage application in the developer dashboard.](/content/blog/generate-jwts-with-vonage’s-online-jwt-generator/screenshot-2023-06-21-at-21.53.49.png "application-in-vonage-dashboard.png")
-
-
 
 ### Step 2: Retrieve the Application ID
 
@@ -90,17 +87,21 @@ We can now add the private key to the generator:
 
 ![Vonage JWT Generator Complete Example](/content/blog/generate-jwts-with-vonage’s-online-jwt-generator/screenshot-2023-06-21-at-22.22.21.png "vonage-jwt-generator-complete-example.png")
 
-![](https://lh3.googleusercontent.com/FztOP3x_wnfOUdq7iZ6AUlbBt1mg2jqxBv-y5TN6VQ8oB04atG8YzgsTLiU72UbcgytasawNefkfdLTG2CRWi-Knjktc57NiDTyl35J_kEqbK_shuYOU9j-ftxiDrxVvv7Co6kjVknctqTTNVI4l_RQ)
-
-
-
-And now the generator will create a JWT instantly! There are many options for your JWTs, which you can explore [here](https://developer.vonage.com/en/getting-started/concepts/authentication#vonage-client-sdks).
+And now the generator will create a JWT instantly!
 
 ## Final Thoughts
 
 ### Enhance JWT Validity and Verification
 
 To validate the integrity of your JWT, you can use [jwt.io](http://jwt.io/). These tools offer comprehensive JWT analysis and debugging capabilities, ensuring your tokens are valid and secure.
+
+#### Bonus: Set JWT Permissions
+
+If you'd like to grant certain permissions for a user, you can set the ACL in the JWT Generator. For example, to allow a user to be able to create/manage conversations as well as send/receive texts. images, and audio, the ACL would look like this:
+
+![ACL Options Example](/content/blog/generate-jwts-with-vonage’s-online-jwt-generator/image-45-.png "acl-options-example.png")
+
+There are many options for your JWTs, which you can explore [here](https://developer.vonage.com/en/getting-started/concepts/authentication#vonage-client-sdks).
 
 ### Vonage’s Developer Community
 
