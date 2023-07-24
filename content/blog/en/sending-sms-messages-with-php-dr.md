@@ -153,8 +153,6 @@ At this point, you have everything you need to send an SMS with our PHP API. Giv
 
 You're all done! By using SlimPHP, you quickly bootstrapped an API that can send an SMS to any phone number.
 
-Want to learn other ways you can use PHP to handle SMS messages? Check out our tutorials on how to receive text messages and SMS delivery receipts with PHP.
-
 Want to learn other ways you can use PHP to handle SMS messages? Check out our tutorials on how to [receive text messages](https://developer.vonage.com/en/blog/receiving-an-sms-with-php-dr) and [SMS delivery receipts](https://developer.vonage.com/en/blog/receiving-sms-delivery-receipts-with-php-dr) with PHP.
 
 <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
