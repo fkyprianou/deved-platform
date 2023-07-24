@@ -3,10 +3,11 @@ title: "Design Systems: Lessons From Vivid"
 description: "What are front-end UX design systems? This blog post covers design
   systems, web components, accessibility, and other lessons from Vonage's
   front-end design system: Vivid."
+thumbnail: /content/blog/design-systems-lessons-from-vivid/design-system_vivid.png
 author: benjamin-aronov
 published: true
-published_at: 2023-06-13T07:59:33.082Z
-updated_at: 2023-06-13T07:59:33.130Z
+published_at: 2023-07-25T07:59:33.082Z
+updated_at: 2023-07-25T07:59:33.130Z
 category: inspiration
 tags:
   - vivid
