@@ -130,7 +130,7 @@ Vonage is a very large company with many teams of developers working on a wide r
 
 To fit this need, Vivid is based on web components.
 
-What are Web Components? 
+### **What are Web Components?** 
 
 Web Components are a suite of different technologies allowing you to create reusable custom elements — with their functionality encapsulated away from the rest of your code — and utilize them in your web apps. Basically, the final product of a web component is HTML, CSS, and Javascript which means it can adapt to any development environment. To learn more, I recommend reading [Getting Started with Web Components](https://developer.vonage.com/en/blog/getting-started-with-web-components-dr).
 
