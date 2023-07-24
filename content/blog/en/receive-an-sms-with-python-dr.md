@@ -21,7 +21,7 @@ This tutorial will show you how to receive SMS messages in Python using the Vona
 
 ---
 
-*Note:*
+**Note:**
 Vonage has two different APIs for receiving SMS. The SMS API is used strictly for SMS messaging, Meanwhile, the Messages API allows you to use other channels like WhatsApp, etc. How you configure your webhook is determined by which API you choose. In this tutorial, we’ll be using the Messages API to send messages to our Python application.
 
 ---
