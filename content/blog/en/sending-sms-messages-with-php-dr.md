@@ -2,7 +2,7 @@
 title: How to Send SMS Messages with PHP
 description: Find out how to send SMS messages using PHP via the Vonage API.
   Learn more in this tutorial from Vonage Developer.
-thumbnail: /content/blog/sending-sms-messages-with-php-dr/sending-sms-featured.png
+thumbnail: /content/blog/how-to-send-sms-messages-with-php/sms-php.png
 author: mheap
 published: true
 published_at: 2017-09-20T13:29:00.000Z
