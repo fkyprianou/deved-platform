@@ -225,29 +225,7 @@ With the project now set up we can install the Vonage client SDK. Currently, the
 
 ### Android SDK
 
-To install the Android SDK open your project level `build.gradle` file which can be found at `android/build.gradle` and add the following repository:
-
-```
-maven {
-    url "https://artifactory.ess-dev.com/artifactory/gradle-dev-local"
-}
-```
-
-So that your all projects repositories now looks like this:
-
-```
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven {
-            url "https://artifactory.ess-dev.com/artifactory/gradle-dev-local"
-        }
-    }
-}
-```
-
-Then you will need to increase the memory allocation for the JVM by editing the `org.gradle.jvmargs` property in your `gradle.properties` file. We recommend this be set to at least 4GB:
+To install the Android SDK start by increasing the memory allocation for the JVM by editing the `org.gradle.jvmargs` property in your `gradle.properties` file. We recommend this be set to at least 4GB: 
 
 ```
 org.gradle.jvmargs=-Xmx4096m -Dfile.encoding=UTF-8
@@ -258,7 +236,7 @@ Next, open your app-level `build.gradle` file which can be found at `android/app
 ```
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "com.nexmo.android:client-sdk:4.1.0"
+    implementation "com.vonage:client-sdk-voice:1.0.3"
 }
 ```
 
@@ -288,7 +266,7 @@ pod init
 This will generate the `PodFile`, open this file and add the below pod:
 
 ```
-pod 'NexmoClient'
+pod 'VonageClientSDKVoice', '~> 1.0.3'
 ```
 
 Make sure to also set the platform to at least ios 10
@@ -300,12 +278,12 @@ platform :ios, '10.0'
 Your complete file should look something like this:
 
 ```
-platform :ios, '11.0'
+platform :ios, '10.0'
 
 target 'Runner' do
   use_frameworks!
 
-  pod 'NexmoClient'
+  pod 'VonageClientSDKVoice', '~> 1.0.3'
 end
 ```
 
