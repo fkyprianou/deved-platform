@@ -148,8 +148,7 @@ https://f9db-102-89-43-137.eu.ngrok.io -> http://localhost:80
 ```
 
 ---
-
-*Note:*
+**Note:**
 * The URL changes whenever you restart the `ngrok` server if you are on the free plan.
 * An ngrok server session lasts for 1 hour in the free plan after which you can launch the server again and receive a new public URL.
 
