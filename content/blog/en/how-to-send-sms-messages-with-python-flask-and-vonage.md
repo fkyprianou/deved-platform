@@ -272,6 +272,6 @@ Congratulations! You've now built a Python Flask application to send an SMS. You
 
 Let us know how we can help! Join the conversation on our [Vonage Community Slack](https://developer.vonage.com/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
 
-## Further Reading
+## Related Content
 
 * [Receive SMS Delivery Receipts in Python](https://developer.vonage.com/en/blog/receiving-sms-delivery-receipts-with-python-dr)
