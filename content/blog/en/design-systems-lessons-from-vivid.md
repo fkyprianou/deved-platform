@@ -48,9 +48,7 @@ But what do style guides have to do with frontend design systems? Think of the f
 
 ***Every digital product needs a UX design system!***
 
-Ok, maybe not _every_ digital product needs a design system. The question you need to ask your organization is, are we a Ford or a Ferrari?
-
-![Is your organization Ford or Ferrari?](https://lh4.googleusercontent.com/vCn2vimHHQBXLW4_sfvPDIm__Mafw4U3X7whywemMoCb4tQQwKLdZJ__JI8yj7jt4oIaaDk4gZuObjgGay0K1m_2r7ahZIEqoVcvvFg9pStsuAX8eGlqIkN8e-8aR_ltxlYjPfWjkwyaHL3yIyOfKGQ "ford-or-ferrari-organization-categorization.png")
+Ok, maybe not *every* digital product needs a design system. The question you need to ask your organization is, are we a Ford or a Ferrari?
 
 Design systems can take a lot of extra time to set up and maintain. The large upfront investment is only worth it for large-scale projects where you will save time in the long run. Your team should consider how many developers would use the design system, the scope of your product(s), and the standards and communication of your development team.
 
