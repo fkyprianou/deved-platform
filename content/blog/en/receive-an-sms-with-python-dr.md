@@ -15,149 +15,207 @@ comments: false
 redirect: ""
 canonical: ""
 ---
-In this post, we'll show you how to receive SMS messages on your Vonage virtual number.
+The Vonage Messages API allows you to receive inbound SMS messages in a range of different ways. This includes the option of receiving messages in Python, one of the most popular and flexible programming languages.
 
-To receive inbound SMS, you need to create a publicly-accessible [webhook](https://developer.nexmo.com/concepts/guides/webhooks) and configure your Vonage account to use it. We'll cover that process in this post and you can find the [source code](https://github.com/Nexmo/nexmo-python-code-snippets/blob/master/sms/receive-flask.py) on Github.
+This tutorial will show you how to receive SMS messages in Python using the Vonage Messages API. You can find the [source code for this tutorial](https://github.com/Nexmo/nexmo-python-code-snippets/blob/master/sms/receive-flask.py) on GitHub.
+
+---
+
+*Note:*
+Vonage has two different APIs for receiving SMS. The SMS API is used strictly for SMS messaging, Meanwhile, the Messages API allows you to use other channels like WhatsApp, etc. How you configure your webhook is determined by which API you choose. In this tutorial, we’ll be using the Messages API to send messages to our Python application.
+
+---
 
 ## Prerequisites
 
-You'll use [Python 3](https://www.python.org/downloads/) and [Flask](http://flask.pocoo.org/) to write your webhook. You can install `flask` with the [pip3](https://pypi.org/project/pip/) package manager:
+To build a Python application that receives SMS messages, you will need a [Vonage API account](https://developer.vonage.com/sign-up). 
 
-```sh
-pip3 install flask
-```
+In addition to your Vonage API account, you will also need to install the following tools:
 
-Lastly, you'll need to install [our Vonage CLI](https://github.com/Vonage/vonage-cli). You will use this to purchase a Vonage virtual number (if you haven't already got one) and to send a test SMS.
+* [Python](https://www.python.org/downloads/) is needed to create your application and use the Flask library. 
+* [Flask](https://flask.palletsprojects.com/en/2.3.x/) will be used to write your webhook for inbound SMS messages.
+* The [Vonage CLI](https://developer.vonage.com/en/tools) package can be used to send a test SMS to Python. It can also be used to purchase a virtual number.
 
-When you have all these things, you're ready to start coding!
+Below, we’ll walk you through the installation and setup process for each of these tools.
 
-## Create the Webhook for Inbound SMS
+### Python
 
-When Vonage receives an SMS on your virtual number, it looks to see if you have configured a webhook on your account so that it can forward the SMS to your application. You can configure this webhook to apply either to a specific number or your account as a whole.
+Visit the official [Python downloads page](https://www.python.org/downloads/) to download a Python version that works for you.
 
-Vonage makes either a `GET` or `POST` request depending on which "HTTP Method" you have configured in your [account settings](https://dashboard.nexmo.com/settings). Because you want your webhook to work regardless of your account settings you will code the handler to accept both types of request.
+### Flask
 
-Create a file called `sms-receive.py` and enter the following code:
+Before installing Flask, create your project directory and navigate into it as follows:
 
 ```python
+mkdir receive_sms
+cd receive_sms
+```
+
+You can install Flask with the pip package manager that comes installed with Python. Use the following terminal command to install Flask inside the newly created folder.
+
+```python
+pip install flask
+```
+
+### Vonage CLI
+
+
+Install the Vonage CLI globally in your terminal by running this command:
+
+```bash
+npm install -g @vonage/cli
+```
+To purchase a phone number in a country, the United States for instance, use the following CLI commands:
+
+```bash
+vonage numbers:search US
+vonage numbers:buy 15555555555 US
+```
+In the above commands, you can use the [Alpha-2 two-letter](https://www.iban.com/country-codes) code of the country you need to replace `US` which works for the United States.
+
+## Instructions
+
+Once you have successfully installed Python, Flask, and the Vonage CLI, you are ready to get started. Below, we’ll explain how to use these tools so that Python can receive text messages from the Vonage API.
+
+To create a Python application that receives SMS messages, simply follow these 4 steps:
+
+1. Create a webhook for inbound SMS
+2. Make the webhook URL publicly accessible
+3. Configure your Vonage API account
+4. Send and receive an SMS message
+
+### 1. Create a Webhook for Inbound SMS
+
+To receive an SMS in Python, the Vonage API requires a webhook for inbound SMS messages. 
+
+Upon receiving an SMS message on your Vonage account, Vonage verifies whether you have configured a webhook to which it can forward the message to your application.
+
+You may configure the webhook to work for a single number or all the numbers in your account. To handle incoming messages, your webhook handler will be designed to accept a `POST` request. To facilitate this, you will create a Flask endpoint dedicated to handling the incoming requests.
+
+Here’s how to create the inbound SMS webhook for Python.
+
+Create an `sms-receive.py` file in your Flask project and add the following code:
+
+```python
+#!/usr/bin/env python3
 from flask import Flask, request, jsonify
 from pprint import pprint
 
 app = Flask(__name__)
 
-@app.route('/webhooks/inbound-sms', methods=['GET', 'POST'])
-def inbound_sms():
+@app.route("/webhooks/inbound-message", methods=['POST'])
+def inbound_message():
     if request.is_json:
-        pprint(request.get_json())
+        data = request.get_json()
+    	pprint(data)
     else:
         data = dict(request.form) or dict(request.args)
         pprint(data)
 
-    return ('', 204)
+    return "200"
 
-app.run(port=3000)
+if __name__ == '__main__':
+    app.run(host="", port=3000)
 ```
 
-This code captures any request sent to the `/webhooks/inbound-sms` endpoint and unpacks it: 
+In the previously provided code snippet, you defined a webhook endpoint named `/webhooks/inbound-message`. This endpoint is responsible for receiving and parsing the data contained within inbound message payloads.
 
-* `request.is_json`: Checks to see if the request is in JSON format. By default a request is considered to include JSON data if the `mimetype` is `application/json` or `application/*+json`
-* `request.args`: Retrieves the key/value pairs in the URL query string.
-* `request.form`: Retrieves the key/value pairs in the body, from a HTML post form, or any request that isn't JSON-encoded.
+* The `request.get_json()` method is utilized to verify whether the request is in JSON format.
 
-This approach enables your application to retrieve the message details from either a `GET` or `POST` request.
+* In case the request is not in JSON format, the key/value pairs within the request body or URL query string are retrieved using `request.form` and `request.args`, respectively.
 
-Having parsed the incoming request data it pretty-prints it to the terminal using `pprint` and then sends a `HTTP 204` status response (success, no content) to Vonage. It is important to return this response otherwise Vonage will keep trying to redeliver.
+* The request data is parsed and stored in the `data` variable, and then printed to the terminal using `pprint`.
 
-## Make Your Webhooks Accessible
+Finally, you indicate that the application be run and served in port `3000`.
 
-For Vonage's APIs to make requests to your webhook endpoint it must be accessible over the public internet.
+[H3] 2. Make the Webhook URL Publicly Accessible
+Your webhook endpoint will need to be accessible over the public internet, so Vonage APIs can request them.
 
-A great tool for exposing your local development environment to the internet is `ngrok`. Our [tutorial](https://learn.vonage.com/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr) shows you how to install and use it.
+Usually in production mode, you would need a server with a public domain to append the endpoint. However, for testing in development mode, we will use `ngrok` to mimic the server environment. We have a [tutorial](https://developer.vonage.com/en/blog/local-development-nexmo-ngrok-tunnel-dr?) that explains in-depth how to use `ngrok` when testing Vonage APIs.
 
-Launch `ngrok` using the following command:
+You can download or install ngrok from the official [website](https://ngrok.com/download).
 
-```sh
+Next, launch ngrok on your terminal:
+
+```bash
 ngrok http 3000
 ```
 
-Make a note of the public URLs that `ngrok` creates for you. These will be similar to (but different from) the following:
+Once ngrok is launched, it will generate a public URL for you similar to the following:
 
-```sh
-http://066d53c9.ngrok.io -> localhost:3000
-https://066d53c9.ngrok.io -> localhost:3000
+```bash
+https://f9db-102-89-43-137.eu.ngrok.io -> http://localhost:80
 ```
 
-On their free plan, every time you restart `ngrok` the URLs change and you will have to update your delivery receipt URL. This is extra work you could do without, so leave it running for the duration of this tutorial. 
+---
 
-## Purchase a Vonage Virtual Number
+*Note:*
+* The URL changes whenever you restart the `ngrok` server if you are on the free plan.
+* An ngrok server session lasts for 1 hour in the free plan after which you can launch the server again and receive a new public URL.
 
-If you don't already have a Vonage virtual number to use for this example, you'll need to buy one. You can do this in the [developer dashboard](https://dashboard.nexmo.com/buy-numbers) but it's often more convenient to perform these account management tasks using our CLI. So that's what we'll do here.
+---
 
-To check which numbers are available, use `vonage numbers:search [COUNTRYCODE]`, passing it your two-character country code. For example, `GB` for Great Britain or `US` for the USA. You want to ensure that the number you purchase is able to receive SMS:
+You can then append your endpoint to the newly generated ngrok URLs to form your webhook URLs like this:
 
-```sh
-vonage numbers:search [COUNTRYCODE]
+* https://f9db-102-89-43-137.eu.ngrok.io/webhooks/inbound-message
+
+Now, you will need this URL when creating your application in the next section of this tutorial.
+
+### 3. Configure Your Vonage API Account
+Now that the Vonage API can request your webhook, it’s time to configure your Vonage account. 
+
+At this point, you will create an application in the account and assign your webhook for incoming messages. This way, any incoming messages will be sent to your Python application.
+
+To do this, go to your dashboard [settings](https://dashboard.nexmo.com/settings) page. Then, go to the **SMS settings** section to select Messages API.
+
+Next, go to the [applications](https://dashboard.nexmo.com/applications) page to create an application. Click the **+ Create application** button. Then, enter your desired name in the **Name** field. 
+
+In the Capabilities section, select **Messages** and input your webhook **Inbound URL**. You can check out our [tutorial](LINKTOBLOGHERE) on how to set up the **Status URL** for accepting the delivery status of outbound SMS.
+
+Click **Generate new Application** to complete the process. You will then be redirected to the newly-created application page. On this page, you can link your number or pay for a virtual number.
+
+### 4. Send and Receive an SMS Message
+Your Python application is now ready to receive SMS messages! Your ngrok server is running in port `3000`, and you have configured your application with a virtual number in your Vonage account.
+
+Now, you can start the Flask application in another terminal window (make sure to keep the previous terminal window running with ngrok). Then, in Flask, initiate this command:
+
+```bash
+python receive-sms.py
 ```
 
-Choose a number from the list and buy it using the following command:
+By executing that command, your Flask application will be launched on your local host port `3000`. This port will be automatically detected by ngrok, enabling you to serve your application to the public internet using ngrok's public URL.
 
-```sh
-vonage numbers:buy [NUMBER] [COUNTRYCODE]
+Now, use the following Vonage CLI command to send a test SMS to your Vonage number on your terminal. If you’ve followed the steps in the tutorial correctly, this SMS message will be received in your Python application.
+
+```bash
+ vonage sms --to=VONAGE_VIRTUAL_NUMBER --from=VONAGETEST --message='Testing webhooks!'
 ```
+In the terminal window that is running your Python application, you should see that your webhook received the inbound SMS:
 
-You will be prompted to confirm your purchase. Make a note of the number that you bought.
-
-## Configure Your Vonage Account
-
-The next thing you need to do is configure your account with the webhook URL so that Vonage can forward any inbound SMS to your application.
-
-This is another task that you could perform either in the dashboard or by using our CLI. Here's how to do it with the CLI. Replace the following placeholders with your own values:
-
-* `VONAGE_VIRTUAL_NUMBER`: Your own virtual number, which should include the international dialling code and omit the leading zero, for example: `447700900001`.
-* `WEBHOOK_URL`: Your webhook endpoint with the `ngrok` URL as the domain name. For example: `http://abc123.ngrok.io/webhooks/inbound-sms`.
-
-```sh
-nexmo link:sms VONAGE_VIRTUAL_NUMBER WEBHOOK_URL
-```
-
-This configures your virtual number to use your webhook. If you want to create a "catch all" webhook to capture SMS sent to any of your numbers, visit your [account settings](https://dashboard.nexmo.com/settings) page and enter the URL in the "Inbound messages" textbox under "Default SMS Setting". Vonage always uses the number-specific webhook if it has been set.
-
-## Try it Out
-
-With `ngrok` running on port 3000 in one terminal window, launch your Python application in another:
-
-```sh
-python3 receive-sms.py
-```
-
-Use our CLI to send a test SMS to your Nexmo number:
-
-```sh
-nexmo sms -f VONAGETEST VONAGE_VIRTUAL_NUMBER "This is a test message"
-```
-
-In the terminal window that is running your Python application you should see that your webhook received the inbound SMS:
-
-```json
+```bash
 {'keyword': ['THIS'],
- 'message-timestamp': ['2019-05-17 12:49:51'],
- 'messageId': ['17000002444B0FD5'],
+ 'message-timestamp': ['2023-04-28 11:30:22'],
+ 'messageId': [''],
  'msisdn': ['VONAGETEST'],
- 'text': ['This is a test'],
+ 'text': ['Testing webhooks!'],
  'to': ['447700900001'],
  'type': ['text']}
-127.0.0.1 - - [17/May/2019 13:50:50] "GET /webhooks/inbound-sms?msisdn=VONAGETEST&to=447700900001&messageId=17000002444B0FD5&text=This+is+a+test&type=text&keyword=THIS&message-timestamp=2019-05-17+12%3A49%3A51 HTTP/1.1" 204 -
+127.0.0.1 - - [28/April/2023 12:35:25] "GET /webhooks/inbound-sms?msisdn=VONAGETEST&to=2340000001&me
+
+Congratulations! You just created a Python application that receives SMS messages!
+
 ```
+## Conclusion
+
+In this tutorial, you've learned the process for receiving inbound text messages in Python. You’ve learned how to configure a webhook for SMS messages, how to set up your Vonage account to send messages to Python, and how to test your Python application. 
+
+Now you can easily integrate the Vonage Messages API into Python-based applications and start receiving SMS messages in Python!
 
 ## Further Reading
+Check out Vonage’s resources to learn more about the Messages API:
 
-If you want to learn more about the SMS API, check out the following resources:
+1. [Messages API Overview](https://developer.vonage.com/en/messages/overview)
 
-* [SMS API overview](https://developer.nexmo.com/messaging/sms/overview)
-* [SMS API reference](https://developer.nexmo.com/api/sms)
-* [Inbound SMS guide](https://developer.nexmo.com/messaging/sms/guides/inbound-sms)
-* [Concatenation and encoding](https://developer.nexmo.com/messaging/sms/guides/concatenation-and-encoding)
+2. [Messages API Reference](https://developer.vonage.com/en/api/messages-olympus)
 
-## Related Content
-
-* [How to Receive SMS Messages in Python with the Vonage API](https://developer.vonage.com/en/blog/how-to-send-sms-messages-with-python-flask-and-vonage)
+3. [Receive SMS Delivery Receipts in Python](https://developer.vonage.com/en/blog/receiving-sms-delivery-receipts-with-python-dr)
