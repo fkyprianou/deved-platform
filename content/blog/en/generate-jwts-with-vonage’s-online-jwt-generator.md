@@ -4,6 +4,7 @@ description: Unlock the full potential of Vonage's developer portal today with
   the Online JWT Generator. Seamlessly integrate JWT authentication into your
   Vonage applications, enhancing security and trust. Use JSON web tokens to
   secure your applications.
+thumbnail: /content/blog/generate-jwts-with-vonage’s-online-jwt-generator/vonage-jwt-generator.png
 author: benjamin-aronov
 published: true
 published_at: 2023-06-22T09:38:15.398Z
