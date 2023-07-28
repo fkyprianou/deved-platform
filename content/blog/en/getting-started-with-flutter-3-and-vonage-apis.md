@@ -809,19 +809,19 @@ Next we override the `configureFlutterEngine` method, this lets us run code when
     }
 ```
 
-Initialising the `NexmoClient` is straightforward thanks to the build method, we simply pass in the current context of the app. Then we create a `ConnectionListener` which will give us the current status of the client, these status maps to values we need to send back to Flutter. So using a when statement we can send the values as required.
+Initialising the `VoiceClient` is straightforward we simply pass in the current context of the app. Then we create an `ErrorListener` and a ‘ReconnectingListener’ which will give us the current status of the client, these status maps to values we need to send back to Flutter. So using a when statement we can send the values as required.
 
 ```kotlin
     private fun initClient() {
-        client = NexmoClient.Builder().build(this)
+        client = VoiceClient(this)
+        client.setConfig(VGClientConfig(ClientConfigRegion.US))
 
-        client.setConnectionListener { connectionStatus, _ ->
-            when (connectionStatus) {
-                ConnectionStatus.CONNECTED -> notifyFlutter(SdkState.LOGGED_IN)
-                ConnectionStatus.DISCONNECTED -> notifyFlutter(SdkState.LOGGED_OUT)
-                ConnectionStatus.CONNECTING -> notifyFlutter(SdkState.WAIT)
-                ConnectionStatus.UNKNOWN -> notifyFlutter(SdkState.ERROR)
-            }
+        client.setSessionErrorListener {
+            notifyFlutter(SdkState.ERROR)
+        }
+
+        client.setReconnectingListener {
+            notifyFlutter(SdkState.WAIT)
         }
     }
 ```
@@ -860,7 +860,12 @@ The `loginUser` method is called when Flutter sends the loginUser method call, t
 
 ```kotlin
 private fun loginUser(token: String) {
-        client.login(token)
+        client.createSession(token) { err, sessionId ->
+            when(err) {
+                null -> notifyFlutter(SdkState.LOGGED_IN)
+                else -> notifyFlutter(SdkState.ERROR) // handle error
+            }
+        }
     }
 ```
 
@@ -871,17 +876,17 @@ Again, here we pass back the state to Flutter depending on if the call is succes
     private fun makeCall() {
         notifyFlutter(SdkState.WAIT)
 
-        client.serverCall("PHONE_NUMBER", null, object : NexmoRequestListener<NexmoCall> {
-            override fun onSuccess(call: NexmoCall?) {
-                onGoingCall = call
-                onGoingCall?.addCallEventListener(callEventListener)
-                notifyFlutter(SdkState.ON_CALL)
+        client.serverCall(mapOf("to" to "PHONE_NUMBER")) {
+                err, outboundCall ->
+            when {
+                err != null -> {
+                    notifyFlutter(SdkState.ERROR)
+                } else -> {
+                    onGoingCallID = outboundCall
+                    notifyFlutter(SdkState.ON_CALL)
+                }
             }
-
-            override fun onError(apiError: NexmoApiError) {
-                notifyFlutter(SdkState.ERROR)
-            }
-        })
+        }
     }
 ```
 
@@ -891,17 +896,19 @@ The `endCall` method is called when Flutter sends the `endCall` method call, thi
     private fun endCall() {
         notifyFlutter(SdkState.WAIT)
 
-        onGoingCall?.hangup(object : NexmoRequestListener<NexmoCall> {
-            override fun onSuccess(call: NexmoCall?) {
-                onGoingCall?.removeCallEventListener(callEventListener)
-                onGoingCall = null
-                notifyFlutter(SdkState.LOGGED_IN)
+        onGoingCallID?.let {
+            client.hangup(it) {
+                    err ->
+                when {
+                    err != null -> {
+                        notifyFlutter(SdkState.ERROR)
+                    } else -> {
+                        notifyFlutter(SdkState.LOGGED_IN)
+                        onGoingCallID = null
+                    }
+                }
             }
-
-            override fun onError(apiError: NexmoApiError) {
-                notifyFlutter(SdkState.ERROR)
-            }
-        })
+        }
     }
 ```
 
@@ -932,7 +939,7 @@ Next, open the file `ios/Runner/AppDelegate` this is where we will include the c
 ```swift
 import UIKit
 import Flutter
-import NexmoClient
+import VonageClientSDKVoice
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -945,8 +952,8 @@ import NexmoClient
     }
     
     var vonageChannel: FlutterMethodChannel?
-    let client = NXMClient.shared
-    var onGoingCall: NXMCall?
+    var client: VGVoiceClient? = nil
+    var callID: String?
     
     override func application(
         _ application: UIApplication,
@@ -960,7 +967,9 @@ import NexmoClient
     }
     
     func initClient() {
-        client.setDelegate(self)
+        client = VGVoiceClient()
+        let config = VGClientConfig(region: .US)
+        client.setConfig(config)
     }
     
     func addFlutterChannelListener() {
@@ -992,68 +1001,45 @@ import NexmoClient
     }
     
     func loginUser(token: String) {
-        self.client.login(withAuthToken: token)
-    }
-    
-    func makeCall() {
-        client.serverCall(withCallee: "PHONE_NUMBER", customData: nil) { [weak self] (error, call) in
-            guard let self = self else { return }
-            
-            if error != nil {
+        client?.createSession(token, sessionId: nil) { error, sessionId in
+            if (error != nil) {
                 self.notifyFlutter(state: .error)
-                return
+            } else {
+                self.notifyFlutter(state: .loggedIn)
             }
-            
-            self.onGoingCall = call
-            self.onGoingCall?.setDelegate(self)
-            self.notifyFlutter(state: .onCall)
         }
     }
     
+    func makeCall() {
+        client.serverCall(["to": "PHONE_NUMBER"]) { error, callId in
+                    DispatchQueue.main.async { [weak self] in
+                        guard let self else { return }
+                        if error == nil {
+                            self.callID = callId
+                            self.notifyFlutter(state: .onCall)
+                        } else {
+                            self.notifyFlutter(state: .error)
+                        }
+                    }
+                }
+    }
+    
     func endCall() {
-        onGoingCall?.hangup()
-        onGoingCall = nil
-        notifyFlutter(state: .loggedIn)
+        client.hangup(callID) { error in
+                    DispatchQueue.main.async { [weak self] in
+                        guard let self else { return }
+                        if (error != nil) {
+                            self.notifyFlutter(state: .error)
+                        } else {
+                            self.callID = nil
+                            self.notifyFlutter(state: .loggedIn)
+                        }
+                    }
+                }
     }
     
     func notifyFlutter(state: SdkState) {
         vonageChannel?.invokeMethod("updateState", arguments: state.rawValue)
-    }
-}
-
-extension AppDelegate: NXMClientDelegate {
-    func client(_ client: NXMClient, didChange status: NXMConnectionStatus, reason: NXMConnectionStatusReason) {
-        switch status {
-        case .connected:
-            notifyFlutter(state: .loggedIn)
-        case .disconnected:
-            notifyFlutter(state: .loggedOut)
-        case .connecting:
-            notifyFlutter(state: .wait)
-        @unknown default:
-            notifyFlutter(state: .error)
-        }
-    }
-    
-    func client(_ client: NXMClient, didReceiveError error: Error) {
-        notifyFlutter(state: .error)
-    }
-}
-
-extension AppDelegate: NXMCallDelegate {
-    func call(_ call: NXMCall, didUpdate callMember: NXMMember, with status: NXMCallMemberStatus) {
-        if (status == .completed || status == .cancelled) {
-            onGoingCall = nil
-            notifyFlutter(state: .loggedIn)
-        }
-    }
-    
-    func call(_ call: NXMCall, didUpdate callMember: NXMMember, isMuted muted: Bool) {
-        
-    }
-    
-    func call(_ call: NXMCall, didReceive error: Error) {
-        notifyFlutter(state: .error)
     }
 }
 ```
@@ -1080,4 +1066,4 @@ Once you wish to finish the call you can do so by pressing the end call button.
 
 ![The four UI screens of the app, from right to left. The App startup screen, the logged in screen, the permission request screen and finally the in call screen](/content/blog/getting-started-with-flutter-3-and-vonage-apis/app-screens.png)
 
-And that's a wrap! You now have your fully functional app to phone call written in Flutter with support for both Android and iOS. But of course, this is not the end! With your knowledge of how to use Android and iOS SDKs take a look at the other [example projects](https://github.com/nexmo-community/client-sdk-tutorials) which will help you build other communication features into your Flutter application. If you want more detail make sure to check out the [developer portal](https://developer.vonage.com/) which has all the documentation and sample code you could ever need!
+And that's a wrap! You now have your fully functional app to phone call written in Flutter with support for both Android and iOS. But of course, this is not the end! With your knowledge of how to use Android and iOS SDKs take a look at the other [example projects](https://github.com/Vonage-Community/tutorials-client_sdk-ios-android-js) which will help you build other communication features into your Flutter application. If you want more detail make sure to check out the [developer portal](https://developer.vonage.com/) which has all the documentation and sample code you could ever need!
