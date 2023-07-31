@@ -28,6 +28,10 @@ In this blog post, I'll walk you through the making of this bot, the challenges 
 
 > If you would like to skip ahead and get right to deploying it, you can find all the code for the app on [GitHub](https://github.com/Vonage-Community/vonage-meetings-bot-scheduler).
 
+H﻿ere you can find a video demo:
+
+<youtube id="V3yu6MH7fLs"></youtube>
+
 ## Project Setup
 
 1. Vonage Account
@@ -114,7 +118,8 @@ If the meeting type is `'instant'`, the `expires_at` property is not required so
 Don’t forget to set up your `.env` file. The required parameters are: 
 
 ```js
-
+APPLICATION_ID=
+PRIVATE_KEY=
 ```
 
 The applicationId is the Id of the application and the private key is the key generated when you create the application in the Vonage dashboard.
@@ -123,12 +128,22 @@ The applicationId is the Id of the application and the private key is the key ge
 
 To enhance our meeting capabilities, we will also implement webhook listeners in our Node.js server. Webhooks allow us to receive real-time notifications when specific events occur, such as the start or end of a recording, the creation of new rooms, or updates to session details. By leveraging these webhooks, we can take proactive actions within our application, such as triggering post-meeting actions or updating UI elements accordingly.
 
-## Create the Bot in Vonage AI
+## Create the Bot in Vonage AI Studio
 
-Vonage AI is a conversational AI platform built to handle complex interactions between businesses and customers, lowering operational costs and significantly improving service levels. It currently offers the following channels: telephony for a voice based bot, WhatApp and SMS for text based bot and HTTP agents. 
+Vonage AI Studio is a conversational AI platform built to handle complex interactions between businesses and customers, lowering operational costs and significantly improving service levels. It currently offers the following channels: telephony for a voice based bot, WhatApp and SMS for text based bot and HTTP agents. 
 I choose to use Whatsapp bot because it’s one of the most popular messaging platforms and offers different types of messages to interact with the user such as buttons, list messages and many others.
 
 For more details on Vonage AI capabilities, you can find the documentation [here](https://studio.docs.ai.vonage.com/)
+
+To get started, access the Vonage (dashboard)\[dashboard.nexmo.com] and locate the Vonage AI section. Next, click on the "Create An Agent" button located at the top right corner of the page. From the available options, choose "Whatsapp Bot" and you'll be presented with a list of templates to choose from. For the purpose of this blog post, select the "from scratch" option, followed by the Inbound Agent. Inbound agents are activated when they receive a message from the customer, while the outbound agent initiates a new conversation using WhatsApp Templates.
+
+### Bot Overview
+
+![bot overview](/content/blog/video-meeting-scheduling-bot-powered-by-vonage-ai-and-meetings-api/bot_overview.png)
+
+
+
+The picture above shows what we’re going to build. We will use different types of Vonage AI Studio nodes such as collect inputs, conditionals, webhooks and send messages. Keeping the diagram in mind, the bot starts with an incoming message from the user and replies with a collect input node. Let’s dig into the process in the next sections. 
 
 ### Collect Input for Meeting Type, Recording Option, and UI Language
 
@@ -136,8 +151,27 @@ To initiate the meeting creation process, our WhatsApp bot will prompt the user 
 
 For the meeting type, we use WhatsApp reply buttons so the user doesn’t need to type the message but only click the desired type of meeting:
 
-Same logic for the recording options, we will use a Collect Input Node with Reply Buttons.
+![meeting type](/content/blog/video-meeting-scheduling-bot-powered-by-vonage-ai-and-meetings-api/meeting_type.png)
+
+![WhatsApp reply buttons](/content/blog/video-meeting-scheduling-bot-powered-by-vonage-ai-and-meetings-api/whatsapp_reply_buttons.png)
+
+
+
+The next is to dispatch the bot based on the previous reply. To do that, we use a classification node.
+
+![Classification node]()
+
+
+
+Based on the previous answer (which is saved on the meeting type parameter), the bot has two branches: instant and long term meeting. For a long term meeting we need an extra step, where we ask the user to type the meeting expiration date.
+
+Then, we use the same logic for the recording options, we will use a Collect Input Node with Reply Buttons.
+
 A different approach is needed for the UI language options, since we have more than three options (we have eight available options). For the UI language options, we will use the List message, where you can add up to 10 options. This type of message shows a list of options to the user. Please see the below screenshot:
+
+![WhatsApp list buttons](/content/blog/video-meeting-scheduling-bot-powered-by-vonage-ai-and-meetings-api/whatsapp_list_buttons.png)
+
+
 
 ### Collect Expiration Date
 
@@ -150,9 +184,7 @@ Now, the critical aspect at this stage is to select the appropriate entity type 
 
 Once we have collected all the necessary information from the user, we need to connect our WhatsApp bot with the Node.js server we created earlier. To achieve this, we utilize the webhook block provided by Vonage AI. This block allows us to make HTTP requests to external endpoints, enabling seamless integration between different systems. By configuring the webhook block to call the relevant endpoints of our Node.js API, we can pass the collected meeting details and trigger the creation of the meeting.
 
-Is it possible to add a video of the bot?
-
-<youtube id="V3yu6MH7fLs"></youtube>
+![Create a meeting](/content/blog/video-meeting-scheduling-bot-powered-by-vonage-ai-and-meetings-api/create_meeting.png)
 
 ## Conclusion
 
