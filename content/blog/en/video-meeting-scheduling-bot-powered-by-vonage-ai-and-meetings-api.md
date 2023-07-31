@@ -141,8 +141,6 @@ To get started, access the Vonage (dashboard)\[dashboard.nexmo.com] and locate t
 
 ![bot overview](/content/blog/video-meeting-scheduling-bot-powered-by-vonage-ai-and-meetings-api/bot_overview.png)
 
-
-
 The picture above shows what we’re going to build. We will use different types of Vonage AI Studio nodes such as collect inputs, conditionals, webhooks and send messages. Keeping the diagram in mind, the bot starts with an incoming message from the user and replies with a collect input node. Let’s dig into the process in the next sections. 
 
 ### Collect Input for Meeting Type, Recording Option, and UI Language
@@ -155,13 +153,9 @@ For the meeting type, we use WhatsApp reply buttons so the user doesn’t need t
 
 ![WhatsApp reply buttons](/content/blog/video-meeting-scheduling-bot-powered-by-vonage-ai-and-meetings-api/whatsapp_reply_buttons.png)
 
-
-
 The next is to dispatch the bot based on the previous reply. To do that, we use a classification node.
 
-![Classification node]()
-
-
+![Classification node](/content/blog/video-meeting-scheduling-bot-powered-by-vonage-ai-and-meetings-api/classification.png)
 
 Based on the previous answer (which is saved on the meeting type parameter), the bot has two branches: instant and long term meeting. For a long term meeting we need an extra step, where we ask the user to type the meeting expiration date.
 
@@ -170,8 +164,6 @@ Then, we use the same logic for the recording options, we will use a Collect Inp
 A different approach is needed for the UI language options, since we have more than three options (we have eight available options). For the UI language options, we will use the List message, where you can add up to 10 options. This type of message shows a list of options to the user. Please see the below screenshot:
 
 ![WhatsApp list buttons](/content/blog/video-meeting-scheduling-bot-powered-by-vonage-ai-and-meetings-api/whatsapp_list_buttons.png)
-
-
 
 ### Collect Expiration Date
 
