@@ -159,8 +159,7 @@ For the meeting type, we use WhatsApp reply buttons so the user doesn’t need t
 
 The next is to dispatch the bot based on the previous reply. To do that, we use a classification node.
 
-![Classification node]()
-
+![Classification node](/content/blog/video-meeting-scheduling-bot-powered-by-vonage-ai-and-meetings-api/classification.png)
 
 
 Based on the previous answer (which is saved on the meeting type parameter), the bot has two branches: instant and long term meeting. For a long term meeting we need an extra step, where we ask the user to type the meeting expiration date.
