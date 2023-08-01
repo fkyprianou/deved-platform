@@ -1,11 +1,12 @@
 ---
-title: Emergency Response System using Vonage Messages API and Java
+title: Emergency Response System Using Vonage Messages API and Java
 description: Create a emergency response and location monitoring solution with
   the Messages API and Java and Spring Boot.
+thumbnail: /content/blog/emergency-response-system-using-vonage-messages-api-and-java/emergency-response-system.png
 author: tolulope-ayemobola
 published: true
-published_at: 2023-07-10T19:31:47.075Z
-updated_at: 2023-07-10T19:31:47.091Z
+published_at: 2023-08-01T19:31:47.075Z
+updated_at: 2023-08-01T19:31:47.091Z
 category: tutorial
 tags:
   - messages
