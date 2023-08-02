@@ -268,6 +268,6 @@ export default {
     },
   },
   staticAssets: {
-    version: 'prod' // overwrites timestamp used in static asset versioning
-  }
+    version: 'prod', // overwrites timestamp used in static asset versioning
+  },
 }
