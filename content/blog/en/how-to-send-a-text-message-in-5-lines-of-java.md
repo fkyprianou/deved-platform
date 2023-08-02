@@ -2,10 +2,11 @@
 title: How to Send a Text Message in 5 Lines of Java
 description: This article will show you just how easily you can send a text
   message using Vonage's Java SDK!
+thumbnail: /content/blog/how-to-send-a-text-message-in-5-lines-of-java/text-message_5lines_java.png
 author: sina-madani
 published: true
-published_at: 2023-07-13T13:46:10.855Z
-updated_at: 2023-07-13T13:46:10.869Z
+published_at: 2023-08-03T13:46:10.855Z
+updated_at: 2023-08-03T13:46:10.869Z
 category: tutorial
 tags:
   - messages-api
