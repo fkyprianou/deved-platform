@@ -29,7 +29,6 @@ In this Ebook, we will show:
 * How to integrate Vonage Verify API with a user login
 * How to use Vonage Messages API to send an order confirmation
 * How to use Vonage Meetings API for issue resolution
-* How to use In-App messaging to pass notifications back to "admin" users
 
 We will also help developers set up:
 
