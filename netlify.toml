@@ -145,3 +145,9 @@
   to = "https://developer.vonage.com/blog/:year/:month/:day/:blog_path"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/spotlight"
+  to = "https://developer.vonage.com/en/documentation"
+  status = 301
+  force = true
