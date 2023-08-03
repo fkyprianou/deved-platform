@@ -10,12 +10,19 @@
         <article
           class="flex flex-col p-6 overflow-hidden bg-white rounded-lg shadow-lg xl:w-2/3 lg:w-2/3 sm:w-full mx-auto"
         >
-          <p class="mb-2">
-            Please note our team is currently at full capacity and we regret to inform you 
-            that we are unable to accept any new submissions at this time. However, we are actively 
-            planning to reopen our submission process in the near future. Please stay tuned for updates and announcements. 
-            Thank you for your understanding and patience.
-          </p>
+        <p class="mb-2">
+          <strong>Please note that our team is currently at full capacity and we regret to inform you 
+          that we are unable to accept any new submissions at this time.
+          <br>
+          <br>
+          However, we are actively 
+          planning to reopen our submission process in the near future. Please stay tuned for updates and announcements.
+          <br>
+          <br>
+          Thank you for your understanding and patience.</strong>
+          <br>
+          <br>
+        </p>
           <h2 class="mb-2 text-lg font-bold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
