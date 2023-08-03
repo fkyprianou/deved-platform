@@ -33,10 +33,11 @@ Before you begin, ensure you have a [Vonage Developer Account](https://developer
 Once that's done, go to your API Dashboard and, on the left-hand side find **BUILD & MANAGE** > **AI Studio** > **Go to AI Studio** > **Create Agent**. You can select any agent type, but for our example we're going to build it with **WhatsApp**.
 
 Fill in all the required details:
-- **Region**: Where will your Agent be typically used - The USA or in Europe
-- **Agent Name**: Give your Agent a unique name that is meaningful to you.
-- **Language**: Select the language of your Agent.
-- **Time Zone**: Choose the time zone where your Agent will operate.
+
+* **Region**: Where will your Agent be typically used - The USA or in Europe
+* **Agent Name**: Give your Agent a unique name that is meaningful to you.
+* **Language**: Select the language of your Agent.
+* **Time Zone**: Choose the time zone where your Agent will operate.
 
 For templates, we are going to **Start from Scratch**.
 
@@ -48,36 +49,41 @@ Now comes the fun part! With Vonage AI Studio's easy-to-use interface, you can d
 
 Our flow should look like this:
 
-
+![Conversation Flow for Farewell App](/content/blog/build-a-farewell-app-using-vonage-ai-studio/conversation-flow.png "conversation-flow.png")
 
 NODES > Conversation > Collect Input
 
 The virtual agent will prompt a question to the user.
-- Node name: `ASK_NAME`.
-- Prompt: What's your name?
+
+* Node name: `ASK_NAME`.
+* Prompt: What's your name?
 
 NODES > Conversation > Conditions
 The user will need to type their name. Here you can create as many conditions as people you want to write notes to.
-- Node name: `TYPE_NAME`
+
+* Node name: `TYPE_NAME`
 
 Create Condition (button)
 I named each condition after the person. (e.g., `Mason`)
-- Parameter: INPUT
-- Operation: Contains
-- Value: Their name
 
-**_Note_**: My parameter is `KURTICE` because that was his full name. However, because we used the operation 'contains', if Kurtice texted 'kurt' (not case sensitive), it would still send him the correct message. However, if you had a 'Michael' and he typed 'mike', it would send him the generic message (explained in next paragraph).
+* Parameter: INPUT
+* Operation: Contains
+* Value: Their name
+
+***Note***: My parameter is `KURTICE` because that was his full name. However, because we used the operation 'contains', if Kurtice texted 'kurt' (not case sensitive), it would still send him the correct message. However, if you had a 'Michael' and he typed 'mike', it would send him the generic message (explained in next paragraph).
 
 There were some people on my team who I didn't talk to very much, so I just had a generic thank you message for them. As long as they text *a* name, they will receive a message. I labeled that condition as `Generic`.
-- Parameter: INPUT
-- Operation: Has value
-- Value: N/A
+
+* Parameter: INPUT
+* Operation: Has value
+* Value: N/A
 
 NODES > Action > Send SMS
 
 I named each node after the person in all caps (e.g., `MASON`)
-- Text
-- Agent says: {Write your message to the recipient}
+
+* Text
+* Agent says: {Write your message to the recipient}
 
 NODES > Actions > End Conversation
 
