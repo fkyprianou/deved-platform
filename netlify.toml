@@ -135,6 +135,12 @@
   force = true
 
 [[redirects]]
+  from = "/spotlight"
+  to = "/spotlight"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/"
   to = "https://developer.vonage.com/blog"
   status = 301
