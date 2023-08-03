@@ -18,8 +18,6 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-# Enhancing Video Streams with QR Codes and Watermarking
-
 ## Introduction
 
 In today's digital era, enhancing video streams has become an increasingly popular practice, be it for branding, advertising, or providing extra information in a non-intrusive way. This blog post aims to walk you through how to add QR Codes and watermarks to a video stream using the Vonage Video API. 
