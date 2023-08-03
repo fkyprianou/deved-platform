@@ -1,5 +1,5 @@
 ---
-title: Enhancing Video Streams with QR Codes and Watermarking
+title: "Video + AI: Enhancing Video Streams with QR Codes and Watermarking"
 description: Explore how to enhance your video streams using QR Codes and
   watermarks with the Vonage Media Processor API. Discover real-world use cases,
   technical implementation, and get a detailed walkthrough of the code.
