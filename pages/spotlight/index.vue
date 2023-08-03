@@ -303,6 +303,7 @@
             naming the original post at Vonage the canonical URL.
           </p>
 
+          <!--
           <h2 class="mt-4 text-lg font-bold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -500,6 +501,7 @@
               </button>
             </div>
           </form>
+      -->
         </article>
       </section>
       <section class="index-section">
